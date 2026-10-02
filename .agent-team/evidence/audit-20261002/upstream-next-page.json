@@ -1,0 +1,1994 @@
+{
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "wav_filename",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "audio",
+      "type": {
+        "_type": "Audio"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "wav_filesize",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "transcript",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "segment_id",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "start_time",
+      "type": {
+        "dtype": "float64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "end_time",
+      "type": {
+        "dtype": "float64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "duration_seconds",
+      "type": {
+        "dtype": "float64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "actual_duration",
+      "type": {
+        "dtype": "float64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "original_filename",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "original_start_time",
+      "type": {
+        "dtype": "float64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "original_end_time",
+      "type": {
+        "dtype": "float64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "transcription_model",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "transcription_timestamp",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "prompt_tokens",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "completion_tokens",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "total_tokens",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 17,
+      "name": "transcript_length",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 18,
+      "name": "transcript_word_count",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 19,
+      "name": "tokens_per_second",
+      "type": {
+        "dtype": "float64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 20,
+      "name": "has_context_overlap",
+      "type": {
+        "dtype": "bool",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 21,
+      "name": "segment_position",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 22,
+      "name": "source_wav_file",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "row_idx": 100,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0101.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/100/audio/audio.wav?Expires=1790917754&Signature=eA6ly-o6iKnKdGZmZ2Hu6OTHwMbucXZbA420H2x0O~YujJvx5gIOhwsowKPy5LiDQvnGD4yG9bNX4Wiw4M5oTQrcHBPne8cu7dDFbLdi7xpWlOmvbSweOOmXfvfVYVivZHYW7Au~V1XQiSNjayFRhyGJiAv~hK8cDnsCJXQzfiRi1Ul34AsTR3dOTjxVBkhNeCVkxKk4svgEufEZkxaINcdxOJOt~jOSKjHgMyq4RTVIejROcn9AuBh6h~WpztTumh2J3Y9ezoDQJWtYwVZLPnBvbnpKxlPUDZ4pmeYxDSQQSXYwLEoDVurJ20z5H6wFG0A8Uv9SZV-VC446ZusK5Q__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1624108,
+        "transcript": "front. I think the foundation for everything is obviously the frontier model progress we are seeing, and particularly with 2.5 Pro and Flash, I think we're well positioned. We are seeing tremendous reception from developers, enterprises, and consumers, too. And",
+        "segment_id": 101,
+        "start_time": 2085.000997732426,
+        "end_time": 2103.4144217687076,
+        "duration_seconds": 18.413424036281413,
+        "actual_duration": 18.413424036281178,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2085.000997732426,
+        "original_end_time": 2103.4144217687076,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:01:37.097151",
+        "prompt_tokens": 404,
+        "completion_tokens": 53,
+        "total_tokens": 457,
+        "transcript_length": 261,
+        "transcript_word_count": 40,
+        "tokens_per_second": 24.81884950346753,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0101.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 101,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0102.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/101/audio/audio.wav?Expires=1790917754&Signature=V51fsJ3LOS6aGYLAhDuL4ltTOHgHTf8kYBloBmpTsRVk3QSf8TdhE3BNMzJg8jKH2cx6yDtVCcYKjLIoC994J87szedCaTC50bBf1MeT9T0bOZDx0yQyTa8dk8YAsn-xdMP~gpbuklZlJinB7~gg8tPGF3RwcLB0FKDbtHxQrWFou4Dr99JfvI14TxsFWCfeCVmcYzW684WOCNWs-fOtrYR3syfIfTsp03dufvRI7MRkVBAfyPzeNZ949nxgRb-qJKWrR3htXrInN81R82cNGH23cVMJiRmbhs4fhMJGWe1PqVXxm7D~L1YYnq1PcZmrXC7BbPcjEd2lNTgqs53j0w__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 957482,
+        "transcript": "delivering consumer AI experiences across our product portfolio, including, you know, the primary way people experience it is obviously in search with AI overviews and",
+        "segment_id": 102,
+        "start_time": 2104.2619501133786,
+        "end_time": 2115.1172789115644,
+        "duration_seconds": 10.855328798185838,
+        "actual_duration": 10.85530612244898,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2104.2619501133786,
+        "original_end_time": 2115.1172789115644,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:01:38.893291",
+        "prompt_tokens": 404,
+        "completion_tokens": 31,
+        "total_tokens": 435,
+        "transcript_length": 167,
+        "transcript_word_count": 25,
+        "tokens_per_second": 40.07248495989343,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0102.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 102,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0103.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/102/audio/audio.wav?Expires=1790917754&Signature=eLRBTTaDpgBe6MbhjLtUQIWIwhgTOEywDCB~lzv5lNnzs~Ke2~wJiE1QBjrtiBkOefqa2u70T52irSrmcj3g5oLSPWu17SqTQSDwd8BL0jZROTlLyAHh~hCl-MN7o4-tjn5rtY6qllaFfsTXGx6dmuVobpZ8gN6IUJ~GZJOgMkHtkHviSOVXbVWMiFRKGzkfF7rK8jNPkontKsOxQuoW8w26M7aHa5SAdjI9xM-2XXtBy10kyaGxbP~RZDX~v6pqzSr-m1QrF2G6pDDM4MaVqdh2xX06y2Ygsy~snuzEQCBtI-BD1NK35QnR-q~IGAfPUvppf9RLrnFZBlmGiKP04Q__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1452076,
+        "transcript": "SOTA and that's been well received in Canvas, we've had a lot of traction as well. And so we are definitely investing more. We have recently organized ourselves better to capitalize on this momentum and I'm excited about our roadmap there.",
+        "segment_id": 103,
+        "start_time": 2162.451156462585,
+        "end_time": 2178.91410430839,
+        "duration_seconds": 16.462947845805047,
+        "actual_duration": 16.46294784580499,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2162.451156462585,
+        "original_end_time": 2178.91410430839,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:01:41.057690",
+        "prompt_tokens": 404,
+        "completion_tokens": 52,
+        "total_tokens": 456,
+        "transcript_length": 239,
+        "transcript_word_count": 41,
+        "tokens_per_second": 27.698563117066193,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0103.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 103,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0104.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/103/audio/audio.wav?Expires=1790917754&Signature=Q7aAmu80qlgEMjEq8~aYH6PHt5u1RYZPvQ-Lz~I6Gkm3DJEpinhBHP5v1clx6DN9LRR-WO4EzSz3UJVRvmSMz~cPNzGQQPgLKTybmsVjzQKxBi2ltjl-LqiagYiBoRo7QtjdkM5aUBYYWZBBJpXJ6I0sSJXFXjKTePzAgZfIE9PD~bJ2CAinWzOsBcw-TeglJRlRr~uXWPJjb4Pl0Hvq-3u~3Zr3oaAWLro~iuzexT2Z35MfSAG-tQwLNj~E1BwHEb4iUJl~t5TCwao9N9HZj-p1hsgpOTw2GLqi2mbg1V-OxB6-KThSFpuVXWS8lzXQ-isUulabsXZ~ioEOTTsAjg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1106988,
+        "transcript": "investments this year and overall, should there be any macroeconomics changes. You know, as I said, we're still planning to invest approximately $75 billion in CapEx this year. We do see a tremendous opportunity",
+        "segment_id": 104,
+        "start_time": 2179.7151927437644,
+        "end_time": 2192.2655782312927,
+        "duration_seconds": 12.550385487528274,
+        "actual_duration": 12.550385487528345,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2179.7151927437644,
+        "original_end_time": 2192.2655782312927,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:01:43.215800",
+        "prompt_tokens": 404,
+        "completion_tokens": 49,
+        "total_tokens": 453,
+        "transcript_length": 211,
+        "transcript_word_count": 34,
+        "tokens_per_second": 36.09450884597615,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0104.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 104,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0105.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/104/audio/audio.wav?Expires=1790917754&Signature=lAFcp-MbkhOEZKAZxCnwaE6MvDihrHknFpMsiq5hmtih2LeG9af2noNT~o1SwH4nWZwg0UxVHnY-pdVyuwmNLt1wL2YJ9OjlE0jltl0tsFkDAlaPZuK~Xv5BIlqn58bVEtUnsa32XopwAnWug2v3KNGTuqdpaIy0jTNEOOOcUTPJAXMquyroWPU5-5MHZX8R5I8WBqFPrdqCHGH8tlAcW1kopEHwtXsoM5mCeuurbfpevJkVx3kZzR-YGpjDjx8WjAFCo2l1ejrhLKDzDUZZX1Fb5w96ELEFJ8jpi2zI~VRHXg3hgiKxcCzLm4SmnZCwZK3nx~0whAbpqVWOfQO3RA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1114156,
+        "transcript": "across the organization, whether it's to support Google services, Google Cloud and Google DeepMind. Recall, I've stated on the Q4 call that we exited the year in cloud specifically with more customer demand.",
+        "segment_id": 105,
+        "start_time": 2193.0666666666666,
+        "end_time": 2205.698321995465,
+        "duration_seconds": 12.631655328798388,
+        "actual_duration": 12.631655328798185,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2193.0666666666666,
+        "original_end_time": 2205.698321995465,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:01:45.225956",
+        "prompt_tokens": 404,
+        "completion_tokens": 44,
+        "total_tokens": 448,
+        "transcript_length": 207,
+        "transcript_word_count": 33,
+        "tokens_per_second": 35.46645220588179,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0105.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 105,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0106.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/105/audio/audio.wav?Expires=1790917754&Signature=UZS1IELzKgUm6CsdNz5OKmHAzvuuq0xIp8tow3MwlFxn~9OwjuSyKQDGW2aZRp9oHWQl9ZV4BKEzQRl-VaQvaQO96zXjBrre9wI4JdmGYPtv9pxu6UP5MJ8FBF73R-5b1g8fYnzVOF0hCesk0WQ9~NJ6hHPolqaPMhL07C-VWwbndWf5aTJRThgkUGnoo8NYiU1M8jhmKqDJGA5xe6Vs2ihZYH0uBVQjDw70Ppbi70iq5oc7Tmn6bqL8AtBzwA5w0k8iennQmJK4yOO300I8vK-8RNcEz29qNrdD0HOr89wUJ8cu7ZSVhGQ0ZML1g7SXxcMCwpUjl6kBJduBBIjPbg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1065004,
+        "transcript": "And that was the case this quarter as well. So we want to make sure we ramp up to support customer needs and customer demands. Having said that, we're investing in long-term and we're investing in",
+        "segment_id": 106,
+        "start_time": 2206.5110204081634,
+        "end_time": 2218.585396825397,
+        "duration_seconds": 12.074376417233452,
+        "actual_duration": 12.07437641723356,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2206.5110204081634,
+        "original_end_time": 2218.585396825397,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:01:47.302383",
+        "prompt_tokens": 404,
+        "completion_tokens": 43,
+        "total_tokens": 447,
+        "transcript_length": 196,
+        "transcript_word_count": 36,
+        "tokens_per_second": 37.02054537259649,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0106.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 106,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0107.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/106/audio/audio.wav?Expires=1790917754&Signature=Sm-R9eRICN4cGJyb44Pk99nGh09FIpY8V65Wt6h0~jt1iUxiighjr4frnmGh5ANlzBkg9KGIpFsjX89fLq~YiZUjM5-QrYPxOsZ9f5UwkadKzTdQZzkY3-DSHvcSanBrQfCrZEXxv8ewkfqvcRRFLo3t5EQJhXi3m6Knnj-GzZVgPC97LVaqn1FQ46NarmWQp4gOcnPsYXqzJW~rf-UTVfDdxExCGFtq5M-uVLg721kIpZwQNFxy6~uKuWlG~GuTRS-WYUQFGg06ghnOwvXV01Jq34aGu3PYMekS~MpfT5sFfChjpgVP4CgX0N~XJ0A23~DdWWLKx5I0hvMq9sTblA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 73772,
+        "transcript": "Essence of our business.",
+        "segment_id": 107,
+        "start_time": 2219.3864852607708,
+        "end_time": 2220.2224036281177,
+        "duration_seconds": 0.8359183673469488,
+        "actual_duration": 0.8359183673469388,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2219.3864852607708,
+        "original_end_time": 2220.2224036281177,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:01:48.694902",
+        "prompt_tokens": 404,
+        "completion_tokens": 7,
+        "total_tokens": 411,
+        "transcript_length": 24,
+        "transcript_word_count": 4,
+        "tokens_per_second": 491.6748046874941,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0107.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 107,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0108.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/107/audio/audio.wav?Expires=1790917754&Signature=LeF-HWXGWPmufNbjiaCgch1kP8GbAvznmP13CQn-dPmiQCKzxirsTIkOxPdyMbmWz7t6sgBHTlaR53Fx1vz0QGWa5tkUE1ewKHcZPMP2G5RHfkuWNBx9YyCYwFasFqre9FNKS-GWebmsOCw1Gsqv5iOwN3qxHRHTtNJ9I1wJWx5yMFUdEaa8HFbZjYqey8FCS57nLSMOi-vuq~g3zQg2PqUd0j3vvBOqX~JYhA3isfz2ro5nPR7hCwHONk-RoG19Se1HdMmIE13HqfIhR9QY0oZLjBfxusa4gazvPo0qOIT6UEnSNx8cKP22LW0LHp5~GLFBF9lcoVdWwYVeFP8MCg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 2646044,
+        "transcript": "And we want to do it in a responsible fashion. So you've seen us over the past couple of years, and we're continuing to do this, and you're seeing this in our results, drive efficiency and productivity throughout the business. And, you know, we've announced things such as consolidation of teams, which helps not just with cost, but with velocity and speed. We're able to get things to market faster. So that's one of the areas we're focused on. You heard from Sundar the last couple of calls on just the rapid pace of innovation we're bringing to the marketplace.",
+        "segment_id": 108,
+        "start_time": 2220.5474829931973,
+        "end_time": 2250.5474829931973,
+        "duration_seconds": 30.0,
+        "actual_duration": 30.0,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2220.5474829931973,
+        "original_end_time": 2250.5474829931973,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:01:52.169228",
+        "prompt_tokens": 404,
+        "completion_tokens": 123,
+        "total_tokens": 527,
+        "transcript_length": 564,
+        "transcript_word_count": 100,
+        "tokens_per_second": 17.566666666666666,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0108.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 108,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0109.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/108/audio/audio.wav?Expires=1790917754&Signature=RqbvyU1z8APDd2xM4~a8Cnm7eIJ5o9BYpAs7Tb6wA37hjLZXLfXWsLZuSQnZlpbg5hxLFuZOibDGV~JivyZcysZ5TLDXoFUVncdtQDkv64bechFj2BfxWR~MYmqPT9BjogpIdmm1M5Az7e3g2v5QGnoPrRhZ2N2iBY1qWCz3080naKa4F5F8EebxdNf9eAOdEPcE3QcKxFtwCmLhLL31WPnMm4A2iaChpQ8QrEEi9bpH9zwKiJLMBXSPQ-s2Olq5hExM~pgr6Dm9e6lgq~HANZynsaRzO6231-EWU21K3UN2XQ0~P0vfWTiCzB7fOLyksd5RMKR0i4NgpRn7ugQ4aA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1761324,
+        "transcript": "What's happening outside the organization as well as inside, but invest appropriately to drive both the short-term growth as well as the long-term growth. Thank you. Thank you. Our next question comes from Ross Sandler from Barclays. Your line is now open.",
+        "segment_id": 109,
+        "start_time": 2263.922358276644,
+        "end_time": 2283.8915192743766,
+        "duration_seconds": 19.969160997732615,
+        "actual_duration": 19.969160997732427,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2263.922358276644,
+        "original_end_time": 2283.8915192743766,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:01:54.370335",
+        "prompt_tokens": 404,
+        "completion_tokens": 54,
+        "total_tokens": 458,
+        "transcript_length": 256,
+        "transcript_word_count": 42,
+        "tokens_per_second": 22.93536518895327,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0109.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 109,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0110.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/109/audio/audio.wav?Expires=1790917754&Signature=v7Ybgw8BRHJdqf7uz2c6Bvv~jTM~3cZtHM-68F54RymdvOezJSoR-wTQ14vtm-qRcLwYZGrDH46hGWLDSlXXiRa1XtUUZpJC2Qdc~xnFg4Gq4dOQXMFZZP~-EOQzf9b60bjb--1pQeuttuMzPa3afG2HURmX-r6nSKCVpDmUBhB0aghJvzaCOdmWpZeol162pmMNG1-ktI1W0o6kY2DeiBeHrrsRABvFVTNnn-CFvkOn2aPTaVSsw45i6pa9W9LjO0s-vNpl-vfqufMaMonHtcO0L8P1n6q5x9DnXQ4Blh2Fe5sLT7jDJnF1KeFApWHlxotez4rZXmD99uBrYzyN~A__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 2436140,
+        "transcript": "Thanks. One for Sundar, one for Philip. Sundar, it was disclosed this week in the trial that's going on that Gemini has 35 million DAUs. And just curious, that number obviously trails ChatGPT by a pretty wide margin. Could you talk about the strategy to get that DAU figure much higher that you guys are deploying? And then, Philip.",
+        "segment_id": 110,
+        "start_time": 2284.8435374149662,
+        "end_time": 2312.4636734693877,
+        "duration_seconds": 27.620136054421437,
+        "actual_duration": 27.620136054421767,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2284.8435374149662,
+        "original_end_time": 2312.4636734693877,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:01:57.188307",
+        "prompt_tokens": 404,
+        "completion_tokens": 79,
+        "total_tokens": 483,
+        "transcript_length": 332,
+        "transcript_word_count": 59,
+        "tokens_per_second": 17.487241882093528,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0110.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 110,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0111.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/110/audio/audio.wav?Expires=1790917754&Signature=WQNti~GLmS2EQpjAOoXXo1omenMiyMnTYnMZCeZYqPmPk6VCjhtgjqmt-Z-eTDt3S7JuS1yTmAEIb3XJm-XSV5rV7gbJI1opRI5axZ30QxBpQueYxHX6q1RLdE78AEmFGBYKk9zJ99UJ7Y-2oxyTEUGPvmDsI85nRjtQHG-xrOKaGrMqMgt5NyZ5HCUZF2-xS~MKVmc2EQcF0NLJXqWYjBXNBBXzLddW1VSHCey5bZbKfLpD5xBLU38WWwQqRehBxNdN2OtsHLUDmOeBGUPEOctsiGCvLhLhdN9lFXESV-2dSyCkpEqvPQEuQLiyzQ8mudlPv6HTscydFImMoVsNGg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1937454,
+        "transcript": "Do you hear what you're seeing on the brand advertising side at YouTube in 1Q and into early 2Q? Are brands holding up relatively well, like direct response, or are they starting to react to some of these macro jitters that we're all experiencing? Any thoughts there? Thank you very much.",
+        "segment_id": 111,
+        "start_time": 2313.404081632653,
+        "end_time": 2335.370158730159,
+        "duration_seconds": 21.96607709750606,
+        "actual_duration": 21.96609977324263,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2313.404081632653,
+        "original_end_time": 2335.370158730159,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:01:59.727987",
+        "prompt_tokens": 404,
+        "completion_tokens": 67,
+        "total_tokens": 471,
+        "transcript_length": 288,
+        "transcript_word_count": 51,
+        "tokens_per_second": 21.442153640327316,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0111.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 111,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0112.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/111/audio/audio.wav?Expires=1790917754&Signature=nfxu65T40Yjb66VTRROc1PjVeuvgJx1dbR6Ei8j6laH6D3cNYuE7XOk-B6jm3ZZ~lUK6H4WII69PQ4G~e8-b2WOexd7L~G-nKraW2hvMOQvzDt3vx63CVro9i9APogr94TSKBTlPkxG3a3~D9SjinMcoIRYgBBVHlZF0Twbroeu~3uVZ7rX0B4rhBYS~~OaNwlscbkmX1HDQmBT8OFjwDwrH9uBvT-KLaMXkxiC6jvWh5L~wn5jUV-T8kVuktymFXW1LvW-rD0392jx3eI9l7uCdtsLXCF0cVJsimtRU8i1khXd3s5vDv3TXpW8nUSEQmY0CDNdhNSbDVtXVPlAgAg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1099818,
+        "transcript": "I think I touched upon this to Eric's question as well, but, you know, we are definitely, I think, you know, there's been a lot of momentum in terms of product features we've been introducing and, you know, we are.",
+        "segment_id": 112,
+        "start_time": 2336.206077097506,
+        "end_time": 2348.675192743764,
+        "duration_seconds": 12.46911564625816,
+        "actual_duration": 12.469092970521542,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2336.206077097506,
+        "original_end_time": 2348.675192743764,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:01.953442",
+        "prompt_tokens": 404,
+        "completion_tokens": 53,
+        "total_tokens": 457,
+        "transcript_length": 214,
+        "transcript_word_count": 40,
+        "tokens_per_second": 36.65055429469375,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0112.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 112,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0113.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/112/audio/audio.wav?Expires=1790917754&Signature=goRXV3kgLwmlP-1eOl13OLuXq23qNkzpJuxPHiFkOdjeIDBOYZWXMKnMECnwBcHPpaflWGaNCKndk6GoPFWoDNPdvnKbdZtBqClAHmieswoF4SCTGn29P5daq1wOhb9oR9Tjhl2zYEPYrVPGwJdT0XkuE-Z3bbkuN7ylgFSY4NIX5Q0pt4hsaFJHWcEWJtCzy3-Unbe-XmplSXRwOBwudbTvONFy1cgr5637s6MPju4EIFIVfG3iBuJDY99gOTfOACV~s8FqB1ON7DkMhTNukF~8YBdTEuxQ~1KuMSxrF6gr2yWU98tuFD~eG9C6-IMZxsmUUTMGHcC99pItBDYDmQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 511020,
+        "transcript": "reception, including increased adoption and usage based on those features. So, I think",
+        "segment_id": 113,
+        "start_time": 2349.7084807256238,
+        "end_time": 2355.501859410431,
+        "duration_seconds": 5.793378684807067,
+        "actual_duration": 5.793378684807256,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2349.7084807256238,
+        "original_end_time": 2355.501859410431,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:03.561041",
+        "prompt_tokens": 404,
+        "completion_tokens": 18,
+        "total_tokens": 422,
+        "transcript_length": 86,
+        "transcript_word_count": 13,
+        "tokens_per_second": 72.8417773046116,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0113.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 113,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0114.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/113/audio/audio.wav?Expires=1790917754&Signature=rhYXPwvNpFBt76M5mDAaQz~QNeKUYFaaJstTgh8XpSx4eYzq2R8GZrYfCuqB8ffU-UZvUn8RkxcAwd7ks0-mxev8z0mdWadJz5k3tCqP1KtzON2HPt1LrbFkbEKUKQu0s66NveJyNmdujg136dzXWSqpNd7X6SpKSh4NdqQvAPIgUrbKFWhVcAC-DmAJzNg3uKQtW8Z1TV4GAyuvt1lO3l9uuwxHcBwi6yQTkANmKpQJLEoBMpTA9BPNEuhpiDKc3g0cmZzODUuBA6c7DACCqyNxN01VgM5EjTNwlDSAo0TUCk56xdfELr3ek3eFdhvS-uxLJpoTHXhEgwdxgl-52w__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1072170,
+        "transcript": "By the way, also direct response had a very solid growth in Q1. Brand advertisers really enjoyed cultural moments we had, like Coachella, for example, or March Madness. We had strong contributions.",
+        "segment_id": 114,
+        "start_time": 2400.711111111111,
+        "end_time": 2412.8667573696143,
+        "duration_seconds": 12.155646258503111,
+        "actual_duration": 12.15562358276644,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2400.711111111111,
+        "original_end_time": 2412.8667573696143,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:05.594277",
+        "prompt_tokens": 404,
+        "completion_tokens": 45,
+        "total_tokens": 449,
+        "transcript_length": 197,
+        "transcript_word_count": 32,
+        "tokens_per_second": 36.93756715616134,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0114.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 114,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0115.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/114/audio/audio.wav?Expires=1790917754&Signature=MGeZqgMOwhqKlrjE4yzzEEWC9EdkDT8bhh4a1vXFULw~ovS22R~YcY4L2JtxeD-ps~5u7UjgI1DERnwpjlXeI-i7CCle-Pivo3z0o4-IEcxCHZzGfqWUjuTZRP4wWY8qWgYTjOg9KGkJcMsi6343RyHyf06T0DGvGbAQz2comJfjZ1aYjv5mQ6dQ2UUT5F03NiqXzkD5WoNmgdj9yCLar4QQWPJ4znYfUq7kEKjTIkDTM9-XcFaVFNdyjb2RHitwikFsWIb1-whZrev7Dwyt03C3657-H7wpF-2C1yKsKwdKjY~Ly9-O0TEwtCIXtvRE4PF54Xxbir-Msgg8NzUk0A__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1133612,
+        "transcript": "finance and retail verticals in Q1, on the side as well. The operating metrics for YouTube were strong in Q1. Watch time growth remains robust, particularly in key monetization opportunity areas, such as short",
+        "segment_id": 115,
+        "start_time": 2413.6910657596372,
+        "end_time": 2426.5433106575965,
+        "duration_seconds": 12.852244897959281,
+        "actual_duration": 12.852244897959183,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2413.6910657596372,
+        "original_end_time": 2426.5433106575965,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:07.738939",
+        "prompt_tokens": 404,
+        "completion_tokens": 46,
+        "total_tokens": 450,
+        "transcript_length": 209,
+        "transcript_word_count": 34,
+        "tokens_per_second": 35.01333841463388,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0115.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 115,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0116.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/115/audio/audio.wav?Expires=1790917754&Signature=RBfwQUP4Dsax7R6eD3julIpQ-qd6eymyWND2v4dN4tDPhKWW5dakI~H6Rkj6I1hIQHTxPCoLGVGsNSfft9zdEWv7yYYCjZ2co2wFL~Ohq-m-LUd7s5XBuyReHSvSCZM8sDHKJEqD0h8KcYZXZAnd-Iqb8tLFtjew52L9hlpIaBpKwl4y4QE4eOSPLAUqapt8Sc1BySIJJC612C8wG3U8hrvxeczT7Q270M-XAeWW9ks5u8jZ6~ruutD4LC-e5UNbFjMYRGaSYbN~aA9fjWsMwrckrd-Ro~aCldeJGFt6xPKfyC4IeyGe8~30SgV3DxubupVzuUbZBJXDWbtDfPpadQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1100844,
+        "transcript": "It's also, by the way, nice to see the strong position of our creators, who obviously benefit from the brand piece, which gives us a lot of confidence when we look at it more closely. And on the Q2 side,",
+        "segment_id": 116,
+        "start_time": 2427.6810884353745,
+        "end_time": 2440.161814058957,
+        "duration_seconds": 12.480725623582657,
+        "actual_duration": 12.480725623582767,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2427.6810884353745,
+        "original_end_time": 2440.161814058957,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:09.829939",
+        "prompt_tokens": 404,
+        "completion_tokens": 49,
+        "total_tokens": 453,
+        "transcript_length": 203,
+        "transcript_word_count": 40,
+        "tokens_per_second": 36.29596656976776,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0116.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 116,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0117.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/116/audio/audio.wav?Expires=1790917754&Signature=uSq1-3se4xVSD2yLwOL12OFjOLKJVGB~Os3lkKt2xeqJY88FQeJ~pFVGGrcqndUmN9z4Nvm3f4a2tnrz8H-sSsuQpsxATN87PiGGCDnIaw5OM6LYHv9WW4dDsmUxoF5LPlZiUjYTFzHSUiyhcyECiaTX0jiXZ~QBQoK9uE-KKRsNI4zYrmPAvIxnQ-od6Zqzv4jN~JcUkjPQhs~kemW-E~PYG4MZUtqebfXdHM9KWSyT8HH2FQX95ymLnaguiDXoeECAp1~vZlaDiKmVrvTNAnQTfxTd9t6Q4puoPbuzoR9GcRDn2v7GGxY6ipBLotcqOxSHlMbsfrTp74OXKj-N9g__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1739820,
+        "transcript": "Thank you. Your next question is from Mark. Your line is now open. Great. Thanks for taking my questions. Sundar, appreciate the color on Gemini deployment across kind of the 15 products with with half a billion users or more.",
+        "segment_id": 117,
+        "start_time": 2441.009342403628,
+        "end_time": 2460.734693877551,
+        "duration_seconds": 19.72535147392273,
+        "actual_duration": 19.725351473922903,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2441.009342403628,
+        "original_end_time": 2460.734693877551,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:11.982557",
+        "prompt_tokens": 404,
+        "completion_tokens": 51,
+        "total_tokens": 455,
+        "transcript_length": 226,
+        "transcript_word_count": 40,
+        "tokens_per_second": 23.066762617716506,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0117.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 117,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0118.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/117/audio/audio.wav?Expires=1790917754&Signature=tv2Uwu5skeUJ84tT-8NDmBvzqd-Bh0ZtxR9WLp~5I66z92bvRJX~sN8AOEhLRT~FAl29bjcSkVvVy5wFxxRNJjf~sUHMQsC92o8qNEZo59e3Ri~YE8uEWHUVrSSeHZCQ~HVad00HLS3FHmXh2ZCNoyLyGHjgBh-na99Bi74Tc9OoFHHv6RrYW24u8pdTi1CCYBWfHWxFPFZN0ujyaHv9MFJPR-BlBNT3CsTxoVVdgYUqstYLNlX697tdbdHmhGyWFA094yyz8wh~s25TkrF3tpv2QPwBYqMqIEkF1tiN75x-3vqP7NPG67~-R9X2XCMcSS0ECpOgFrYAvRhZrXPBIA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1695788,
+        "transcript": "Here, more about where you're seeing the most usage and deployment of Gen AI internally at Google, uh, perhaps whether the capabilities, are they in a place today in terms of either supplementing or augmenting the workforce? Uh, and then just to build on that earlier AI mode type questions, appreciate AI mode has, you know, 2x longer queries than traditional search.",
+        "segment_id": 118,
+        "start_time": 2461.570612244898,
+        "end_time": 2480.7967346938776,
+        "duration_seconds": 19.226122448979822,
+        "actual_duration": 19.22612244897959,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2461.570612244898,
+        "original_end_time": 2480.7967346938776,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:14.715828",
+        "prompt_tokens": 404,
+        "completion_tokens": 78,
+        "total_tokens": 482,
+        "transcript_length": 368,
+        "transcript_word_count": 62,
+        "tokens_per_second": 25.070057744564917,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0118.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 118,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0119.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/118/audio/audio.wav?Expires=1790917754&Signature=SZeAMk1bmx8Kg~Nc4~UmSnFBUkR3JH7qjn9ggaHzDoojvabpWldSGizkMv94-~4vUeMuwIvRQtg9Pyre6lJxN8zme00ccA8nNrYNnsbGvey1Rgib2p90QvfYEp7-bgZjcsmBQ--4Kjn3cWeql90a68U2PPP2SnhBAKQkzhg5FXSf745iACOJfoSy5Gnn-aMIN7Y4eX33g7PUQo1sPbyMTBSalEGaJ6DAAGcTtUdpMaE-~xv584T20mf8mvzZu5nQFbBrcfVqq0bV~LCQQONJS4Mbp0dgB0j89kBB-lkFWS~pXAeY~8uqgFXuILC6yr~a6A6XWNS2b8COYq0KMuC9fg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1734700,
+        "transcript": "Look, on internally, I mean, this has been, you know, extraordinary amount of focus and excitement, both because I think, you know, we are, you know, the early.",
+        "segment_id": 119,
+        "start_time": 2481.655873015873,
+        "end_time": 2501.3231746031747,
+        "duration_seconds": 19.66730158730161,
+        "actual_duration": 19.667301587301587,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2481.655873015873,
+        "original_end_time": 2501.3231746031747,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:16.679752",
+        "prompt_tokens": 404,
+        "completion_tokens": 40,
+        "total_tokens": 444,
+        "transcript_length": 160,
+        "transcript_word_count": 28,
+        "tokens_per_second": 22.575542355371876,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0119.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 119,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0120.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/119/audio/audio.wav?Expires=1790917754&Signature=agjxamnmmh~9AknNGfuCKQi80~wzRxBPqOXhfSvTV3oSvAci3qOw3AdyOl080zQy8cEJ17d5HYxYfTmdMHd2MMHn7uLYbz4lulGXjGtN0AvIKWoD-SP5rae0lrpUwTyUlceaqrV303tIgG2Y24zKbQBwC3RIQJYA8eOumWMonH1zh6kslWOuNlKd~x5qalx-7VHjvM~CBQO6rgf8eQWshga5XD3jlK~pm4f32p4ZBsoJHkaY6vVCz5-mhqzhbALgj6RpzIvTiH5NGZDUHQYUOxlWe026qhGO0slqd849rgI2XW6qoKKlr3RwPHynewJwEGdFTMFrG6pDcIYFt4CJ0w__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 2212908,
+        "transcript": "transformative in nature, and I think this still feels like early days and long ways to go. Obviously, I had mentioned a few months ago, you know, in terms of how we are using AI for coding. We are continuing to make a lot of progress there in terms of, you know, people using coding suggestions. I think the last time I had said the number was like 25% of code that's checked in, uh, involves people accepting.",
+        "segment_id": 120,
+        "start_time": 2502.26358276644,
+        "end_time": 2527.3527437641724,
+        "duration_seconds": 25.089160997732506,
+        "actual_duration": 25.089160997732428,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2502.26358276644,
+        "original_end_time": 2527.3527437641724,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:22.970371",
+        "prompt_tokens": 404,
+        "completion_tokens": 96,
+        "total_tokens": 500,
+        "transcript_length": 411,
+        "transcript_word_count": 78,
+        "tokens_per_second": 19.928924687644546,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0120.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 120,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0121.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/120/audio/audio.wav?Expires=1790917754&Signature=UQfZpqNWt6RjxC~~9nFkj7hcmW2WZ5aP1ZdVeNFcK37XNhAobBiPvApo2Ol1vrZo7Xzc1tmqSQJw7TJeu-d2aJlE9uiywIbroZQezg0swkB-bilsCbSLmMH4BdeuKkJ6Z8e3LOLMy1Ul~Hd0YmSZ-zWPOpRw9xCFkT7W3moEp8tixZFeMGQFB9MDjnvf1pwzc9HOh--z6E4Cv7lNiuf3B3F7dS5fLrbosMzDbfCR7dARySuQlCmExFa9g1t~blXRkAIPv5C2UsDQp9NMxY~pvC2BbCizabZocuBKcnnJZWeqDdlrf3JoKxVb66OlDX3KObHI~gPU5jGAXkIT-sVjaQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1334316,
+        "transcript": "Solutions, that number is well over 30% now. But more importantly, we have deployed more deeper flows, and particularly with the newer models, I think, you know, we are working on early agentic workflows and",
+        "segment_id": 121,
+        "start_time": 2528.2467120181404,
+        "end_time": 2543.374512471655,
+        "duration_seconds": 15.127800453514737,
+        "actual_duration": 15.12780045351474,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2528.2467120181404,
+        "original_end_time": 2543.374512471655,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:26.654714",
+        "prompt_tokens": 404,
+        "completion_tokens": 49,
+        "total_tokens": 453,
+        "transcript_length": 207,
+        "transcript_word_count": 35,
+        "tokens_per_second": 29.944868812356106,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0121.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 121,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0122.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/121/audio/audio.wav?Expires=1790917754&Signature=f-7L0LJME9acEgqwHNtBXyWfZhpOJzVw-fkgjOL2qI5er68LvY4dq6rs1g237rU0L5JJKIdrRKWjB9Y~NaAnGPFgGzG9simHPlyPbWFD7aSR7w0uaogH2YI2QCb~nqJg5ecHiEwadxVSRKq6rZnO36zzWoX4qaCvNYcR03F8zM26OWfecyseY1Zwozl4SE3NyKDJQszJilUdvTex1UzAR3u4hWKTk9L8KjD1x5rZN8gJ14B565zfa8xNFf0uiirVyywlkWNPRCs52vvyKwv3ZxTbLr6Y1bHon-m8~3rl7LvDcAejpsKKeXzemx8NE-VUb2AwRl-irxEPrfaCAKoEIg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 78894,
+        "transcript": "Can get those coding",
+        "segment_id": 122,
+        "start_time": 2544.1988208616776,
+        "end_time": 2545.092789115646,
+        "duration_seconds": 0.8939682539685236,
+        "actual_duration": 0.8939909297052154,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2544.1988208616776,
+        "original_end_time": 2545.092789115646,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:28.024258",
+        "prompt_tokens": 404,
+        "completion_tokens": 5,
+        "total_tokens": 409,
+        "transcript_length": 20,
+        "transcript_word_count": 4,
+        "tokens_per_second": 457.5106534089529,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0122.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 122,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0123.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/122/audio/audio.wav?Expires=1790917754&Signature=pL-OexUGeihudPd-zXbmSv2ODgh7TcYdy0227q26AJB4FM42E233Mxm1qztslJAtZsKBC~SYZfyj6E9zNSvsHoNbyCyJf0Z3ow8OG7tqrIcLKEMBmYYtUucZZll8d~Spo1~7U7vhc1EvUgbrjPun3yyNFTZLobl7HUvtlBbAIOtpaBvcmLJQlQbOrmHFSqSEwS3izzczr8wBT70m-jFGJ0KWHFm6qeT8goTfoxxrFgIfC1DZpbRJ~WnCnp4dMny1GTvC-c1TUo7VG8Gzv5J9h08HY12Uglxb0i~QxGIUAjBYf89qZQkZGqahRrCoT0i7Adr3KAYTMMUnqC8XTw9VPw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 73772,
+        "transcript": "Be much deeper.",
+        "segment_id": 123,
+        "start_time": 2545.9054875283446,
+        "end_time": 2546.7414058956915,
+        "duration_seconds": 0.8359183673469488,
+        "actual_duration": 0.8359183673469388,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2545.9054875283446,
+        "original_end_time": 2546.7414058956915,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:29.315748",
+        "prompt_tokens": 404,
+        "completion_tokens": 5,
+        "total_tokens": 409,
+        "transcript_length": 15,
+        "transcript_word_count": 3,
+        "tokens_per_second": 489.28222656249415,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0123.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 123,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0124.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/123/audio/audio.wav?Expires=1790917754&Signature=bg6OPf7s5BE2xY0-bvA7zH6jb6bX2wit6~nmEa0ynJCh4FZG1YsLxUU4W71ihVjWrozhc5V6wvT90xVhy2ErNjht4oCTcx62cKRlhjL1uRm4KRNXsWxBk91cxSeo9VtFIyBL7GjcupUnbsVdCG1gLU4jjRU~ZwxHXAYF~opckD8Tlf7kAhosuFifO7Eoz9L6wswJ9OpfYZKntBeADML2a04L9S7LvKwnDNqAQxF3XnWtA6t7YbOcTqjMzkPZuJEj-iv7h4YpXuYtlIWIf2HA2ZQrPnqqEdQOppOPS3gTyETx7HuB4z6SeygdqQY2MclMsfbcpX-9QyiYibmviTRElg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1078316,
+        "transcript": "It's been one of our most positive launches and, but, you know, it's been clear people have wanted even more of it. And so, uh, you know, with AI mode, we are bringing the, our state of the art",
+        "segment_id": 124,
+        "start_time": 2595.3059410430837,
+        "end_time": 2607.531247165533,
+        "duration_seconds": 12.225306122449183,
+        "actual_duration": 12.225306122448979,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2595.3059410430837,
+        "original_end_time": 2607.531247165533,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:31.551582",
+        "prompt_tokens": 404,
+        "completion_tokens": 51,
+        "total_tokens": 455,
+        "transcript_length": 193,
+        "transcript_word_count": 39,
+        "tokens_per_second": 37.217881944443825,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0124.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 124,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0125.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/124/audio/audio.wav?Expires=1790917754&Signature=Fz2argwSYJXgXrqoSPHu-bu4QH7hvow6APN~MDOe9ZFvw3BVE97-gHsAXqOVcSZyYnZUE4S-VmsxHoZ8D-K7GSRUVOkuxzjmxYXE~oYhUGxHy59rQTzUGJ6ps5XxF6PrXDwBLPx-YNxwg3hNIavnYWdgM3cSnqV2FY2E5S~37Deh3jzqW5pOdtMpUQVfr6nY0JF~ZJZiDW-AKr5WJJOODLR1I6-vVtkwNZx61m2hHmPikOseDDDrdB8GVqWYPTtpMpQboK~A3evj3zJR99m8Sb1U8yb7giCdWifl9bP3ni1-32bPBtveJOtK04SViOV-LHmSbJ2IPu~dlLZOQkDfBA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1061932,
+        "transcript": "into search and, you know, I mentioned people typing in longer queries. There's a lot more complex, nuanced questions. People are following through more.",
+        "segment_id": 125,
+        "start_time": 2608.4948752834466,
+        "end_time": 2620.5344217687075,
+        "duration_seconds": 12.039546485260871,
+        "actual_duration": 12.039546485260772,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2608.4948752834466,
+        "original_end_time": 2620.5344217687075,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:33.377400",
+        "prompt_tokens": 404,
+        "completion_tokens": 33,
+        "total_tokens": 437,
+        "transcript_length": 153,
+        "transcript_word_count": 24,
+        "tokens_per_second": 36.29704827627742,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0125.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 125,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0126.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/125/audio/audio.wav?Expires=1790917754&Signature=UB~8rP~nCBS9Z~TncrotHWVc6yS-TQjaoYjjK~h~4o7-MT~LtaiwnN-PekkMnR97OUdMK9mmKYrZ89ASVLK9p2~XnVtVNVqhcgWHjvHkeQgD-iwFr~KuqQ1KO9zG2FNAkBl6--yI0kRTXeOlKxyTnHTNR9~Ud5vXMGn03Chsn5IucvORMaauTBvgHXKcz5byA8kWGNs~cytdfTwNGasJi3cU71i5VzQyZUyp0FIizYx7rRu9MBqmB1j7nvn0y-ta96EdbxnVLE14fxjImlPTjIT~rrwMHQ6~AxnHkyvBrzZCJ9tAcemQCYY06ym9gT5-x1uLmWESED7aci4~SlJoGA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 2316332,
+        "transcript": "Thank you. Your next question is from Mark Mahaney from Evercore. Your line is now open. Okay, thanks. One for Anand and one for Sundar. Anand, getting back to a question I think that Doug was asking earlier on, you just put up, you know, record high or multi-year record high margins for both Google services and for Google Cloud. You talked",
+        "segment_id": 126,
+        "start_time": 2649.338775510204,
+        "end_time": 2675.600544217687,
+        "duration_seconds": 26.261768707483043,
+        "actual_duration": 26.261768707482993,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2649.338775510204,
+        "original_end_time": 2675.600544217687,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:36.202685",
+        "prompt_tokens": 404,
+        "completion_tokens": 80,
+        "total_tokens": 484,
+        "transcript_length": 342,
+        "transcript_word_count": 62,
+        "tokens_per_second": 18.429832559681664,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0126.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 126,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0127.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/126/audio/audio.wav?Expires=1790917754&Signature=c2FCClmyl7gpIYSGE2sbOJ3B2NOwo24Q8HGxmKmpGvfj~MgSiJY5G8Lgiz~P4ErBVcnc3DzsGTYAUB~LhWhZMk3HLqCVkT7rzyqStmdbpp-Shm-N9xzPu0LqM0EeWbatGOJIugQYZQHH5HeLsu~0OPF0~yYbXRp1QNNSj~bdynh0VenThvwnvCG4xCo0e7~U8xC1MQXYt16Lt74HTuQ3SyVaCvZ8s~ciroObjpVsEg9cTq9YyP4teodmDBgSzMDelfyAQmCXZvMfERuz~t0EjdK4O5IYhJEz7TRJr6dDC3AKRChhOckiNVy8fMVCEsvp7r-5LsGFZZ7zGXpyrvasIQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1098796,
+        "transcript": "operation expenses accelerating rapidly, you know, throughout the year because of all the investments you've you've already, uh, you know, you'd you'd warned people about. Um, do you, uh, back in the September quarter, you seemed relatively confident that you had enough leverage",
+        "segment_id": 127,
+        "start_time": 2676.4016326530614,
+        "end_time": 2688.8591383219955,
+        "duration_seconds": 12.457505668934118,
+        "actual_duration": 12.45750566893424,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2676.4016326530614,
+        "original_end_time": 2688.8591383219955,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:38.455592",
+        "prompt_tokens": 404,
+        "completion_tokens": 58,
+        "total_tokens": 462,
+        "transcript_length": 279,
+        "transcript_word_count": 43,
+        "tokens_per_second": 37.08607583877017,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0127.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 127,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0128.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/127/audio/audio.wav?Expires=1790917754&Signature=pRSP6wpGlHCIk-Z1renI2MRZDwNp2JHlOCs5xfkwEXwKriptVIFXv22K3mTxOMXK9tDtvblS0H-x4K~B7aB23gkacHz70GOdvfDPChrW3YfyZUjMGGL-FxsG~4sUtkzr5nNfQnfdxF3Eq8sIAqhYLN~Ow-NR5T-A3SfBbxwKRltNLhG94ylUkUkwUdE3xfG6cQ2RMqwrm0uUrvxBhDLEgaeQ1Kl89mNUudInzg5giUL9tiX-gPVF8-RCQdmFf3kNIWncYQ-Jkm04eFyVkmOLj8Z4sQ53GodSw8tRRI9WslqgDYGMhXjTomLfe6y-lUae0h0-ttT5vP9LxyW7bc5TsA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1851436,
+        "transcript": "offset, you know, kind of rising infrastructure costs. Is that still your, you know, six months later, is that still your view that you've got enough levers that even with the rising infrastructure costs, you can, there's enough in there to kind of counterbalance that. And then just briefly on Waymo, the, the, the, continues to rise aggressively, the numbers, Sundar. The long-term,",
+        "segment_id": 128,
+        "start_time": 2689.6950566893424,
+        "end_time": 2710.68589569161,
+        "duration_seconds": 20.99083900226742,
+        "actual_duration": 20.990839002267574,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2689.6950566893424,
+        "original_end_time": 2710.68589569161,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:41.236890",
+        "prompt_tokens": 404,
+        "completion_tokens": 89,
+        "total_tokens": 493,
+        "transcript_length": 384,
+        "transcript_word_count": 63,
+        "tokens_per_second": 23.48643615182539,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0128.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 128,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0129.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/128/audio/audio.wav?Expires=1790917754&Signature=NXkzLwG42R3AH23-GYG630M-QEbZEHxhLKKydPxWffFyXSa~LA4nqq250KG0pxY~7PNjSXUHme4Pcwx49yWCmVmHqyecQMFrjriNz416RruQmfOl61lgvB7RHx~f8RV3elO6DAAE-hRFpHBoW1FJLVJE7~ivZax26oUyTlkvQ99lgc-n77UGwsokTtuxkUG438pUlOACSVF1rTTFvtlVgPuErXeK994gbr5lNG~5YIRfeLINqBSmwe1ecC1gLImN~6B93zVohgZJrvB2DPhA~nx8a4Rib14bl5JE~cLtlUb6GfOedhowkC-hMlxsZKIcYNhC8oWl-OtTCrsQ9y4nZg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1058860,
+        "transcript": "For Waymo, is there a reason to make a decision on that soon, or have you already made a decision on whether this is a long-term licensing model, or you really want to run this as a standalone ride-sharing, delivery, autonomous vehicle business?",
+        "segment_id": 129,
+        "start_time": 2711.486984126984,
+        "end_time": 2723.491700680272,
+        "duration_seconds": 12.004716553287835,
+        "actual_duration": 12.004716553287983,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2711.486984126984,
+        "original_end_time": 2723.491700680272,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:43.397555",
+        "prompt_tokens": 404,
+        "completion_tokens": 53,
+        "total_tokens": 457,
+        "transcript_length": 245,
+        "transcript_word_count": 43,
+        "tokens_per_second": 38.06837070841439,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0129.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 129,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0130.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/129/audio/audio.wav?Expires=1790917754&Signature=ST6BDFOMle4cRm37riYZ5LmKgmxs5xWu3Cw3xhJBZRnXXQbpUPoInBJpLuOlkG6GpsQADs6cB4Ypc4AJsaz5g68wmDX4KX9OvVtqnXaw3eOKRFA9dS9bm0nKTh5DYwm5QnLInxG4V41GIvohhZhh7Ge90IU25Y0dDcXdgRlOzcEB3wKlWMt-nEhF1py5kgH1jgIFfafzEqd7lq968VVZ9dvp7K5hD29RIn0H5wzUIbW~QV5dVdowfJ6yN66d0ABJNE60daAaM235C~nFx81s1t8oRq7G89ByVLxSCs3ehJH33T~OAFmd3U~LwBc7apLVQN2Bg-R7orWS03wC9XFZNQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1853484,
+        "transcript": "sustainability and what levers do we have and do we still have levers to pull? First, I think every organization can always push a little further. I don't view productivity goals or efficiency as an episodic, kind of project-based effort, but rather a continuous effort that when you get to a certain place, you push a little further. Having said that,",
+        "segment_id": 130,
+        "start_time": 2728.5304308390023,
+        "end_time": 2749.5444897959183,
+        "duration_seconds": 21.01405895691596,
+        "actual_duration": 21.0140589569161,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2728.5304308390023,
+        "original_end_time": 2749.5444897959183,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:45.986512",
+        "prompt_tokens": 404,
+        "completion_tokens": 77,
+        "total_tokens": 481,
+        "transcript_length": 352,
+        "transcript_word_count": 61,
+        "tokens_per_second": 22.889438017955953,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0130.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 130,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0131.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/130/audio/audio.wav?Expires=1790917754&Signature=ItDYBm1LbB1fJBrWBW0mClC0dtXX6FhAO5MxzMWQ6W8CeqfC8jBaSL14CphhRKDJrx7JI2s9QBWMwJcqkP3i-EcS-eGFec48wjp89FxOHQ4OeUK7Lb9CDg79KGbgoPr-Yv0gAs5egOCzaRSOdKaS6UZQLtwdJd0v5GEKAHRhgvEEqQM-Z2mEZUp7gwYN9-LkKf67yNIsSA6Xa-8qVez6C212pfOqYVdQWPoUKinWhbp~cI4eVZGUkPIzMfkZ4CfwGt4Sftgnb0MXZA3Xoe9TvY68HyeFjBPOdtM3el3IpS02GA3SATCSSr6aqZCZKa1HRbTX7e1BzE4Ho5sYX1IHWw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1131566,
+        "transcript": "We have significant investments we're making across the organization, and we have been making them for the past several quarters. And we've been able to do it because we were able to find efficiency to fund those investments across the organization.",
+        "segment_id": 131,
+        "start_time": 2750.4848979591834,
+        "end_time": 2763.3139229024946,
+        "duration_seconds": 12.829024943311197,
+        "actual_duration": 12.82904761904762,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2750.4848979591834,
+        "original_end_time": 2763.3139229024946,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:48.074774",
+        "prompt_tokens": 404,
+        "completion_tokens": 47,
+        "total_tokens": 451,
+        "transcript_length": 249,
+        "transcript_word_count": 41,
+        "tokens_per_second": 35.15465921945554,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0131.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 131,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0132.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/131/audio/audio.wav?Expires=1790917754&Signature=OVHS5ofSIZhP5gKFheHBCC3dawCuz4O3K4veLj9bq0hHiPMFIsTSvmXxprYN5ZozHd54nq3m-C~qF~dkacRuUIxIsZqmk1lq~XF7HNBXhGiUr~HMFCZ1sBj5xf1HQUYX1J5UwNr5kkR88LE3nOfpTdNso8Sh6SC4qx1mg5ehklV~Ur6VCNKAHI6d~ob1uIuM5BBQweiyS9b7bl-pyl-gZE9dFDVIqXPXRyQEphE7SJovaYtY~TxWJFFeHiwo2YFlVkVcuGLfVfpdekWRjZ80DKEwHX-44MeqFNpv-IVwNC9J28E~2VXyTUWmly-mscsLpsSWp11FiilE61ndVp7MYA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 779308,
+        "transcript": "So, while we're trying to offset as much of the headwind associated with",
+        "segment_id": 132,
+        "start_time": 2764.126621315193,
+        "end_time": 2772.961814058957,
+        "duration_seconds": 8.835192743763855,
+        "actual_duration": 8.835192743764173,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2764.126621315193,
+        "original_end_time": 2772.961814058957,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:49.631676",
+        "prompt_tokens": 404,
+        "completion_tokens": 17,
+        "total_tokens": 421,
+        "transcript_length": 72,
+        "transcript_word_count": 13,
+        "tokens_per_second": 47.65034699408844,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0132.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 132,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0133.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/132/audio/audio.wav?Expires=1790917754&Signature=H5uVYMZ4RU7e1vQ0nflw~TBRhvw1gpnERyYVpFqjLHwy0HFR4LN~dJVxZhRqqMJaLnoZeakNlFKbs7FZN0fjodEGWt--X3rOWkKDxVQ8SJrGkJ~YPpdRtrAYdcQ3eZguDsiDPyNu7b~IcGj1Li2w-wmw7f-jvevMDhHD-Si3QQWM5pAEXdKPMd-fmn39jhaxvhcnVAuCTbMEvaH1nsr0pqGfGBas4CG9xKX4Hz5wwTHXg6qDBbJAa4WZ5aQbxuyyYcuJUHHmYRfS-NYjKdbu64U~oJSmua8EVucLMUBaLdH7YocD9mYhqCr-qzWm1j9NoUxC1hr7JhuI~joOFt3POg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1067052,
+        "transcript": "And kind of an AI first Google across several of our functions to help us manage a larger scope of work using our AI, AI agents and AI tools. So they're mentioned we did deliver.",
+        "segment_id": 133,
+        "start_time": 2798.689523809524,
+        "end_time": 2810.787120181406,
+        "duration_seconds": 12.097596371881991,
+        "actual_duration": 12.097596371882085,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2798.689523809524,
+        "original_end_time": 2810.787120181406,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:51.664803",
+        "prompt_tokens": 404,
+        "completion_tokens": 40,
+        "total_tokens": 444,
+        "transcript_length": 178,
+        "transcript_word_count": 35,
+        "tokens_per_second": 36.701505518234455,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0133.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 133,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0134.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/133/audio/audio.wav?Expires=1790917754&Signature=qs4t9KkUV2~HgbsN-ew8C-Jt8h3xp74x~35yUj3HwqxS7p4LupA6gnDSfGwj9OdVXu~Id~QRGEJY6TDUb38pyKFNUt5ak~vuPbynSiwxgkvXuGtPumWcjtVIB~kzKaPyd2ZeORJacQnOnzn5xPCaUuI6H9ZWvS5RYbIgQYMgfzVG9oKk1HLqkdv4K18xHubWZJ7vt0oIKMk78RyVYbPVb9TxwNz5yVq67rUnvj6qcDU3OzgOfHAbmwXwPr-EohaROr0A4798ZQNH-2ndOgFVd3hqJrPqBx~SgkMIDc78PA5Dg7TrKOtwIgDk1LegRPHhIHu3Cy0Ev4Ur0srT0gxskw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 2073644,
+        "transcript": "In preparation for the earnings call, we're leveraging across several functions. So there are opportunities, but there are also great opportunities for investment, and we want to make sure that we make room for to make these investments to drive long-term growth and ensure we have a very resilient long-term growth profile for the company. Uh, and Mark, thanks. I think, I think this is probably the first question.",
+        "segment_id": 134,
+        "start_time": 2811.054149659864,
+        "end_time": 2834.5643537414967,
+        "duration_seconds": 23.510204081632764,
+        "actual_duration": 23.510204081632654,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2811.054149659864,
+        "original_end_time": 2834.5643537414967,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:54.430417",
+        "prompt_tokens": 404,
+        "completion_tokens": 84,
+        "total_tokens": 488,
+        "transcript_length": 416,
+        "transcript_word_count": 69,
+        "tokens_per_second": 20.756944444444347,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0134.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 134,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0135.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/134/audio/audio.wav?Expires=1790917754&Signature=l5O4RR34RZzunlhPrhhEC5yg-JHQysEeV-YO4n7ZllPoXliK31bElusr5H~ZE3FvkJIxKVXTd6Xi~5Dfz5WgpbRZ83gPxhJViLD4KRx0o64JVf-HNWrHX6X9WRsgFlqBVL3hLxX0L2qnGCUn5qR3l5TQEPvMxsChYTzg0HAIEZwncx~~Hv4SQugzIGwwrUoJm1uzsqDyzN0UdhStUOSMHsQtZJXPiYxhtcBq3ZRCwy8n0LpBd0SAslBotbTsDfr9wHJ8ELlXaXdB-oBox42IwTH5t33rb6JaOp5gHfowAJF6YRbMByAWehW7~oqPu8Sqr5I7cmQYGaAl3SSdFCfQRQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 2541612,
+        "transcript": "Thanks call on Waymo. So thank you. And I think it's a sign of its progress. Look, you know, the thing that excites me is I think we've been laser focused and will continue to be on building the world's best driver. And I think, I think, I think doing that well, uh, you know, really gives you a variety of, uh, optionality in business models across geographies, etc. It'll also require a successful ecosystem of partners.",
+        "segment_id": 135,
+        "start_time": 2835.4002721088436,
+        "end_time": 2864.2162358276646,
+        "duration_seconds": 28.815963718820967,
+        "actual_duration": 28.81596371882086,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2835.4002721088436,
+        "original_end_time": 2864.2162358276646,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:57.581171",
+        "prompt_tokens": 404,
+        "completion_tokens": 102,
+        "total_tokens": 506,
+        "transcript_length": 422,
+        "transcript_word_count": 77,
+        "tokens_per_second": 17.55971117042701,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0135.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 135,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0136.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/135/audio/audio.wav?Expires=1790917754&Signature=L-K67vt8-L8H7jMa8s~dlW~uwyLhWw1gVIeylY7uyEKhbUGyr1BK3immN1V5giQJmJbXG8pzInxRgn~TWSUcYrxmSt0MNJQpcA6ZrupiJ2VJBSBnBVfhlNY1IQ6bvFr3-Fqn-3vqgdpP54u56bHtVRvQ94ovankB7LFFnjMBGXJGki4SMFYN5YVOq2fNnACvZhrJkuQ2SZbmnNHnsD69PoaNDFx~gdGSGc2WcGnDqaNZ5rVhIS9tdheMBJhKU8p8SZmlU7Zo6PmpB~Gf~aOvvh2lgoH7r~jp-Axqzl-26WKxxjHpVQQ1e5cqD7iFLJp0FwXA4SC~vuwIxme~Dc3hzQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 267308,
+        "transcript": "You know, we can't possibly do it all ourselves.",
+        "segment_id": 136,
+        "start_time": 2865.504943310658,
+        "end_time": 2868.53514739229,
+        "duration_seconds": 3.0302040816322915,
+        "actual_duration": 3.030204081632653,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2865.504943310658,
+        "original_end_time": 2868.53514739229,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:02:59.009699",
+        "prompt_tokens": 404,
+        "completion_tokens": 13,
+        "total_tokens": 417,
+        "transcript_length": 48,
+        "transcript_word_count": 9,
+        "tokens_per_second": 137.6144935344992,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0136.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 136,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0137.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/136/audio/audio.wav?Expires=1790917754&Signature=u~SHCsG8gcoJi7VZacqxzx9c9Pnx8kP2yjR7JBQ7-uVG13z2iM7DkFzsTjBcK-t9ek5XNpLuaSfpma4RSrORmLW4kqGiw-4O0~TNZkl1ByQrMVGvMY-eAica4eT8IOSuHxDJNSPOFIqzDzH9hcF1MFntMfYttfIODnYEjtOEuvwD7FXkKdmeycumVAYflfAcmIfXy11du87YB6SaV-x6XTts92gKSpJnMrF4yNq9eiD2RUDNmiuixR3HGLcW7hnMMTb5qdR4OaQ3MXmYyYyk5Lx978qnQYhTSYEh3q9STUMQgzehFAf4cnvd2qBNf4zub3ZP73Y-qLfpbsGXH3BdoQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1094702,
+        "transcript": "You have a number of AI-powered search interfaces, uh, including three most prominently, AI overviews, AI mode, and Gemini. In the future, should we think of these as distinct experiences?",
+        "segment_id": 137,
+        "start_time": 2949.003900226757,
+        "end_time": 2961.4149659863947,
+        "duration_seconds": 12.411065759637495,
+        "actual_duration": 12.41108843537415,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2949.003900226757,
+        "original_end_time": 2961.4149659863947,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:03:00.953616",
+        "prompt_tokens": 404,
+        "completion_tokens": 41,
+        "total_tokens": 445,
+        "transcript_length": 188,
+        "transcript_word_count": 30,
+        "tokens_per_second": 35.855099684283495,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0137.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 137,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0138.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/137/audio/audio.wav?Expires=1790917754&Signature=vojO6gXpMJ3xiHQYBklO1J-9FiGMttrsmebyAL1B8ybRvmhV4KrXpVKbqPDSm2vo8OYQl65aQOCmRoz7OXYAbsHfD7sH2HDbbxuRK2~8wXNYSTpPALq1mqgID6INAWmGKlHt75P2WHM62TBa1~-IusOMLijE-J1opytXtE60tMNTZq3hzYRjLtuW6ZoBzqb5A5fPNGV~mxYlVyMlCGZEpZ6OVICywB9yn2m~2J71rpchnw-FEBpuyHF-937qnI9AxPFL2FNeIeX7yDCF49saeht2VdZLJgRdVDP6aoMbSvwxk211F~N7H12sLyPY9MAiOA6zo3RG8EkWA~5w3C1y8w__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 2610220,
+        "transcript": "Will be long-lasting or more experimental now, and Google will eventually focus on one approach going forward? And the second one is more on the financial side. You continue to experience very healthy gross margin expansion. We see the tack, sure, but you also talked about the offsetting depreciation expense. Can you talk about beyond those two buckets, where you're seeing the",
+        "segment_id": 138,
+        "start_time": 2962.239274376417,
+        "end_time": 2991.833106575964,
+        "duration_seconds": 29.593832199546796,
+        "actual_duration": 29.593832199546487,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2962.239274376417,
+        "original_end_time": 2991.833106575964,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:03:03.747702",
+        "prompt_tokens": 404,
+        "completion_tokens": 75,
+        "total_tokens": 479,
+        "transcript_length": 379,
+        "transcript_word_count": 62,
+        "tokens_per_second": 16.185805095135176,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0138.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 138,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0139.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/138/audio/audio.wav?Expires=1790917754&Signature=wnqNB-UirP2Tggzn0L2TNPB8zHKbaTw7EYRr7iRqupR9klNy73pbdoFxmpl-2YJ1ZHbp78Ciioc4LLcML47vBFNXbwO1VOKWZPOuLZ~dsdca4Qq~J00n4vxQmphbS4O8zw1mtldGjtaJW1upaniaAClCNAXea71rSuMG8LlOEvj-BjE8ikQ5xUdwTB6NditCxfjEs~MAoDdKLD2AgiWJersNZofYQyzxi9ubFvaWD0WPryd4fvHYmvg-PQAVV~zct~rcrb81etOWgALP~Qy-Q~JzxC0El0GnBjmTdxecm83ramNC0PBSC9C1gloS62hW3otuZ1PLIhqJb6dmhUJcAg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1095724,
+        "transcript": "on the COGS line and driving that gross margin expansion, and maybe even how we should be thinking about that going forward. Thank you. Okay, now, maybe on AI-powered search and",
+        "segment_id": 139,
+        "start_time": 2992.773514739229,
+        "end_time": 3005.1961904761906,
+        "duration_seconds": 12.422675736961537,
+        "actual_duration": 12.422675736961452,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 2992.773514739229,
+        "original_end_time": 3005.1961904761906,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:03:05.798108",
+        "prompt_tokens": 404,
+        "completion_tokens": 39,
+        "total_tokens": 443,
+        "transcript_length": 177,
+        "transcript_word_count": 31,
+        "tokens_per_second": 35.660594334111906,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0139.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 139,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0140.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/139/audio/audio.wav?Expires=1790917754&Signature=vm8WGZLIXibx7~1RVZmW-Coe4HvwgWb7mjxRr-E-nzhsRdC4frmUBLabTXJLxrZ779wBXjBXuHpLaemLNpT61lkgzrUPULtHLZDIc~c3S3lhbgCXyuA1LKkRZ4kmPG5ptLOJ5s0D4swrdvF62N-LYYi7A60ZKQaQ5roiQRuXcNedA97dxP~TUWFj-D8djtE7fxEB-PfCKJy1PqduKdKes78y3w514Qh2396YukzKehNCn7GXX7gQ83QQ-xagIhjqNvAeR9OuUZ80FVdSPT7YREw8-vuTi63hkNER-Dd76GWqFdZX38bnseg527XyzIQz6QSQzOC7jlu0eztoWuM2pA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 74796,
+        "transcript": "See my experiences.",
+        "segment_id": 140,
+        "start_time": 3005.997278911565,
+        "end_time": 3006.844807256236,
+        "duration_seconds": 0.8475283446709909,
+        "actual_duration": 0.8475283446712019,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 3005.997278911565,
+        "original_end_time": 3006.844807256236,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:03:07.105356",
+        "prompt_tokens": 404,
+        "completion_tokens": 5,
+        "total_tokens": 409,
+        "transcript_length": 19,
+        "transcript_word_count": 3,
+        "tokens_per_second": 482.57973030833926,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0140.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 140,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0141.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/140/audio/audio.wav?Expires=1790917754&Signature=GiOH4nPQ8OYHm4NN0FtEoKoq1f4DXSOQViKyl6iMSWPHFiGQTNEU4a2ePznMloGs49kTcZn2L4M9H4TbfzUOOaSsaKpwbiNBufzXs3q5tPY3eU9vlaG27tfVNn7x2NNJ4O20OW0xgp0T6Osoq87w3Z5DvRhz5Vneo8mj60CBTO4K-z~lG294UgatURTDJ-r9~89e--gqv8jzsO3bC9HGwEXeznfQhK6CnQcarsv-ppNaRwSkzI4E9eKETrABdq7QEIgeTHn3gRS1msQMGSCq-7I64uzZHwQ~MiFv9i2k9209sG2t9FL~zH5SO2ktoERpSCasgXIRK~76sMc2dRgRWg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 67628,
+        "transcript": "\"Can Gemini.\"",
+        "segment_id": 141,
+        "start_time": 3007.6691156462584,
+        "end_time": 3008.4353741496598,
+        "duration_seconds": 0.7662585034013318,
+        "actual_duration": 0.7662585034013606,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 3007.6691156462584,
+        "original_end_time": 3008.4353741496598,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:03:08.416185",
+        "prompt_tokens": 404,
+        "completion_tokens": 5,
+        "total_tokens": 409,
+        "transcript_length": 13,
+        "transcript_word_count": 2,
+        "tokens_per_second": 533.7624289772928,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0141.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 141,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0142.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/141/audio/audio.wav?Expires=1790917754&Signature=feDG8iQ~9vkKx7LQZhNJhn~M1SgXmcugj15o6A3-n0nIRInSLZiINxNh6b75GG3eDK8Pl3BMf0I20Gl2QXKsKmecMTliwPJIkrpD-Qrb1QisuYx~CDDINf~ON45ktSH~lnEqMHorvWnmKUgZjbAFg6~PlCtiA-iF~8WUo6UhLevUiWdbdrRDxKleAec81gJWmolR2vR0HTmkl9eai7~mhUd6NLL5ZjOKvzbBJQ8QfcGsDUq0~09ehyaNN-tfo63o49UbzSEpDSiGapgd1Wvwa6jPmVmlO0gESBjzpoKlQDaEpDrwuyNZnfP6R2Yt~5aP0B9a0CFdDI5trHHVCXYFWA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 473132,
+        "transcript": "which will make sense in the context of AI overviews. So I think, I think will flow through to our user base.",
+        "segment_id": 142,
+        "start_time": 3049.5695238095236,
+        "end_time": 3054.9333333333334,
+        "duration_seconds": 5.363809523809778,
+        "actual_duration": 5.363809523809524,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 3049.5695238095236,
+        "original_end_time": 3054.9333333333334,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:03:10.202265",
+        "prompt_tokens": 404,
+        "completion_tokens": 27,
+        "total_tokens": 431,
+        "transcript_length": 109,
+        "transcript_word_count": 22,
+        "tokens_per_second": 80.35333806817802,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0142.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 142,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0143.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/142/audio/audio.wav?Expires=1790917754&Signature=VQH8viZJt6UDygLYI9vgGQcs1HBpzcsbeauG~ir~k8x0ROE0R5CH593suw8pvhMbBvaHhPEtZT1HMlqwIcZqXPScqcGeM7THmxd5qw8ECUFCYDkxjt5W0tKtHMCyDZftAZgBS9yxOHoI0WfQEMONbQfjLx8ZN07O3olq0nXVLZXM9wDQdZgI889dZpaBUyxbQxzQVig0wK~fpjQ0DzRa~v~4WGvcaOHlsfqNNd5NI9vEAYjDBcdi~bnMRvncTa7FWCAsO6efiysUQ7X9gK2Th0XJv0jFi2eiDqY1b9u5m0Vt-Qa6hDQk3rkjoHeZlicGML5fwGqVv9TmO-nZbGN-kA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1184812,
+        "transcript": "And I've mentioned this in the prepared remarks, you've seen improvement in tech that's really driven by the change in revenue mix, with a continued search growth.",
+        "segment_id": 143,
+        "start_time": 3087.52253968254,
+        "end_time": 3100.955283446712,
+        "duration_seconds": 13.4327437641723,
+        "actual_duration": 13.432743764172336,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 3087.52253968254,
+        "original_end_time": 3100.955283446712,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:03:12.169327",
+        "prompt_tokens": 404,
+        "completion_tokens": 34,
+        "total_tokens": 438,
+        "transcript_length": 163,
+        "transcript_word_count": 27,
+        "tokens_per_second": 32.6068901253242,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0143.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 143,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0144.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/143/audio/audio.wav?Expires=1790917754&Signature=PiAq0pbUWOE187HbKcQLoG778u8-14rV~jpPFkTwmNoofA6RkJUR1hinW6OwLI1Cv6Itdv6LWbHLnG5BZzCWoCEiOyalvuSqVhHZA0-T3D2xrvSOr4ydHSlI3~9hsKxk07O2Cp~6KALggVx0UlnK97He0hPoBaryRKoJ~rEzG4QWlgEuGELVOvbL9yGTNdrx9vDyGzU33MmTut5WmkX01wUzkw-kb0thL1tRum1gxIsDid7LLjYy0i3FK69v3Xd8yLsyJHKlgW2~z3O5FWkjmZx7nNS0bTmnuBUevA1RywelCz9tTCbmdda4b-ji6uds5cT1Ymrad9dbUwgd~u26Nw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 72748,
+        "transcript": "Revenue declines.",
+        "segment_id": 144,
+        "start_time": 3101.791201814059,
+        "end_time": 3102.6155102040816,
+        "duration_seconds": 0.8243083900224519,
+        "actual_duration": 0.8243083900226758,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 3101.791201814059,
+        "original_end_time": 3102.6155102040816,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:03:13.513747",
+        "prompt_tokens": 404,
+        "completion_tokens": 5,
+        "total_tokens": 409,
+        "transcript_length": 17,
+        "transcript_word_count": 2,
+        "tokens_per_second": 496.17352552830374,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0144.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 144,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0145.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/144/audio/audio.wav?Expires=1790917754&Signature=mL-8HAS0-~6pETU1qwnObCxDXg1426BHwnm7-QC2iO7aji~rlingOaD6RDW~teKX7Md8MUKVK~LRjGcctsb7VQepujYALBJ7HdpY3RafjBgRFbilK-g6oEwHb2uRmaXu-oxrE~7ovKEVcP1ZV7OJZBsUL3MW~DbQAwFXVsD7grypO6gDVAqeAClMT8iVQ~Mi9dgL6tt4S0TsCPbYXBL8MkI~6CTsl4OIOfcPNCiL82LUmR0m3-9fgXpW5CT8z5zPRojkuLsto6WkRXjlig~BlrzTWlWtx82qU4kX-3767f5ABndpV-yJ8HvMU6EhnIZZFd3ZT0N6SEynVuzKK7KagQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 73772,
+        "transcript": "It has a much higher",
+        "segment_id": 145,
+        "start_time": 3103.50947845805,
+        "end_time": 3104.345396825397,
+        "duration_seconds": 0.8359183673469488,
+        "actual_duration": 0.8359183673469388,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 3103.50947845805,
+        "original_end_time": 3104.345396825397,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:03:14.834067",
+        "prompt_tokens": 404,
+        "completion_tokens": 6,
+        "total_tokens": 410,
+        "transcript_length": 20,
+        "transcript_word_count": 5,
+        "tokens_per_second": 490.47851562499415,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0145.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 145,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0146.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/145/audio/audio.wav?Expires=1790917754&Signature=Jj4it~0TwnLZeRHNbwy0KpCYsVV4h7hmDYUZwK6jKvvbK9b1TZjSpG6FrvhugUSRzHTYCXeuqjwPGpcxzdUIR3P6gcMswSRXd316GI3Hkd6Fs7xpV3XQf7jVjrJmVbFt2n~KNFwITxvPrQopcv-6lGCeZFHbkWQItZDf2LJvjPPLmr1rhS-6P080tiloz1AWnbwCMB3b2aY~IPbRihFIplfkVHPOB1k~CNbO6BymUNO42lL3O16VbQhJ~EgORzSqGLgFn3OOpJF996UpOKLrgTRBg1UW12o97YrTRoO4HC7BcjGzDmdT8m9guwDScnEbqJKgjG2D5mGgJfA10cLSYA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 2646044,
+        "transcript": "So that mix is helping us from a gross margin perspective. So think about that as well. Now, we do have depreciation for technical infrastructure hits in two places, primarily in two places in the income statement. One is in other costs of sales and the rest is in R&D. So it is in that line item that's impacting costs of sales. Now, we've had some efficiencies there and I did mention the improvement in our overall cost of",
+        "segment_id": 146,
+        "start_time": 3104.5427664399094,
+        "end_time": 3134.5427664399094,
+        "duration_seconds": 30.0,
+        "actual_duration": 30.0,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 3104.5427664399094,
+        "original_end_time": 3134.5427664399094,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:03:17.854148",
+        "prompt_tokens": 404,
+        "completion_tokens": 92,
+        "total_tokens": 496,
+        "transcript_length": 425,
+        "transcript_word_count": 79,
+        "tokens_per_second": 16.533333333333335,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0146.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 146,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0147.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/146/audio/audio.wav?Expires=1790917754&Signature=VD-NLG2yWUL2dTa2byUnS0egmosznp0dECXkwnkcooMa5i2E3NJB9eLtYQVhYo6qYVHj5yl8pLRxrNWw~RKKT-Hf33ZjJWVBlGZY3f9fKu0TfS6-XsXM6wCVmUZhoWmN6ipB0DCFk1MXOV1gTO9Mk80yX3IrfiFFqORc1ZkA1bLaNTgSEuJNaqeETBj8tuUXpzLb6vLOUplkhXUM9NtiMFeBIGX~XNEVXblMZDOMacKo14x-6U0~f~NU8gnqkgMCr33bylkP0fZR2KD8-vfoieIf-oy7alrVlsRkTq~6JXU8C7z~MHmxPs2oaMoxy7gAc6745nAPjDImQ6TjxlumQw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 2163756,
+        "transcript": "In the coming quarters, recall we have, we said approximately $75 billion in CapEx, which is up from 55 or just over 50 billion last year. So there is, there's expected to be quite a significant increase in depreciation. Thank you. And our last question comes from Ron Josie from Citi. Your line is now open.",
+        "segment_id": 147,
+        "start_time": 3149.8332879818595,
+        "end_time": 3174.365170068027,
+        "duration_seconds": 24.53188208616757,
+        "actual_duration": 24.5318820861678,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 3149.8332879818595,
+        "original_end_time": 3174.365170068027,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:03:20.548121",
+        "prompt_tokens": 404,
+        "completion_tokens": 77,
+        "total_tokens": 481,
+        "transcript_length": 308,
+        "transcript_word_count": 56,
+        "tokens_per_second": 19.60713810340766,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0147.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 147,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0148.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/147/audio/audio.wav?Expires=1790917754&Signature=v-SxlaBhNLhMV8iutpcAzDWluTmQzKWE0lCWqod2Ihl0d-6Kx0yKiuEnszFj7v-d-tavLZYRVhnAOXCnbcM5lLQKYUJHpnCT3jd0NK7toghTGBcF28N19nkZj-HDSH3a2tC6Snay-tRatiSvk7~V6c2BbUHJy8QzjOXgaou4Wf40Nx7~DOhPhDtLMKLLUPLbRez~SQEU74UgU05~-8UmOjllFLcq4aFwfkCvhmZNpPDsj97Kg-GZPpSF6j9G2rhln3JlWun06Q2RlXkxwtjBDDWK-2Fs9zn7-Ilgn6eoWXXRLC8y7ILrzJiu0nyEJZj1i06n6uOpOQ4ELmhZ-XHtUA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1349676,
+        "transcript": "taking the question. Philip, I wanted to touch a little bit more on your comments around direct response and YouTube. I think it's been improving and been a driver over the past couple of quarters. I'd love to hear more just about what's driving that. Is that the demand gen and integration with PMAX or are users perhaps more",
+        "segment_id": 148,
+        "start_time": 3175.1662585034014,
+        "end_time": 3190.46820861678,
+        "duration_seconds": 15.301950113378552,
+        "actual_duration": 15.301950113378684,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 3175.1662585034014,
+        "original_end_time": 3190.46820861678,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:03:23.109510",
+        "prompt_tokens": 404,
+        "completion_tokens": 71,
+        "total_tokens": 475,
+        "transcript_length": 326,
+        "transcript_word_count": 59,
+        "tokens_per_second": 31.04179509673775,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0148.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 148,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0149.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/148/audio/audio.wav?Expires=1790917754&Signature=DgB3jW7eGkti~XTs5mg3S5PG28WV5lcO80gBn-rk~I3XuUP7BuPJiW7HuTLV7W-rW9kfZmTYozh6NwX-d3mMwmioWgff2~SVctMqMN3-hsnEKiiCUM9QRDfAFTuNaMq25COA9AQFCM~3QQqgl0cZiT~lMJWb038erK91DChuVhUUZXJZUsqbuiu19uH27AXU2Rt3dbGRONRZbD3QczGnjSmzPC6oxYxHbL7OqZoD-35Km~5ZSv~nuxjHukR8jtFPyvv96-RYp7ArFUhGk20JH16grF2Fe7yDT22ylOJIl1-BRRY37sG-w2BwONmV6fFHvJZDDOBYUAk3JYSnaN2utg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1075244,
+        "transcript": "Yeah, I think there's a lot of different factors. Mostly, we continue to help our customers really using our AI-powered tools.",
+        "segment_id": 149,
+        "start_time": 3191.4318367346937,
+        "end_time": 3203.6223129251703,
+        "duration_seconds": 12.190476190476602,
+        "actual_duration": 12.19047619047619,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 3191.4318367346937,
+        "original_end_time": 3203.6223129251703,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:03:24.944860",
+        "prompt_tokens": 404,
+        "completion_tokens": 29,
+        "total_tokens": 433,
+        "transcript_length": 126,
+        "transcript_word_count": 21,
+        "tokens_per_second": 35.5195312499988,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0149.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 149,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0150.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/149/audio/audio.wav?Expires=1790917754&Signature=Dz7sLSyR66jlVELgToflR5C82ff5OusCnMrbh0SvByDtSO9LBS00D8PkkYOgyJymvg6W-ZsjNT3oSmNImJjbtj0snCGPWBC1YnWqwvuxE2jQBNYzdOP4C3FFq4Ix1Lm4Ytxq46gqq9zPDbgsnlFG2-BJjzvQa4xYAGvegp4XjVFNfyjAuDWyrDBv-a~K1Y43mucPeeuwgXPmpQOIJyaIJFHl5rv-4Xj6tPWbZHoUUyhCbjCYUrgJPXKrVPENxRdush8wp515k3RnqS0d~SlwS3~rBUhxVS8scQ7OF4oijTcbmkcu56otTgdIQDoN43N7-bnPUhYEWRMkQhRW~1riMQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1067052,
+        "transcript": "To drive performance, that's a very big one. As I mentioned before, we're also happy with the progress we're seeing on shorts and closing the monetization gap here to",
+        "segment_id": 150,
+        "start_time": 3204.423401360544,
+        "end_time": 3216.520997732426,
+        "duration_seconds": 12.097596371881991,
+        "actual_duration": 12.097596371882085,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 3204.423401360544,
+        "original_end_time": 3216.520997732426,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:03:26.891906",
+        "prompt_tokens": 404,
+        "completion_tokens": 37,
+        "total_tokens": 441,
+        "transcript_length": 166,
+        "transcript_word_count": 29,
+        "tokens_per_second": 36.45352237284098,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0150.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 150,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0151.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/150/audio/audio.wav?Expires=1790917754&Signature=qNjK3vUq3jvXi-qTPgDw65WGVAwfdY3ivWBvdoZsZkj65~npMO8G1o8bNC-GRiORbBlnHiohbgvo5LKbl~UXiN6~TKOBQvUOmMra-Ri-kiKEfw9T9SfGJBF1YXYPobN1l5xv0sP6btf2LXsjoYULCA9JLgR-N0swMZMGJR4k5RH8ZNAQkwRNZX5ATdQiuUFsAgfKJ8B0CQkRXnrfaYA2kCYyYI2j6WkFpK3oK89kMNyEN7xXnzK3Mc7YiL57Eilcs1UeiJy9BBmPdMdJ17tK94VWS3E1pERfripvWEGd1ZPbhN1p7FoQ6JGmx8LZQkx8FJ6-01~bv~SCQhv9vInGow__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 366636,
+        "transcript": "which is actually really nice to see, especially in the US, so we're very happy with that.",
+        "segment_id": 151,
+        "start_time": 3217.3220861678005,
+        "end_time": 3221.4784580498867,
+        "duration_seconds": 4.156371882086205,
+        "actual_duration": 4.156371882086168,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 3217.3220861678005,
+        "original_end_time": 3221.4784580498867,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:03:28.514577",
+        "prompt_tokens": 404,
+        "completion_tokens": 22,
+        "total_tokens": 426,
+        "transcript_length": 90,
+        "transcript_word_count": 17,
+        "tokens_per_second": 102.4932349860326,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0151.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 151,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0152.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/151/audio/audio.wav?Expires=1790917754&Signature=lHxkXMq4g4QDNV6Ugt5MiXOvZ4M3-qukNw1-VXJnbnwZuo0MGCHqVeugaIIPCrlJBNrbZHOJNEQrFdZnNZsa9ByBN2iIDwID5h5P~aNALBx~MecbJSxz-WnFBQL-H9egbWb8ZMKo1VmFS1K~B-W19EM2mvQnV3H2m6cyhdGDMESAw2wc9HpFbNZRYdYBvb29w8LgN9GkH-yCntF3HZX80D76N0rFJN03UZTUtXav4vJL7xTVYqMWwnex08q1SseghEktXBaak5HqgiBAlyiucZJ~Wb7sew3UI-rhUwWZBlc53AUrGS1Snfve79mdf4HQxo1xUr39Os69-1BjThJV2Q__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1096748,
+        "transcript": "And that concludes our question and answer session for today. I would like to turn the conference back over to Jim Freeland for any further remarks. Thanks, everyone, for joining us today. We look forward to speaking with you again.",
+        "segment_id": 152,
+        "start_time": 3251.6295691609976,
+        "end_time": 3264.0638548752836,
+        "duration_seconds": 12.434285714286034,
+        "actual_duration": 12.434285714285714,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 3251.6295691609976,
+        "original_end_time": 3264.0638548752836,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:03:30.681918",
+        "prompt_tokens": 404,
+        "completion_tokens": 48,
+        "total_tokens": 452,
+        "transcript_length": 232,
+        "transcript_word_count": 40,
+        "tokens_per_second": 36.35110294117553,
+        "has_context_overlap": false,
+        "segment_position": "middle",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0152.wav"
+      },
+      "truncated_cells": []
+    },
+    {
+      "row_idx": 152,
+      "row": {
+        "wav_filename": "Alphabet_2025_Q1_Earnings_Call_segment_0153.wav",
+        "audio": [
+          {
+            "src": "https://datasets-server.huggingface.co/cached-assets/finosfoundation/EarningsCallTranscript/--/12635462a03328b5f68e49bc3e1038d98acd5081/--/default/train/152/audio/audio.wav?Expires=1790917754&Signature=DGFyjB3nSIvwjGEYs7E8bBPgmxUHXuDedl-Z55UeJapipnZDJe7RVGXN4VE5vg5QwabKcNUvFbCLg6~f91F08lXb-4xr7DvsR5jgS-GvvxGhxMx42Z6P-X5Phth53IuOFXQn9IJOJV5dRaVOkmcbSIYBW0PSCoU9baeSGHBxEQZdcU~AbQDY7CLwya2qXBWjy-m58jKbm2EryKkSmYM~XEabQW1oBDoaS13-0lGYv7Rw8RCbaIUNkzHFEfQUx-jbtzpmkVJo9ZYrTSaxHjMN1BpGzZtGHfQ4bzM3wCTd8~VcnCja7QTqJahnDoxtJ8TTU1K4Ih6XNK4NawFP5QKnVA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+            "type": "audio/wav"
+          }
+        ],
+        "wav_filesize": 1216556,
+        "transcript": "2025 call. Thank you and have a good evening. Thank you, everyone. This concludes today's conference call. Thank you for participating. You may now disconnect.",
+        "segment_id": 153,
+        "start_time": 3264.864943310658,
+        "end_time": 3278.657596371882,
+        "duration_seconds": 13.792653061223973,
+        "actual_duration": 13.79265306122449,
+        "original_filename": "Alphabet_2025_Q1_Earnings_Call.mp3",
+        "original_start_time": 3264.864943310658,
+        "original_end_time": 3278.657596371882,
+        "transcription_model": "voxtral-small-24b-2507",
+        "transcription_timestamp": "2025-10-12T17:03:32.591244",
+        "prompt_tokens": 404,
+        "completion_tokens": 37,
+        "total_tokens": 441,
+        "transcript_length": 159,
+        "transcript_word_count": 25,
+        "tokens_per_second": 31.973544034092107,
+        "has_context_overlap": false,
+        "segment_position": "end",
+        "source_wav_file": "Alphabet_2025_Q1_Earnings_Call_segment_0153.wav"
+      },
+      "truncated_cells": []
+    }
+  ],
+  "num_rows_total": 153,
+  "num_rows_per_page": 100,
+  "partial": false
+}

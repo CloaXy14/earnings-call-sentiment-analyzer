@@ -1,0 +1,807 @@
+{
+ "version": "1.0.0",
+ "project": {
+  "name": "earnings-call-sentiment-analyzer",
+  "languages": [
+   "python"
+  ],
+  "frameworks": [
+   "PyTorch",
+   "Hugging Face Transformers",
+   "pandas",
+   "scikit-learn",
+   "statsmodels",
+   "Streamlit",
+   "Plotly",
+   "Pydantic"
+  ],
+  "description": "Turns earnings-call transcripts and SEC filings into sentiment features, tests them with a −5 to +10 day event study, and converts them into cost-aware long/short signals shown in a Streamlit dashboard.",
+  "analyzedAt": "2026-10-01T18:21:15Z",
+  "gitCommitHash": "none"
+ },
+ "nodes": [
+  {
+   "id": "domain:text-acquisition",
+   "type": "domain",
+   "name": "Earnings text acquisition",
+   "summary": "Getting the words management said, with exact timing and licensing respected.",
+   "tags": [
+    "domain"
+   ],
+   "complexity": "moderate",
+   "domainMeta": {
+    "entities": [
+     "Document",
+     "Section",
+     "Utterance"
+    ],
+    "businessRules": [
+     "Only licensed transcripts; no scraping of sites that forbid it",
+     "SEC requests declare an identity and stay under 10 per second",
+     "Call time and text availability are recorded separately"
+    ],
+    "crossDomainInteractions": [
+     "Documents with timing feed the sentiment analysis."
+    ]
+   }
+  },
+  {
+   "id": "flow:collect-documents",
+   "type": "flow",
+   "name": "Collect documents for an earnings event",
+   "summary": "Load licensed transcripts → Parse speakers and Q&A → Fetch SEC earnings releases → Classify call timing → Store documents.",
+   "tags": [
+    "flow"
+   ],
+   "complexity": "moderate",
+   "domainMeta": {
+    "entryPoint": "python -m ecsa.pipeline ingest",
+    "entryType": "cli"
+   }
+  },
+  {
+   "id": "step:collect-documents:load-licensed-transcripts",
+   "type": "step",
+   "name": "Load licensed transcripts",
+   "summary": "Read JSON/CSV/TXT files from data/raw/transcripts/.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/data/transcripts.py"
+  },
+  {
+   "id": "step:collect-documents:parse-speakers-and-q-a",
+   "type": "step",
+   "name": "Parse speakers and Q&A",
+   "summary": "Split into speaker turns, mark prepared remarks vs Q&A, tag roles.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/data/transcripts.py"
+  },
+  {
+   "id": "step:collect-documents:fetch-sec-earnings-releases",
+   "type": "step",
+   "name": "Fetch SEC earnings releases",
+   "summary": "Optional: 8-K Item 2.02 EX-99 exhibits and MD&A from EDGAR.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/data/edgar.py"
+  },
+  {
+   "id": "step:collect-documents:classify-call-timing",
+   "type": "step",
+   "name": "Classify call timing",
+   "summary": "Before open, during, after close, or unknown.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/data/transcripts.py"
+  },
+  {
+   "id": "step:collect-documents:store-documents",
+   "type": "step",
+   "name": "Store documents",
+   "summary": "Save validated documents to Parquet.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/storage.py"
+  },
+  {
+   "id": "flow:collect-prices",
+   "type": "flow",
+   "name": "Collect daily prices",
+   "summary": "Download or load bars → Validate and compute returns.",
+   "tags": [
+    "flow"
+   ],
+   "complexity": "moderate",
+   "domainMeta": {
+    "entryPoint": "python -m ecsa.pipeline ingest",
+    "entryType": "cli"
+   }
+  },
+  {
+   "id": "step:collect-prices:download-or-load-bars",
+   "type": "step",
+   "name": "Download or load bars",
+   "summary": "Local Parquet or yfinance (prototype only), cached.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/data/prices.py"
+  },
+  {
+   "id": "step:collect-prices:validate-and-compute-returns",
+   "type": "step",
+   "name": "Validate and compute returns",
+   "summary": "Check bars; compute decimal returns without filling gaps.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/data/prices.py"
+  },
+  {
+   "id": "domain:language-analysis",
+   "type": "domain",
+   "name": "Language & sentiment analysis",
+   "summary": "Measuring how positive, uncertain and forward-looking management sounded.",
+   "tags": [
+    "domain"
+   ],
+   "complexity": "moderate",
+   "domainMeta": {
+    "entities": [
+     "EventFeatures",
+     "Sentence",
+     "PhraseMatch"
+    ],
+    "businessRules": [
+     "Remove the safe-harbor disclaimer before measuring forward-looking language",
+     "Model revisions are pinned",
+     "Themes and surprise use only earlier calls"
+    ],
+    "crossDomainInteractions": [
+     "Documents with timing feed the sentiment analysis.",
+     "Event features are joined to abnormal returns."
+    ]
+   }
+  },
+  {
+   "id": "flow:score-call",
+   "type": "flow",
+   "name": "Score one earnings call",
+   "summary": "Clean text → Split into sentences → Score sentiment → Match keywords → Find forward-looking statements → Build event features.",
+   "tags": [
+    "flow"
+   ],
+   "complexity": "moderate",
+   "domainMeta": {
+    "entryPoint": "python -m ecsa.pipeline analyze",
+    "entryType": "cli"
+   }
+  },
+  {
+   "id": "step:score-call:clean-text",
+   "type": "step",
+   "name": "Clean text",
+   "summary": "Normalize text and remove boilerplate disclaimers.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/nlp/cleaning.py"
+  },
+  {
+   "id": "step:score-call:split-into-sentences",
+   "type": "step",
+   "name": "Split into sentences",
+   "summary": "Keep speaker, role and section for every sentence.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/nlp/segment.py"
+  },
+  {
+   "id": "step:score-call:score-sentiment",
+   "type": "step",
+   "name": "Score sentiment",
+   "summary": "FinBERT (or optional LLM) per sentence, −1 to +1.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/nlp/finbert.py"
+  },
+  {
+   "id": "step:score-call:match-keywords",
+   "type": "step",
+   "name": "Match keywords",
+   "summary": "Positive/negative phrases with negation handling.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/nlp/lexicon.py"
+  },
+  {
+   "id": "step:score-call:find-forward-looking-statements",
+   "type": "step",
+   "name": "Find forward-looking statements",
+   "summary": "Guidance and outlook sentences and their tone.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/nlp/fls.py"
+  },
+  {
+   "id": "step:score-call:build-event-features",
+   "type": "step",
+   "name": "Build event features",
+   "summary": "Aggregate to one row per event, add sentiment surprise.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/nlp/features.py"
+  },
+  {
+   "id": "domain:market-reaction",
+   "type": "domain",
+   "name": "Market reaction measurement",
+   "summary": "Measuring how the stock moved relative to the market around each call.",
+   "tags": [
+    "domain"
+   ],
+   "complexity": "moderate",
+   "domainMeta": {
+    "entities": [
+     "Abnormal return",
+     "CAR window"
+    ],
+    "businessRules": [
+     "Day 0 is the first session that could react",
+     "Normal returns are estimated on days −250 to −30 only",
+     "Only [+1,+10] tests tradeable prediction"
+    ],
+    "crossDomainInteractions": [
+     "Event features are joined to abnormal returns.",
+     "Event-study rows supply scores and the calendar for trades.",
+     "Return paths and peer buckets are charted."
+    ]
+   }
+  },
+  {
+   "id": "flow:event-study",
+   "type": "flow",
+   "name": "Run the event study",
+   "summary": "Find day 0 → Fit market model → Compute abnormal returns → Test across events.",
+   "tags": [
+    "flow"
+   ],
+   "complexity": "moderate",
+   "domainMeta": {
+    "entryPoint": "python -m ecsa.pipeline event-study",
+    "entryType": "cli"
+   }
+  },
+  {
+   "id": "step:event-study:find-day-0",
+   "type": "step",
+   "name": "Find day 0",
+   "summary": "Map call time to the reacting trading day.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/events/calendar.py"
+  },
+  {
+   "id": "step:event-study:fit-market-model",
+   "type": "step",
+   "name": "Fit market model",
+   "summary": "Expected return from the market on past data.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/events/market_model.py"
+  },
+  {
+   "id": "step:event-study:compute-abnormal-returns",
+   "type": "step",
+   "name": "Compute abnormal returns",
+   "summary": "Daily AR from −5 to +10 and CAR windows.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/events/study.py"
+  },
+  {
+   "id": "step:event-study:test-across-events",
+   "type": "step",
+   "name": "Test across events",
+   "summary": "Quintile paths, t/BMP tests, IC, regression.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/events/stats.py"
+  },
+  {
+   "id": "domain:trading-strategy",
+   "type": "domain",
+   "name": "Trading strategy",
+   "summary": "Turning sentiment into positions and checking whether they would have made money.",
+   "tags": [
+    "domain"
+   ],
+   "complexity": "moderate",
+   "domainMeta": {
+    "entities": [
+     "Signal",
+     "Portfolio",
+     "Backtest"
+    ],
+    "businessRules": [
+     "Enter at the day-0 close, hold 10 trading days",
+     "Rank only against the past 90 days; at least 20 events",
+     "Max 5% per name; 10 bps per side",
+     "Compare with 100 placebo runs"
+    ],
+    "crossDomainInteractions": [
+     "Event-study rows supply scores and the calendar for trades.",
+     "Signals, backtest and metrics are displayed."
+    ]
+   }
+  },
+  {
+   "id": "flow:generate-trades",
+   "type": "flow",
+   "name": "Generate and test trades",
+   "summary": "Composite score → Rank and decide → Backtest with costs → Placebo comparison → Score the strategy.",
+   "tags": [
+    "flow"
+   ],
+   "complexity": "moderate",
+   "domainMeta": {
+    "entryPoint": "python -m ecsa.pipeline signals",
+    "entryType": "cli"
+   }
+  },
+  {
+   "id": "step:generate-trades:composite-score",
+   "type": "step",
+   "name": "Composite score",
+   "summary": "Past-only z-scores combined with configured weights.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/signals/scoring.py"
+  },
+  {
+   "id": "step:generate-trades:rank-and-decide",
+   "type": "step",
+   "name": "Rank and decide",
+   "summary": "LONG top 20%, SHORT bottom 20%, NONE otherwise, with reasons.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/signals/portfolio.py"
+  },
+  {
+   "id": "step:generate-trades:backtest-with-costs",
+   "type": "step",
+   "name": "Backtest with costs",
+   "summary": "Daily returns of overlapping 10-day positions.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/signals/backtest.py"
+  },
+  {
+   "id": "step:generate-trades:placebo-comparison",
+   "type": "step",
+   "name": "Placebo comparison",
+   "summary": "100 shuffled-score reruns.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/signals/backtest.py"
+  },
+  {
+   "id": "step:generate-trades:score-the-strategy",
+   "type": "step",
+   "name": "Score the strategy",
+   "summary": "Sharpe, drawdown, hit rate, IC, variants tried.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/signals/metrics.py"
+  },
+  {
+   "id": "domain:research-presentation",
+   "type": "domain",
+   "name": "Research presentation",
+   "summary": "Showing a researcher what changed in a call, how the stock reacted, and how the strategy performed.",
+   "tags": [
+    "domain"
+   ],
+   "complexity": "moderate",
+   "domainMeta": {
+    "entities": [
+     "Processed tables"
+    ],
+    "businessRules": [
+     "The dashboard reads processed files only; no models or downloads",
+     "Demo results are labelled as synthetic"
+    ],
+    "crossDomainInteractions": [
+     "Signals, backtest and metrics are displayed.",
+     "Return paths and peer buckets are charted."
+    ]
+   }
+  },
+  {
+   "id": "flow:explore-event",
+   "type": "flow",
+   "name": "Explore an earnings event",
+   "summary": "Choose ticker and event → Read the scores and decision → Compare the price path with peers → Inspect the evidence → Review the strategy.",
+   "tags": [
+    "flow"
+   ],
+   "complexity": "moderate",
+   "domainMeta": {
+    "entryPoint": "streamlit run app/streamlit_app.py",
+    "entryType": "manual"
+   }
+  },
+  {
+   "id": "step:explore-event:choose-ticker-and-event",
+   "type": "step",
+   "name": "Choose ticker and event",
+   "summary": "Sidebar filters and score definition.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/dashboard.py"
+  },
+  {
+   "id": "step:explore-event:read-the-scores-and-decision",
+   "type": "step",
+   "name": "Read the scores and decision",
+   "summary": "Metric cards and the signal explanation.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/dashboard.py"
+  },
+  {
+   "id": "step:explore-event:compare-the-price-path-with-peers",
+   "type": "step",
+   "name": "Compare the price path with peers",
+   "summary": "The −5 to +10 day chart.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/dashboard.py"
+  },
+  {
+   "id": "step:explore-event:inspect-the-evidence",
+   "type": "step",
+   "name": "Inspect the evidence",
+   "summary": "Phrases, themes, forward-looking statements, tone across the call.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/dashboard.py"
+  },
+  {
+   "id": "step:explore-event:review-the-strategy",
+   "type": "step",
+   "name": "Review the strategy",
+   "summary": "Equity curve vs SPY and placebo, metrics, IC.",
+   "tags": [
+    "step"
+   ],
+   "complexity": "simple",
+   "filePath": "src/ecsa/dashboard.py"
+  }
+ ],
+ "edges": [
+  {
+   "source": "domain:text-acquisition",
+   "target": "flow:collect-documents",
+   "type": "contains_flow",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "flow:collect-documents",
+   "target": "step:collect-documents:load-licensed-transcripts",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.2
+  },
+  {
+   "source": "flow:collect-documents",
+   "target": "step:collect-documents:parse-speakers-and-q-a",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.4
+  },
+  {
+   "source": "flow:collect-documents",
+   "target": "step:collect-documents:fetch-sec-earnings-releases",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "flow:collect-documents",
+   "target": "step:collect-documents:classify-call-timing",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "flow:collect-documents",
+   "target": "step:collect-documents:store-documents",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "domain:text-acquisition",
+   "target": "flow:collect-prices",
+   "type": "contains_flow",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "flow:collect-prices",
+   "target": "step:collect-prices:download-or-load-bars",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "flow:collect-prices",
+   "target": "step:collect-prices:validate-and-compute-returns",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "domain:language-analysis",
+   "target": "flow:score-call",
+   "type": "contains_flow",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "flow:score-call",
+   "target": "step:score-call:clean-text",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.17
+  },
+  {
+   "source": "flow:score-call",
+   "target": "step:score-call:split-into-sentences",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.33
+  },
+  {
+   "source": "flow:score-call",
+   "target": "step:score-call:score-sentiment",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "flow:score-call",
+   "target": "step:score-call:match-keywords",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.67
+  },
+  {
+   "source": "flow:score-call",
+   "target": "step:score-call:find-forward-looking-statements",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.83
+  },
+  {
+   "source": "flow:score-call",
+   "target": "step:score-call:build-event-features",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "domain:market-reaction",
+   "target": "flow:event-study",
+   "type": "contains_flow",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "flow:event-study",
+   "target": "step:event-study:find-day-0",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.25
+  },
+  {
+   "source": "flow:event-study",
+   "target": "step:event-study:fit-market-model",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "flow:event-study",
+   "target": "step:event-study:compute-abnormal-returns",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.75
+  },
+  {
+   "source": "flow:event-study",
+   "target": "step:event-study:test-across-events",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "domain:trading-strategy",
+   "target": "flow:generate-trades",
+   "type": "contains_flow",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "flow:generate-trades",
+   "target": "step:generate-trades:composite-score",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.2
+  },
+  {
+   "source": "flow:generate-trades",
+   "target": "step:generate-trades:rank-and-decide",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.4
+  },
+  {
+   "source": "flow:generate-trades",
+   "target": "step:generate-trades:backtest-with-costs",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "flow:generate-trades",
+   "target": "step:generate-trades:placebo-comparison",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "flow:generate-trades",
+   "target": "step:generate-trades:score-the-strategy",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "domain:research-presentation",
+   "target": "flow:explore-event",
+   "type": "contains_flow",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "flow:explore-event",
+   "target": "step:explore-event:choose-ticker-and-event",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.2
+  },
+  {
+   "source": "flow:explore-event",
+   "target": "step:explore-event:read-the-scores-and-decision",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.4
+  },
+  {
+   "source": "flow:explore-event",
+   "target": "step:explore-event:compare-the-price-path-with-peers",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "flow:explore-event",
+   "target": "step:explore-event:inspect-the-evidence",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "flow:explore-event",
+   "target": "step:explore-event:review-the-strategy",
+   "type": "flow_step",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "domain:text-acquisition",
+   "target": "domain:language-analysis",
+   "type": "cross_domain",
+   "direction": "forward",
+   "description": "Documents with timing feed the sentiment analysis.",
+   "weight": 0.6
+  },
+  {
+   "source": "domain:language-analysis",
+   "target": "domain:market-reaction",
+   "type": "cross_domain",
+   "direction": "forward",
+   "description": "Event features are joined to abnormal returns.",
+   "weight": 0.6
+  },
+  {
+   "source": "domain:market-reaction",
+   "target": "domain:trading-strategy",
+   "type": "cross_domain",
+   "direction": "forward",
+   "description": "Event-study rows supply scores and the calendar for trades.",
+   "weight": 0.6
+  },
+  {
+   "source": "domain:trading-strategy",
+   "target": "domain:research-presentation",
+   "type": "cross_domain",
+   "direction": "forward",
+   "description": "Signals, backtest and metrics are displayed.",
+   "weight": 0.6
+  },
+  {
+   "source": "domain:market-reaction",
+   "target": "domain:research-presentation",
+   "type": "cross_domain",
+   "direction": "forward",
+   "description": "Return paths and peer buckets are charted.",
+   "weight": 0.6
+  }
+ ],
+ "layers": [],
+ "tour": []
+}

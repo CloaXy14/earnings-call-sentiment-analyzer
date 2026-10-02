@@ -1,0 +1,4322 @@
+[
+  {
+    "doc_id": "f76f67301da382d41bc647125b9e01a38f065ed46dee1fcef4adcc8c2f86165c",
+    "event_id": "SYN00-0",
+    "ticker": "SYN00",
+    "cik": "0000000001",
+    "doc_type": "transcript",
+    "event_datetime": "2023-02-14T13:00:00Z",
+    "available_at": "2023-02-14T14:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN00/0",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "10a421e6ec65e1f66b96c645e36425cacb7d1a964c5672f9fde1bd4958e69e7f",
+    "event_id": "SYN00-1",
+    "ticker": "SYN00",
+    "cik": "0000000001",
+    "doc_type": "transcript",
+    "event_datetime": "2023-03-15T21:00:00Z",
+    "available_at": "2023-03-15T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN00/1",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: Our full year outlook is unchanged.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "Our full year outlook is unchanged."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "f8d5c79551b4ffd0a025b4a25d9ad628745b843fc9f8b7abcf83e1f40eb34db2",
+    "event_id": "SYN00-2",
+    "ticker": "SYN00",
+    "cik": "0000000001",
+    "doc_type": "transcript",
+    "event_datetime": "2023-04-17T12:00:00Z",
+    "available_at": "2023-04-17T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN00/2",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "bb992c9a0b71e35b0dfcbb9dc861904528af17b07138ad85fa0c53ae7598a6b3",
+    "event_id": "SYN00-3",
+    "ticker": "SYN00",
+    "cik": "0000000001",
+    "doc_type": "transcript",
+    "event_datetime": "2023-05-15T21:00:00Z",
+    "available_at": "2023-05-15T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN00/3",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "90b55e83e09e0b3722a673b0f6e9272628ca0d39bacb62f861f059bd52f8229b",
+    "event_id": "SYN00-4",
+    "ticker": "SYN00",
+    "cik": "0000000001",
+    "doc_type": "transcript",
+    "event_datetime": "2023-06-15T12:00:00Z",
+    "available_at": "2023-06-15T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN00/4",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "fd370c8cb9324dba6d90b1d8af604fbff174218fce7c5e705d3693b73f6eb6ea",
+    "event_id": "SYN00-5",
+    "ticker": "SYN00",
+    "cik": "0000000001",
+    "doc_type": "transcript",
+    "event_datetime": "2023-07-17T21:00:00Z",
+    "available_at": "2023-07-17T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN00/5",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "1579a92e9ffe2bbcc8694adc264c6f135353e618656a2b4c40c176d93ecc6e04",
+    "event_id": "SYN00-6",
+    "ticker": "SYN00",
+    "cik": "0000000001",
+    "doc_type": "transcript",
+    "event_datetime": "2023-08-16T12:00:00Z",
+    "available_at": "2023-08-16T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN00/6",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "8408aa08ca1fd8853c01ce47ae130151bbc71d70a36aad4aa0f0a05746d05a41",
+    "event_id": "SYN00-7",
+    "ticker": "SYN00",
+    "cik": "0000000001",
+    "doc_type": "transcript",
+    "event_datetime": "2023-09-14T21:00:00Z",
+    "available_at": "2023-09-14T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN00/7",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "ac86c470f4d0edca6dc0cdf4e5495c55c1b210c5ba663395260555cc53ef0d9b",
+    "event_id": "SYN00-8",
+    "ticker": "SYN00",
+    "cik": "0000000001",
+    "doc_type": "transcript",
+    "event_datetime": "2023-10-16T12:00:00Z",
+    "available_at": "2023-10-16T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN00/8",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: Our full year outlook is unchanged.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "Our full year outlook is unchanged."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "92a857975e829dbd205a2d902813096b9b07e902bd8d955e073e39e2c081f826",
+    "event_id": "SYN00-9",
+    "ticker": "SYN00",
+    "cik": "0000000001",
+    "doc_type": "transcript",
+    "event_datetime": "2023-11-13T22:00:00Z",
+    "available_at": "2023-11-13T23:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN00/9",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "0c161a2af29a07007c8a472503e46b44e11012e997655795ae02242ff225479b",
+    "event_id": "SYN00-10",
+    "ticker": "SYN00",
+    "cik": "0000000001",
+    "doc_type": "transcript",
+    "event_datetime": "2023-12-14T13:00:00Z",
+    "available_at": "2023-12-14T14:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN00/10",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "bbbb714a31bfec3ab4569298915f7fc46ba184c86618617d76c4d54f5448c1dc",
+    "event_id": "SYN00-11",
+    "ticker": "SYN00",
+    "cik": "0000000001",
+    "doc_type": "transcript",
+    "event_datetime": "2024-01-16T22:00:00Z",
+    "available_at": "2024-01-16T23:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN00/11",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "594ce56ce06a22f1a15a604236003acfad0ef360944990c95cb896f7b0c1eb88",
+    "event_id": "SYN01-0",
+    "ticker": "SYN01",
+    "cik": "0000000002",
+    "doc_type": "transcript",
+    "event_datetime": "2023-02-14T13:00:00Z",
+    "available_at": "2023-02-14T14:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN01/0",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "db047fb1dbbcd44e5b3d92e9e49fadd65097a6cec1e8bdad881af45de832c12e",
+    "event_id": "SYN01-1",
+    "ticker": "SYN01",
+    "cik": "0000000002",
+    "doc_type": "transcript",
+    "event_datetime": "2023-03-15T21:00:00Z",
+    "available_at": "2023-03-15T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN01/1",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "cc025335d6a16d489911309327413d2e7f11dcc6aa2bb5abdfcdb73b72c83cfa",
+    "event_id": "SYN01-2",
+    "ticker": "SYN01",
+    "cik": "0000000002",
+    "doc_type": "transcript",
+    "event_datetime": "2023-04-17T12:00:00Z",
+    "available_at": "2023-04-17T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN01/2",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "f984b05eaeb70554f93bd2825a5fbab3494f49bd2d370b80cef2dd16cb83e5f9",
+    "event_id": "SYN01-3",
+    "ticker": "SYN01",
+    "cik": "0000000002",
+    "doc_type": "transcript",
+    "event_datetime": "2023-05-15T21:00:00Z",
+    "available_at": "2023-05-15T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN01/3",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "db6724983fd3026fc9b8d1829be07abb058fa7fd41b4a776d9554cb9b4546020",
+    "event_id": "SYN01-4",
+    "ticker": "SYN01",
+    "cik": "0000000002",
+    "doc_type": "transcript",
+    "event_datetime": "2023-06-15T12:00:00Z",
+    "available_at": "2023-06-15T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN01/4",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "b8c6360e65dc076f898467c96ef7df1f8bf4c262f70ed4090bcf70efbf9a4850",
+    "event_id": "SYN01-5",
+    "ticker": "SYN01",
+    "cik": "0000000002",
+    "doc_type": "transcript",
+    "event_datetime": "2023-07-17T21:00:00Z",
+    "available_at": "2023-07-17T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN01/5",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "1b4d75bfe7d96bc0c0b31dc0a801c528d6b643759dc5ee3aeb8a37ef5466f7b0",
+    "event_id": "SYN01-6",
+    "ticker": "SYN01",
+    "cik": "0000000002",
+    "doc_type": "transcript",
+    "event_datetime": "2023-08-16T12:00:00Z",
+    "available_at": "2023-08-16T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN01/6",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: Our full year outlook is unchanged.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "Our full year outlook is unchanged."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "f7ee0e6acf78d740c535cd8d3fe25b5d69c7a92f1493b4a2647cbb94bb1e5a95",
+    "event_id": "SYN01-7",
+    "ticker": "SYN01",
+    "cik": "0000000002",
+    "doc_type": "transcript",
+    "event_datetime": "2023-09-14T21:00:00Z",
+    "available_at": "2023-09-14T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN01/7",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "451e2a9c18600d511f23e557556289e8c3c34bbd783dc390182cb0c5fb94a4ed",
+    "event_id": "SYN01-8",
+    "ticker": "SYN01",
+    "cik": "0000000002",
+    "doc_type": "transcript",
+    "event_datetime": "2023-10-16T12:00:00Z",
+    "available_at": "2023-10-16T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN01/8",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "d870553a13eab5c0b703afbfeb97d187d74e2c05bcf61dc54cca0d4fe6ce5ee3",
+    "event_id": "SYN01-9",
+    "ticker": "SYN01",
+    "cik": "0000000002",
+    "doc_type": "transcript",
+    "event_datetime": "2023-11-13T22:00:00Z",
+    "available_at": "2023-11-13T23:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN01/9",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "91c20436a19f5659ce0f97e1b246fca7dcc0c442b7bc83b6131848018cd9f717",
+    "event_id": "SYN01-10",
+    "ticker": "SYN01",
+    "cik": "0000000002",
+    "doc_type": "transcript",
+    "event_datetime": "2023-12-14T13:00:00Z",
+    "available_at": "2023-12-14T14:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN01/10",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "1b082191ac6fb5711fe65753fdb07e9ac1e1069ea5074919952c8c90e13def81",
+    "event_id": "SYN01-11",
+    "ticker": "SYN01",
+    "cik": "0000000002",
+    "doc_type": "transcript",
+    "event_datetime": "2024-01-16T22:00:00Z",
+    "available_at": "2024-01-16T23:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN01/11",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "ede27977550b31670004c721df759aa7fec60801c6e9c6abbf8442520701aa62",
+    "event_id": "SYN02-0",
+    "ticker": "SYN02",
+    "cik": "0000000003",
+    "doc_type": "transcript",
+    "event_datetime": "2023-02-14T13:00:00Z",
+    "available_at": "2023-02-14T14:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN02/0",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "1c11d922edf3af04ea4b0e246c49370a62b376676e844da7394798320a7fb383",
+    "event_id": "SYN02-1",
+    "ticker": "SYN02",
+    "cik": "0000000003",
+    "doc_type": "transcript",
+    "event_datetime": "2023-03-15T21:00:00Z",
+    "available_at": "2023-03-15T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN02/1",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "75c4630312c986bc410b3a6de29296a56105e9f685f9a556d6cbbb48c5862ec9",
+    "event_id": "SYN02-2",
+    "ticker": "SYN02",
+    "cik": "0000000003",
+    "doc_type": "transcript",
+    "event_datetime": "2023-04-17T12:00:00Z",
+    "available_at": "2023-04-17T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN02/2",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "1230d3bf45f6660072df476c6356a6a77fd2f67f2039d424ee990bf55b6dda0a",
+    "event_id": "SYN02-3",
+    "ticker": "SYN02",
+    "cik": "0000000003",
+    "doc_type": "transcript",
+    "event_datetime": "2023-05-15T21:00:00Z",
+    "available_at": "2023-05-15T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN02/3",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "48dd388a4f4611e39672f30f694d703e21db6581e785caf1ef9c504acea321de",
+    "event_id": "SYN02-4",
+    "ticker": "SYN02",
+    "cik": "0000000003",
+    "doc_type": "transcript",
+    "event_datetime": "2023-06-15T12:00:00Z",
+    "available_at": "2023-06-15T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN02/4",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: Our full year outlook is unchanged.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "Our full year outlook is unchanged."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "1fdc419724f109a0f25d98a5d7bc918994abb127b351619b89e13e9e83c0b493",
+    "event_id": "SYN02-5",
+    "ticker": "SYN02",
+    "cik": "0000000003",
+    "doc_type": "transcript",
+    "event_datetime": "2023-07-17T21:00:00Z",
+    "available_at": "2023-07-17T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN02/5",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "ac5db176f753453df9a9b7287b5dca851eb19cfdae7fe2eea2583b52378c7434",
+    "event_id": "SYN02-6",
+    "ticker": "SYN02",
+    "cik": "0000000003",
+    "doc_type": "transcript",
+    "event_datetime": "2023-08-16T12:00:00Z",
+    "available_at": "2023-08-16T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN02/6",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "094c055b9c86fe1e410e438b414a0fac8974d4ac64c5c580f8be015dda869580",
+    "event_id": "SYN02-7",
+    "ticker": "SYN02",
+    "cik": "0000000003",
+    "doc_type": "transcript",
+    "event_datetime": "2023-09-14T21:00:00Z",
+    "available_at": "2023-09-14T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN02/7",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "d32fd3d008b972e33c79c77e1852b1cec5d764e4bc318f19aa2ffca1e95a84db",
+    "event_id": "SYN02-8",
+    "ticker": "SYN02",
+    "cik": "0000000003",
+    "doc_type": "transcript",
+    "event_datetime": "2023-10-16T12:00:00Z",
+    "available_at": "2023-10-16T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN02/8",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "69efbbcc519da82b63003e04931316134dd9b0aaad4d2508c4260d66a88c0177",
+    "event_id": "SYN02-9",
+    "ticker": "SYN02",
+    "cik": "0000000003",
+    "doc_type": "transcript",
+    "event_datetime": "2023-11-13T22:00:00Z",
+    "available_at": "2023-11-13T23:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN02/9",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "8436a4442d5bb5fa5764f2eb0c7ceffa46f6991d606f9de4d8446208b2931465",
+    "event_id": "SYN02-10",
+    "ticker": "SYN02",
+    "cik": "0000000003",
+    "doc_type": "transcript",
+    "event_datetime": "2023-12-14T13:00:00Z",
+    "available_at": "2023-12-14T14:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN02/10",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "4e97c877269ddf89fa846e373db3d19c4e0d3da9ef06fec283f8d1e4a77cd94c",
+    "event_id": "SYN02-11",
+    "ticker": "SYN02",
+    "cik": "0000000003",
+    "doc_type": "transcript",
+    "event_datetime": "2024-01-16T22:00:00Z",
+    "available_at": "2024-01-16T23:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN02/11",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: Our full year outlook is unchanged.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "Our full year outlook is unchanged."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "76808da108e77680af9f2a054e75ea36de896b7d295def8c106699246b473987",
+    "event_id": "SYN03-0",
+    "ticker": "SYN03",
+    "cik": "0000000004",
+    "doc_type": "transcript",
+    "event_datetime": "2023-02-14T13:00:00Z",
+    "available_at": "2023-02-14T14:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN03/0",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "0be584a9d777ac91d842b78a5ea8d9f5db2e7802c38b5b7a65da204c1846d280",
+    "event_id": "SYN03-1",
+    "ticker": "SYN03",
+    "cik": "0000000004",
+    "doc_type": "transcript",
+    "event_datetime": "2023-03-15T21:00:00Z",
+    "available_at": "2023-03-15T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN03/1",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "f8dd27f03477da8221e1408cfb97c3bc395766f7e2cc4a754065fb23400f2380",
+    "event_id": "SYN03-2",
+    "ticker": "SYN03",
+    "cik": "0000000004",
+    "doc_type": "transcript",
+    "event_datetime": "2023-04-17T12:00:00Z",
+    "available_at": "2023-04-17T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN03/2",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: Our full year outlook is unchanged.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "Our full year outlook is unchanged."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "6c5e20d04cca7557fd89652745c3343560427ea902c8c0893260634c802409ba",
+    "event_id": "SYN03-3",
+    "ticker": "SYN03",
+    "cik": "0000000004",
+    "doc_type": "transcript",
+    "event_datetime": "2023-05-15T21:00:00Z",
+    "available_at": "2023-05-15T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN03/3",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "c32eb19e1a4fa7c94d0788d11d409c105d98a72adc1281d9cd891f4054b8ae5a",
+    "event_id": "SYN03-4",
+    "ticker": "SYN03",
+    "cik": "0000000004",
+    "doc_type": "transcript",
+    "event_datetime": "2023-06-15T12:00:00Z",
+    "available_at": "2023-06-15T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN03/4",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "a3c27f533e06ff32659b772110ca3b210414514eef5f445504b2a817b3d42427",
+    "event_id": "SYN03-5",
+    "ticker": "SYN03",
+    "cik": "0000000004",
+    "doc_type": "transcript",
+    "event_datetime": "2023-07-17T21:00:00Z",
+    "available_at": "2023-07-17T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN03/5",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "4af5246504736e56aa2e01969ea40b68965b0dd1c4af9ac499321ab07d417555",
+    "event_id": "SYN03-6",
+    "ticker": "SYN03",
+    "cik": "0000000004",
+    "doc_type": "transcript",
+    "event_datetime": "2023-08-16T12:00:00Z",
+    "available_at": "2023-08-16T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN03/6",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "e762aee8cc35a0cdb83f3e5adf5fa0e33c18017350cfe68219742d7b3bd7795b",
+    "event_id": "SYN03-7",
+    "ticker": "SYN03",
+    "cik": "0000000004",
+    "doc_type": "transcript",
+    "event_datetime": "2023-09-14T21:00:00Z",
+    "available_at": "2023-09-14T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN03/7",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "d9328186691680389684f2ba57211e4878cd7dc4ae7c56db3b6c2809171f9be4",
+    "event_id": "SYN03-8",
+    "ticker": "SYN03",
+    "cik": "0000000004",
+    "doc_type": "transcript",
+    "event_datetime": "2023-10-16T12:00:00Z",
+    "available_at": "2023-10-16T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN03/8",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "fefddf17325333c729a0f6912fb1ca354c57187cc83b1f3b9b09a15e95020c63",
+    "event_id": "SYN03-9",
+    "ticker": "SYN03",
+    "cik": "0000000004",
+    "doc_type": "transcript",
+    "event_datetime": "2023-11-13T22:00:00Z",
+    "available_at": "2023-11-13T23:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN03/9",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: Our full year outlook is unchanged.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "Our full year outlook is unchanged."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "e50c66f5f2cc66980983cd2067e10e96c577314b4950056f3fb3079640eae9bb",
+    "event_id": "SYN03-10",
+    "ticker": "SYN03",
+    "cik": "0000000004",
+    "doc_type": "transcript",
+    "event_datetime": "2023-12-14T13:00:00Z",
+    "available_at": "2023-12-14T14:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN03/10",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "1bf76fc41c7d91bb77486e323e2bd64d58c7a2aade6e97ab7f32387846ebe0dd",
+    "event_id": "SYN03-11",
+    "ticker": "SYN03",
+    "cik": "0000000004",
+    "doc_type": "transcript",
+    "event_datetime": "2024-01-16T22:00:00Z",
+    "available_at": "2024-01-16T23:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN03/11",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "9e1395da096f7a711ae35cfbbea73a64ec53bfb62781e96ba547233d969ccd81",
+    "event_id": "SYN04-0",
+    "ticker": "SYN04",
+    "cik": "0000000005",
+    "doc_type": "transcript",
+    "event_datetime": "2023-02-14T13:00:00Z",
+    "available_at": "2023-02-14T14:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN04/0",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: Our full year outlook is unchanged.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "Our full year outlook is unchanged."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "c4abe2cf97f605d8b4ee20556294afb19279c736a0cdbcd576690d171b95810f",
+    "event_id": "SYN04-1",
+    "ticker": "SYN04",
+    "cik": "0000000005",
+    "doc_type": "transcript",
+    "event_datetime": "2023-03-15T21:00:00Z",
+    "available_at": "2023-03-15T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN04/1",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "a3f58f47eebf5458bcfcfd71ae308f4faa3562ba416376ef519e494560d1a3a0",
+    "event_id": "SYN04-2",
+    "ticker": "SYN04",
+    "cik": "0000000005",
+    "doc_type": "transcript",
+    "event_datetime": "2023-04-17T12:00:00Z",
+    "available_at": "2023-04-17T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN04/2",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "fd9ccf9ce0ab52518440a791d012992fdaabf7936d869995464ff618accd90ee",
+    "event_id": "SYN04-3",
+    "ticker": "SYN04",
+    "cik": "0000000005",
+    "doc_type": "transcript",
+    "event_datetime": "2023-05-15T21:00:00Z",
+    "available_at": "2023-05-15T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN04/3",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "903ecf19228e3525b145d63542f37f601d27b0015fd52e23c6203986f7a33641",
+    "event_id": "SYN04-4",
+    "ticker": "SYN04",
+    "cik": "0000000005",
+    "doc_type": "transcript",
+    "event_datetime": "2023-06-15T12:00:00Z",
+    "available_at": "2023-06-15T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN04/4",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "d52ea6dd286990e175def82f5e9cccf801f7b111de83c8021a6be0882e27931e",
+    "event_id": "SYN04-5",
+    "ticker": "SYN04",
+    "cik": "0000000005",
+    "doc_type": "transcript",
+    "event_datetime": "2023-07-17T21:00:00Z",
+    "available_at": "2023-07-17T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN04/5",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "329e859403aa3c0bbfb408d52807cb967393f4377bd61c4aed225fd355373fbd",
+    "event_id": "SYN04-6",
+    "ticker": "SYN04",
+    "cik": "0000000005",
+    "doc_type": "transcript",
+    "event_datetime": "2023-08-16T12:00:00Z",
+    "available_at": "2023-08-16T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN04/6",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "aeac5967f77887a875f38a3188b3de0540a14db97881cb6072d7895b98bdd4d3",
+    "event_id": "SYN04-7",
+    "ticker": "SYN04",
+    "cik": "0000000005",
+    "doc_type": "transcript",
+    "event_datetime": "2023-09-14T21:00:00Z",
+    "available_at": "2023-09-14T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN04/7",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: Our full year outlook is unchanged.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "Our full year outlook is unchanged."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "20247f3a951c3ca7dc1010de92e760c0d87c135f53042145b5bbc5750fce8740",
+    "event_id": "SYN04-8",
+    "ticker": "SYN04",
+    "cik": "0000000005",
+    "doc_type": "transcript",
+    "event_datetime": "2023-10-16T12:00:00Z",
+    "available_at": "2023-10-16T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN04/8",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "097d1fc13075379ff27e07456f48a29d564e40d6c49011a8fa63d5407071b531",
+    "event_id": "SYN04-9",
+    "ticker": "SYN04",
+    "cik": "0000000005",
+    "doc_type": "transcript",
+    "event_datetime": "2023-11-13T22:00:00Z",
+    "available_at": "2023-11-13T23:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN04/9",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "85922cb3fccab2f9b10805386062a1f7f66c87767101068dff7da48b8376eb79",
+    "event_id": "SYN04-10",
+    "ticker": "SYN04",
+    "cik": "0000000005",
+    "doc_type": "transcript",
+    "event_datetime": "2023-12-14T13:00:00Z",
+    "available_at": "2023-12-14T14:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN04/10",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "25d3f3e1528d22a2ebdcb6d19da268f84e078af333cfbfa70f2c7369594aba2f",
+    "event_id": "SYN04-11",
+    "ticker": "SYN04",
+    "cik": "0000000005",
+    "doc_type": "transcript",
+    "event_datetime": "2024-01-16T22:00:00Z",
+    "available_at": "2024-01-16T23:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN04/11",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "4e4776c0bded5d90c764233007052352b6b89293a71616eb30735adee03750c1",
+    "event_id": "SYN05-0",
+    "ticker": "SYN05",
+    "cik": "0000000006",
+    "doc_type": "transcript",
+    "event_datetime": "2023-02-14T13:00:00Z",
+    "available_at": "2023-02-14T14:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN05/0",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "e9a345f013cb27f41688d5117f94d1302717f1e2003346acdf2807fb638b25bf",
+    "event_id": "SYN05-1",
+    "ticker": "SYN05",
+    "cik": "0000000006",
+    "doc_type": "transcript",
+    "event_datetime": "2023-03-15T21:00:00Z",
+    "available_at": "2023-03-15T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN05/1",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "2d96b946e1d02ef8fb7f1565720591f84d4f01425f859dbf4c84f9818380e964",
+    "event_id": "SYN05-2",
+    "ticker": "SYN05",
+    "cik": "0000000006",
+    "doc_type": "transcript",
+    "event_datetime": "2023-04-17T12:00:00Z",
+    "available_at": "2023-04-17T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN05/2",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "decb87f599b8843310f9345906d763c48cd81a28685d7e07fec7d686898dcfc6",
+    "event_id": "SYN05-3",
+    "ticker": "SYN05",
+    "cik": "0000000006",
+    "doc_type": "transcript",
+    "event_datetime": "2023-05-15T21:00:00Z",
+    "available_at": "2023-05-15T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN05/3",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "9a14f3f7aae6b9af7b7dd63af7ef3b96dbecaae39847e0589f8a52f03131480d",
+    "event_id": "SYN05-4",
+    "ticker": "SYN05",
+    "cik": "0000000006",
+    "doc_type": "transcript",
+    "event_datetime": "2023-06-15T12:00:00Z",
+    "available_at": "2023-06-15T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN05/4",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "6057f0b2623c22c5288031ff65605fe01c825c2264e3b81097fed67bfcb33645",
+    "event_id": "SYN05-5",
+    "ticker": "SYN05",
+    "cik": "0000000006",
+    "doc_type": "transcript",
+    "event_datetime": "2023-07-17T21:00:00Z",
+    "available_at": "2023-07-17T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN05/5",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: Our full year outlook is unchanged.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "Our full year outlook is unchanged."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "f3cff19fef1df13c2db8e20eb31cec303125d5fdf7d209dc3534e053bce41b4d",
+    "event_id": "SYN05-6",
+    "ticker": "SYN05",
+    "cik": "0000000006",
+    "doc_type": "transcript",
+    "event_datetime": "2023-08-16T12:00:00Z",
+    "available_at": "2023-08-16T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN05/6",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "b8a5ea8996f36bd9205fde32296f73f895902702e671a799780f4476da8cc3e5",
+    "event_id": "SYN05-7",
+    "ticker": "SYN05",
+    "cik": "0000000006",
+    "doc_type": "transcript",
+    "event_datetime": "2023-09-14T21:00:00Z",
+    "available_at": "2023-09-14T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN05/7",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "29ef191e1f2b65bc69b93e7d50584e1daad9139f8b15bc99aece2eae30a4a450",
+    "event_id": "SYN05-8",
+    "ticker": "SYN05",
+    "cik": "0000000006",
+    "doc_type": "transcript",
+    "event_datetime": "2023-10-16T12:00:00Z",
+    "available_at": "2023-10-16T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN05/8",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "15dbe331193559a4e38ce2e92035b10a49ed63483047d43d9ba12b5d75727aa1",
+    "event_id": "SYN05-9",
+    "ticker": "SYN05",
+    "cik": "0000000006",
+    "doc_type": "transcript",
+    "event_datetime": "2023-11-13T22:00:00Z",
+    "available_at": "2023-11-13T23:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN05/9",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "15d5bc88d2d704fbaea4bc32349206f3e849d3419bdd7b674af23a9fe77b3a19",
+    "event_id": "SYN05-10",
+    "ticker": "SYN05",
+    "cik": "0000000006",
+    "doc_type": "transcript",
+    "event_datetime": "2023-12-14T13:00:00Z",
+    "available_at": "2023-12-14T14:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN05/10",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "ac38516ebdb76cd248d53ce73958e58202f7b4b720b179a316429ab5c5144233",
+    "event_id": "SYN05-11",
+    "ticker": "SYN05",
+    "cik": "0000000006",
+    "doc_type": "transcript",
+    "event_datetime": "2024-01-16T22:00:00Z",
+    "available_at": "2024-01-16T23:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN05/11",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "f5dd7866f05ef46a0b0a16f1d7d288614691c7cfb09e4aecefcc82d0626d2c32",
+    "event_id": "SYN06-0",
+    "ticker": "SYN06",
+    "cik": "0000000007",
+    "doc_type": "transcript",
+    "event_datetime": "2023-02-14T13:00:00Z",
+    "available_at": "2023-02-14T14:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN06/0",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "35132ad2aaff43ef7bd4335a43a81db1abf64e1d77b072fb6a4091d5dabeb0ee",
+    "event_id": "SYN06-1",
+    "ticker": "SYN06",
+    "cik": "0000000007",
+    "doc_type": "transcript",
+    "event_datetime": "2023-03-15T21:00:00Z",
+    "available_at": "2023-03-15T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN06/1",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "e5e2f4b94218aecb5ffd48106e9a47bf9cfb8749a3390772639f77c313049912",
+    "event_id": "SYN06-2",
+    "ticker": "SYN06",
+    "cik": "0000000007",
+    "doc_type": "transcript",
+    "event_datetime": "2023-04-17T12:00:00Z",
+    "available_at": "2023-04-17T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN06/2",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "985cda1d1fb9d74649c3ed2609f0b88c5ec43736ba0d5634fecb7356dab2f375",
+    "event_id": "SYN06-3",
+    "ticker": "SYN06",
+    "cik": "0000000007",
+    "doc_type": "transcript",
+    "event_datetime": "2023-05-15T21:00:00Z",
+    "available_at": "2023-05-15T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN06/3",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: Our full year outlook is unchanged.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "Our full year outlook is unchanged."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "ed313f348329da41f1ed4691366794eb0df62ecb3f1c7a4937b8294881ba3535",
+    "event_id": "SYN06-4",
+    "ticker": "SYN06",
+    "cik": "0000000007",
+    "doc_type": "transcript",
+    "event_datetime": "2023-06-15T12:00:00Z",
+    "available_at": "2023-06-15T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN06/4",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "c3bc993df3084f48e997e28c09cb8f54f8b909a81472f5a23ad4510b7183204c",
+    "event_id": "SYN06-5",
+    "ticker": "SYN06",
+    "cik": "0000000007",
+    "doc_type": "transcript",
+    "event_datetime": "2023-07-17T21:00:00Z",
+    "available_at": "2023-07-17T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN06/5",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "03e56121578e6fa748a5575ec36f5fc427a51180518213de7310bff6f60e5281",
+    "event_id": "SYN06-6",
+    "ticker": "SYN06",
+    "cik": "0000000007",
+    "doc_type": "transcript",
+    "event_datetime": "2023-08-16T12:00:00Z",
+    "available_at": "2023-08-16T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN06/6",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "5c24fac9c5c98055739ca2e1bad0c91ccc29972b853eee91f5fa47cc074cac6a",
+    "event_id": "SYN06-7",
+    "ticker": "SYN06",
+    "cik": "0000000007",
+    "doc_type": "transcript",
+    "event_datetime": "2023-09-14T21:00:00Z",
+    "available_at": "2023-09-14T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN06/7",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "66a20996aa062c1bd4619a06e128e2004cc042a7730890cba436bec86d3588d6",
+    "event_id": "SYN06-8",
+    "ticker": "SYN06",
+    "cik": "0000000007",
+    "doc_type": "transcript",
+    "event_datetime": "2023-10-16T12:00:00Z",
+    "available_at": "2023-10-16T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN06/8",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "520ac7c11d8c0fed486c5b2fe35ce2c673fb8ce87023404c1ea4e9d9dd293eda",
+    "event_id": "SYN06-9",
+    "ticker": "SYN06",
+    "cik": "0000000007",
+    "doc_type": "transcript",
+    "event_datetime": "2023-11-13T22:00:00Z",
+    "available_at": "2023-11-13T23:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN06/9",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "9b9b1e7aaa840941c4e8ccaf235abe6f1eca5e19c8f9dce76a9476817eb382dc",
+    "event_id": "SYN06-10",
+    "ticker": "SYN06",
+    "cik": "0000000007",
+    "doc_type": "transcript",
+    "event_datetime": "2023-12-14T13:00:00Z",
+    "available_at": "2023-12-14T14:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN06/10",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: Our full year outlook is unchanged.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "Our full year outlook is unchanged."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "4460c3673614cfbc5aaf501dec1ad9d0bfe2a4458ae9fb96b4cbd4dba060b6b3",
+    "event_id": "SYN06-11",
+    "ticker": "SYN06",
+    "cik": "0000000007",
+    "doc_type": "transcript",
+    "event_datetime": "2024-01-16T22:00:00Z",
+    "available_at": "2024-01-16T23:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN06/11",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "2bfea4fc3a8a732ec66caceb56e570c83e580cb5b18012cffa5fcdb0cbfdc523",
+    "event_id": "SYN07-0",
+    "ticker": "SYN07",
+    "cik": "0000000008",
+    "doc_type": "transcript",
+    "event_datetime": "2023-02-14T13:00:00Z",
+    "available_at": "2023-02-14T14:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN07/0",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "ac0e276dbd8eb03b8c6b286dd1436411a53e1245e9e365e264ef39c7a2d00f91",
+    "event_id": "SYN07-1",
+    "ticker": "SYN07",
+    "cik": "0000000008",
+    "doc_type": "transcript",
+    "event_datetime": "2023-03-15T21:00:00Z",
+    "available_at": "2023-03-15T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN07/1",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: Our full year outlook is unchanged.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "Our full year outlook is unchanged."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "9e4f8c718614869b5753dcd3fd2210a99a0b2abf5edf2e62316daf566469fcfb",
+    "event_id": "SYN07-2",
+    "ticker": "SYN07",
+    "cik": "0000000008",
+    "doc_type": "transcript",
+    "event_datetime": "2023-04-17T12:00:00Z",
+    "available_at": "2023-04-17T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN07/2",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "4cb758f62570c70ee785175003fb404f235e11afe4e097a735e2d14f9948e3e1",
+    "event_id": "SYN07-3",
+    "ticker": "SYN07",
+    "cik": "0000000008",
+    "doc_type": "transcript",
+    "event_datetime": "2023-05-15T21:00:00Z",
+    "available_at": "2023-05-15T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN07/3",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "deeb561ef551442f1b0950a591bfe38e0e570aeda7f470d127dfe6fdf5a6290a",
+    "event_id": "SYN07-4",
+    "ticker": "SYN07",
+    "cik": "0000000008",
+    "doc_type": "transcript",
+    "event_datetime": "2023-06-15T12:00:00Z",
+    "available_at": "2023-06-15T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN07/4",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "81817110ccf41b27d072a10dca6f17e869d804f21654416d89b1d4d25d8116f0",
+    "event_id": "SYN07-5",
+    "ticker": "SYN07",
+    "cik": "0000000008",
+    "doc_type": "transcript",
+    "event_datetime": "2023-07-17T21:00:00Z",
+    "available_at": "2023-07-17T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN07/5",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "11b1f4f2cd7ff14543356074d0cc54fd97f418e127c737cb98e0849247e7404e",
+    "event_id": "SYN07-6",
+    "ticker": "SYN07",
+    "cik": "0000000008",
+    "doc_type": "transcript",
+    "event_datetime": "2023-08-16T12:00:00Z",
+    "available_at": "2023-08-16T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN07/6",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. Headwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "9c37815da303d1b88bd223f6168e7601651586331b4a76c53be6c8d120f270f6",
+    "event_id": "SYN07-7",
+    "ticker": "SYN07",
+    "cik": "0000000008",
+    "doc_type": "transcript",
+    "event_datetime": "2023-09-14T21:00:00Z",
+    "available_at": "2023-09-14T22:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN07/7",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We anticipate a slowdown next quarter and lowered guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nHeadwinds caused margin pressure and uncertainty. We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We anticipate a slowdown next quarter and lowered guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "a53890c73fe0ba6a3bd2f1edcb46ae648ceeb6ca234459171f1e321643906eae",
+    "event_id": "SYN07-8",
+    "ticker": "SYN07",
+    "cik": "0000000008",
+    "doc_type": "transcript",
+    "event_datetime": "2023-10-16T12:00:00Z",
+    "available_at": "2023-10-16T13:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN07/8",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: Our full year outlook is unchanged.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nRevenue was stable in the reporting period.Our full year outlook is unchanged."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "Our full year outlook is unchanged."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "7fad00a7b21f22f4aa807d86a5d05eb84ed859cece3f4a4fb4e546a44fea8c79",
+    "event_id": "SYN07-9",
+    "ticker": "SYN07",
+    "cik": "0000000008",
+    "doc_type": "transcript",
+    "event_datetime": "2023-11-13T22:00:00Z",
+    "available_at": "2023-11-13T23:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN07/9",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "50c54797161470967ffcaab5b2ee7ac4a7ceadafc68536923fcbd5e4f72a1db0",
+    "event_id": "SYN07-10",
+    "ticker": "SYN07",
+    "cik": "0000000008",
+    "doc_type": "transcript",
+    "event_datetime": "2023-12-14T13:00:00Z",
+    "available_at": "2023-12-14T14:00:00Z",
+    "session_timing": "BMO",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN07/10",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "d4441529a43233b9e5f42fac7496814582e42d4f5f2a5e6a4d8eab5c116b7c4f",
+    "event_id": "SYN07-11",
+    "ticker": "SYN07",
+    "cik": "0000000008",
+    "doc_type": "transcript",
+    "event_datetime": "2024-01-16T22:00:00Z",
+    "available_at": "2024-01-16T23:00:00Z",
+    "session_timing": "AMC",
+    "source": "synthetic_fixture",
+    "url": "local://synthetic/SYN07/11",
+    "raw_text": "Operator: Welcome to the conference call.\n\nCEO: Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance.\n\nAnalyst: What is your outlook for next quarter?\n\nCFO: We expect strong demand next quarter and raised guidance.",
+    "sections": [
+      {
+        "name": "prepared_remarks",
+        "utterances": [
+          {
+            "speaker": "Operator",
+            "role": "operator",
+            "text": "Welcome to the conference call."
+          },
+          {
+            "speaker": "CEO",
+            "role": "executive",
+            "text": "Safe harbor: forward-looking statements involve risks and actual results may differ.\n\nStrong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. Strong demand supported growth and margin expansion. We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      },
+      {
+        "name": "qa",
+        "utterances": [
+          {
+            "speaker": "Analyst",
+            "role": "analyst",
+            "text": "What is your outlook for next quarter?"
+          },
+          {
+            "speaker": "CFO",
+            "role": "executive",
+            "text": "We expect strong demand next quarter and raised guidance."
+          }
+        ]
+      }
+    ]
+  }
+]

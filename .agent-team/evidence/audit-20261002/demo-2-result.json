@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/.venv/bin/python",
+    "-m",
+    "ecsa.pipeline",
+    "all",
+    "--demo",
+    "--config",
+    "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/.agent-team/evidence/audit-20261002/demo-settings.yaml"
+  ],
+  "cwd": "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer",
+  "exit_code": 0,
+  "seconds": 49.87
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "order": 1,
+    "title": "Project Overview",
+    "description": "Start with the README to understand the project.",
+    "nodeIds": ["document:README.md"]
+  },
+  {
+    "order": 2,
+    "title": "Pipeline Entry",
+    "description": "The main CLI pipeline.",
+    "nodeIds": ["file:src/ecsa/pipeline.py"]
+  }
+]

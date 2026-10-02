@@ -1,0 +1,633 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "none",
+  "generatedAt": "2026-10-01T17:15:41.693Z",
+  "files": {
+    "config/settings.yaml": {
+      "filePath": "config/settings.yaml",
+      "contentHash": "f56512104bde0f6ea01957c1f7bcd3f40e2d59626c9835ea03fb69f9905c999a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 77,
+      "hasStructuralAnalysis": false
+    },
+    "src/ecsa/pipeline.py": {
+      "filePath": "src/ecsa/pipeline.py",
+      "contentHash": "a6e19ac12d8b58555184668ccf4de0b64bddfb9d158578130350e5af07ad8fda",
+      "functions": [
+        {
+          "name": "build_parser",
+          "params": [],
+          "returnType": "argparse.ArgumentParser",
+          "exported": true,
+          "lineCount": 24
+        },
+        {
+          "name": "ingest",
+          "params": [
+            "settings",
+            "tickers",
+            "start",
+            "end",
+            "demo"
+          ],
+          "returnType": "dict[str, int]",
+          "exported": true,
+          "lineCount": 83
+        },
+        {
+          "name": "analyze",
+          "params": [
+            "settings"
+          ],
+          "returnType": "dict[str, int]",
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "event_study",
+          "params": [
+            "settings"
+          ],
+          "returnType": "dict[str, int]",
+          "exported": true,
+          "lineCount": 67
+        },
+        {
+          "name": "signals",
+          "params": [
+            "settings"
+          ],
+          "returnType": "dict[str, int]",
+          "exported": true,
+          "lineCount": 58
+        },
+        {
+          "name": "main",
+          "params": [
+            "argv"
+          ],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 42
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "logging",
+          "specifiers": [
+            "logging"
+          ]
+        },
+        {
+          "source": "collections.abc",
+          "specifiers": [
+            "Sequence"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "date",
+            "timedelta"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any"
+          ]
+        },
+        {
+          "source": "ecsa.settings",
+          "specifiers": [
+            "Settings"
+          ]
+        }
+      ],
+      "exports": [
+        "build_parser",
+        "ingest",
+        "analyze",
+        "event_study",
+        "signals",
+        "main"
+      ],
+      "totalLines": 330,
+      "hasStructuralAnalysis": true
+    },
+    "src/ecsa/dashboard.py": {
+      "filePath": "src/ecsa/dashboard.py",
+      "contentHash": "3529070a42254c324fd6610e3d5e83de87f2430dbf985be09d2da4fa976a1c23",
+      "functions": [
+        {
+          "name": "signal_explanation",
+          "params": [
+            "signal"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "load_table",
+          "params": [
+            "path",
+            "modified_ns"
+          ],
+          "returnType": "pd.DataFrame",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "table",
+          "params": [
+            "directory",
+            "name"
+          ],
+          "returnType": "pd.DataFrame",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "highlighted",
+          "params": [
+            "sentence",
+            "phrase"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "event_chart",
+          "params": [
+            "path",
+            "peers",
+            "score",
+            "bucket",
+            "bounded"
+          ],
+          "returnType": "go.Figure",
+          "exported": true,
+          "lineCount": 100
+        },
+        {
+          "name": "render",
+          "params": [
+            "processed"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 248
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "html",
+          "specifiers": [
+            "html"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "pandas",
+          "specifiers": [
+            "pd"
+          ]
+        },
+        {
+          "source": "plotly.graph_objects",
+          "specifiers": [
+            "go"
+          ]
+        },
+        {
+          "source": "streamlit",
+          "specifiers": [
+            "st"
+          ]
+        },
+        {
+          "source": "plotly.subplots",
+          "specifiers": [
+            "make_subplots"
+          ]
+        }
+      ],
+      "exports": [
+        "signal_explanation",
+        "load_table",
+        "table",
+        "highlighted",
+        "event_chart",
+        "render"
+      ],
+      "totalLines": 417,
+      "hasStructuralAnalysis": true
+    },
+    "src/ecsa/demo.py": {
+      "filePath": "src/ecsa/demo.py",
+      "contentHash": "0b84f21576a7534589051b01973edd2a2cdc5a7a47e98fa4fd57a03592cd9543",
+      "functions": [
+        {
+          "name": "generate_fixtures",
+          "params": [
+            "directory",
+            "seed"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 107
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "timedelta"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "exchange_calendars",
+          "specifiers": [
+            "xcals"
+          ]
+        },
+        {
+          "source": "numpy",
+          "specifiers": [
+            "np"
+          ]
+        },
+        {
+          "source": "pandas",
+          "specifiers": [
+            "pd"
+          ]
+        },
+        {
+          "source": "ecsa.events.calendar",
+          "specifiers": [
+            "TradingCalendar"
+          ]
+        },
+        {
+          "source": "ecsa.schemas",
+          "specifiers": [
+            "Document",
+            "Section",
+            "Utterance"
+          ]
+        },
+        {
+          "source": "ecsa.storage",
+          "specifiers": [
+            "write_parquet"
+          ]
+        }
+      ],
+      "exports": [
+        "generate_fixtures"
+      ],
+      "totalLines": 125,
+      "hasStructuralAnalysis": true
+    },
+    "src/ecsa/data/edgar.py": {
+      "filePath": "src/ecsa/data/edgar.py",
+      "contentHash": "99883fd4f60f4eadd061ff4fe4733cc58c5cdff1bf6abb5f86a0d5e26311a264",
+      "functions": [
+        {
+          "name": "pad_cik",
+          "params": [
+            "cik"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "parse_submissions",
+          "params": [
+            "payload",
+            "cik"
+          ],
+          "returnType": "list[Filing]",
+          "exported": true,
+          "lineCount": 23
+        },
+        {
+          "name": "extract_mdna",
+          "params": [
+            "html",
+            "form"
+          ],
+          "returnType": "str | None",
+          "exported": true,
+          "lineCount": 28
+        }
+      ],
+      "classes": [
+        {
+          "name": "Filing",
+          "methods": [
+            "base_url"
+          ],
+          "properties": [
+            "cik",
+            "accession",
+            "form",
+            "filing_date",
+            "acceptance_datetime",
+            "items",
+            "primary_document"
+          ],
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "EdgarClient",
+          "methods": [
+            "__init__",
+            "ticker_to_cik",
+            "list_filings",
+            "earnings_8ks",
+            "mdna"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 134
+        }
+      ],
+      "imports": [
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "dataclass"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "date",
+            "datetime"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any"
+          ]
+        },
+        {
+          "source": "urllib.parse",
+          "specifiers": [
+            "urljoin"
+          ]
+        },
+        {
+          "source": "bs4",
+          "specifiers": [
+            "BeautifulSoup"
+          ]
+        },
+        {
+          "source": "ecsa.data.cache",
+          "specifiers": [
+            "DiskCache",
+            "HttpClient"
+          ]
+        },
+        {
+          "source": "ecsa.data.transcripts",
+          "specifiers": [
+            "parse_transcript",
+            "session_timing"
+          ]
+        },
+        {
+          "source": "ecsa.schemas",
+          "specifiers": [
+            "DocType",
+            "Document",
+            "Section",
+            "Utterance"
+          ]
+        },
+        {
+          "source": "ecsa.settings",
+          "specifiers": [
+            "Settings"
+          ]
+        },
+        {
+          "source": "ecsa.storage",
+          "specifiers": [
+            "utc"
+          ]
+        }
+      ],
+      "exports": [
+        "pad_cik",
+        "Filing",
+        "parse_submissions",
+        "extract_mdna",
+        "EdgarClient"
+      ],
+      "totalLines": 237,
+      "hasStructuralAnalysis": true
+    },
+    "src/ecsa/data/transcripts.py": {
+      "filePath": "src/ecsa/data/transcripts.py",
+      "contentHash": "55f7b485e374016a97e5d5de5e4d5c467668c8c9a9adb577ed238d0c6809179e",
+      "functions": [
+        {
+          "name": "session_timing",
+          "params": [
+            "timestamp"
+          ],
+          "returnType": "SessionTiming",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "parse_transcript",
+          "params": [
+            "text"
+          ],
+          "returnType": "list[Section]",
+          "exported": true,
+          "lineCount": 63
+        }
+      ],
+      "classes": [
+        {
+          "name": "TranscriptSource",
+          "methods": [
+            "fetch"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "LocalFileSource",
+          "methods": [
+            "__init__",
+            "fetch",
+            "_document"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 74
+        },
+        {
+          "name": "VendorAPISource",
+          "methods": [
+            "fetch"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 10
+        }
+      ],
+      "imports": [
+        {
+          "source": "csv",
+          "specifiers": [
+            "csv"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "date",
+            "datetime",
+            "time"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "Protocol"
+          ]
+        },
+        {
+          "source": "zoneinfo",
+          "specifiers": [
+            "ZoneInfo"
+          ]
+        },
+        {
+          "source": "ecsa.schemas",
+          "specifiers": [
+            "Document",
+            "Section",
+            "SectionName",
+            "SessionTiming",
+            "SpeakerRole",
+            "Utterance"
+          ]
+        },
+        {
+          "source": "ecsa.storage",
+          "specifiers": [
+            "utc"
+          ]
+        }
+      ],
+      "exports": [
+        "TranscriptSource",
+        "session_timing",
+        "parse_transcript",
+        "LocalFileSource",
+        "VendorAPISource"
+      ],
+      "totalLines": 182,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

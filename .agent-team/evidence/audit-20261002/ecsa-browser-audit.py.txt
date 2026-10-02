@@ -1,0 +1,25 @@
+from pathlib import Path
+import subprocess,time,json,urllib.request,socket
+from playwright.sync_api import sync_playwright
+R=Path('/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer');E=R/'.agent-team/evidence/audit-20261002';results={}
+with socket.socket() as s:s.bind(('127.0.0.1',0));port=s.getsockname()[1]
+log=(E/'streamlit.txt').open('w');server=subprocess.Popen([str(R/'.venv/bin/python'),'-m','streamlit','run',str(R/'app/streamlit_app.py'),'--server.address','127.0.0.1','--server.port',str(port),'--server.headless','true','--browser.gatherUsageStats','false'],cwd=R,stdout=log,stderr=subprocess.STDOUT)
+try:
+ for _ in range(60):
+  try:
+   urllib.request.urlopen(f'http://127.0.0.1:{port}/_stcore/health',timeout=1);break
+  except Exception: time.sleep(.5)
+ with sync_playwright() as p:
+  browser=p.chromium.launch(executable_path='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless=True,args=['--disable-gpu'])
+  for name,width,height in [('desktop',1400,1000),('mobile',390,844)]:
+   page=browser.new_page(viewport={'width':width,'height':height});errors=[];page.on('pageerror',lambda x:errors.append(str(x)))
+   page.goto(f'http://127.0.0.1:{port}',wait_until='networkidle');page.get_by_test_id('stMetric').first.wait_for(timeout=45000);page.get_by_test_id('stPlotlyChart').nth(2).wait_for(state='attached',timeout=45000);page.locator('[data-testid="stPlotlyChart"] .main-svg').first.wait_for(timeout=45000);page.wait_for_timeout(500);page.screenshot(path=str(E/f'browser-{name}.png'),full_page=True)
+   body=page.inner_text('body');results[name]={'exceptions':page.get_by_test_id('stException').count(),'page_errors':errors,'metrics':page.get_by_test_id('stMetric').count(),'charts':page.get_by_test_id('stPlotlyChart').count(),'horizontal_overflow':page.evaluate('document.documentElement.scrollWidth > innerWidth'),'synthetic_label':'synthetic' in body.lower(),'selectboxes':page.get_by_role('combobox').count()}
+   if name=='desktop':
+    cb=page.get_by_role('combobox').first;cb.click();page.get_by_role('option',name='SYN03',exact=True).click();page.locator('[data-testid="stPlotlyChart"] .main-svg').first.wait_for(timeout=45000);page.wait_for_timeout(1000);results[name]['ticker_selection_exceptions']=page.get_by_test_id('stException').count();results[name]['ticker_selected']=cb.input_value();page.screenshot(path=str(E/'browser-desktop-selected.png'),full_page=True)
+   page.get_by_role('tab',name='Strategy',exact=True).click();page.get_by_test_id('stPlotlyChart').last.wait_for(timeout=45000);page.wait_for_timeout(1500);results[name]['strategy_exceptions']=page.get_by_test_id('stException').count();page.screenshot(path=str(E/f'browser-{name}-strategy.png'),full_page=True)
+   page.close()
+  browser.close()
+ (E/'browser.json').write_text(json.dumps(results,indent=2));print(json.dumps(results,indent=2))
+finally:
+ server.terminate();server.wait(timeout=10);log.close()

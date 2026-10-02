@@ -1,0 +1,15 @@
+import runpy,json
+from pathlib import Path
+from datetime import timedelta
+import pandas as pd
+from ecsa.settings import Settings
+from ecsa.events.study import run_study
+from ecsa.signals.model import walk_forward
+R=Path('/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer');E=R/'.agent-team/evidence/audit-20261002'
+p,cal=runpy.run_path(str(R/'tests/test_events_signals.py'))['synthetic_prices']()
+s=Settings.from_yaml(R/'config/settings.yaml').model_copy(update={'learned_model':'ridge','minimum_training_events':5,'score_weights':{'x':1.0}})
+events=pd.DataFrame([dict(event_id=str(i),ticker='TEST',session_timing='BMO',event_datetime=cal.close(cal.dates[i])-timedelta(hours=7),available_at=cal.close(cal.dates[i])-timedelta(hours=1),x=float(i-200)) for i in [200,205,210,215,220,225,230,240,250,280]])
+mask=(p.ticker=='TEST')&(p.date==cal.dates[250]);p.loc[mask,'available_at']=cal.close(cal.dates[309])
+def predict():
+ t,_=run_study(events,p,s);pred=walk_forward(t,cal,s);return {'score':float(pred.iloc[-1].model_score),'label_available_at':str(t[t.event_id=='250'].iloc[0].label_available_at)}
+a=predict();p.loc[mask,'adj_close']*=2;b=predict();result={'case':'unavailable_denominator','prediction_time':str(cal.close(cal.dates[280])),'price_available_at':str(cal.close(cal.dates[309])),'before':a,'after':b,'requirement_passed':abs(a['score']-b['score'])<1e-10};(E/'core-leakage.json').write_text(json.dumps(result,indent=2));print(json.dumps(result,indent=2))

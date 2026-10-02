@@ -1,0 +1,34 @@
+[
+  {
+    "case": "model_failure",
+    "expected": "nonzero exit for invalid evaluation",
+    "observed_exit": 0,
+    "output": "Loading transcripts from LocalFileSource...\nFound tickers in sample: ALPHA\nLoaded 1 parsed Document objects.\n\nInitializing NLP models (FinBERT and Lexicon)...\n\nInitializing NLP model (FinBERT) and running full pipeline...\nPipeline error: AUDIT_INFERENCE_FAILURE\n",
+    "requirement_passed": false
+  },
+  {
+    "case": "no_features",
+    "expected": "nonzero exit for invalid evaluation",
+    "observed_exit": 0,
+    "output": "Loading transcripts from LocalFileSource...\nFound tickers in sample: ALPHA\nLoaded 1 parsed Document objects.\n\nInitializing NLP models (FinBERT and Lexicon)...\n\nInitializing NLP model (FinBERT) and running full pipeline...\n\n--- SENTIMENT SCORES (Total rows: 0) ---\nNo analyzable features extracted.\n",
+    "requirement_passed": false
+  },
+  {
+    "case": "metadata_and_pagination",
+    "observed_ticker": "ALPHA",
+    "event_datetime": "2025-01-01T12:00:00Z",
+    "available_at": "2025-01-01T14:00:00Z",
+    "request_count": 1,
+    "request_parameters": {
+      "params": {
+        "dataset": "finosfoundation/EarningsCallTranscript",
+        "config": "default",
+        "split": "train",
+        "offset": 0,
+        "length": 100
+      }
+    },
+    "segments_written": 100,
+    "source_segments": 101
+  }
+]

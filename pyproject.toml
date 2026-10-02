@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=75,<83"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecsa"
+version = "0.1.0"
+description = "Earnings Call Sentiment Analyzer research pipeline"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "pydantic>=2.10,<3",
+    "PyYAML>=6.0,<7",
+]
+
+[project.optional-dependencies]
+research = [
+    "torch>=2.2,<3",
+    "transformers>=4.45,<4.50",
+    "pandas>=2.2,<3",
+    "numpy>=1.26,<2",
+    "scikit-learn>=1.5,<2",
+    "statsmodels>=0.14,<0.15",
+    "scipy>=1.13,<2",
+    "pyarrow>=17,<24",
+    "plotly>=5.24,<7",
+    "streamlit>=1.39,<2",
+    "requests>=2.32,<3",
+    "beautifulsoup4>=4.12,<5",
+    "lxml>=5.3,<7",
+    "pysbd>=0.3.4,<0.4",
+    "yfinance>=0.2.50,<1",
+    "simplemma>=1.1,<2",
+    "exchange-calendars>=4.5,<5",
+    "pypdf>=5,<7",
+]
+llm = ["openai>=1.60,<3"]
+dev = [
+    "pytest>=8.3,<10",
+    "pytest-socket>=0.7,<1",
+    "ruff>=0.9,<1",
+    "mypy>=1.14,<2",
+    "types-PyYAML>=6,<7",
+    "types-requests>=2.32,<3",
+    "types-beautifulsoup4>=4.12,<5",
+]
+
+[project.scripts]
+ecsa = "ecsa.pipeline:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ecsa = ["py.typed", "sample_data/*.json", "sample_data/*.parquet"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers --disable-socket --allow-unix-socket"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+# Generated agent tooling (.ua, .python) and the verbatim guidelines are not project
+# source and are excluded from the lint gate; project code under src/, scripts/,
+# tests/ and app/ is still fully linted.
+extend-exclude = [".python", ".ua", "guidelines.md"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src/ecsa"]
+plugins = ["pydantic.mypy"]
+ignore_missing_imports = true

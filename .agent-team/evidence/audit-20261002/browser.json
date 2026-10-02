@@ -1,0 +1,24 @@
+{
+  "desktop": {
+    "exceptions": 0,
+    "page_errors": [],
+    "metrics": 4,
+    "charts": 3,
+    "horizontal_overflow": false,
+    "synthetic_label": true,
+    "selectboxes": 4,
+    "ticker_selection_exceptions": 0,
+    "ticker_selected": "SYN03",
+    "strategy_exceptions": 0
+  },
+  "mobile": {
+    "exceptions": 0,
+    "page_errors": [],
+    "metrics": 4,
+    "charts": 3,
+    "horizontal_overflow": false,
+    "synthetic_label": true,
+    "selectboxes": 4,
+    "strategy_exceptions": 0
+  }
+}

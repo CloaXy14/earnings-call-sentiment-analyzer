@@ -1,0 +1,14 @@
+{
+ "desktop": {
+  "exceptions": 0,
+  "console_errors": [],
+  "horizontal_overflow": false,
+  "signal_caption": "Signal"
+ },
+ "mobile": {
+  "exceptions": 0,
+  "console_errors": [],
+  "horizontal_overflow": false,
+  "signal_caption": "Signal"
+ }
+}

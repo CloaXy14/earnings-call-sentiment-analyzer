@@ -1,0 +1,87 @@
+benchmark: SPY
+borrow_cost_bps_annual: 0
+cache_ttl_seconds: 86400
+data_dir: /Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/.agent-team/evidence/audit-20261002/demo-data
+dictionary_path: null
+embargo_days: 10
+end_date: null
+estimation_end: -30
+estimation_min_days: 120
+estimation_start: -250
+event_end: 10
+event_start: -5
+financial_stop_words:
+- company
+- quarter
+- year
+- thank
+- operator
+- million
+- billion
+finbert_available_at: '2023-05-23T12:43:35Z'
+finbert_batch_size: 32
+finbert_max_tokens: 512
+finbert_model_id: ProsusAI/finbert
+finbert_revision: 4556d13015211d73dccd3fdd39d39232506f3e43
+fls_available_at: null
+fls_backend: rules
+fls_model_id: yiyanghkust/finbert-fls
+fls_revision: null
+gross_target: 1.0
+holding_days: 10
+include_edgar: false
+include_mdna: false
+learned_model: none
+llm_available_at: '2024-07-18T00:00:00Z'
+llm_enabled: false
+llm_input_cost_per_million: 0.15
+llm_model: gpt-4o-mini-2024-07-18
+llm_output_cost_per_million: 0.6
+long_quantile: 0.8
+market_timezone: America/New_York
+max_name_weight: 0.05
+minimum_ranking_events: 20
+minimum_training_events: 30
+negative_phrases:
+- costs
+- margin pressure
+- uncertainty
+- headwinds
+- slowdown
+- lowered guidance
+- impairment
+nlp_backend: finbert
+placebo_seeds: 100
+positive_phrases:
+- growth
+- expansion
+- record revenue
+- strong demand
+- margin expansion
+- raised guidance
+price_backend: yfinance
+ranking_days: 90
+request_max_retries: 4
+request_timeout_seconds: 30.0
+retry_backoff_seconds: 1.0
+score_weights:
+  finbert_net_weighted: 1
+  fls_net: 1
+  lexicon_net: 1
+  sentiment_surprise: 1
+  uncertainty_per_1k: -1
+sec_requests_per_second: 8.0
+sector_neutral: false
+sectors: {}
+seed: 42
+short_quantile: 0.2
+start_date: null
+storage_timezone: UTC
+tickers: []
+topic_count: 4
+transaction_cost_bps: 10
+uncertainty_phrases:
+- uncertainty
+variants_tried: 1
+volatility_days: 60
+weighting: equal

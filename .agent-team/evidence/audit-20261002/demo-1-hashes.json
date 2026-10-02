@@ -1,0 +1,22 @@
+{
+  "event_study.parquet": "cd045d4f71ac56c7c3920547baa15923482a574542de1c8d29a1fa9a5f7ab7ad",
+  "placebo_seeds.parquet": "65cf4a395bfa304b2a214b83fc0f3d623ee711441df6309d7ae4c54c9ec25778",
+  "sentences.parquet": "f00dbc66c86209cedc05e4f6b93dba8299c6775432774cd32030d57e9a981c86",
+  "event_buckets.parquet": "45f3775e44527c9f6dae5c5b16d5ee00f39b370064085c8ebbec3576190236aa",
+  "bucket_paths.parquet": "0e55399a07ef8b0a3f5ca2b7f81a347ffb35ba18271df65f9de8b7167f905f94",
+  "backtest.parquet": "f51977a12f29e2f7048a2ef769d697e239365bbdd5f40f309b5651900bb07188",
+  "placebo.parquet": "2663b7435a7bc586b2d2fce75b713e7a36401ba6eb23bd7778541501ad46ef75",
+  "strategy_ic.parquet": "4bbb268224990a59e0a3683fcf9fd229d1a21ea64605c0fc66e4d010144b371b",
+  "run_metadata.parquet": "0505e6147983a4fb0d177bc51808027dffef257a0bad85454998e6beb684c7aa",
+  "information_coefficients.parquet": "705e0e284c71c094923fb9b658b0f3d0beff4d1156885da54fa33c0bfc57b95a",
+  "phrases.parquet": "1202f230ce8c7e5e93b2eb320cd6ed508706d3fcc9dee958f6fab3687807f9b4",
+  "signals.parquet": "b2839bdabbfd330ad1f1cff6b1b3cf816e6f8a502db5a450f8eae14d8cae666e",
+  "scored_events.parquet": "f6436f10fba28cff20fa9ca23ccd062ef1456c81215947b792e19a2ae5526379",
+  "event_paths.parquet": "59ad8f7e9c9db236b45d682290d9dd55034411eb561ff8310704cba374604a4c",
+  "features.parquet": "58771581dcd3f7c1a5ce116857bea382688b2e352e7bb78c11ddbf3205e516e4",
+  "window_tests.parquet": "bdf0ec9fdac591f8ff230f267441febb041b3ea12df5e9569a17b0d357032012",
+  "rejected_signals.parquet": "1aee0b2174333f1d8ffdc95305715c5a0961cc99ecfd0264c019b9dc58416025",
+  "regression.parquet": "72a268767658959352327ebbf4435fc0427a24f64fbe329cdacc6923289da63d",
+  "removed_text.parquet": "e709f1ce8cb5718f094e296c44dbae3015e2226c82bab77539c2391ed625ed0f",
+  "strategy_metrics.parquet": "49796fedf29aa43362366625e00225f260bf19219880b3456814b16bc941cd5e"
+}

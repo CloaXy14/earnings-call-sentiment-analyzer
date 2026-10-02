@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/leonhardaudie/.local/bin/uv",
+    "pip",
+    "check",
+    "--python",
+    "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/.venv/bin/python",
+    "--cache-dir",
+    "/private/tmp/ecsa-uv-cache"
+  ],
+  "cwd": "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer",
+  "exit_code": 0,
+  "seconds": 0.19
+}

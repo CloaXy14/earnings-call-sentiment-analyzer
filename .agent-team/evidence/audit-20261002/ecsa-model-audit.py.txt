@@ -1,0 +1,16 @@
+from pathlib import Path
+import json,hashlib
+import numpy as np
+from datetime import date
+from ecsa.settings import Settings
+from ecsa.nlp.finbert import FinBertScorer
+from ecsa.nlp.features import analyze_documents
+from ecsa.data.cache import DiskCache
+from ecsa.data.transcripts import LocalFileSource
+R=Path('/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer');E=R/'.agent-team/evidence/audit-20261002'
+s=Settings.from_yaml(R/'config/settings.yaml');scorer=FinBertScorer(s);scorer.cache=DiskCache(E/'fresh-inference-cache',float('inf'))
+docs=LocalFileSource(R/'data/raw').fetch('ALPHA',date(2000,1,1),date(2030,1,1));result=analyze_documents(docs,scorer,s);probs=result.sentences[['p_pos','p_neg','p_neu']].to_numpy();assert np.isfinite(probs).all() and np.allclose(probs.sum(axis=1),1,atol=1e-6) and ((probs>=0)&(probs<=1)).all()
+path=s.cache_dir/'models'/s.finbert_model_id.replace('/','--')/s.finbert_revision
+result.features.to_json(E/'real-features.json',orient='records',date_format='iso');result.sentences.to_parquet(E/'real-sentences.parquet',index=False)
+meta={'model':scorer.model_id,'revision':scorer.revision,'device':scorer.device,'sentences':len(probs),'events':len(result.features),'probabilities_valid':True,'cache':'fresh isolated cache; full inference performed','weights':{p.name:{'size':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in path.iterdir() if p.is_file()},'scores':result.features[['finbert_net_mean','lexicon_net','fls_net']].to_dict('records')}
+(E/'model-verification.json').write_text(json.dumps(meta,indent=2));print(json.dumps(meta,indent=2))

@@ -1,0 +1,2071 @@
+E501 Line too long (101 > 100)
+   --> .ua/build_graph.py:150:101
+    |
+148 |         "regression. These look back at outcomes, so they are for evaluation only and never "
+149 |         "feed trading decisions.", "complex", ["event-study", "statistics", "evaluation"]),
+150 |     "src/ecsa/signals/__init__.py": ("Package for Stage 4, trading signals.", "simple", ["package"]),
+    |                                                                                                     ^
+151 |     "src/ecsa/signals/scoring.py": (
+152 |         "Combines five measures into one composite score: length-weighted sentiment, sentiment "
+    |
+
+E501 Line too long (105 > 100)
+   --> .ua/build_graph.py:159:101
+    |
+157 |         "Optional learned weights. Walk-forward training only on events whose 10-day outcome had "
+158 |         "already finished, with a 10-trading-day gap (embargo) before each test date, so the "
+159 |         "model never sees the answers it is graded on.", "moderate", ["signals", "ml", "no-look-ahead"]),
+    |                                                                                                     ^^^^^
+160 |     "src/ecsa/signals/portfolio.py": (
+161 |         "Turns scores into trades. At each event's day-0 close, it ranks the event against events "
+    |
+
+E501 Line too long (148 > 100)
+   --> .ua/build_graph.py:180:101
+    |
+178 | …ted falls back to its docstring)
+179 | …settings and calls dashboard.render().",
+180 | … the four stages, `all`, and the --config, --demo, --tickers, --start and --end options.",
+    |                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+181 | …ments (demo fixtures, licensed transcript files, optional EDGAR) and daily prices for the tickers plus the benchmark, then saves the…
+182 | …orer (FinBERT, LLM or demo), runs the NLP feature extraction and saves features plus evidence tables.",
+    |
+
+E501 Line too long (205 > 100)
+   --> .ua/build_graph.py:181:101
+    |
+179 | …render().",
+180 | …the --config, --demo, --tickers, --start and --end options.",
+181 | …d transcript files, optional EDGAR) and daily prices for the tickers plus the benchmark, then saves them as Parquet.",
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+182 | …runs the NLP feature extraction and saves features plus evidence tables.",
+183 | …nd the summary statistics (window tests, quintile paths, IC, regression).",
+    |
+
+E501 Line too long (161 > 100)
+   --> .ua/build_graph.py:182:101
+    |
+180 | …ur stages, `all`, and the --config, --demo, --tickers, --start and --end options.",
+181 | …demo fixtures, licensed transcript files, optional EDGAR) and daily prices for the tickers plus the benchmark, then saves them as Pa…
+182 | …inBERT, LLM or demo), runs the NLP feature extraction and saves features plus evidence tables.",
+    |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+183 | …al returns per event and the summary statistics (window tests, quintile paths, IC, regression).",
+184 | …ores, makes trade decisions, backtests them, runs the placebo, and saves the scorecard.",
+    |
+
+E501 Line too long (162 > 100)
+   --> .ua/build_graph.py:183:101
+    |
+181 | …demo fixtures, licensed transcript files, optional EDGAR) and daily prices for the tickers plus the benchmark, then saves them as Pa…
+182 | …inBERT, LLM or demo), runs the NLP feature extraction and saves features plus evidence tables.",
+183 | …al returns per event and the summary statistics (window tests, quintile paths, IC, regression).",
+    |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+184 | …ores, makes trade decisions, backtests them, runs the placebo, and saves the scorecard.",
+185 | …der, prints one JSON summary line per stage, and turns errors into a clear CLI message.",
+    |
+
+E501 Line too long (154 > 100)
+   --> .ua/build_graph.py:184:101
+    |
+182 | …r (FinBERT, LLM or demo), runs the NLP feature extraction and saves features plus evidence tables.",
+183 | …normal returns per event and the summary statistics (window tests, quintile paths, IC, regression).",
+184 | …e scores, makes trade decisions, backtests them, runs the placebo, and saves the scorecard.",
+    |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+185 | …n order, prints one JSON summary line per stage, and turns errors into a clear CLI message.",
+186 | …e validated object. Relative paths resolve from the project root; unknown keys and secrets in YAML are rejected.",
+    |
+
+E501 Line too long (154 > 100)
+   --> .ua/build_graph.py:185:101
+    |
+183 | …normal returns per event and the summary statistics (window tests, quintile paths, IC, regression).",
+184 | …e scores, makes trade decisions, backtests them, runs the placebo, and saves the scorecard.",
+185 | …n order, prints one JSON summary line per stage, and turns errors into a clear CLI message.",
+    |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+186 | …e validated object. Relative paths resolve from the project root; unknown keys and secrets in YAML are rejected.",
+187 | …lease or MD&A section, with its sections and speaker turns. `event_datetime` is when the call happened; `available_at` is when the f…
+    |
+
+E501 Line too long (175 > 100)
+   --> .ua/build_graph.py:186:101
+    |
+184 | …akes trade decisions, backtests them, runs the placebo, and saves the scorecard.",
+185 | …ints one JSON summary line per stage, and turns errors into a clear CLI message.",
+186 | … object. Relative paths resolve from the project root; unknown keys and secrets in YAML are rejected.",
+    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+187 | …&A section, with its sections and speaker turns. `event_datetime` is when the call happened; `available_at` is when the full text co…
+188 | …earnings event. Validation rejects features that claim to be available before their inputs.",
+    |
+
+E501 Line too long (253 > 100)
+   --> .ua/build_graph.py:187:101
+    |
+185 | …ine per stage, and turns errors into a clear CLI message.",
+186 | … resolve from the project root; unknown keys and secrets in YAML are rejected.",
+187 | …ctions and speaker turns. `event_datetime` is when the call happened; `available_at` is when the full text could be read. They are kept separate on purpose.",
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+188 | …ion rejects features that claim to be available before their inputs.",
+189 | …eight, entry and exit dates. Validation forbids using information after the signal time.",
+    |
+
+E501 Line too long (165 > 100)
+   --> .ua/build_graph.py:188:101
+    |
+186 | …dated object. Relative paths resolve from the project root; unknown keys and secrets in YAML are rejected.",
+187 | …or MD&A section, with its sections and speaker turns. `event_datetime` is when the call happened; `available_at` is when the full te…
+188 | … one earnings event. Validation rejects features that claim to be available before their inputs.",
+    |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+189 | …, SHORT or NONE), unsigned weight, entry and exit dates. Validation forbids using information after the signal time.",
+190 | …ated prices and volume.",
+    |
+
+E501 Line too long (185 > 100)
+   --> .ua/build_graph.py:189:101
+    |
+187 | …ction, with its sections and speaker turns. `event_datetime` is when the call happened; `available_at` is when the full text could b…
+188 | …ngs event. Validation rejects features that claim to be available before their inputs.",
+189 | … NONE), unsigned weight, entry and exit dates. Validation forbids using information after the signal time.",
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+190 | …s and volume.",
+191 | …ource, URL and exact text, so the same document is never stored twice.",
+    |
+
+E501 Line too long (149 > 100)
+   --> .ua/build_graph.py:191:101
+    |
+189 | …de (LONG, SHORT or NONE), unsigned weight, entry and exit dates. Validation forbids using information after the signal time.",
+190 | …th validated prices and volume.",
+191 | …-256 id from the source, URL and exact text, so the same document is never stored twice.",
+    |                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+192 | …ies a call as BMO (before 09:30 New York time), DURING, AMC (after 16:00) or UNKNOWN.",
+193 | …s transcript text into speaker turns, finds where Q&A starts, and labels each speaker's role.",
+    |
+
+E501 Line too long (146 > 100)
+   --> .ua/build_graph.py:192:101
+    |
+190 | …with validated prices and volume.",
+191 | …HA-256 id from the source, URL and exact text, so the same document is never stored twice.",
+192 | …ifies a call as BMO (before 09:30 New York time), DURING, AMC (after 16:00) or UNKNOWN.",
+    |                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+193 | …its transcript text into speaker turns, finds where Q&A starts, and labels each speaker's role.",
+194 | …s licensed transcript files for one ticker and date range; malformed input fails with the file name and row number.",
+    |
+
+E501 Line too long (154 > 100)
+   --> .ua/build_graph.py:193:101
+    |
+191 | …56 id from the source, URL and exact text, so the same document is never stored twice.",
+192 | …s a call as BMO (before 09:30 New York time), DURING, AMC (after 16:00) or UNKNOWN.",
+193 | …transcript text into speaker turns, finds where Q&A starts, and labels each speaker's role.",
+    |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+194 | …censed transcript files for one ticker and date range; malformed input fails with the file name and row number.",
+195 | … with your declared identity, at under 10 requests per second, with caching.",
+    |
+
+E501 Line too long (174 > 100)
+   --> .ua/build_graph.py:194:101
+    |
+192 | …s BMO (before 09:30 New York time), DURING, AMC (after 16:00) or UNKNOWN.",
+193 | … text into speaker turns, finds where Q&A starts, and labels each speaker's role.",
+194 | …nscript files for one ticker and date range; malformed input fails with the file name and row number.",
+    |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+195 | … declared identity, at under 10 requests per second, with caching.",
+196 | …n: cleans, segments and scores every document, then aggregates one feature row per event.",
+    |
+
+E501 Line too long (139 > 100)
+   --> .ua/build_graph.py:195:101
+    |
+193 | …Splits transcript text into speaker turns, finds where Q&A starts, and labels each speaker's role.",
+194 | …eads licensed transcript files for one ticker and date range; malformed input fails with the file name and row number.",
+195 | …C EDGAR with your declared identity, at under 10 requests per second, with caching.",
+    |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+196 | … main NLP function: cleans, segments and scores every document, then aggregates one feature row per event.",
+197 | …t surprise: how unusual this call's tone is versus the company's previous four calls (a z-score). Needs at least two prior calls.",
+    |
+
+E501 Line too long (162 > 100)
+   --> .ua/build_graph.py:196:101
+    |
+194 | …ed transcript files for one ticker and date range; malformed input fails with the file name and row number.",
+195 | …h your declared identity, at under 10 requests per second, with caching.",
+196 | …unction: cleans, segments and scores every document, then aggregates one feature row per event.",
+    |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+197 | … how unusual this call's tone is versus the company's previous four calls (a z-score). Needs at least two prior calls.",
+198 | …day 0, fit the market model on past data, then compute daily abnormal returns from −5 to +10 and the CAR windows.",
+    |
+
+E501 Line too long (185 > 100)
+   --> .ua/build_graph.py:197:101
+    |
+195 | …red identity, at under 10 requests per second, with caching.",
+196 | …ans, segments and scores every document, then aggregates one feature row per event.",
+197 | … this call's tone is versus the company's previous four calls (a z-score). Needs at least two prior calls.",
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+198 | …he market model on past data, then compute daily abnormal returns from −5 to +10 and the CAR windows.",
+199 | … = alpha + beta × market return on the estimation window, using only data available before the event.",
+    |
+
+E501 Line too long (180 > 100)
+   --> .ua/build_graph.py:198:101
+    |
+196 | …cleans, segments and scores every document, then aggregates one feature row per event.",
+197 | …ual this call's tone is versus the company's previous four calls (a z-score). Needs at least two prior calls.",
+198 | …t the market model on past data, then compute daily abnormal returns from −5 to +10 and the CAR windows.",
+    |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+199 | …urn = alpha + beta × market return on the estimation window, using only data available before the event.",
+200 | …s and answers 'which day is day 0 for this call?'.",
+    |
+
+E501 Line too long (180 > 100)
+   --> .ua/build_graph.py:199:101
+    |
+197 | …ual this call's tone is versus the company's previous four calls (a z-score). Needs at least two prior calls.",
+198 | …t the market model on past data, then compute daily abnormal returns from −5 to +10 and the CAR windows.",
+199 | …urn = alpha + beta × market return on the estimation window, using only data available before the event.",
+    |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+200 | …s and answers 'which day is day 0 for this call?'.",
+201 | …gainst the trailing 90 days and returns LONG/SHORT/NONE with a reason, plus the list of rejected events.",
+    |
+
+E501 Line too long (126 > 100)
+   --> .ua/build_graph.py:200:101
+    |
+198 |     "src/ecsa/events/study.py:run_study": "For every event: find day 0, fit the market model on past data, then compute daily abnorma…
+199 |     "src/ecsa/events/market_model.py:fit_market_model": "Fits expected return = alpha + beta × market return on the estimation window…
+200 |     "src/ecsa/events/calendar.py:TradingCalendar": "Lists real trading days and answers 'which day is day 0 for this call?'.",
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+201 |     "src/ecsa/signals/portfolio.py:build_signals": "Ranks each new event against the trailing 90 days and returns LONG/SHORT/NONE wit…
+202 |     "src/ecsa/signals/backtest.py:backtest": "Daily portfolio returns after costs from all open positions.",
+    |
+
+E501 Line too long (180 > 100)
+   --> .ua/build_graph.py:201:101
+    |
+199 | …urn = alpha + beta × market return on the estimation window, using only data available before the event.",
+200 | …s and answers 'which day is day 0 for this call?'.",
+201 | …gainst the trailing 90 days and returns LONG/SHORT/NONE with a reason, plus the list of rejected events.",
+    |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+202 | …r costs from all open positions.",
+203 | …on the same day and reruns the backtest, 100 times, as a 'luck' baseline.",
+    |
+
+E501 Line too long (108 > 100)
+   --> .ua/build_graph.py:202:101
+    |
+200 |     "src/ecsa/events/calendar.py:TradingCalendar": "Lists real trading days and answers 'which day is day 0 for this call?'.",
+201 |     "src/ecsa/signals/portfolio.py:build_signals": "Ranks each new event against the trailing 90 days and returns LONG/SHORT/NONE wit…
+202 |     "src/ecsa/signals/backtest.py:backtest": "Daily portfolio returns after costs from all open positions.",
+    |                                                                                                     ^^^^^^^^
+203 |     "src/ecsa/signals/backtest.py:placebo": "Shuffles scores among events on the same day and reruns the backtest, 100 times, as a 'l…
+204 |     "src/ecsa/signals/scoring.py:composite_scores": "Computes each event's composite score from past-only z-scores of the five measur…
+    |
+
+E501 Line too long (149 > 100)
+   --> .ua/build_graph.py:203:101
+    |
+201 | …ach new event against the trailing 90 days and returns LONG/SHORT/NONE with a reason, plus the list of rejected events.",
+202 | …io returns after costs from all open positions.",
+203 | …s among events on the same day and reruns the backtest, 100 times, as a 'luck' baseline.",
+    |                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+204 | …es each event's composite score from past-only z-scores of the five measures.",
+205 | …sidebar filters, metric cards, signal explanation, and the two tabs.",
+    |
+
+E501 Line too long (138 > 100)
+   --> .ua/build_graph.py:204:101
+    |
+202 | …ortfolio returns after costs from all open positions.",
+203 | … scores among events on the same day and reruns the backtest, 100 times, as a 'luck' baseline.",
+204 | …Computes each event's composite score from past-only z-scores of the five measures.",
+    |                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+205 | …page: sidebar filters, metric cards, signal explanation, and the two tabs.",
+206 | …art: this event's return and CAR from −5 to +10 days, peer-bucket averages with 95% bands, and its sentiment score on the right axis…
+    |
+
+E501 Line too long (129 > 100)
+   --> .ua/build_graph.py:205:101
+    |
+203 | …fles scores among events on the same day and reruns the backtest, 100 times, as a 'luck' baseline.",
+204 | …": "Computes each event's composite score from past-only z-scores of the five measures.",
+205 | …ole page: sidebar filters, metric cards, signal explanation, and the two tabs.",
+    |                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+206 | …n chart: this event's return and CAR from −5 to +10 days, peer-bucket averages with 95% bands, and its sentiment score on the right …
+207 | …One sentence explaining the event's trade decision, using the composite score and the recorded reason.",
+    |
+
+E501 Line too long (188 > 100)
+   --> .ua/build_graph.py:206:101
+    |
+204 | …posite score from past-only z-scores of the five measures.",
+205 | …tric cards, signal explanation, and the two tabs.",
+206 | …and CAR from −5 to +10 days, peer-bucket averages with 95% bands, and its sentiment score on the right axis.",
+    |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+207 | …vent's trade decision, using the composite score and the recorded reason.",
+208 | …
+    |
+
+E501 Line too long (153 > 100)
+   --> .ua/build_graph.py:207:101
+    |
+205 | …debar filters, metric cards, signal explanation, and the two tabs.",
+206 | …s event's return and CAR from −5 to +10 days, peer-bucket averages with 95% bands, and its sentiment score on the right axis.",
+207 | … explaining the event's trade decision, using the composite score and the recorded reason.",
+    |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+208 | …
+    |
+
+E501 Line too long (129 > 100)
+   --> .ua/build_graph.py:212:101
+    |
+210 | …ummary, writer stage, readers)
+211 | …
+212 | …cted documents with sections, speakers and timestamps.", "ingest", ["analyze"]),
+    |                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+213 | … and decimal returns for every ticker and the benchmark (SPY).", "ingest", ["event_study", "signals"]),
+214 | …of sentiment features per earnings event.", "analyze", ["event_study"]),
+    |
+
+E501 Line too long (152 > 100)
+   --> .ua/build_graph.py:213:101
+    |
+211 | …
+212 | …nts with sections, speakers and timestamps.", "ingest", ["analyze"]),
+213 | …l returns for every ticker and the benchmark (SPY).", "ingest", ["event_study", "signals"]),
+    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+214 | …t features per earnings event.", "analyze", ["event_study"]),
+215 | …nce with speaker, section and sentiment; feeds the dashboard's tone-across-the-call chart.", "analyze", ["render"]),
+    |
+
+E501 Line too long (121 > 100)
+   --> .ua/build_graph.py:214:101
+    |
+212 |     ("data/interim/documents.parquet", "All collected documents with sections, speakers and timestamps.", "ingest", ["analyze"]),
+213 |     ("data/interim/prices.parquet", "Daily prices and decimal returns for every ticker and the benchmark (SPY).", "ingest", ["event_s…
+214 |     ("data/processed/features.parquet", "One row of sentiment features per earnings event.", "analyze", ["event_study"]),
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^
+215 |     ("data/processed/sentences.parquet", "Every scored sentence with speaker, section and sentiment; feeds the dashboard's tone-acros…
+216 |     ("data/processed/phrases.parquet", "Matched positive/negative phrases with their sentences; feeds 'Words behind the score'.", "an…
+    |
+
+E501 Line too long (176 > 100)
+   --> .ua/build_graph.py:215:101
+    |
+213 | …r every ticker and the benchmark (SPY).", "ingest", ["event_study", "signals"]),
+214 | …er earnings event.", "analyze", ["event_study"]),
+215 | …aker, section and sentiment; feeds the dashboard's tone-across-the-call chart.", "analyze", ["render"]),
+    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+216 | …s with their sentences; feeds 'Words behind the score'.", "analyze", ["render"]),
+217 | … text removed before analysis, kept for audit.", "analyze", ["render"]),
+    |
+
+E501 Line too long (153 > 100)
+   --> .ua/build_graph.py:216:101
+    |
+214 | … features per earnings event.", "analyze", ["event_study"]),
+215 | …ce with speaker, section and sentiment; feeds the dashboard's tone-across-the-call chart.", "analyze", ["render"]),
+216 | …tive phrases with their sentences; feeds 'Words behind the score'.", "analyze", ["render"]),
+    |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+217 | …boilerplate text removed before analysis, kept for audit.", "analyze", ["render"]),
+218 | …l returns and CAR windows joined to the features.", "event_study", ["signals"]),
+    |
+
+E501 Line too long (144 > 100)
+   --> .ua/build_graph.py:217:101
+    |
+215 | …entence with speaker, section and sentiment; feeds the dashboard's tone-across-the-call chart.", "analyze", ["render"]),
+216 | …/negative phrases with their sentences; feeds 'Words behind the score'.", "analyze", ["render"]),
+217 | … and boilerplate text removed before analysis, kept for audit.", "analyze", ["render"]),
+    |                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+218 | …normal returns and CAR windows joined to the features.", "event_study", ["signals"]),
+219 | …R/CAR path of each event (−5…+10) for the chart.", "event_study", ["render"]),
+    |
+
+E501 Line too long (141 > 100)
+   --> .ua/build_graph.py:218:101
+    |
+216 | …e/negative phrases with their sentences; feeds 'Words behind the score'.", "analyze", ["render"]),
+217 | …r and boilerplate text removed before analysis, kept for audit.", "analyze", ["render"]),
+218 | …bnormal returns and CAR windows joined to the features.", "event_study", ["signals"]),
+    |                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+219 | …AR/CAR path of each event (−5…+10) for the chart.", "event_study", ["render"]),
+220 | …turn paths of high/neutral/low sentiment peers with 95% bands.", "event_study", ["render"]),
+    |
+
+E501 Line too long (134 > 100)
+   --> .ua/build_graph.py:219:101
+    |
+217 | …arbor and boilerplate text removed before analysis, kept for audit.", "analyze", ["render"]),
+218 | …nt abnormal returns and CAR windows joined to the features.", "event_study", ["signals"]),
+219 | …day AR/CAR path of each event (−5…+10) for the chart.", "event_study", ["render"]),
+    |                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+220 | …e return paths of high/neutral/low sentiment peers with 95% bands.", "event_study", ["render"]),
+221 | … sentiment quintile each event falls in.", "event_study", ["render"]),
+    |
+
+E501 Line too long (147 > 100)
+   --> .ua/build_graph.py:220:101
+    |
+218 | …rmal returns and CAR windows joined to the features.", "event_study", ["signals"]),
+219 | …CAR path of each event (−5…+10) for the chart.", "event_study", ["render"]),
+220 | …n paths of high/neutral/low sentiment peers with 95% bands.", "event_study", ["render"]),
+    |                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+221 | …ent quintile each event falls in.", "event_study", ["render"]),
+222 | …P results for each return window.", "event_study", []),
+    |
+
+E501 Line too long (121 > 100)
+   --> .ua/build_graph.py:221:101
+    |
+219 |     ("data/processed/event_paths.parquet", "Day-by-day AR/CAR path of each event (−5…+10) for the chart.", "event_study", ["render"]),
+220 |     ("data/processed/bucket_paths.parquet", "Average return paths of high/neutral/low sentiment peers with 95% bands.", "event_study"…
+221 |     ("data/processed/event_buckets.parquet", "Which sentiment quintile each event falls in.", "event_study", ["render"]),
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^
+222 |     ("data/processed/window_tests.parquet", "t-test and BMP results for each return window.", "event_study", []),
+223 |     ("data/processed/information_coefficients.parquet", "Rank correlation of each score with post-event drift, overall and by quarter…
+    |
+
+E501 Line too long (113 > 100)
+   --> .ua/build_graph.py:222:101
+    |
+220 |     ("data/processed/bucket_paths.parquet", "Average return paths of high/neutral/low sentiment peers with 95% bands.", "event_study"…
+221 |     ("data/processed/event_buckets.parquet", "Which sentiment quintile each event falls in.", "event_study", ["render"]),
+222 |     ("data/processed/window_tests.parquet", "t-test and BMP results for each return window.", "event_study", []),
+    |                                                                                                     ^^^^^^^^^^^^^
+223 |     ("data/processed/information_coefficients.parquet", "Rank correlation of each score with post-event drift, overall and by quarter…
+224 |     ("data/processed/regression.parquet", "Drift regression controlling for anticipation and reaction.", "event_study", []),
+    |
+
+E501 Line too long (156 > 100)
+   --> .ua/build_graph.py:223:101
+    |
+221 | …quintile each event falls in.", "event_study", ["render"]),
+222 | …sults for each return window.", "event_study", []),
+223 | …correlation of each score with post-event drift, overall and by quarter.", "event_study", []),
+    |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+224 | …ntrolling for anticipation and reaction.", "event_study", []),
+225 | …r composite score.", "signals", ["render"]),
+    |
+
+E501 Line too long (124 > 100)
+   --> .ua/build_graph.py:224:101
+    |
+222 |     ("data/processed/window_tests.parquet", "t-test and BMP results for each return window.", "event_study", []),
+223 |     ("data/processed/information_coefficients.parquet", "Rank correlation of each score with post-event drift, overall and by quarter…
+224 |     ("data/processed/regression.parquet", "Drift regression controlling for anticipation and reaction.", "event_study", []),
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+225 |     ("data/processed/scored_events.parquet", "Events with their composite score.", "signals", ["render"]),
+226 |     ("data/processed/signals.parquet", "Every trade decision (LONG/SHORT/NONE), weight, dates and reason.", "signals", ["render"]),
+    |
+
+E501 Line too long (106 > 100)
+   --> .ua/build_graph.py:225:101
+    |
+223 |     ("data/processed/information_coefficients.parquet", "Rank correlation of each score with post-event drift, overall and by quarter…
+224 |     ("data/processed/regression.parquet", "Drift regression controlling for anticipation and reaction.", "event_study", []),
+225 |     ("data/processed/scored_events.parquet", "Events with their composite score.", "signals", ["render"]),
+    |                                                                                                     ^^^^^^
+226 |     ("data/processed/signals.parquet", "Every trade decision (LONG/SHORT/NONE), weight, dates and reason.", "signals", ["render"]),
+227 |     ("data/processed/rejected_signals.parquet", "Events that could not be traded, with the reason.", "signals", []),
+    |
+
+E501 Line too long (131 > 100)
+   --> .ua/build_graph.py:226:101
+    |
+224 |     ("data/processed/regression.parquet", "Drift regression controlling for anticipation and reaction.", "event_study", []),
+225 |     ("data/processed/scored_events.parquet", "Events with their composite score.", "signals", ["render"]),
+226 |     ("data/processed/signals.parquet", "Every trade decision (LONG/SHORT/NONE), weight, dates and reason.", "signals", ["render"]),
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+227 |     ("data/processed/rejected_signals.parquet", "Events that could not be traded, with the reason.", "signals", []),
+228 |     ("data/processed/backtest.parquet", "Daily strategy returns after costs.", "signals", ["render"]),
+    |
+
+E501 Line too long (116 > 100)
+   --> .ua/build_graph.py:227:101
+    |
+225 |     ("data/processed/scored_events.parquet", "Events with their composite score.", "signals", ["render"]),
+226 |     ("data/processed/signals.parquet", "Every trade decision (LONG/SHORT/NONE), weight, dates and reason.", "signals", ["render"]),
+227 |     ("data/processed/rejected_signals.parquet", "Events that could not be traded, with the reason.", "signals", []),
+    |                                                                                                     ^^^^^^^^^^^^^^^^
+228 |     ("data/processed/backtest.parquet", "Daily strategy returns after costs.", "signals", ["render"]),
+229 |     ("data/processed/placebo.parquet", "Average equity path of the shuffled-score placebo.", "signals", ["render"]),
+    |
+
+E501 Line too long (102 > 100)
+   --> .ua/build_graph.py:228:101
+    |
+226 |     ("data/processed/signals.parquet", "Every trade decision (LONG/SHORT/NONE), weight, dates and reason.", "signals", ["render"]),
+227 |     ("data/processed/rejected_signals.parquet", "Events that could not be traded, with the reason.", "signals", []),
+228 |     ("data/processed/backtest.parquet", "Daily strategy returns after costs.", "signals", ["render"]),
+    |                                                                                                     ^^
+229 |     ("data/processed/placebo.parquet", "Average equity path of the shuffled-score placebo.", "signals", ["render"]),
+230 |     ("data/processed/strategy_metrics.parquet", "Strategy scorecard (Sharpe, drawdown, hit rate, IC…).", "signals", ["render"]),
+    |
+
+E501 Line too long (116 > 100)
+   --> .ua/build_graph.py:229:101
+    |
+227 |     ("data/processed/rejected_signals.parquet", "Events that could not be traded, with the reason.", "signals", []),
+228 |     ("data/processed/backtest.parquet", "Daily strategy returns after costs.", "signals", ["render"]),
+229 |     ("data/processed/placebo.parquet", "Average equity path of the shuffled-score placebo.", "signals", ["render"]),
+    |                                                                                                     ^^^^^^^^^^^^^^^^
+230 |     ("data/processed/strategy_metrics.parquet", "Strategy scorecard (Sharpe, drawdown, hit rate, IC…).", "signals", ["render"]),
+231 |     ("data/processed/strategy_ic.parquet", "Information coefficient of the composite score by quarter.", "signals", ["render"]),
+    |
+
+E501 Line too long (128 > 100)
+   --> .ua/build_graph.py:230:101
+    |
+228 |     ("data/processed/backtest.parquet", "Daily strategy returns after costs.", "signals", ["render"]),
+229 |     ("data/processed/placebo.parquet", "Average equity path of the shuffled-score placebo.", "signals", ["render"]),
+230 |     ("data/processed/strategy_metrics.parquet", "Strategy scorecard (Sharpe, drawdown, hit rate, IC…).", "signals", ["render"]),
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+231 |     ("data/processed/strategy_ic.parquet", "Information coefficient of the composite score by quarter.", "signals", ["render"]),
+232 |     ("data/processed/run_metadata.parquet", "Run settings: demo flag, seed, model revision, costs, placebo count.", "signals", ["rend…
+    |
+
+E501 Line too long (128 > 100)
+   --> .ua/build_graph.py:231:101
+    |
+229 |     ("data/processed/placebo.parquet", "Average equity path of the shuffled-score placebo.", "signals", ["render"]),
+230 |     ("data/processed/strategy_metrics.parquet", "Strategy scorecard (Sharpe, drawdown, hit rate, IC…).", "signals", ["render"]),
+231 |     ("data/processed/strategy_ic.parquet", "Information coefficient of the composite score by quarter.", "signals", ["render"]),
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+232 |     ("data/processed/run_metadata.parquet", "Run settings: demo flag, seed, model revision, costs, placebo count.", "signals", ["rend…
+233 | ]
+    |
+
+E501 Line too long (139 > 100)
+   --> .ua/build_graph.py:232:101
+    |
+230 | …egy scorecard (Sharpe, drawdown, hit rate, IC…).", "signals", ["render"]),
+231 | …n coefficient of the composite score by quarter.", "signals", ["render"]),
+232 | …ngs: demo flag, seed, model revision, costs, placebo count.", "signals", ["render"]),
+    |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+233 | …
+    |
+
+E501 Line too long (126 > 100)
+   --> .ua/build_graph.py:277:101
+    |
+276 | DOCS = {
+277 |     "README.md": "Start here: what the project does, how to run the offline demo, how to use real data, and its limitations.",
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+278 |     "guidelines.md": "The design document: the methodology for data collection, NLP, the event study and trading signals, plus the da…
+279 |     "change-report.md": "What was built and verified: test, lint, type, build and browser checks, and the bugs fixed.",
+    |
+
+E501 Line too long (157 > 100)
+   --> .ua/build_graph.py:278:101
+    |
+276 | …
+277 | … the offline demo, how to use real data, and its limitations.",
+278 | …data collection, NLP, the event study and trading signals, plus the dashboard specification.",
+    |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+279 | …t, type, build and browser checks, and the bugs fixed.",
+280 | …assistants; currently marked complete.",
+    |
+
+E501 Line too long (119 > 100)
+   --> .ua/build_graph.py:279:101
+    |
+277 |     "README.md": "Start here: what the project does, how to run the offline demo, how to use real data, and its limitations.",
+278 |     "guidelines.md": "The design document: the methodology for data collection, NLP, the event study and trading signals, plus the da…
+279 |     "change-report.md": "What was built and verified: test, lint, type, build and browser checks, and the bugs fixed.",
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^
+280 |     "HANDOFF.md": "Checkpoint used to hand the task between AI assistants; currently marked complete.",
+281 | }
+    |
+
+E501 Line too long (103 > 100)
+   --> .ua/build_graph.py:280:101
+    |
+278 |     "guidelines.md": "The design document: the methodology for data collection, NLP, the event study and trading signals, plus the da…
+279 |     "change-report.md": "What was built and verified: test, lint, type, build and browser checks, and the bugs fixed.",
+280 |     "HANDOFF.md": "Checkpoint used to hand the task between AI assistants; currently marked complete.",
+    |                                                                                                     ^^^
+281 | }
+282 | CONFIGS = {
+    |
+
+E501 Line too long (190 > 100)
+   --> .ua/build_graph.py:283:101
+    |
+281 | …
+282 | …
+283 | …d revisions, keyword lists, event windows, ranking thresholds, costs, placebo count.", "src/ecsa/settings.py"),
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+284 | … Copy to .env, fill in, and export; never committed.", "src/ecsa/settings.py"),
+285 | … pytest (network disabled), ruff and strict mypy.", "src/ecsa/__init__.py"),
+    |
+
+E501 Line too long (158 > 100)
+   --> .ua/build_graph.py:284:101
+    |
+282 | …
+283 | …ce: model ids and revisions, keyword lists, event windows, ranking thresholds, costs, placebo count.", "src/ecsa/settings.py"),
+284 | …ional API keys). Copy to .env, fill in, and export; never committed.", "src/ecsa/settings.py"),
+    |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+285 | …ool settings for pytest (network disabled), ruff and strict mypy.", "src/ecsa/__init__.py"),
+286 | …e test`, `make check`.", "src/ecsa/pipeline.py"),
+    |
+
+E501 Line too long (155 > 100)
+   --> .ua/build_graph.py:285:101
+    |
+283 | …ace: model ids and revisions, keyword lists, event windows, ranking thresholds, costs, placebo count.", "src/ecsa/settings.py"),
+284 | …tional API keys). Copy to .env, fill in, and export; never committed.", "src/ecsa/settings.py"),
+285 | …tool settings for pytest (network disabled), ruff and strict mypy.", "src/ecsa/__init__.py"),
+    |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+286 | …ke test`, `make check`.", "src/ecsa/pipeline.py"),
+287 | …
+    |
+
+E501 Line too long (112 > 100)
+   --> .ua/build_graph.py:286:101
+    |
+284 |     ".env.example": ("Template for secrets (SEC_USER_AGENT, optional API keys). Copy to .env, fill in, and export; never committed.",…
+285 |     "pyproject.toml": ("Package definition, dependencies, and tool settings for pytest (network disabled), ruff and strict mypy.", "s…
+286 |     "Makefile": ("Shortcuts: `make demo-data`, `make app`, `make test`, `make check`.", "src/ecsa/pipeline.py"),
+    |                                                                                                     ^^^^^^^^^^^^
+287 | }
+    |
+
+E501 Line too long (125 > 100)
+   --> .ua/build_graph.py:290:101
+    |
+289 | LAYERS = [
+290 |     ("foundations", "1 · Foundations", "Shared contracts every stage relies on: data records, settings and Parquet storage.",
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+291 |      ["src/ecsa/__init__.py", "src/ecsa/schemas.py", "src/ecsa/settings.py", "src/ecsa/storage.py"]),
+292 |     ("collection", "2 · Data collection (ingest)", "Gets earnings text and prices: licensed transcripts, SEC EDGAR filings, price sou…
+    |
+
+E501 Line too long (101 > 100)
+   --> .ua/build_graph.py:291:101
+    |
+289 | LAYERS = [
+290 |     ("foundations", "1 · Foundations", "Shared contracts every stage relies on: data records, settings and Parquet storage.",
+291 |      ["src/ecsa/__init__.py", "src/ecsa/schemas.py", "src/ecsa/settings.py", "src/ecsa/storage.py"]),
+    |                                                                                                     ^
+292 |     ("collection", "2 · Data collection (ingest)", "Gets earnings text and prices: licensed transcripts, SEC EDGAR filings, price sou…
+293 |      ["src/ecsa/data/"]),
+    |
+
+E501 Line too long (172 > 100)
+   --> .ua/build_graph.py:292:101
+    |
+290 | …elies on: data records, settings and Parquet storage.",
+291 | …s.py", "src/ecsa/storage.py"]),
+292 | … and prices: licensed transcripts, SEC EDGAR filings, price sources, with caching and rate limiting.",
+    |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+293 | …
+294 | … cleaning, sentences, FinBERT/LLM sentiment, keyword tone, forward-looking statements, themes, event features.",
+    |
+
+E501 Line too long (182 > 100)
+   --> .ua/build_graph.py:294:101
+    |
+292 | …prices: licensed transcripts, SEC EDGAR filings, price sources, with caching and rate limiting.",
+293 | …
+294 | …ning, sentences, FinBERT/LLM sentiment, keyword tone, forward-looking statements, themes, event features.",
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+295 | …
+296 | …around each call (−5 to +10 days) and whether sentiment explains the move.",
+    |
+
+E501 Line too long (151 > 100)
+   --> .ua/build_graph.py:296:101
+    |
+294 | …o numbers: cleaning, sentences, FinBERT/LLM sentiment, keyword tone, forward-looking statements, themes, event features.",
+295 | …
+296 | …w prices moved around each call (−5 to +10 days) and whether sentiment explains the move.",
+    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+297 | …
+298 | …"Turns sentiment into LONG/SHORT decisions and tests them honestly with costs and a placebo.",
+    |
+
+E501 Line too long (154 > 100)
+   --> .ua/build_graph.py:298:101
+    |
+296 | … prices moved around each call (−5 to +10 days) and whether sentiment explains the move.",
+297 | …
+298 | …Turns sentiment into LONG/SHORT decisions and tests them honestly with costs and a placebo.",
+    |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+299 | …
+300 | …ns the stages, the synthetic demo, and the Streamlit dashboard.",
+    |
+
+E501 Line too long (126 > 100)
+   --> .ua/build_graph.py:300:101
+    |
+298 |     ("signals", "5 · Trading signals & backtest (signals)", "Turns sentiment into LONG/SHORT decisions and tests them honestly with c…
+299 |      ["src/ecsa/signals/"]),
+300 |     ("app", "6 · Orchestration & dashboard", "The CLI that runs the stages, the synthetic demo, and the Streamlit dashboard.",
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+301 |      ["src/ecsa/pipeline.py", "src/ecsa/demo.py", "src/ecsa/dashboard.py", "app/"]),
+302 |     ("data", "7 · Data files", "The Parquet tables each stage writes and the next stage (or the dashboard) reads.", []),
+    |
+
+E501 Line too long (120 > 100)
+   --> .ua/build_graph.py:302:101
+    |
+300 |     ("app", "6 · Orchestration & dashboard", "The CLI that runs the stages, the synthetic demo, and the Streamlit dashboard.",
+301 |      ["src/ecsa/pipeline.py", "src/ecsa/demo.py", "src/ecsa/dashboard.py", "app/"]),
+302 |     ("data", "7 · Data files", "The Parquet tables each stage writes and the next stage (or the dashboard) reads.", []),
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^
+303 |     ("concepts", "8 · Key ideas", "Short explanations of the ideas you need to read the code and the results.", []),
+304 |     ("docs", "9 · Docs & configuration", "Project documents and configuration files.", []),
+    |
+
+E501 Line too long (116 > 100)
+   --> .ua/build_graph.py:303:101
+    |
+301 |      ["src/ecsa/pipeline.py", "src/ecsa/demo.py", "src/ecsa/dashboard.py", "app/"]),
+302 |     ("data", "7 · Data files", "The Parquet tables each stage writes and the next stage (or the dashboard) reads.", []),
+303 |     ("concepts", "8 · Key ideas", "Short explanations of the ideas you need to read the code and the results.", []),
+    |                                                                                                     ^^^^^^^^^^^^^^^^
+304 |     ("docs", "9 · Docs & configuration", "Project documents and configuration files.", []),
+305 | ]
+    |
+
+E501 Line too long (274 > 100)
+   --> .ua/build_graph.py:308:101
+    |
+307 | …
+308 | …ether tone explains the stock's move over the following days, and turns that into long/short trades. Start with the README for the big picture and the guidelines for the method.",
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+309 | …
+310 | …. Each stage writes Parquet files the next stage reads (see the Data files layer). `--demo` runs it all offline on synthetic data.",
+    |
+
+E501 Line too long (227 > 100)
+   --> .ua/build_graph.py:310:101
+    |
+308 | …ether tone explains the stock's move over the following days, and turns that into long/short trades. Start with the README for the big pi…
+309 | …
+310 | …. Each stage writes Parquet files the next stage reads (see the Data files layer). `--demo` runs it all offline on synthetic data.",
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+311 | …s.yaml"], None),
+312 | …Read the Document and Signal schemas, then the concept note. Most design choices later in the tour exist to enforce this rule.",
+    |
+
+E501 Line too long (111 > 100)
+   --> .ua/build_graph.py:311:101
+    |
+309 |      ["document:README.md", "document:guidelines.md"], None),
+310 |     ("How a run flows", "pipeline.py runs four stages: ingest → analyze → event-study → signals. Each stage writes Parquet files the …
+311 |      ["file:src/ecsa/pipeline.py", "function:src/ecsa/pipeline.py:main", "config:config/settings.yaml"], None),
+    |                                                                                                     ^^^^^^^^^^^
+312 |     ("The rule behind everything: no look-ahead", "Every record says when it became available. Read the Document and Signal schemas, …
+313 |      ["file:src/ecsa/schemas.py", "concept:no-look-ahead"],
+    |
+
+E501 Line too long (223 > 100)
+   --> .ua/build_graph.py:312:101
+    |
+310 | …. Each stage writes Parquet files the next stage reads (see the Data files layer). `--demo` runs it all offline on synthetic data.",
+311 | …s.yaml"], None),
+312 | …Read the Document and Signal schemas, then the concept note. Most design choices later in the tour exist to enforce this rule.",
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+313 | …
+314 | …ible availability times raise errors immediately instead of silently corrupting results."),
+    |
+
+E501 Line too long (186 > 100)
+   --> .ua/build_graph.py:314:101
+    |
+312 | …became available. Read the Document and Signal schemas, then the concept note. Most design choices later in the tour exist to enforc…
+313 | …
+314 | …mestamps or impossible availability times raise errors immediately instead of silently corrupting results."),
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+315 | …local files (Seeking Alpha is not scraped), filings from SEC EDGAR, prices from a local file or yfinance. All network access goes th…
+316 | …le:src/ecsa/data/prices.py", "file:src/ecsa/data/cache.py"], None),
+    |
+
+E501 Line too long (249 > 100)
+   --> .ua/build_graph.py:315:101
+    |
+313 | …
+314 | …ible availability times raise errors immediately instead of silently corrupting results."),
+315 | …ng Alpha is not scraped), filings from SEC EDGAR, prices from a local file or yfinance. All network access goes through one cached, rate-limited client.",
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+316 | …rices.py", "file:src/ecsa/data/cache.py"], None),
+317 | …the next trading day. The calendar turns call times into day 0, which anchors the event study and the trade entry.",
+    |
+
+E501 Line too long (144 > 100)
+   --> .ua/build_graph.py:316:101
+    |
+314 | …wrong types, naive timestamps or impossible availability times raise errors immediately instead of silently corrupting results."),
+315 | …s come from licensed local files (Seeking Alpha is not scraped), filings from SEC EDGAR, prices from a local file or yfinance. All n…
+316 | …a/data/edgar.py", "file:src/ecsa/data/prices.py", "file:src/ecsa/data/cache.py"], None),
+    |                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+317 | …r the 16:00 close can only move prices the next trading day. The calendar turns call times into day 0, which anchors the event study…
+318 | …r.py:TradingCalendar"], None),
+    |
+
+E501 Line too long (211 > 100)
+   --> .ua/build_graph.py:317:101
+    |
+315 | …Seeking Alpha is not scraped), filings from SEC EDGAR, prices from a local file or yfinance. All network access goes through one cac…
+316 | …ata/prices.py", "file:src/ecsa/data/cache.py"], None),
+317 | …ices the next trading day. The calendar turns call times into day 0, which anchors the event study and the trade entry.",
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+318 | …
+319 | …), split into sentences, scored by FinBERT, and matched against keyword lists. features.py combines everything into one row per even…
+    |
+
+E501 Line too long (256 > 100)
+   --> .ua/build_graph.py:319:101
+    |
+317 | …the next trading day. The calendar turns call times into day 0, which anchors the event study and the trade entry.",
+318 | …
+319 | …lit into sentences, scored by FinBERT, and matched against keyword lists. features.py combines everything into one row per event, including sentiment surprise.",
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+320 | …on.py", "file:src/ecsa/nlp/features.py", "concept:sentence-sentiment", "concept:sentiment-surprise"], None),
+321 | …nce is the abnormal return. Summing it over windows gives CAR. stats.py tests, across all events, whether high-sentiment calls drift up after the call.",
+    |
+
+E501 Line too long (203 > 100)
+   --> .ua/build_graph.py:320:101
+    |
+318 | …
+319 | …oved), split into sentences, scored by FinBERT, and matched against keyword lists. features.py combines everything into one row per …
+320 | …nlp/lexicon.py", "file:src/ecsa/nlp/features.py", "concept:sentence-sentiment", "concept:sentiment-surprise"], None),
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+321 | …e difference is the abnormal return. Summing it over windows gives CAR. stats.py tests, across all events, whether high-sentiment ca…
+322 | …rc/ecsa/events/stats.py", "concept:abnormal-return"],
+    |
+
+E501 Line too long (248 > 100)
+   --> .ua/build_graph.py:321:101
+    |
+319 | …lit into sentences, scored by FinBERT, and matched against keyword lists. features.py combines everything into one row per event, including sentiment surprise…
+320 | …on.py", "file:src/ecsa/nlp/features.py", "concept:sentence-sentiment", "concept:sentiment-surprise"], None),
+321 | …nce is the abnormal return. Summing it over windows gives CAR. stats.py tests, across all events, whether high-sentiment calls drift up after the call.",
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+322 | …vents/stats.py", "concept:abnormal-return"],
+323 | …s are clustered by date because many companies report on the same days."),
+    |
+
+E501 Line too long (139 > 100)
+   --> .ua/build_graph.py:322:101
+    |
+320 | …nlp/finbert.py", "file:src/ecsa/nlp/lexicon.py", "file:src/ecsa/nlp/features.py", "concept:sentence-sentiment", "concept:sentiment-s…
+321 | …el estimates a normal return; the difference is the abnormal return. Summing it over windows gives CAR. stats.py tests, across all e…
+322 | …c/ecsa/events/study.py", "file:src/ecsa/events/stats.py", "concept:abnormal-return"],
+    |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+323 | … for the drift regression; standard errors are clustered by date because many companies report on the same days."),
+324 | … builds the composite score from past-only z-scores; portfolio.py ranks each event against the last 90 days to decide LONG, SHORT or…
+    |
+
+E501 Line too long (169 > 100)
+   --> .ua/build_graph.py:323:101
+    |
+321 | …normal return; the difference is the abnormal return. Summing it over windows gives CAR. stats.py tests, across all events, whether …
+322 | …tudy.py", "file:src/ecsa/events/stats.py", "concept:abnormal-return"],
+323 | …regression; standard errors are clustered by date because many companies report on the same days."),
+    |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+324 | …posite score from past-only z-scores; portfolio.py ranks each event against the last 90 days to decide LONG, SHORT or NONE and recor…
+325 | …folio.py", "concept:composite-score"], None),
+    |
+
+E501 Line too long (210 > 100)
+   --> .ua/build_graph.py:324:101
+    |
+322 | …ecsa/events/stats.py", "concept:abnormal-return"],
+323 | … errors are clustered by date because many companies report on the same days."),
+324 | …st-only z-scores; portfolio.py ranks each event against the last 90 days to decide LONG, SHORT or NONE and records why.",
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+325 | …composite-score"], None),
+326 | …placebo reruns it with shuffled scores 100 times; metrics.py reports Sharpe, drawdown, hit rate, IC and the number of variants tried…
+    |
+
+E501 Line too long (114 > 100)
+   --> .ua/build_graph.py:325:101
+    |
+323 |      "statsmodels OLS is used for the market model and for the drift regression; standard errors are clustered by date because many c…
+324 |     ("Stage 4 — turning tone into trades", "scoring.py builds the composite score from past-only z-scores; portfolio.py ranks each ev…
+325 |      ["file:src/ecsa/signals/scoring.py", "file:src/ecsa/signals/portfolio.py", "concept:composite-score"], None),
+    |                                                                                                     ^^^^^^^^^^^^^^
+326 |     ("Testing the strategy honestly", "The backtest charges costs and holds 10 days; the placebo reruns it with shuffled scores 100 t…
+327 |      ["file:src/ecsa/signals/backtest.py", "file:src/ecsa/signals/metrics.py", "concept:placebo-test"], None),
+    |
+
+E501 Line too long (224 > 100)
+   --> .ua/build_graph.py:326:101
+    |
+324 | …y z-scores; portfolio.py ranks each event against the last 90 days to decide LONG, SHORT or NONE and records why.",
+325 | …ite-score"], None),
+326 | …o reruns it with shuffled scores 100 times; metrics.py reports Sharpe, drawdown, hit rate, IC and the number of variants tried.",
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+327 | …-test"], None),
+328 | …ent to see its scores, the reason for its trade decision, the −5 to +10 day chart against peers, and the phrases behind the score.",
+    |
+
+E501 Line too long (110 > 100)
+   --> .ua/build_graph.py:327:101
+    |
+325 |      ["file:src/ecsa/signals/scoring.py", "file:src/ecsa/signals/portfolio.py", "concept:composite-score"], None),
+326 |     ("Testing the strategy honestly", "The backtest charges costs and holds 10 days; the placebo reruns it with shuffled scores 100 t…
+327 |      ["file:src/ecsa/signals/backtest.py", "file:src/ecsa/signals/metrics.py", "concept:placebo-test"], None),
+    |                                                                                                     ^^^^^^^^^^
+328 |     ("Seeing the results", "The dashboard only reads the processed tables. Pick a ticker and event to see its scores, the reason for …
+329 |      ["file:app/streamlit_app.py", "file:src/ecsa/dashboard.py", "table:data/processed/signals.parquet"],
+    |
+
+E501 Line too long (227 > 100)
+   --> .ua/build_graph.py:328:101
+    |
+326 | …o reruns it with shuffled scores 100 times; metrics.py reports Sharpe, drawdown, hit rate, IC and the number of variants tried.",
+327 | …-test"], None),
+328 | …ent to see its scores, the reason for its trade decision, the −5 to +10 day chart against peers, and the phrases behind the score.",
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+329 | …parquet"],
+330 | …from repeating."),
+    |
+
+E501 Line too long (105 > 100)
+   --> .ua/build_graph.py:329:101
+    |
+327 |      ["file:src/ecsa/signals/backtest.py", "file:src/ecsa/signals/metrics.py", "concept:placebo-test"], None),
+328 |     ("Seeing the results", "The dashboard only reads the processed tables. Pick a ticker and event to see its scores, the reason for …
+329 |      ["file:app/streamlit_app.py", "file:src/ecsa/dashboard.py", "table:data/processed/signals.parquet"],
+    |                                                                                                     ^^^^^
+330 |      "Streamlit reruns the script on every interaction; @st.cache_data keeps the Parquet reads from repeating."),
+331 | ]
+    |
+
+E501 Line too long (113 > 100)
+   --> .ua/build_graph.py:330:101
+    |
+328 |     ("Seeing the results", "The dashboard only reads the processed tables. Pick a ticker and event to see its scores, the reason for …
+329 |      ["file:app/streamlit_app.py", "file:src/ecsa/dashboard.py", "table:data/processed/signals.parquet"],
+330 |      "Streamlit reruns the script on every interaction; @st.cache_data keeps the Parquet reads from repeating."),
+    |                                                                                                     ^^^^^^^^^^^^^
+331 | ]
+    |
+
+E501 Line too long (196 > 100)
+   --> .ua/build_graph.py:338:101
+    |
+336 | ….",
+337 | …
+338 | …sts declare an identity and stay under 10 per second", "Call time and text availability are recorded separately"],
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+339 | …ecsa.pipeline ingest", "cli", [
+340 | …scripts/.", "src/ecsa/data/transcripts.py"),
+    |
+
+E501 Line too long (113 > 100)
+   --> .ua/build_graph.py:339:101
+    |
+337 |      ["Document", "Section", "Utterance"],
+338 |      ["Only licensed transcripts; no scraping of sites that forbid it", "SEC requests declare an identity and stay under 10 per secon…
+339 |      [("collect-documents", "Collect documents for an earnings event", "python -m ecsa.pipeline ingest", "cli", [
+    |                                                                                                     ^^^^^^^^^^^^^
+340 |          ("Load licensed transcripts", "Read JSON/CSV/TXT files from data/raw/transcripts/.", "src/ecsa/data/transcripts.py"),
+341 |          ("Parse speakers and Q&A", "Split into speaker turns, mark prepared remarks vs Q&A, tag roles.", "src/ecsa/data/transcripts.…
+    |
+
+E501 Line too long (126 > 100)
+   --> .ua/build_graph.py:340:101
+    |
+338 |      ["Only licensed transcripts; no scraping of sites that forbid it", "SEC requests declare an identity and stay under 10 per secon…
+339 |      [("collect-documents", "Collect documents for an earnings event", "python -m ecsa.pipeline ingest", "cli", [
+340 |          ("Load licensed transcripts", "Read JSON/CSV/TXT files from data/raw/transcripts/.", "src/ecsa/data/transcripts.py"),
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+341 |          ("Parse speakers and Q&A", "Split into speaker turns, mark prepared remarks vs Q&A, tag roles.", "src/ecsa/data/transcripts.…
+342 |          ("Fetch SEC earnings releases", "Optional: 8-K Item 2.02 EX-99 exhibits and MD&A from EDGAR.", "src/ecsa/data/edgar.py"),
+    |
+
+E501 Line too long (138 > 100)
+   --> .ua/build_graph.py:341:101
+    |
+339 | … earnings event", "python -m ecsa.pipeline ingest", "cli", [
+340 | …/TXT files from data/raw/transcripts/.", "src/ecsa/data/transcripts.py"),
+341 | …er turns, mark prepared remarks vs Q&A, tag roles.", "src/ecsa/data/transcripts.py"),
+    |                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+342 | …-K Item 2.02 EX-99 exhibits and MD&A from EDGAR.", "src/ecsa/data/edgar.py"),
+343 | …g, after close, or unknown.", "src/ecsa/data/transcripts.py"),
+    |
+
+E501 Line too long (130 > 100)
+   --> .ua/build_graph.py:342:101
+    |
+340 | …     ("Load licensed transcripts", "Read JSON/CSV/TXT files from data/raw/transcripts/.", "src/ecsa/data/transcripts.py"),
+341 | …     ("Parse speakers and Q&A", "Split into speaker turns, mark prepared remarks vs Q&A, tag roles.", "src/ecsa/data/transcripts.py"…
+342 | …     ("Fetch SEC earnings releases", "Optional: 8-K Item 2.02 EX-99 exhibits and MD&A from EDGAR.", "src/ecsa/data/edgar.py"),
+    |                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+343 | …     ("Classify call timing", "Before open, during, after close, or unknown.", "src/ecsa/data/transcripts.py"),
+344 | …     ("Store documents", "Save validated documents to Parquet.", "src/ecsa/storage.py")]),
+    |
+
+E501 Line too long (115 > 100)
+   --> .ua/build_graph.py:343:101
+    |
+341 |          ("Parse speakers and Q&A", "Split into speaker turns, mark prepared remarks vs Q&A, tag roles.", "src/ecsa/data/transcripts.…
+342 |          ("Fetch SEC earnings releases", "Optional: 8-K Item 2.02 EX-99 exhibits and MD&A from EDGAR.", "src/ecsa/data/edgar.py"),
+343 |          ("Classify call timing", "Before open, during, after close, or unknown.", "src/ecsa/data/transcripts.py"),
+    |                                                                                                     ^^^^^^^^^^^^^^^
+344 |          ("Store documents", "Save validated documents to Parquet.", "src/ecsa/storage.py")]),
+345 |       ("collect-prices", "Collect daily prices", "python -m ecsa.pipeline ingest", "cli", [
+    |
+
+E501 Line too long (117 > 100)
+   --> .ua/build_graph.py:346:101
+    |
+344 |          ("Store documents", "Save validated documents to Parquet.", "src/ecsa/storage.py")]),
+345 |       ("collect-prices", "Collect daily prices", "python -m ecsa.pipeline ingest", "cli", [
+346 |          ("Download or load bars", "Local Parquet or yfinance (prototype only), cached.", "src/ecsa/data/prices.py"),
+    |                                                                                                     ^^^^^^^^^^^^^^^^^
+347 |          ("Validate and compute returns", "Check bars; compute decimal returns without filling gaps.", "src/ecsa/data/prices.py")])]),
+348 |     ("language-analysis", "Language & sentiment analysis",
+    |
+
+E501 Line too long (134 > 100)
+   --> .ua/build_graph.py:347:101
+    |
+345 |       ("collect-prices", "Collect daily prices", "python -m ecsa.pipeline ingest", "cli", [
+346 |          ("Download or load bars", "Local Parquet or yfinance (prototype only), cached.", "src/ecsa/data/prices.py"),
+347 |          ("Validate and compute returns", "Check bars; compute decimal returns without filling gaps.", "src/ecsa/data/prices.py")])]),
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+348 |     ("language-analysis", "Language & sentiment analysis",
+349 |      "Measuring how positive, uncertain and forward-looking management sounded.",
+    |
+
+E501 Line too long (161 > 100)
+   --> .ua/build_graph.py:351:101
+    |
+349 | …ement sounded.",
+350 | …
+351 | …-looking language", "Model revisions are pinned", "Themes and surprise use only earlier calls"],
+    |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+352 | …ipeline analyze", "cli", [
+353 | …sclaimers.", "src/ecsa/nlp/cleaning.py"),
+    |
+
+E501 Line too long (106 > 100)
+   --> .ua/build_graph.py:353:101
+    |
+351 |      ["Remove the safe-harbor disclaimer before measuring forward-looking language", "Model revisions are pinned", "Themes and surpri…
+352 |      [("score-call", "Score one earnings call", "python -m ecsa.pipeline analyze", "cli", [
+353 |          ("Clean text", "Normalize text and remove boilerplate disclaimers.", "src/ecsa/nlp/cleaning.py"),
+    |                                                                                                     ^^^^^^
+354 |          ("Split into sentences", "Keep speaker, role and section for every sentence.", "src/ecsa/nlp/segment.py"),
+355 |          ("Score sentiment", "FinBERT (or optional LLM) per sentence, −1 to +1.", "src/ecsa/nlp/finbert.py"),
+    |
+
+E501 Line too long (115 > 100)
+   --> .ua/build_graph.py:354:101
+    |
+352 |      [("score-call", "Score one earnings call", "python -m ecsa.pipeline analyze", "cli", [
+353 |          ("Clean text", "Normalize text and remove boilerplate disclaimers.", "src/ecsa/nlp/cleaning.py"),
+354 |          ("Split into sentences", "Keep speaker, role and section for every sentence.", "src/ecsa/nlp/segment.py"),
+    |                                                                                                     ^^^^^^^^^^^^^^^
+355 |          ("Score sentiment", "FinBERT (or optional LLM) per sentence, −1 to +1.", "src/ecsa/nlp/finbert.py"),
+356 |          ("Match keywords", "Positive/negative phrases with negation handling.", "src/ecsa/nlp/lexicon.py"),
+    |
+
+E501 Line too long (109 > 100)
+   --> .ua/build_graph.py:355:101
+    |
+353 |          ("Clean text", "Normalize text and remove boilerplate disclaimers.", "src/ecsa/nlp/cleaning.py"),
+354 |          ("Split into sentences", "Keep speaker, role and section for every sentence.", "src/ecsa/nlp/segment.py"),
+355 |          ("Score sentiment", "FinBERT (or optional LLM) per sentence, −1 to +1.", "src/ecsa/nlp/finbert.py"),
+    |                                                                                                     ^^^^^^^^^
+356 |          ("Match keywords", "Positive/negative phrases with negation handling.", "src/ecsa/nlp/lexicon.py"),
+357 |          ("Find forward-looking statements", "Guidance and outlook sentences and their tone.", "src/ecsa/nlp/fls.py"),
+    |
+
+E501 Line too long (108 > 100)
+   --> .ua/build_graph.py:356:101
+    |
+354 |          ("Split into sentences", "Keep speaker, role and section for every sentence.", "src/ecsa/nlp/segment.py"),
+355 |          ("Score sentiment", "FinBERT (or optional LLM) per sentence, −1 to +1.", "src/ecsa/nlp/finbert.py"),
+356 |          ("Match keywords", "Positive/negative phrases with negation handling.", "src/ecsa/nlp/lexicon.py"),
+    |                                                                                                     ^^^^^^^^
+357 |          ("Find forward-looking statements", "Guidance and outlook sentences and their tone.", "src/ecsa/nlp/fls.py"),
+358 |          ("Build event features", "Aggregate to one row per event, add sentiment surprise.", "src/ecsa/nlp/features.py")])]),
+    |
+
+E501 Line too long (118 > 100)
+   --> .ua/build_graph.py:357:101
+    |
+355 |          ("Score sentiment", "FinBERT (or optional LLM) per sentence, −1 to +1.", "src/ecsa/nlp/finbert.py"),
+356 |          ("Match keywords", "Positive/negative phrases with negation handling.", "src/ecsa/nlp/lexicon.py"),
+357 |          ("Find forward-looking statements", "Guidance and outlook sentences and their tone.", "src/ecsa/nlp/fls.py"),
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^
+358 |          ("Build event features", "Aggregate to one row per event, add sentiment surprise.", "src/ecsa/nlp/features.py")])]),
+359 |     ("market-reaction", "Market reaction measurement",
+    |
+
+E501 Line too long (125 > 100)
+   --> .ua/build_graph.py:358:101
+    |
+356 |          ("Match keywords", "Positive/negative phrases with negation handling.", "src/ecsa/nlp/lexicon.py"),
+357 |          ("Find forward-looking statements", "Guidance and outlook sentences and their tone.", "src/ecsa/nlp/fls.py"),
+358 |          ("Build event features", "Aggregate to one row per event, add sentiment surprise.", "src/ecsa/nlp/features.py")])]),
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+359 |     ("market-reaction", "Market reaction measurement",
+360 |      "Measuring how the stock moved relative to the market around each call.",
+    |
+
+E501 Line too long (154 > 100)
+   --> .ua/build_graph.py:362:101
+    |
+360 | …ound each call.",
+361 | …
+362 | …returns are estimated on days −250 to −30 only", "Only [+1,+10] tests tradeable prediction"],
+    |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+363 | …pipeline event-study", "cli", [
+364 | …g day.", "src/ecsa/events/calendar.py"),
+    |
+
+E501 Line too long (101 > 100)
+   --> .ua/build_graph.py:364:101
+    |
+362 |      ["Day 0 is the first session that could react", "Normal returns are estimated on days −250 to −30 only", "Only [+1,+10] tests tr…
+363 |      [("event-study", "Run the event study", "python -m ecsa.pipeline event-study", "cli", [
+364 |          ("Find day 0", "Map call time to the reacting trading day.", "src/ecsa/events/calendar.py"),
+    |                                                                                                     ^
+365 |          ("Fit market model", "Expected return from the market on past data.", "src/ecsa/events/market_model.py"),
+366 |          ("Compute abnormal returns", "Daily AR from −5 to +10 and CAR windows.", "src/ecsa/events/study.py"),
+    |
+
+E501 Line too long (114 > 100)
+   --> .ua/build_graph.py:365:101
+    |
+363 |      [("event-study", "Run the event study", "python -m ecsa.pipeline event-study", "cli", [
+364 |          ("Find day 0", "Map call time to the reacting trading day.", "src/ecsa/events/calendar.py"),
+365 |          ("Fit market model", "Expected return from the market on past data.", "src/ecsa/events/market_model.py"),
+    |                                                                                                     ^^^^^^^^^^^^^^
+366 |          ("Compute abnormal returns", "Daily AR from −5 to +10 and CAR windows.", "src/ecsa/events/study.py"),
+367 |          ("Test across events", "Quintile paths, t/BMP tests, IC, regression.", "src/ecsa/events/stats.py")])]),
+    |
+
+E501 Line too long (110 > 100)
+   --> .ua/build_graph.py:366:101
+    |
+364 |          ("Find day 0", "Map call time to the reacting trading day.", "src/ecsa/events/calendar.py"),
+365 |          ("Fit market model", "Expected return from the market on past data.", "src/ecsa/events/market_model.py"),
+366 |          ("Compute abnormal returns", "Daily AR from −5 to +10 and CAR windows.", "src/ecsa/events/study.py"),
+    |                                                                                                     ^^^^^^^^^^
+367 |          ("Test across events", "Quintile paths, t/BMP tests, IC, regression.", "src/ecsa/events/stats.py")])]),
+368 |     ("trading-strategy", "Trading strategy",
+    |
+
+E501 Line too long (112 > 100)
+   --> .ua/build_graph.py:367:101
+    |
+365 |          ("Fit market model", "Expected return from the market on past data.", "src/ecsa/events/market_model.py"),
+366 |          ("Compute abnormal returns", "Daily AR from −5 to +10 and CAR windows.", "src/ecsa/events/study.py"),
+367 |          ("Test across events", "Quintile paths, t/BMP tests, IC, regression.", "src/ecsa/events/stats.py")])]),
+    |                                                                                                     ^^^^^^^^^^^^
+368 |     ("trading-strategy", "Trading strategy",
+369 |      "Turning sentiment into positions and checking whether they would have made money.",
+    |
+
+E501 Line too long (183 > 100)
+   --> .ua/build_graph.py:371:101
+    |
+369 | …made money.",
+370 | …
+371 | …he past 90 days; at least 20 events", "Max 5% per name; 10 bps per side", "Compare with 100 placebo runs"],
+    |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+372 | …ne signals", "cli", [
+373 | …ights.", "src/ecsa/signals/scoring.py"),
+    |
+
+E501 Line too long (116 > 100)
+   --> .ua/build_graph.py:373:101
+    |
+371 |      ["Enter at the day-0 close, hold 10 trading days", "Rank only against the past 90 days; at least 20 events", "Max 5% per name; 1…
+372 |      [("generate-trades", "Generate and test trades", "python -m ecsa.pipeline signals", "cli", [
+373 |          ("Composite score", "Past-only z-scores combined with configured weights.", "src/ecsa/signals/scoring.py"),
+    |                                                                                                     ^^^^^^^^^^^^^^^^
+374 |          ("Rank and decide", "LONG top 20%, SHORT bottom 20%, NONE otherwise, with reasons.", "src/ecsa/signals/portfolio.py"),
+375 |          ("Backtest with costs", "Daily returns of overlapping 10-day positions.", "src/ecsa/signals/backtest.py"),
+    |
+
+E501 Line too long (127 > 100)
+   --> .ua/build_graph.py:374:101
+    |
+372 |      [("generate-trades", "Generate and test trades", "python -m ecsa.pipeline signals", "cli", [
+373 |          ("Composite score", "Past-only z-scores combined with configured weights.", "src/ecsa/signals/scoring.py"),
+374 |          ("Rank and decide", "LONG top 20%, SHORT bottom 20%, NONE otherwise, with reasons.", "src/ecsa/signals/portfolio.py"),
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+375 |          ("Backtest with costs", "Daily returns of overlapping 10-day positions.", "src/ecsa/signals/backtest.py"),
+376 |          ("Placebo comparison", "100 shuffled-score reruns.", "src/ecsa/signals/backtest.py"),
+    |
+
+E501 Line too long (115 > 100)
+   --> .ua/build_graph.py:375:101
+    |
+373 |          ("Composite score", "Past-only z-scores combined with configured weights.", "src/ecsa/signals/scoring.py"),
+374 |          ("Rank and decide", "LONG top 20%, SHORT bottom 20%, NONE otherwise, with reasons.", "src/ecsa/signals/portfolio.py"),
+375 |          ("Backtest with costs", "Daily returns of overlapping 10-day positions.", "src/ecsa/signals/backtest.py"),
+    |                                                                                                     ^^^^^^^^^^^^^^^
+376 |          ("Placebo comparison", "100 shuffled-score reruns.", "src/ecsa/signals/backtest.py"),
+377 |          ("Score the strategy", "Sharpe, drawdown, hit rate, IC, variants tried.", "src/ecsa/signals/metrics.py")])]),
+    |
+
+E501 Line too long (118 > 100)
+   --> .ua/build_graph.py:377:101
+    |
+375 |          ("Backtest with costs", "Daily returns of overlapping 10-day positions.", "src/ecsa/signals/backtest.py"),
+376 |          ("Placebo comparison", "100 shuffled-score reruns.", "src/ecsa/signals/backtest.py"),
+377 |          ("Score the strategy", "Sharpe, drawdown, hit rate, IC, variants tried.", "src/ecsa/signals/metrics.py")])]),
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^
+378 |     ("research-presentation", "Research presentation",
+379 |      "Showing a researcher what changed in a call, how the stock reacted, and how the strategy performed.",
+    |
+
+E501 Line too long (107 > 100)
+   --> .ua/build_graph.py:379:101
+    |
+377 |          ("Score the strategy", "Sharpe, drawdown, hit rate, IC, variants tried.", "src/ecsa/signals/metrics.py")])]),
+378 |     ("research-presentation", "Research presentation",
+379 |      "Showing a researcher what changed in a call, how the stock reacted, and how the strategy performed.",
+    |                                                                                                     ^^^^^^^
+380 |      ["Processed tables"],
+381 |      ["The dashboard reads processed files only; no models or downloads", "Demo results are labelled as synthetic"],
+    |
+
+E501 Line too long (116 > 100)
+   --> .ua/build_graph.py:381:101
+    |
+379 |      "Showing a researcher what changed in a call, how the stock reacted, and how the strategy performed.",
+380 |      ["Processed tables"],
+381 |      ["The dashboard reads processed files only; no models or downloads", "Demo results are labelled as synthetic"],
+    |                                                                                                     ^^^^^^^^^^^^^^^^
+382 |      [("explore-event", "Explore an earnings event", "streamlit run app/streamlit_app.py", "manual", [
+383 |          ("Choose ticker and event", "Sidebar filters and score definition.", "src/ecsa/dashboard.py"),
+    |
+
+E501 Line too long (102 > 100)
+   --> .ua/build_graph.py:382:101
+    |
+380 |      ["Processed tables"],
+381 |      ["The dashboard reads processed files only; no models or downloads", "Demo results are labelled as synthetic"],
+382 |      [("explore-event", "Explore an earnings event", "streamlit run app/streamlit_app.py", "manual", [
+    |                                                                                                     ^^
+383 |          ("Choose ticker and event", "Sidebar filters and score definition.", "src/ecsa/dashboard.py"),
+384 |          ("Read the scores and decision", "Metric cards and the signal explanation.", "src/ecsa/dashboard.py"),
+    |
+
+E501 Line too long (103 > 100)
+   --> .ua/build_graph.py:383:101
+    |
+381 |      ["The dashboard reads processed files only; no models or downloads", "Demo results are labelled as synthetic"],
+382 |      [("explore-event", "Explore an earnings event", "streamlit run app/streamlit_app.py", "manual", [
+383 |          ("Choose ticker and event", "Sidebar filters and score definition.", "src/ecsa/dashboard.py"),
+    |                                                                                                     ^^^
+384 |          ("Read the scores and decision", "Metric cards and the signal explanation.", "src/ecsa/dashboard.py"),
+385 |          ("Compare the price path with peers", "The −5 to +10 day chart.", "src/ecsa/dashboard.py"),
+    |
+
+E501 Line too long (111 > 100)
+   --> .ua/build_graph.py:384:101
+    |
+382 |      [("explore-event", "Explore an earnings event", "streamlit run app/streamlit_app.py", "manual", [
+383 |          ("Choose ticker and event", "Sidebar filters and score definition.", "src/ecsa/dashboard.py"),
+384 |          ("Read the scores and decision", "Metric cards and the signal explanation.", "src/ecsa/dashboard.py"),
+    |                                                                                                     ^^^^^^^^^^^
+385 |          ("Compare the price path with peers", "The −5 to +10 day chart.", "src/ecsa/dashboard.py"),
+386 |          ("Inspect the evidence", "Phrases, themes, forward-looking statements, tone across the call.", "src/ecsa/dashboard.py"),
+    |
+
+E501 Line too long (129 > 100)
+   --> .ua/build_graph.py:386:101
+    |
+384 |          ("Read the scores and decision", "Metric cards and the signal explanation.", "src/ecsa/dashboard.py"),
+385 |          ("Compare the price path with peers", "The −5 to +10 day chart.", "src/ecsa/dashboard.py"),
+386 |          ("Inspect the evidence", "Phrases, themes, forward-looking statements, tone across the call.", "src/ecsa/dashboard.py"),
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+387 |          ("Review the strategy", "Equity curve vs SPY and placebo, metrics, IC.", "src/ecsa/dashboard.py")])]),
+388 | ]
+    |
+
+E501 Line too long (111 > 100)
+   --> .ua/build_graph.py:387:101
+    |
+385 |          ("Compare the price path with peers", "The −5 to +10 day chart.", "src/ecsa/dashboard.py"),
+386 |          ("Inspect the evidence", "Phrases, themes, forward-looking statements, tone across the call.", "src/ecsa/dashboard.py"),
+387 |          ("Review the strategy", "Equity curve vs SPY and placebo, metrics, IC.", "src/ecsa/dashboard.py")])]),
+    |                                                                                                     ^^^^^^^^^^^
+388 | ]
+389 | CROSS_DOMAIN = [
+    |
+
+E501 Line too long (107 > 100)
+   --> .ua/build_graph.py:392:101
+    |
+390 |     ("text-acquisition", "language-analysis", "Documents with timing feed the sentiment analysis."),
+391 |     ("language-analysis", "market-reaction", "Event features are joined to abnormal returns."),
+392 |     ("market-reaction", "trading-strategy", "Event-study rows supply scores and the calendar for trades."),
+    |                                                                                                     ^^^^^^^
+393 |     ("trading-strategy", "research-presentation", "Signals, backtest and metrics are displayed."),
+394 |     ("market-reaction", "research-presentation", "Return paths and peer buckets are charted."),
+    |
+
+E501 Line too long (111 > 100)
+   --> .ua/build_graph.py:401:101
+    |
+400 | # Small utilities called from almost everywhere; their call edges would only add clutter.
+401 | HELPERS = {"write_parquet", "utc", "table", "load_table", "lemma", "words", "load_documents", "save_documents"}
+    |                                                                                                     ^^^^^^^^^^^
+
+E501 Line too long (105 > 100)
+   --> .ua/build_graph.py:423:101
+    |
+421 |         nodes[str(data["id"])] = {k: v for k, v in data.items() if v is not None}
+422 |
+423 |     def edge(source: str, target: str, kind: str, weight: float, description: str | None = None) -> None:
+    |                                                                                                     ^^^^^
+424 |         if source in nodes and target in nodes and source != target:
+425 |             item = {"source": source, "target": target, "type": kind, "direction": "forward", "weight": weight}
+    |
+
+E501 Line too long (111 > 100)
+   --> .ua/build_graph.py:425:101
+    |
+423 |     def edge(source: str, target: str, kind: str, weight: float, description: str | None = None) -> None:
+424 |         if source in nodes and target in nodes and source != target:
+425 |             item = {"source": source, "target": target, "type": kind, "direction": "forward", "weight": weight}
+    |                                                                                                     ^^^^^^^^^^^
+426 |             if description:
+427 |                 item["description"] = description
+    |
+
+E501 Line too long (124 > 100)
+   --> .ua/build_graph.py:452:101
+    |
+450 |             node(id=node_id, type=kind, name=item.name, filePath=path,
+451 |                  lineRange=[item.lineno, item.end_lineno],
+452 |                  summary=SYMBOLS.get(f"{path}:{item.name}") or first_line(ast.get_docstring(item)) or f"{kind} {item.name}",
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+453 |                  tags=[t for t in tags if t not in {"entry-point", "package"}] or ["code"],
+454 |                  complexity=complexity(span))
+    |
+
+E501 Line too long (107 > 100)
+   --> .ua/build_graph.py:474:101
+    |
+472 |                 if isinstance(call, ast.Call) and isinstance(call.func, ast.Name):
+473 |                     name = call.func.id
+474 |                     target = symbols.get(imported[name]) if name in imported else symbols.get((path, name))
+    |                                                                                                     ^^^^^^^
+475 |                     if target and target.rsplit(":", 1)[-1] not in HELPERS:
+476 |                         edge(caller, target, "calls", 0.8)
+    |
+
+E501 Line too long (119 > 100)
+   --> .ua/build_graph.py:479:101
+    |
+478 |     # data files: stage functions write them, later stages / dashboard read them
+479 |     stage = {name: f"function:src/ecsa/pipeline.py:{name}" for name in ("ingest", "analyze", "event_study", "signals")}
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^
+480 |     stage["render"] = "function:src/ecsa/dashboard.py:render"
+481 |     for path, summary, writer, readers in TABLES:
+    |
+
+E501 Line too long (116 > 100)
+   --> .ua/build_graph.py:490:101
+    |
+489 |     for key, name, summary, files in CONCEPTS:
+490 |         node(id=f"concept:{key}", type="concept", name=name, summary=summary, tags=["concept"], complexity="simple")
+    |                                                                                                     ^^^^^^^^^^^^^^^^
+491 |         for path in files:
+492 |             edge(f"file:{path}", f"concept:{key}", "related", 0.7, "implements this idea")
+    |
+
+E501 Line too long (122 > 100)
+   --> .ua/build_graph.py:520:101
+    |
+518 |             members = [n for n, v in nodes.items()
+519 |                        if v["type"] == "file"
+520 |                        and any(v["filePath"] == p or (p.endswith("/") and v["filePath"].startswith(p)) for p in prefixes)]
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^
+521 |         placed.update(members)
+522 |         layers.append({"id": f"layer:{key}", "name": name, "description": description, "nodeIds": members})
+    |
+
+E501 Line too long (107 > 100)
+   --> .ua/build_graph.py:522:101
+    |
+520 |                        and any(v["filePath"] == p or (p.endswith("/") and v["filePath"].startswith(p)) for p in prefixes)]
+521 |         placed.update(members)
+522 |         layers.append({"id": f"layer:{key}", "name": name, "description": description, "nodeIds": members})
+    |                                                                                                     ^^^^^^^
+523 |     missing = {n for n, v in nodes.items() if v["type"] not in {"function", "class"}} - placed
+524 |     assert not missing, f"nodes without a layer: {sorted(missing)}"
+    |
+
+E501 Line too long (139 > 100)
+   --> .ua/build_graph.py:538:101
+    |
+536 | …
+537 | …
+538 | …ormers", "pandas", "scikit-learn", "statsmodels", "Streamlit", "Plotly", "Pydantic"],
+    |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+539 | …s and SEC filings into sentiment features, tests "
+540 | …t study, and converts them into cost-aware "
+    |
+
+E501 Line too long (104 > 100)
+   --> .ua/build_graph.py:539:101
+    |
+537 | …     "languages": ["python"],
+538 | …     "frameworks": ["PyTorch", "Hugging Face Transformers", "pandas", "scikit-learn", "statsmodels", "Streamlit", "Plotly", "Pydanti…
+539 | …     "description": "Turns earnings-call transcripts and SEC filings into sentiment features, tests "
+    |                                                                                                   ^^^^
+540 | …                    "them with a −5 to +10 day event study, and converts them into cost-aware "
+541 | …                    "long/short signals shown in a Streamlit dashboard.",
+    |
+
+E501 Line too long (116 > 100)
+   --> .ua/build_graph.py:554:101
+    |
+552 |                        "tags": ["domain"], "complexity": "moderate",
+553 |                        "domainMeta": {"entities": entities, "businessRules": rules,
+554 |                                       "crossDomainInteractions": [d for s, t, d in CROSS_DOMAIN if key in (s, t)]}})
+    |                                                                                                     ^^^^^^^^^^^^^^^^
+555 |         for fkey, fname, entry, entry_type, steps in flows:
+556 |             dnodes.append({"id": f"flow:{fkey}", "type": "flow", "name": fname,
+    |
+
+E501 Line too long (115 > 100)
+   --> .ua/build_graph.py:558:101
+    |
+556 | …     dnodes.append({"id": f"flow:{fkey}", "type": "flow", "name": fname,
+557 | …                    "summary": " → ".join(s[0] for s in steps) + ".", "tags": ["flow"],
+558 | …                    "complexity": "moderate", "domainMeta": {"entryPoint": entry, "entryType": entry_type}})
+    |                                                                                               ^^^^^^^^^^^^^^^
+559 | …     dedges.append({"source": f"domain:{key}", "target": f"flow:{fkey}", "type": "contains_flow", "direction": "forward", "weight": …
+560 | …     for index, (sname, ssummary, sfile) in enumerate(steps, start=1):
+    |
+
+E501 Line too long (144 > 100)
+   --> .ua/build_graph.py:559:101
+    |
+557 | …r s in steps) + ".", "tags": ["flow"],
+558 | …mainMeta": {"entryPoint": entry, "entryType": entry_type}})
+559 | …arget": f"flow:{fkey}", "type": "contains_flow", "direction": "forward", "weight": 1.0})
+    |                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+560 | …rate(steps, start=1):
+561 | …
+    |
+
+E501 Line too long (111 > 100)
+   --> .ua/build_graph.py:562:101
+    |
+560 |             for index, (sname, ssummary, sfile) in enumerate(steps, start=1):
+561 |                 sid = f"step:{fkey}:{kebab(sname)}"
+562 |                 dnodes.append({"id": sid, "type": "step", "name": sname, "summary": ssummary, "tags": ["step"],
+    |                                                                                                     ^^^^^^^^^^^
+563 |                                "complexity": "simple", "filePath": sfile})
+564 |                 dedges.append({"source": f"flow:{fkey}", "target": sid, "type": "flow_step", "direction": "forward",
+    |
+
+E501 Line too long (116 > 100)
+   --> .ua/build_graph.py:564:101
+    |
+562 |                 dnodes.append({"id": sid, "type": "step", "name": sname, "summary": ssummary, "tags": ["step"],
+563 |                                "complexity": "simple", "filePath": sfile})
+564 |                 dedges.append({"source": f"flow:{fkey}", "target": sid, "type": "flow_step", "direction": "forward",
+    |                                                                                                     ^^^^^^^^^^^^^^^^
+565 |                                "weight": round(min(1.0, max(0.1, index / len(steps))), 2)})
+566 |     for source, target, description in CROSS_DOMAIN:
+    |
+
+E501 Line too long (106 > 100)
+   --> .ua/build_graph.py:567:101
+    |
+565 |                                "weight": round(min(1.0, max(0.1, index / len(steps))), 2)})
+566 |     for source, target, description in CROSS_DOMAIN:
+567 |         dedges.append({"source": f"domain:{source}", "target": f"domain:{target}", "type": "cross_domain",
+    |                                                                                                     ^^^^^^
+568 |                        "direction": "forward", "description": description, "weight": 0.6})
+569 |     domain = {"version": "1.0.0", "project": project, "nodes": dnodes, "edges": dedges, "layers": [], "tour": []}
+    |
+
+E501 Line too long (113 > 100)
+   --> .ua/build_graph.py:569:101
+    |
+567 |         dedges.append({"source": f"domain:{source}", "target": f"domain:{target}", "type": "cross_domain",
+568 |                        "direction": "forward", "description": description, "weight": 0.6})
+569 |     domain = {"version": "1.0.0", "project": project, "nodes": dnodes, "edges": dedges, "layers": [], "tour": []}
+    |                                                                                                     ^^^^^^^^^^^^^
+570 |     return graph, domain
+    |
+
+E501 Line too long (118 > 100)
+   --> .ua/build_graph.py:575:101
+    |
+573 | if __name__ == "__main__":
+574 |     graph, domain = build()
+575 |     (UA / "knowledge-graph.json").write_text(json.dumps(graph, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^
+576 |     (UA / "domain-graph.json").write_text(json.dumps(domain, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+577 |     meta = {"lastAnalyzedAt": graph["project"]["analyzedAt"], "gitCommitHash": "none", "version": "1.0.0",
+    |
+
+E501 Line too long (116 > 100)
+   --> .ua/build_graph.py:576:101
+    |
+574 |     graph, domain = build()
+575 |     (UA / "knowledge-graph.json").write_text(json.dumps(graph, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+576 |     (UA / "domain-graph.json").write_text(json.dumps(domain, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    |                                                                                                     ^^^^^^^^^^^^^^^^
+577 |     meta = {"lastAnalyzedAt": graph["project"]["analyzedAt"], "gitCommitHash": "none", "version": "1.0.0",
+578 |             "analyzedFiles": len(FILES) + len(DOCS) + len(CONFIGS)}
+    |
+
+E501 Line too long (106 > 100)
+   --> .ua/build_graph.py:577:101
+    |
+575 |     (UA / "knowledge-graph.json").write_text(json.dumps(graph, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+576 |     (UA / "domain-graph.json").write_text(json.dumps(domain, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+577 |     meta = {"lastAnalyzedAt": graph["project"]["analyzedAt"], "gitCommitHash": "none", "version": "1.0.0",
+    |                                                                                                     ^^^^^^
+578 |             "analyzedFiles": len(FILES) + len(DOCS) + len(CONFIGS)}
+579 |     (UA / "meta.json").write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
+    |
+
+E401 [*] Multiple imports on one line
+ --> .ua/tmp/add_edges.py:1:1
+  |
+1 | import json, os
+  | ^^^^^^^^^^^^^^^
+2 |
+3 | ua_dir = "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/.ua"
+  |
+help: Split imports
+  |
+  - import json, os
+1 + import json
+2 + import os
+3 |
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> .ua/tmp/add_edges.py:1:1
+  |
+1 | import json, os
+  | ^^^^^^^^^^^^^^^
+2 |
+3 | ua_dir = "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/.ua"
+  |
+help: Organize imports
+  |
+  - import json, os
+1 + import json
+2 + import os
+3 |
+  |
+
+E501 Line too long (137 > 100)
+  --> .ua/tmp/add_edges.py:48:101
+   |
+46 | …
+47 | …
+48 | …] if n.get("filePath") == source_path and n.get("type") in ["file", "config"]), None)
+   |                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+49 | …] if n.get("filePath") == target_path and n.get("type") in ["file", "config"]), None)
+   |
+
+E501 Line too long (137 > 100)
+  --> .ua/tmp/add_edges.py:49:101
+   |
+47 | …
+48 | …] if n.get("filePath") == source_path and n.get("type") in ["file", "config"]), None)
+49 | …] if n.get("filePath") == target_path and n.get("type") in ["file", "config"]), None)
+   |                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+50 | …
+51 | …
+   |
+
+E401 [*] Multiple imports on one line
+ --> .ua/tmp/build_batches.py:1:1
+  |
+1 | import json, os, subprocess
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2 |
+3 | base_dir = "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer"
+  |
+help: Split imports
+  |
+  - import json, os, subprocess
+1 + import json
+2 + import os
+3 + import subprocess
+4 |
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> .ua/tmp/build_batches.py:1:1
+  |
+1 | import json, os, subprocess
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2 |
+3 | base_dir = "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer"
+  |
+help: Organize imports
+  |
+  - import json, os, subprocess
+1 + import json
+2 + import os
+3 + import subprocess
+4 |
+  |
+
+E501 Line too long (114 > 100)
+ --> .ua/tmp/build_batches.py:4:101
+  |
+3 | base_dir = "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer"
+4 | plugin_root = "/Users/leonhardaudie/Documents/antigravity/Projects/Understand-Anything/understand-anything-plugin"
+  |                                                                                                     ^^^^^^^^^^^^^^
+5 | ua_dir = os.path.join(base_dir, ".ua")
+  |
+
+E501 Line too long (107 > 100)
+  --> .ua/tmp/build_batches.py:25:101
+   |
+23 |         json.dump(input_data, f)
+24 |         
+25 |     cmd = ["node", os.path.join(plugin_root, "skills/understand/extract-structure.mjs"), in_file, out_file]
+   |                                                                                                     ^^^^^^^
+26 |     subprocess.run(cmd, check=True)
+   |
+
+E401 [*] Multiple imports on one line
+ --> .ua/tmp/build_final.py:1:1
+  |
+1 | import json, os
+  | ^^^^^^^^^^^^^^^
+2 |
+3 | ua_dir = "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/.ua"
+  |
+help: Split imports
+  |
+  - import json, os
+1 + import json
+2 + import os
+3 |
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> .ua/tmp/build_final.py:1:1
+  |
+1 | import json, os
+  | ^^^^^^^^^^^^^^^
+2 |
+3 | ua_dir = "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/.ua"
+  |
+help: Organize imports
+  |
+  - import json, os
+1 + import json
+2 + import os
+3 |
+  |
+
+E401 [*] Multiple imports on one line
+ --> .ua/tmp/update_summaries.py:1:1
+  |
+1 | import json, os
+  | ^^^^^^^^^^^^^^^
+2 |
+3 | ua_dir = "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/.ua"
+  |
+help: Split imports
+  |
+  - import json, os
+1 + import json
+2 + import os
+3 |
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> .ua/tmp/update_summaries.py:1:1
+  |
+1 | import json, os
+  | ^^^^^^^^^^^^^^^
+2 |
+3 | ua_dir = "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/.ua"
+  |
+help: Organize imports
+  |
+  - import json, os
+1 + import json
+2 + import os
+3 |
+  |
+
+E501 Line too long (125 > 100)
+  --> .ua/tmp/update_summaries.py:11:101
+   |
+ 9 | file_summaries = {
+10 |     "app/streamlit_app.py": "Streamlit web dashboard entry point for viewing backtest results.",
+11 |     "config/settings.yaml": "Global configuration parameters like model revisions, phrases, windows, thresholds, and costs.",
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+12 |     "src/ecsa/dashboard.py": "Renders UI components for the dashboard, including signal explanations and event charts.",
+13 |     "src/ecsa/data/cache.py": "Manages local caching (DiskCache) and HTTP requests to prevent redundant network calls.",
+   |
+
+E501 Line too long (120 > 100)
+  --> .ua/tmp/update_summaries.py:12:101
+   |
+10 |     "app/streamlit_app.py": "Streamlit web dashboard entry point for viewing backtest results.",
+11 |     "config/settings.yaml": "Global configuration parameters like model revisions, phrases, windows, thresholds, and costs.",
+12 |     "src/ecsa/dashboard.py": "Renders UI components for the dashboard, including signal explanations and event charts.",
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^
+13 |     "src/ecsa/data/cache.py": "Manages local caching (DiskCache) and HTTP requests to prevent redundant network calls.",
+14 |     "src/ecsa/data/edgar.py": "SEC EDGAR client for parsing company submissions and extracting 8-K/MD&A text.",
+   |
+
+E501 Line too long (120 > 100)
+  --> .ua/tmp/update_summaries.py:13:101
+   |
+11 |     "config/settings.yaml": "Global configuration parameters like model revisions, phrases, windows, thresholds, and costs.",
+12 |     "src/ecsa/dashboard.py": "Renders UI components for the dashboard, including signal explanations and event charts.",
+13 |     "src/ecsa/data/cache.py": "Manages local caching (DiskCache) and HTTP requests to prevent redundant network calls.",
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^
+14 |     "src/ecsa/data/edgar.py": "SEC EDGAR client for parsing company submissions and extracting 8-K/MD&A text.",
+15 |     "src/ecsa/data/prices.py": "Fetches historical stock prices using Yahoo Finance (yfinance) and local sources.",
+   |
+
+E501 Line too long (111 > 100)
+  --> .ua/tmp/update_summaries.py:14:101
+   |
+12 |     "src/ecsa/dashboard.py": "Renders UI components for the dashboard, including signal explanations and event charts.",
+13 |     "src/ecsa/data/cache.py": "Manages local caching (DiskCache) and HTTP requests to prevent redundant network calls.",
+14 |     "src/ecsa/data/edgar.py": "SEC EDGAR client for parsing company submissions and extracting 8-K/MD&A text.",
+   |                                                                                                     ^^^^^^^^^^^
+15 |     "src/ecsa/data/prices.py": "Fetches historical stock prices using Yahoo Finance (yfinance) and local sources.",
+16 |     "src/ecsa/data/ratelimit.py": "Enforces token bucket rate limiting to comply with SEC API rules.",
+   |
+
+E501 Line too long (115 > 100)
+  --> .ua/tmp/update_summaries.py:15:101
+   |
+13 |     "src/ecsa/data/cache.py": "Manages local caching (DiskCache) and HTTP requests to prevent redundant network calls.",
+14 |     "src/ecsa/data/edgar.py": "SEC EDGAR client for parsing company submissions and extracting 8-K/MD&A text.",
+15 |     "src/ecsa/data/prices.py": "Fetches historical stock prices using Yahoo Finance (yfinance) and local sources.",
+   |                                                                                                     ^^^^^^^^^^^^^^^
+16 |     "src/ecsa/data/ratelimit.py": "Enforces token bucket rate limiting to comply with SEC API rules.",
+17 |     "src/ecsa/data/transcripts.py": "Handles parsing and loading earnings call transcripts from local files or vendor APIs.",
+   |
+
+E501 Line too long (102 > 100)
+  --> .ua/tmp/update_summaries.py:16:101
+   |
+14 |     "src/ecsa/data/edgar.py": "SEC EDGAR client for parsing company submissions and extracting 8-K/MD&A text.",
+15 |     "src/ecsa/data/prices.py": "Fetches historical stock prices using Yahoo Finance (yfinance) and local sources.",
+16 |     "src/ecsa/data/ratelimit.py": "Enforces token bucket rate limiting to comply with SEC API rules.",
+   |                                                                                                     ^^
+17 |     "src/ecsa/data/transcripts.py": "Handles parsing and loading earnings call transcripts from local files or vendor APIs.",
+18 |     "src/ecsa/demo.py": "Generates reproducible synthetic firms, events, and stock prices for offline demo testing.",
+   |
+
+E501 Line too long (125 > 100)
+  --> .ua/tmp/update_summaries.py:17:101
+   |
+15 |     "src/ecsa/data/prices.py": "Fetches historical stock prices using Yahoo Finance (yfinance) and local sources.",
+16 |     "src/ecsa/data/ratelimit.py": "Enforces token bucket rate limiting to comply with SEC API rules.",
+17 |     "src/ecsa/data/transcripts.py": "Handles parsing and loading earnings call transcripts from local files or vendor APIs.",
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+18 |     "src/ecsa/demo.py": "Generates reproducible synthetic firms, events, and stock prices for offline demo testing.",
+19 |     "src/ecsa/events/calendar.py": "Manages valid trading days and stock market calendars.",
+   |
+
+E501 Line too long (117 > 100)
+  --> .ua/tmp/update_summaries.py:18:101
+   |
+16 |     "src/ecsa/data/ratelimit.py": "Enforces token bucket rate limiting to comply with SEC API rules.",
+17 |     "src/ecsa/data/transcripts.py": "Handles parsing and loading earnings call transcripts from local files or vendor APIs.",
+18 |     "src/ecsa/demo.py": "Generates reproducible synthetic firms, events, and stock prices for offline demo testing.",
+   |                                                                                                     ^^^^^^^^^^^^^^^^^
+19 |     "src/ecsa/events/calendar.py": "Manages valid trading days and stock market calendars.",
+20 |     "src/ecsa/events/market_model.py": "Fits the statistical market model to compare stock performance against the broader market.",
+   |
+
+E501 Line too long (132 > 100)
+  --> .ua/tmp/update_summaries.py:20:101
+   |
+18 |     "src/ecsa/demo.py": "Generates reproducible synthetic firms, events, and stock prices for offline demo testing.",
+19 |     "src/ecsa/events/calendar.py": "Manages valid trading days and stock market calendars.",
+20 |     "src/ecsa/events/market_model.py": "Fits the statistical market model to compare stock performance against the broader market.",
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |     "src/ecsa/events/stats.py": "Calculates bucket statistics, abnormal returns, and information coefficients.",
+22 |     "src/ecsa/events/study.py": "Orchestrates the main event study pipeline across specified time windows.",
+   |
+
+E501 Line too long (112 > 100)
+  --> .ua/tmp/update_summaries.py:21:101
+   |
+19 |     "src/ecsa/events/calendar.py": "Manages valid trading days and stock market calendars.",
+20 |     "src/ecsa/events/market_model.py": "Fits the statistical market model to compare stock performance against the broader market.",
+21 |     "src/ecsa/events/stats.py": "Calculates bucket statistics, abnormal returns, and information coefficients.",
+   |                                                                                                     ^^^^^^^^^^^^
+22 |     "src/ecsa/events/study.py": "Orchestrates the main event study pipeline across specified time windows.",
+23 |     "src/ecsa/nlp/cleaning.py": "Normalizes and cleans raw transcript text before NLP processing.",
+   |
+
+E501 Line too long (108 > 100)
+  --> .ua/tmp/update_summaries.py:22:101
+   |
+20 |     "src/ecsa/events/market_model.py": "Fits the statistical market model to compare stock performance against the broader market.",
+21 |     "src/ecsa/events/stats.py": "Calculates bucket statistics, abnormal returns, and information coefficients.",
+22 |     "src/ecsa/events/study.py": "Orchestrates the main event study pipeline across specified time windows.",
+   |                                                                                                     ^^^^^^^^
+23 |     "src/ecsa/nlp/cleaning.py": "Normalizes and cleans raw transcript text before NLP processing.",
+24 |     "src/ecsa/nlp/features.py": "Extracts and computes sentiment features and surprise metrics from documents.",
+   |
+
+E501 Line too long (112 > 100)
+  --> .ua/tmp/update_summaries.py:24:101
+   |
+22 |     "src/ecsa/events/study.py": "Orchestrates the main event study pipeline across specified time windows.",
+23 |     "src/ecsa/nlp/cleaning.py": "Normalizes and cleans raw transcript text before NLP processing.",
+24 |     "src/ecsa/nlp/features.py": "Extracts and computes sentiment features and surprise metrics from documents.",
+   |                                                                                                     ^^^^^^^^^^^^
+25 |     "src/ecsa/nlp/finbert.py": "Wraps the HuggingFace FinBERT model to score the financial sentiment of text.",
+26 |     "src/ecsa/nlp/fls.py": "Detects Forward-Looking Statements (FLS) to separate them from standard corporate boilerplate.",
+   |
+
+E501 Line too long (111 > 100)
+  --> .ua/tmp/update_summaries.py:25:101
+   |
+23 |     "src/ecsa/nlp/cleaning.py": "Normalizes and cleans raw transcript text before NLP processing.",
+24 |     "src/ecsa/nlp/features.py": "Extracts and computes sentiment features and surprise metrics from documents.",
+25 |     "src/ecsa/nlp/finbert.py": "Wraps the HuggingFace FinBERT model to score the financial sentiment of text.",
+   |                                                                                                     ^^^^^^^^^^^
+26 |     "src/ecsa/nlp/fls.py": "Detects Forward-Looking Statements (FLS) to separate them from standard corporate boilerplate.",
+27 |     "src/ecsa/nlp/lexicon.py": "Custom dictionary and regex matcher for specific financial phrases.",
+   |
+
+E501 Line too long (124 > 100)
+  --> .ua/tmp/update_summaries.py:26:101
+   |
+24 |     "src/ecsa/nlp/features.py": "Extracts and computes sentiment features and surprise metrics from documents.",
+25 |     "src/ecsa/nlp/finbert.py": "Wraps the HuggingFace FinBERT model to score the financial sentiment of text.",
+26 |     "src/ecsa/nlp/fls.py": "Detects Forward-Looking Statements (FLS) to separate them from standard corporate boilerplate.",
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+27 |     "src/ecsa/nlp/lexicon.py": "Custom dictionary and regex matcher for specific financial phrases.",
+28 |     "src/ecsa/nlp/llm.py": "Optional OpenAI LLM scorer for extracting themes and advanced sentiment.",
+   |
+
+E501 Line too long (101 > 100)
+  --> .ua/tmp/update_summaries.py:27:101
+   |
+25 |     "src/ecsa/nlp/finbert.py": "Wraps the HuggingFace FinBERT model to score the financial sentiment of text.",
+26 |     "src/ecsa/nlp/fls.py": "Detects Forward-Looking Statements (FLS) to separate them from standard corporate boilerplate.",
+27 |     "src/ecsa/nlp/lexicon.py": "Custom dictionary and regex matcher for specific financial phrases.",
+   |                                                                                                     ^
+28 |     "src/ecsa/nlp/llm.py": "Optional OpenAI LLM scorer for extracting themes and advanced sentiment.",
+29 |     "src/ecsa/nlp/segment.py": "Segments cleaned documents into individual sentences for scoring.",
+   |
+
+E501 Line too long (102 > 100)
+  --> .ua/tmp/update_summaries.py:28:101
+   |
+26 |     "src/ecsa/nlp/fls.py": "Detects Forward-Looking Statements (FLS) to separate them from standard corporate boilerplate.",
+27 |     "src/ecsa/nlp/lexicon.py": "Custom dictionary and regex matcher for specific financial phrases.",
+28 |     "src/ecsa/nlp/llm.py": "Optional OpenAI LLM scorer for extracting themes and advanced sentiment.",
+   |                                                                                                     ^^
+29 |     "src/ecsa/nlp/segment.py": "Segments cleaned documents into individual sentences for scoring.",
+30 |     "src/ecsa/nlp/themes.py": "Analyzes temporal themes across the corpus of earnings calls.",
+   |
+
+E501 Line too long (118 > 100)
+  --> .ua/tmp/update_summaries.py:31:101
+   |
+29 |     "src/ecsa/nlp/segment.py": "Segments cleaned documents into individual sentences for scoring.",
+30 |     "src/ecsa/nlp/themes.py": "Analyzes temporal themes across the corpus of earnings calls.",
+31 |     "src/ecsa/pipeline.py": "The main CLI entry point that orchestrates Ingest -> Analyze -> Event-Study -> Signals.",
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^
+32 |     "src/ecsa/schemas.py": "Pydantic data models (Document, Section, PriceBar, Signal) defining the system's data structures.",
+33 |     "src/ecsa/settings.py": "Pydantic BaseSettings class that loads environment variables and YAML configurations.",
+   |
+
+E501 Line too long (127 > 100)
+  --> .ua/tmp/update_summaries.py:32:101
+   |
+30 |     "src/ecsa/nlp/themes.py": "Analyzes temporal themes across the corpus of earnings calls.",
+31 |     "src/ecsa/pipeline.py": "The main CLI entry point that orchestrates Ingest -> Analyze -> Event-Study -> Signals.",
+32 |     "src/ecsa/schemas.py": "Pydantic data models (Document, Section, PriceBar, Signal) defining the system's data structures.",
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+33 |     "src/ecsa/settings.py": "Pydantic BaseSettings class that loads environment variables and YAML configurations.",
+34 |     "src/ecsa/signals/backtest.py": "Runs the historical portfolio backtest and executes placebo checks.",
+   |
+
+E501 Line too long (116 > 100)
+  --> .ua/tmp/update_summaries.py:33:101
+   |
+31 |     "src/ecsa/pipeline.py": "The main CLI entry point that orchestrates Ingest -> Analyze -> Event-Study -> Signals.",
+32 |     "src/ecsa/schemas.py": "Pydantic data models (Document, Section, PriceBar, Signal) defining the system's data structures.",
+33 |     "src/ecsa/settings.py": "Pydantic BaseSettings class that loads environment variables and YAML configurations.",
+   |                                                                                                     ^^^^^^^^^^^^^^^^
+34 |     "src/ecsa/signals/backtest.py": "Runs the historical portfolio backtest and executes placebo checks.",
+35 |     "src/ecsa/signals/metrics.py": "Calculates trading performance metrics (Sharpe ratio, returns) for the backtest.",
+   |
+
+E501 Line too long (106 > 100)
+  --> .ua/tmp/update_summaries.py:34:101
+   |
+32 |     "src/ecsa/schemas.py": "Pydantic data models (Document, Section, PriceBar, Signal) defining the system's data structures.",
+33 |     "src/ecsa/settings.py": "Pydantic BaseSettings class that loads environment variables and YAML configurations.",
+34 |     "src/ecsa/signals/backtest.py": "Runs the historical portfolio backtest and executes placebo checks.",
+   |                                                                                                     ^^^^^^
+35 |     "src/ecsa/signals/metrics.py": "Calculates trading performance metrics (Sharpe ratio, returns) for the backtest.",
+36 |     "src/ecsa/signals/model.py": "Defines the walk-forward logic for generating trading signals.",
+   |
+
+E501 Line too long (118 > 100)
+  --> .ua/tmp/update_summaries.py:35:101
+   |
+33 |     "src/ecsa/settings.py": "Pydantic BaseSettings class that loads environment variables and YAML configurations.",
+34 |     "src/ecsa/signals/backtest.py": "Runs the historical portfolio backtest and executes placebo checks.",
+35 |     "src/ecsa/signals/metrics.py": "Calculates trading performance metrics (Sharpe ratio, returns) for the backtest.",
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^
+36 |     "src/ecsa/signals/model.py": "Defines the walk-forward logic for generating trading signals.",
+37 |     "src/ecsa/signals/portfolio.py": "Constructs long/short portfolios based on event sentiment scores.",
+   |
+
+E501 Line too long (105 > 100)
+  --> .ua/tmp/update_summaries.py:37:101
+   |
+35 |     "src/ecsa/signals/metrics.py": "Calculates trading performance metrics (Sharpe ratio, returns) for the backtest.",
+36 |     "src/ecsa/signals/model.py": "Defines the walk-forward logic for generating trading signals.",
+37 |     "src/ecsa/signals/portfolio.py": "Constructs long/short portfolios based on event sentiment scores.",
+   |                                                                                                     ^^^^^
+38 |     "src/ecsa/signals/scoring.py": "Combines multiple sentiment scores into a final composite signal score.",
+39 |     "src/ecsa/storage.py": "Utility functions for writing and loading Parquet data files."
+   |
+
+E501 Line too long (109 > 100)
+  --> .ua/tmp/update_summaries.py:38:101
+   |
+36 |     "src/ecsa/signals/model.py": "Defines the walk-forward logic for generating trading signals.",
+37 |     "src/ecsa/signals/portfolio.py": "Constructs long/short portfolios based on event sentiment scores.",
+38 |     "src/ecsa/signals/scoring.py": "Combines multiple sentiment scores into a final composite signal score.",
+   |                                                                                                     ^^^^^^^^^
+39 |     "src/ecsa/storage.py": "Utility functions for writing and loading Parquet data files."
+40 | }
+   |
+
+E501 Line too long (106 > 100)
+  --> .ua/tmp/update_summaries.py:51:101
+   |
+49 |             updated_count += 1
+50 |         elif path.endswith("README.md"):
+51 |             node["summary"] = "The main project documentation detailing how the sentiment analyzer works."
+   |                                                                                                     ^^^^^^
+52 |         elif "change-report" in path:
+53 |             node["summary"] = "Autogenerated agent-team change report."
+   |
+
+F401 [*] `datetime.datetime` imported but unused
+  --> scripts/download_data.py:10:22
+   |
+ 8 | import json
+ 9 | import sys
+10 | from datetime import datetime
+   |                      ^^^^^^^^
+11 | from pathlib import Path
+   |
+help: Remove unused import: `datetime.datetime`
+   |
+9  | import sys
+   - from datetime import datetime
+10 | from pathlib import Path
+   |
+
+E501 Line too long (118 > 100)
+  --> scripts/download_hf_data.py:62:101
+   |
+60 |             "raw_text": str(row.get("content", "")),
+61 |             "source": "Bose345/sp500_earnings_transcripts",
+62 |             "url": f"hf://Bose345/{row.get('ticker', 'UNKNOWN')}_{row.get('year', '2023')}_Q{row.get('quarter', '1')}"
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^
+63 |         }
+64 |         records.append(record)
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> scripts/test_analyzer.py:6:1
+   |
+ 4 |   """
+ 5 |
+ 6 | / import sys
+ 7 | | from datetime import date
+ 8 | | from pathlib import Path
+ 9 | |
+10 | | from ecsa.data.transcripts import LocalFileSource
+11 | | from ecsa.nlp.finbert import FinBertScorer
+12 | | from ecsa.nlp.lexicon import Lexicon
+   | |____________________________________^
+13 |
+14 |   def main():
+   |
+help: Organize imports
+   |
+13 |
+14 +
+15 | def main():
+   |
+
+F401 [*] `ecsa.nlp.finbert.FinBertScorer` imported but unused
+  --> scripts/test_analyzer.py:11:30
+   |
+10 | from ecsa.data.transcripts import LocalFileSource
+11 | from ecsa.nlp.finbert import FinBertScorer
+   |                              ^^^^^^^^^^^^^
+12 | from ecsa.nlp.lexicon import Lexicon
+   |
+help: Remove unused import: `ecsa.nlp.finbert.FinBertScorer`
+   |
+10 | from ecsa.data.transcripts import LocalFileSource
+   - from ecsa.nlp.finbert import FinBertScorer
+11 | from ecsa.nlp.lexicon import Lexicon
+   |
+
+F401 [*] `ecsa.nlp.lexicon.Lexicon` imported but unused
+  --> scripts/test_analyzer.py:12:30
+   |
+10 | from ecsa.data.transcripts import LocalFileSource
+11 | from ecsa.nlp.finbert import FinBertScorer
+12 | from ecsa.nlp.lexicon import Lexicon
+   |                              ^^^^^^^
+13 |
+14 | def main():
+   |
+help: Remove unused import: `ecsa.nlp.lexicon.Lexicon`
+   |
+11 | from ecsa.nlp.finbert import FinBertScorer
+   - from ecsa.nlp.lexicon import Lexicon
+12 |
+   |
+
+UP015 [*] Unnecessary mode argument
+  --> scripts/test_analyzer.py:24:58
+   |
+23 |     import json
+24 |     with open(data_dir / "real_sample_transcripts.json", "r") as f:
+   |                                                          ^^^
+25 |         records = json.load(f)
+   |
+help: Remove mode argument
+   |
+23 |     import json
+   -     with open(data_dir / "real_sample_transcripts.json", "r") as f:
+24 +     with open(data_dir / "real_sample_transcripts.json") as f:
+25 |         records = json.load(f)
+   |
+
+Found 183 errors.
+[*] 13 fixable with the `--fix` option.

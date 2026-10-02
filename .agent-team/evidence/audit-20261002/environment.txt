@@ -1,0 +1,1 @@
+/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/.venv/bin/python: No module named pip

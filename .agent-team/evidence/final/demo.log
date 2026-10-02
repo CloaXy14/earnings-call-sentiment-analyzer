@@ -1,0 +1,8 @@
+Running ingest
+Running analyze
+Running event-study
+Running signals
+{"stage": "ingest", "documents": 96, "price_bars": 5040}
+{"stage": "analyze", "events": 96, "sentences": 451}
+{"stage": "event-study", "event_study_rows": 96}
+{"stage": "signals", "signals": 30, "rejected_events": 8, "placebo_seeds": 100}

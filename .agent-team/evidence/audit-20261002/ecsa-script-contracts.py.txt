@@ -1,0 +1,28 @@
+from pathlib import Path
+import runpy,contextlib,io,json,os,tempfile,sys
+from unittest.mock import patch
+from types import SimpleNamespace
+import pandas as pd
+R=Path('/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer');E=R/'.agent-team/evidence/audit-20261002'
+sys.path.insert(0,str(R/'scripts'))
+import test_analyzer,download_data
+results=[]
+for kind in ['model_failure','no_features']:
+ output=io.StringIO();status=0
+ with contextlib.redirect_stdout(output):
+  try:
+   if kind=='model_failure':
+    with patch('ecsa.nlp.finbert.FinBertScorer',side_effect=RuntimeError('AUDIT_INFERENCE_FAILURE')): test_analyzer.main()
+   else:
+    with patch('ecsa.nlp.finbert.FinBertScorer',return_value=object()),patch('ecsa.nlp.features.analyze_documents',return_value=SimpleNamespace(features=pd.DataFrame())):test_analyzer.main()
+  except SystemExit as exc:status=exc.code
+ results.append({'case':kind,'expected':'nonzero exit for invalid evaluation','observed_exit':status,'output':output.getvalue(),'requirement_passed':status!=0})
+# Known synthetic boundary: server has >100 segments for one call; current client must not claim complete.
+rows=[{'row':{'original_filename':'Alphabet_2025_Q1_Earnings_Call.mp3','segment_id':i,'transcript':f'Segment {i}.'}} for i in range(100)]
+with tempfile.TemporaryDirectory() as tmp:
+ os.chdir(tmp)
+ with patch.object(download_data.requests,'get',return_value=SimpleNamespace(raise_for_status=lambda:None,json=lambda:{'rows':rows,'num_rows_total':101})) as get:
+  download_data.main();data=json.loads(Path('data/raw/real_sample_transcripts.json').read_text())
+ results.append({'case':'metadata_and_pagination','observed_ticker':data[0]['ticker'],'event_datetime':data[0]['event_datetime'],'available_at':data[0]['available_at'],'request_count':get.call_count,'request_parameters':get.call_args.kwargs,'segments_written':data[0]['raw_text'].count('Segment'),'source_segments':101})
+ os.chdir(R)
+(E/'script-contracts.json').write_text(json.dumps(results,indent=2));print(json.dumps(results,indent=2))

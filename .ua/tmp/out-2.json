@@ -1,0 +1,119 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 2,
+  "filesSkipped": [
+    ".agent-team/evidence/step-0/build.txt",
+    ".agent-team/evidence/step-0/cli-help.txt",
+    ".agent-team/evidence/step-0/created-files.txt",
+    ".agent-team/evidence/step-0/mypy.txt",
+    ".agent-team/evidence/step-0/pytest.txt",
+    ".agent-team/evidence/step-0/ruff.txt",
+    ".agent-team/evidence/step-0/versions.txt"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 2,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 2
+    }
+  },
+  "results": [
+    {
+      "path": ".agent-team/evidence/step-0/change-report-step-0.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 100,
+      "nonEmptyLines": 77,
+      "sections": [
+        {
+          "heading": "Step 0 change report",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Summary",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Acceptance evidence",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "Added",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "Changed",
+          "level": 2,
+          "line": 49
+        },
+        {
+          "heading": "Removed and discarded",
+          "level": 2,
+          "line": 56
+        },
+        {
+          "heading": "Checks and numbers",
+          "level": 2,
+          "line": 62
+        },
+        {
+          "heading": "Capabilities unavailable / not done",
+          "level": 2,
+          "line": 84
+        },
+        {
+          "heading": "Bugs found",
+          "level": 2,
+          "line": 92
+        },
+        {
+          "heading": "Next step",
+          "level": 2,
+          "line": 97
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": ".agent-team/evidence/step-0/source-sha256.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 55,
+      "nonEmptyLines": 55,
+      "sections": [
+        {
+          "heading": "files",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "policy_files",
+          "level": 1,
+          "line": 49
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    }
+  ]
+}

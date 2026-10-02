@@ -1,0 +1,19 @@
+{
+  "missing_benchmark": {
+    "expected_day10": "2023-02-14",
+    "actual_day10": "2023-02-15",
+    "full_car": 0.009999999999999657,
+    "gap_car": 0.010327835563650427,
+    "label_available_at": "2023-02-15 21:00:00+00:00"
+  },
+  "late_features_ic": {
+    "accepted": 0,
+    "rejected": 4,
+    "ic": 1.0
+  },
+  "hit_rate_accounting": {
+    "equity": 0.9739874999999999,
+    "hit_rate": 1.0,
+    "average_win": 0.010000000000000009
+  }
+}

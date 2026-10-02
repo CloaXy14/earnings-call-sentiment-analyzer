@@ -1,0 +1,4872 @@
+{
+ "version": "1.0.0",
+ "kind": "codebase",
+ "project": {
+  "name": "earnings-call-sentiment-analyzer",
+  "languages": [
+   "python"
+  ],
+  "frameworks": [
+   "PyTorch",
+   "Hugging Face Transformers",
+   "pandas",
+   "scikit-learn",
+   "statsmodels",
+   "Streamlit",
+   "Plotly",
+   "Pydantic"
+  ],
+  "description": "Turns earnings-call transcripts and SEC filings into sentiment features, tests them with a −5 to +10 day event study, and converts them into cost-aware long/short signals shown in a Streamlit dashboard.",
+  "analyzedAt": "2026-10-01T18:21:15Z",
+  "gitCommitHash": "none"
+ },
+ "nodes": [
+  {
+   "id": "file:app/streamlit_app.py",
+   "type": "file",
+   "name": "streamlit_app.py",
+   "filePath": "app/streamlit_app.py",
+   "lineRange": [
+    1,
+    19
+   ],
+   "summary": "Entry point for `streamlit run`. Loads config/settings.yaml and hands the processed-data folder to the dashboard. It does no analysis itself, so the page opens instantly.",
+   "tags": [
+    "entry-point",
+    "ui"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:app/streamlit_app.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "app/streamlit_app.py",
+   "lineRange": [
+    11,
+    15
+   ],
+   "summary": "Sets the page up, loads settings and calls dashboard.render().",
+   "tags": [
+    "ui"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:src/ecsa/__init__.py",
+   "type": "file",
+   "name": "__init__.py",
+   "filePath": "src/ecsa/__init__.py",
+   "lineRange": [
+    1,
+    3
+   ],
+   "summary": "Package marker for `ecsa`. Records the project-wide unit rule: returns are decimals (0.05 = 5%) unless a name ends in `_pct`.",
+   "tags": [
+    "package"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:src/ecsa/pipeline.py",
+   "type": "file",
+   "name": "pipeline.py",
+   "filePath": "src/ecsa/pipeline.py",
+   "lineRange": [
+    1,
+    329
+   ],
+   "summary": "The command-line conductor. `python -m ecsa.pipeline all` runs four stages in order: ingest (collect text and prices) → analyze (sentiment features) → event-study (how prices reacted) → signals (trades and backtest). Each stage reads the previous stage's Parquet files and writes its own, so stages can be re-run independently. `--demo` swaps in synthetic data and a toy scorer so everything runs offline.",
+   "tags": [
+    "entry-point",
+    "orchestration",
+    "cli"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:src/ecsa/pipeline.py:build_parser",
+   "type": "function",
+   "name": "build_parser",
+   "filePath": "src/ecsa/pipeline.py",
+   "lineRange": [
+    16,
+    39
+   ],
+   "summary": "Defines the CLI: the four stages, `all`, and the --config, --demo, --tickers, --start and --end options.",
+   "tags": [
+    "orchestration",
+    "cli"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/pipeline.py:ingest",
+   "type": "function",
+   "name": "ingest",
+   "filePath": "src/ecsa/pipeline.py",
+   "lineRange": [
+    42,
+    124
+   ],
+   "summary": "Stage 1. Collects documents (demo fixtures, licensed transcript files, optional EDGAR) and daily prices for the tickers plus the benchmark, then saves them as Parquet.",
+   "tags": [
+    "orchestration",
+    "cli"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:src/ecsa/pipeline.py:analyze",
+   "type": "function",
+   "name": "analyze",
+   "filePath": "src/ecsa/pipeline.py",
+   "lineRange": [
+    127,
+    152
+   ],
+   "summary": "Stage 2. Picks the scorer (FinBERT, LLM or demo), runs the NLP feature extraction and saves features plus evidence tables.",
+   "tags": [
+    "orchestration",
+    "cli"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:src/ecsa/pipeline.py:event_study",
+   "type": "function",
+   "name": "event_study",
+   "filePath": "src/ecsa/pipeline.py",
+   "lineRange": [
+    155,
+    221
+   ],
+   "summary": "Stage 3. Computes abnormal returns per event and the summary statistics (window tests, quintile paths, IC, regression).",
+   "tags": [
+    "orchestration",
+    "cli"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:src/ecsa/pipeline.py:signals",
+   "type": "function",
+   "name": "signals",
+   "filePath": "src/ecsa/pipeline.py",
+   "lineRange": [
+    224,
+    281
+   ],
+   "summary": "Stage 4. Builds composite scores, makes trade decisions, backtests them, runs the placebo, and saves the scorecard.",
+   "tags": [
+    "orchestration",
+    "cli"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:src/ecsa/pipeline.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "src/ecsa/pipeline.py",
+   "lineRange": [
+    284,
+    325
+   ],
+   "summary": "Runs the requested stages in order, prints one JSON summary line per stage, and turns errors into a clear CLI message.",
+   "tags": [
+    "orchestration",
+    "cli"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:src/ecsa/settings.py",
+   "type": "file",
+   "name": "settings.py",
+   "filePath": "src/ecsa/settings.py",
+   "lineRange": [
+    1,
+    210
+   ],
+   "summary": "One validated settings object built from config/settings.yaml: model ids and pinned revisions, keyword lists, event windows, ranking thresholds, costs. Secrets (SEC User-Agent, API keys) are read only from environment variables and are rejected if someone puts them in YAML.",
+   "tags": [
+    "configuration",
+    "security"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:src/ecsa/settings.py:Settings",
+   "type": "class",
+   "name": "Settings",
+   "filePath": "src/ecsa/settings.py",
+   "lineRange": [
+    21,
+    210
+   ],
+   "summary": "All configuration in one validated object. Relative paths resolve from the project root; unknown keys and secrets in YAML are rejected.",
+   "tags": [
+    "configuration",
+    "security"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:src/ecsa/schemas.py",
+   "type": "file",
+   "name": "schemas.py",
+   "filePath": "src/ecsa/schemas.py",
+   "lineRange": [
+    1,
+    197
+   ],
+   "summary": "The data contracts every stage shares: Document (a transcript or filing split into sections and speaker turns), PriceBar, EventFeatures (one row of sentiment numbers per earnings event) and Signal (a trade decision). Every record carries timezone-aware timestamps and an `available_at` time, which is how the system proves it never used information before it existed.",
+   "tags": [
+    "data-model",
+    "no-look-ahead"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "class:src/ecsa/schemas.py:Record",
+   "type": "class",
+   "name": "Record",
+   "filePath": "src/ecsa/schemas.py",
+   "lineRange": [
+    41,
+    44
+   ],
+   "summary": "Shared strict field names and immutable scalar fields for research records.",
+   "tags": [
+    "data-model",
+    "no-look-ahead"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:src/ecsa/schemas.py:Utterance",
+   "type": "class",
+   "name": "Utterance",
+   "filePath": "src/ecsa/schemas.py",
+   "lineRange": [
+    47,
+    52
+   ],
+   "summary": "One speaker turn; text is the original unscored content.",
+   "tags": [
+    "data-model",
+    "no-look-ahead"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:src/ecsa/schemas.py:Section",
+   "type": "class",
+   "name": "Section",
+   "filePath": "src/ecsa/schemas.py",
+   "lineRange": [
+    55,
+    59
+   ],
+   "summary": "An ordered group of utterances in a document section.",
+   "tags": [
+    "data-model",
+    "no-look-ahead"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/schemas.py:document_id",
+   "type": "function",
+   "name": "document_id",
+   "filePath": "src/ecsa/schemas.py",
+   "lineRange": [
+    62,
+    69
+   ],
+   "summary": "Builds a stable SHA-256 id from the source, URL and exact text, so the same document is never stored twice.",
+   "tags": [
+    "data-model",
+    "no-look-ahead"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:src/ecsa/schemas.py:Document",
+   "type": "class",
+   "name": "Document",
+   "filePath": "src/ecsa/schemas.py",
+   "lineRange": [
+    72,
+    103
+   ],
+   "summary": "One transcript, press release or MD&A section, with its sections and speaker turns. `event_datetime` is when the call happened; `available_at` is when the full text could be read. They are kept separate on purpose.",
+   "tags": [
+    "data-model",
+    "no-look-ahead"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:src/ecsa/schemas.py:PriceBar",
+   "type": "class",
+   "name": "PriceBar",
+   "filePath": "src/ecsa/schemas.py",
+   "lineRange": [
+    106,
+    130
+   ],
+   "summary": "One daily price bar with validated prices and volume.",
+   "tags": [
+    "data-model",
+    "no-look-ahead"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:src/ecsa/schemas.py:EventFeatures",
+   "type": "class",
+   "name": "EventFeatures",
+   "filePath": "src/ecsa/schemas.py",
+   "lineRange": [
+    133,
+    166
+   ],
+   "summary": "The sentiment numbers for one earnings event. Validation rejects features that claim to be available before their inputs.",
+   "tags": [
+    "data-model",
+    "no-look-ahead"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:src/ecsa/schemas.py:Signal",
+   "type": "class",
+   "name": "Signal",
+   "filePath": "src/ecsa/schemas.py",
+   "lineRange": [
+    169,
+    197
+   ],
+   "summary": "One trading decision: side (LONG, SHORT or NONE), unsigned weight, entry and exit dates. Validation forbids using information after the signal time.",
+   "tags": [
+    "data-model",
+    "no-look-ahead"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:src/ecsa/storage.py",
+   "type": "file",
+   "name": "storage.py",
+   "filePath": "src/ecsa/storage.py",
+   "lineRange": [
+    1,
+    56
+   ],
+   "summary": "Small helpers for reading and writing Parquet files atomically (write to a temp file, then rename) and for converting timestamps to UTC.",
+   "tags": [
+    "storage"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/storage.py:utc",
+   "type": "function",
+   "name": "utc",
+   "filePath": "src/ecsa/storage.py",
+   "lineRange": [
+    17,
+    22
+   ],
+   "summary": "Parse a timezone-aware instant and normalize to UTC; reject naive values.",
+   "tags": [
+    "storage"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/storage.py:write_parquet",
+   "type": "function",
+   "name": "write_parquet",
+   "filePath": "src/ecsa/storage.py",
+   "lineRange": [
+    25,
+    34
+   ],
+   "summary": "Atomically write a DataFrame without an index; returns remain decimal.",
+   "tags": [
+    "storage"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/storage.py:save_documents",
+   "type": "function",
+   "name": "save_documents",
+   "filePath": "src/ecsa/storage.py",
+   "lineRange": [
+    37,
+    47
+   ],
+   "summary": "Store UTC timestamps as Parquet timestamps and nested sections as JSON.",
+   "tags": [
+    "storage"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/storage.py:load_documents",
+   "type": "function",
+   "name": "load_documents",
+   "filePath": "src/ecsa/storage.py",
+   "lineRange": [
+    50,
+    56
+   ],
+   "summary": "Load and validate persisted source identities and timestamps.",
+   "tags": [
+    "storage"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:src/ecsa/demo.py",
+   "type": "file",
+   "name": "demo.py",
+   "filePath": "src/ecsa/demo.py",
+   "lineRange": [
+    1,
+    124
+   ],
+   "summary": "Creates the offline demo world: 8 fictional companies (SYN00–SYN07), 12 earnings calls each, and 560 days of prices with a known relationship between tone and returns. Used by `--demo` and the tests. Not real market data.",
+   "tags": [
+    "demo",
+    "synthetic-data"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:src/ecsa/demo.py:generate_fixtures",
+   "type": "function",
+   "name": "generate_fixtures",
+   "filePath": "src/ecsa/demo.py",
+   "lineRange": [
+    18,
+    124
+   ],
+   "summary": "Generate eight synthetic firms, twelve events each and 560 NYSE daily bars.",
+   "tags": [
+    "demo",
+    "synthetic-data"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:src/ecsa/dashboard.py",
+   "type": "file",
+   "name": "dashboard.py",
+   "filePath": "src/ecsa/dashboard.py",
+   "lineRange": [
+    1,
+    416
+   ],
+   "summary": "Everything you see in the Streamlit app. It only reads files in data/processed/ (no models, no downloads). Shows the event's sentiment scores, why it did or did not trade, the −5 to +10 day return chart against high/neutral/low sentiment peers, the phrases behind the score, tone across the call, and the strategy tab (equity curve vs SPY and placebo, metrics, information coefficient).",
+   "tags": [
+    "ui",
+    "visualization"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:src/ecsa/dashboard.py:signal_explanation",
+   "type": "function",
+   "name": "signal_explanation",
+   "filePath": "src/ecsa/dashboard.py",
+   "lineRange": [
+    36,
+    45
+   ],
+   "summary": "One sentence explaining the event's trade decision, using the composite score and the recorded reason.",
+   "tags": [
+    "ui",
+    "visualization"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/dashboard.py:load_table",
+   "type": "function",
+   "name": "load_table",
+   "filePath": "src/ecsa/dashboard.py",
+   "lineRange": [
+    49,
+    51
+   ],
+   "summary": "Cache a processed Parquet table; file modification time invalidates stale results.",
+   "tags": [
+    "ui",
+    "visualization"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/dashboard.py:table",
+   "type": "function",
+   "name": "table",
+   "filePath": "src/ecsa/dashboard.py",
+   "lineRange": [
+    54,
+    57
+   ],
+   "summary": "Read a known processed table or return an empty frame when optional data is absent.",
+   "tags": [
+    "ui",
+    "visualization"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/dashboard.py:highlighted",
+   "type": "function",
+   "name": "highlighted",
+   "filePath": "src/ecsa/dashboard.py",
+   "lineRange": [
+    60,
+    64
+   ],
+   "summary": "Escape source text before highlighting literal phrase spans; never execute source HTML.",
+   "tags": [
+    "ui",
+    "visualization"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/dashboard.py:event_chart",
+   "type": "function",
+   "name": "event_chart",
+   "filePath": "src/ecsa/dashboard.py",
+   "lineRange": [
+    67,
+    166
+   ],
+   "summary": "The main chart: this event's return and CAR from −5 to +10 days, peer-bucket averages with 95% bands, and its sentiment score on the right axis.",
+   "tags": [
+    "ui",
+    "visualization"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:src/ecsa/dashboard.py:render",
+   "type": "function",
+   "name": "render",
+   "filePath": "src/ecsa/dashboard.py",
+   "lineRange": [
+    169,
+    416
+   ],
+   "summary": "Draws the whole page: sidebar filters, metric cards, signal explanation, and the two tabs.",
+   "tags": [
+    "ui",
+    "visualization"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:src/ecsa/data/__init__.py",
+   "type": "file",
+   "name": "__init__.py",
+   "filePath": "src/ecsa/data/__init__.py",
+   "lineRange": [
+    1,
+    1
+   ],
+   "summary": "Package for Stage 1, data collection.",
+   "tags": [
+    "package"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:src/ecsa/data/cache.py",
+   "type": "file",
+   "name": "cache.py",
+   "filePath": "src/ecsa/data/cache.py",
+   "lineRange": [
+    1,
+    146
+   ],
+   "summary": "The only place that talks to the internet. DiskCache stores responses on disk with an expiry time; HttpClient adds retries with backoff and rate limiting, so repeated runs don't re-download and SEC limits are respected.",
+   "tags": [
+    "network",
+    "caching"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:src/ecsa/data/cache.py:DiskCache",
+   "type": "class",
+   "name": "DiskCache",
+   "filePath": "src/ecsa/data/cache.py",
+   "lineRange": [
+    21,
+    68
+   ],
+   "summary": "URL/parameter cache; TTL and injected clock use seconds since the UTC epoch.",
+   "tags": [
+    "network",
+    "caching"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:src/ecsa/data/cache.py:HttpClient",
+   "type": "class",
+   "name": "HttpClient",
+   "filePath": "src/ecsa/data/cache.py",
+   "lineRange": [
+    71,
+    146
+   ],
+   "summary": "Cached HTTP requests with bounded retries and per-request rate limiting.",
+   "tags": [
+    "network",
+    "caching"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:src/ecsa/data/ratelimit.py",
+   "type": "file",
+   "name": "ratelimit.py",
+   "filePath": "src/ecsa/data/ratelimit.py",
+   "lineRange": [
+    1,
+    42
+   ],
+   "summary": "A token bucket that spaces out requests (default 8 per second, under the SEC's 10/s limit).",
+   "tags": [
+    "network"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:src/ecsa/data/ratelimit.py:TokenBucket",
+   "type": "class",
+   "name": "TokenBucket",
+   "filePath": "src/ecsa/data/ratelimit.py",
+   "lineRange": [
+    11,
+    42
+   ],
+   "summary": "Limit request starts; capacity=1 prevents initial SEC request bursts.",
+   "tags": [
+    "network"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:src/ecsa/data/edgar.py",
+   "type": "file",
+   "name": "edgar.py",
+   "filePath": "src/ecsa/data/edgar.py",
+   "lineRange": [
+    1,
+    236
+   ],
+   "summary": "SEC EDGAR client. Maps a ticker to its CIK, reads the company's filing history, keeps 8-K filings tagged Item 2.02 (earnings results) and downloads their EX-99 press-release exhibits. It can also pull the MD&A section from 10-Q/10-K filings, but returns nothing rather than guessing when the headings are ambiguous.",
+   "tags": [
+    "data-source",
+    "sec"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:src/ecsa/data/edgar.py:pad_cik",
+   "type": "function",
+   "name": "pad_cik",
+   "filePath": "src/ecsa/data/edgar.py",
+   "lineRange": [
+    21,
+    26
+   ],
+   "summary": "Validate and normalize CIK to ten decimal digits.",
+   "tags": [
+    "data-source",
+    "sec"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:src/ecsa/data/edgar.py:Filing",
+   "type": "class",
+   "name": "Filing",
+   "filePath": "src/ecsa/data/edgar.py",
+   "lineRange": [
+    30,
+    45
+   ],
+   "summary": "Filing identity; acceptance_datetime is the UTC availability, if supplied by SEC.",
+   "tags": [
+    "data-source",
+    "sec"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/data/edgar.py:parse_submissions",
+   "type": "function",
+   "name": "parse_submissions",
+   "filePath": "src/ecsa/data/edgar.py",
+   "lineRange": [
+    48,
+    70
+   ],
+   "summary": "Parse recent and paginated column-oriented SEC submissions JSON.",
+   "tags": [
+    "data-source",
+    "sec"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/data/edgar.py:extract_mdna",
+   "type": "function",
+   "name": "extract_mdna",
+   "filePath": "src/ecsa/data/edgar.py",
+   "lineRange": [
+    73,
+    100
+   ],
+   "summary": "Extract 10-Q Item 2 / 10-K Item 7 only with unambiguous heading boundaries.",
+   "tags": [
+    "data-source",
+    "sec"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:src/ecsa/data/edgar.py:EdgarClient",
+   "type": "class",
+   "name": "EdgarClient",
+   "filePath": "src/ecsa/data/edgar.py",
+   "lineRange": [
+    103,
+    236
+   ],
+   "summary": "Talks to SEC EDGAR with your declared identity, at under 10 requests per second, with caching.",
+   "tags": [
+    "data-source",
+    "sec"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:src/ecsa/data/transcripts.py",
+   "type": "file",
+   "name": "transcripts.py",
+   "filePath": "src/ecsa/data/transcripts.py",
+   "lineRange": [
+    1,
+    181
+   ],
+   "summary": "Loads earnings-call transcripts you are licensed to use from data/raw/transcripts/ (JSON, CSV, or TXT with a .meta.json sidecar), splits them into prepared remarks and Q&A, and tags each speaker as executive, analyst or operator. Also decides whether a call was before the open, during, or after the close, which sets the event's day 0. A malformed file fails with its file name and row. The vendor-API source is a deliberate stub.",
+   "tags": [
+    "data-source",
+    "parsing"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "class:src/ecsa/data/transcripts.py:TranscriptSource",
+   "type": "class",
+   "name": "TranscriptSource",
+   "filePath": "src/ecsa/data/transcripts.py",
+   "lineRange": [
+    17,
+    20
+   ],
+   "summary": "Source of licensed, timestamped call documents.",
+   "tags": [
+    "data-source",
+    "parsing"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/data/transcripts.py:session_timing",
+   "type": "function",
+   "name": "session_timing",
+   "filePath": "src/ecsa/data/transcripts.py",
+   "lineRange": [
+    23,
+    28
+   ],
+   "summary": "Classifies a call as BMO (before 09:30 New York time), DURING, AMC (after 16:00) or UNKNOWN.",
+   "tags": [
+    "data-source",
+    "parsing"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/data/transcripts.py:parse_transcript",
+   "type": "function",
+   "name": "parse_transcript",
+   "filePath": "src/ecsa/data/transcripts.py",
+   "lineRange": [
+    31,
+    93
+   ],
+   "summary": "Splits transcript text into speaker turns, finds where Q&A starts, and labels each speaker's role.",
+   "tags": [
+    "data-source",
+    "parsing"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:src/ecsa/data/transcripts.py:LocalFileSource",
+   "type": "class",
+   "name": "LocalFileSource",
+   "filePath": "src/ecsa/data/transcripts.py",
+   "lineRange": [
+    96,
+    169
+   ],
+   "summary": "Reads licensed transcript files for one ticker and date range; malformed input fails with the file name and row number.",
+   "tags": [
+    "data-source",
+    "parsing"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:src/ecsa/data/transcripts.py:VendorAPISource",
+   "type": "class",
+   "name": "VendorAPISource",
+   "filePath": "src/ecsa/data/transcripts.py",
+   "lineRange": [
+    172,
+    181
+   ],
+   "summary": "Extension point for an explicitly licensed transcript vendor.",
+   "tags": [
+    "data-source",
+    "parsing"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:src/ecsa/data/prices.py",
+   "type": "file",
+   "name": "prices.py",
+   "filePath": "src/ecsa/data/prices.py",
+   "lineRange": [
+    1,
+    154
+   ],
+   "summary": "Daily price sources. LocalPriceSource reads a Parquet file; YFinancePriceSource downloads from Yahoo Finance for prototyping (cached, rate-limited). Also validates bars and turns adjusted closes into daily decimal returns without filling gaps.",
+   "tags": [
+    "data-source",
+    "prices"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:src/ecsa/data/prices.py:PriceSource",
+   "type": "class",
+   "name": "PriceSource",
+   "filePath": "src/ecsa/data/prices.py",
+   "lineRange": [
+    20,
+    23
+   ],
+   "summary": "Daily price table contract; date is a session label, prices in currency/share.",
+   "tags": [
+    "data-source",
+    "prices"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/data/prices.py:daily_returns",
+   "type": "function",
+   "name": "daily_returns",
+   "filePath": "src/ecsa/data/prices.py",
+   "lineRange": [
+    26,
+    30
+   ],
+   "summary": "Compute simple adjusted-close decimal returns; never forward-fill missing prices.",
+   "tags": [
+    "data-source",
+    "prices"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/data/prices.py:validate_bars",
+   "type": "function",
+   "name": "validate_bars",
+   "filePath": "src/ecsa/data/prices.py",
+   "lineRange": [
+    33,
+    65
+   ],
+   "summary": "Validate units, timestamp awareness, uniqueness and nonnegative share volume.",
+   "tags": [
+    "data-source",
+    "prices"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:src/ecsa/data/prices.py:LocalPriceSource",
+   "type": "class",
+   "name": "LocalPriceSource",
+   "filePath": "src/ecsa/data/prices.py",
+   "lineRange": [
+    68,
+    77
+   ],
+   "summary": "Licensed or synthetic local Parquet input; no network operations.",
+   "tags": [
+    "data-source",
+    "prices"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:src/ecsa/data/prices.py:YFinancePriceSource",
+   "type": "class",
+   "name": "YFinancePriceSource",
+   "filePath": "src/ecsa/data/prices.py",
+   "lineRange": [
+    80,
+    154
+   ],
+   "summary": "Prototype adapter: cached download calls, bounded retries and rate limiting.",
+   "tags": [
+    "data-source",
+    "prices"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:src/ecsa/nlp/__init__.py",
+   "type": "file",
+   "name": "__init__.py",
+   "filePath": "src/ecsa/nlp/__init__.py",
+   "lineRange": [
+    1,
+    1
+   ],
+   "summary": "Package for Stage 2, text analysis.",
+   "tags": [
+    "package"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:src/ecsa/nlp/cleaning.py",
+   "type": "file",
+   "name": "cleaning.py",
+   "filePath": "src/ecsa/nlp/cleaning.py",
+   "lineRange": [
+    1,
+    72
+   ],
+   "summary": "Tidies text (Unicode, whitespace, dash variants) and removes the legal safe-harbor disclaimer. The disclaimer is full of words like 'expect' and 'anticipate', so leaving it in would make every call look forward-looking. Removed text is kept for audit.",
+   "tags": [
+    "nlp",
+    "cleaning"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:src/ecsa/nlp/cleaning.py:CleanedDocument",
+   "type": "class",
+   "name": "CleanedDocument",
+   "filePath": "src/ecsa/nlp/cleaning.py",
+   "lineRange": [
+    13,
+    18
+   ],
+   "summary": "Cleaned sections and removed text/reasons; source identity is unchanged.",
+   "tags": [
+    "nlp",
+    "cleaning"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/nlp/cleaning.py:normalize",
+   "type": "function",
+   "name": "normalize",
+   "filePath": "src/ecsa/nlp/cleaning.py",
+   "lineRange": [
+    24,
+    29
+   ],
+   "summary": "Normalize Unicode and intra-paragraph whitespace, retaining paragraph boundaries.",
+   "tags": [
+    "nlp",
+    "cleaning"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/nlp/cleaning.py:clean_document",
+   "type": "function",
+   "name": "clean_document",
+   "filePath": "src/ecsa/nlp/cleaning.py",
+   "lineRange": [
+    32,
+    72
+   ],
+   "summary": "Remove legal disclaimer paragraphs before forward-looking detection.",
+   "tags": [
+    "nlp",
+    "cleaning"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:src/ecsa/nlp/segment.py",
+   "type": "file",
+   "name": "segment.py",
+   "filePath": "src/ecsa/nlp/segment.py",
+   "lineRange": [
+    1,
+    50
+   ],
+   "summary": "Splits cleaned text into sentences (pysbd) while remembering who said each one, their role, and whether it was in prepared remarks or Q&A.",
+   "tags": [
+    "nlp"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:src/ecsa/nlp/segment.py:Sentence",
+   "type": "class",
+   "name": "Sentence",
+   "filePath": "src/ecsa/nlp/segment.py",
+   "lineRange": [
+    15,
+    24
+   ],
+   "summary": "One sentence; ordinal is zero-based within its source document.",
+   "tags": [
+    "nlp"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/nlp/segment.py:segment",
+   "type": "function",
+   "name": "segment",
+   "filePath": "src/ecsa/nlp/segment.py",
+   "lineRange": [
+    27,
+    50
+   ],
+   "summary": "Use pysbd without discarding attribution or prepared/Q&A boundaries.",
+   "tags": [
+    "nlp"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:src/ecsa/nlp/finbert.py",
+   "type": "file",
+   "name": "finbert.py",
+   "filePath": "src/ecsa/nlp/finbert.py",
+   "lineRange": [
+    1,
+    173
+   ],
+   "summary": "Sentence sentiment. FinBertScorer runs the FinBERT financial model (pinned revision, batched, cached) and returns positive/negative/neutral probabilities; each sentence's score is positive − negative, from −1 to +1. ModelClient downloads only the pinned model files. DemoScorer is a clearly labelled toy used by the offline demo.",
+   "tags": [
+    "nlp",
+    "model",
+    "sentiment"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "class:src/ecsa/nlp/finbert.py:SentimentResult",
+   "type": "class",
+   "name": "SentimentResult",
+   "filePath": "src/ecsa/nlp/finbert.py",
+   "lineRange": [
+    18,
+    28
+   ],
+   "summary": "Probabilities are fractions; net is positive minus negative in [-1,1].",
+   "tags": [
+    "nlp",
+    "model",
+    "sentiment"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:src/ecsa/nlp/finbert.py:SentimentModel",
+   "type": "class",
+   "name": "SentimentModel",
+   "filePath": "src/ecsa/nlp/finbert.py",
+   "lineRange": [
+    31,
+    38
+   ],
+   "summary": "Common sentence scorer contract; provenance includes the artifact availability.",
+   "tags": [
+    "nlp",
+    "model",
+    "sentiment"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:src/ecsa/nlp/finbert.py:ModelClient",
+   "type": "class",
+   "name": "ModelClient",
+   "filePath": "src/ecsa/nlp/finbert.py",
+   "lineRange": [
+    41,
+    83
+   ],
+   "summary": "Download only pinned model files through the rate-limited cached HTTP client.",
+   "tags": [
+    "nlp",
+    "model",
+    "sentiment"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:src/ecsa/nlp/finbert.py:FinBertScorer",
+   "type": "class",
+   "name": "FinBertScorer",
+   "filePath": "src/ecsa/nlp/finbert.py",
+   "lineRange": [
+    86,
+    152
+   ],
+   "summary": "Batched deterministic inference; model label order always comes from id2label.",
+   "tags": [
+    "nlp",
+    "model",
+    "sentiment"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:src/ecsa/nlp/finbert.py:DemoScorer",
+   "type": "class",
+   "name": "DemoScorer",
+   "filePath": "src/ecsa/nlp/finbert.py",
+   "lineRange": [
+    155,
+    173
+   ],
+   "summary": "Synthetic lexical fixture scorer. This is NOT FinBERT or evidence of NLP quality.",
+   "tags": [
+    "nlp",
+    "model",
+    "sentiment"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:src/ecsa/nlp/llm.py",
+   "type": "file",
+   "name": "llm.py",
+   "filePath": "src/ecsa/nlp/llm.py",
+   "lineRange": [
+    1,
+    88
+   ],
+   "summary": "Optional alternative scorer that asks an OpenAI model for sentiment, themes and forward-looking statements as structured JSON (temperature 0, cost logged). Off by default.",
+   "tags": [
+    "nlp",
+    "optional",
+    "llm"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:src/ecsa/nlp/llm.py:LlmResult",
+   "type": "class",
+   "name": "LlmResult",
+   "filePath": "src/ecsa/nlp/llm.py",
+   "lineRange": [
+    14,
+    20
+   ],
+   "summary": "Signed sentiment in [-1,1], themes and forward-looking evidence strings.",
+   "tags": [
+    "nlp",
+    "optional",
+    "llm"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:src/ecsa/nlp/llm.py:LlmScorer",
+   "type": "class",
+   "name": "LlmScorer",
+   "filePath": "src/ecsa/nlp/llm.py",
+   "lineRange": [
+    23,
+    88
+   ],
+   "summary": "Opt-in scorer; pin a dated model, temperature zero, and log token-based costs.",
+   "tags": [
+    "nlp",
+    "optional",
+    "llm"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:src/ecsa/nlp/lexicon.py",
+   "type": "file",
+   "name": "lexicon.py",
+   "filePath": "src/ecsa/nlp/lexicon.py",
+   "lineRange": [
+    1,
+    113
+   ],
+   "summary": "Keyword tone. Matches the configured positive phrases (growth, expansion, raised guidance…) and negative phrases (costs, margin pressure, uncertainty…), plus the Loughran-McDonald financial dictionary if you supply it. Handles word forms and flips a match when a negation like 'no' or 'not' appears within three words ('no margin pressure').",
+   "tags": [
+    "nlp",
+    "lexicon"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:src/ecsa/nlp/lexicon.py:lemma",
+   "type": "function",
+   "name": "lemma",
+   "filePath": "src/ecsa/nlp/lexicon.py",
+   "lineRange": [
+    18,
+    20
+   ],
+   "summary": "English dictionary lemma; packaged simplemma resources require no downloads.",
+   "tags": [
+    "nlp",
+    "lexicon"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/nlp/lexicon.py:words",
+   "type": "function",
+   "name": "words",
+   "filePath": "src/ecsa/nlp/lexicon.py",
+   "lineRange": [
+    23,
+    25
+   ],
+   "summary": "Tokenize financial prose into English words without punctuation.",
+   "tags": [
+    "nlp",
+    "lexicon"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:src/ecsa/nlp/lexicon.py:PhraseMatch",
+   "type": "class",
+   "name": "PhraseMatch",
+   "filePath": "src/ecsa/nlp/lexicon.py",
+   "lineRange": [
+    29,
+    37
+   ],
+   "summary": "Phrase evidence with original sentence, category and negation flag.",
+   "tags": [
+    "nlp",
+    "lexicon"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:src/ecsa/nlp/lexicon.py:Lexicon",
+   "type": "class",
+   "name": "Lexicon",
+   "filePath": "src/ecsa/nlp/lexicon.py",
+   "lineRange": [
+    40,
+    113
+   ],
+   "summary": "User-supplied LM CSV (license respected) plus configurable custom phrases.",
+   "tags": [
+    "nlp",
+    "lexicon"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:src/ecsa/nlp/fls.py",
+   "type": "file",
+   "name": "fls.py",
+   "filePath": "src/ecsa/nlp/fls.py",
+   "lineRange": [
+    1,
+    67
+   ],
+   "summary": "Finds forward-looking statements (guidance, outlook, plans) using future and modal word cues, or an optional pinned classifier model. Their average sentiment becomes 'guidance tone'.",
+   "tags": [
+    "nlp",
+    "forward-looking"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/nlp/fls.py:is_forward_looking",
+   "type": "function",
+   "name": "is_forward_looking",
+   "filePath": "src/ecsa/nlp/fls.py",
+   "lineRange": [
+    18,
+    20
+   ],
+   "summary": "Classify future/modal business cues; input must exclude safe-harbor boilerplate.",
+   "tags": [
+    "nlp",
+    "forward-looking"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:src/ecsa/nlp/fls.py:FlsDetector",
+   "type": "class",
+   "name": "FlsDetector",
+   "filePath": "src/ecsa/nlp/fls.py",
+   "lineRange": [
+    23,
+    67
+   ],
+   "summary": "Optional FLS model loaded from a pinned local snapshot; rules are the default.",
+   "tags": [
+    "nlp",
+    "forward-looking"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:src/ecsa/nlp/themes.py",
+   "type": "file",
+   "name": "themes.py",
+   "filePath": "src/ecsa/nlp/themes.py",
+   "lineRange": [
+    1,
+    69
+   ],
+   "summary": "Discovers recurring themes with TF-IDF and NMF topic modelling. The model is fitted only on documents published before the current call, so themes never leak the future.",
+   "tags": [
+    "nlp",
+    "themes",
+    "no-look-ahead"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:src/ecsa/nlp/themes.py:CorpusDocument",
+   "type": "class",
+   "name": "CorpusDocument",
+   "filePath": "src/ecsa/nlp/themes.py",
+   "lineRange": [
+    18,
+    22
+   ],
+   "summary": "Text corpus member with UTC availability, independent of realized returns.",
+   "tags": [
+    "nlp",
+    "themes",
+    "no-look-ahead"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:src/ecsa/nlp/themes.py:TemporalThemes",
+   "type": "class",
+   "name": "TemporalThemes",
+   "filePath": "src/ecsa/nlp/themes.py",
+   "lineRange": [
+    25,
+    69
+   ],
+   "summary": "Small expanding corpus model; current/future documents never enter fit.",
+   "tags": [
+    "nlp",
+    "themes",
+    "no-look-ahead"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:src/ecsa/nlp/features.py",
+   "type": "file",
+   "name": "features.py",
+   "filePath": "src/ecsa/nlp/features.py",
+   "lineRange": [
+    1,
+    190
+   ],
+   "summary": "Turns sentences into one feature row per earnings event: average and length-weighted sentiment, positive/negative shares, splits by section and speaker role, lexicon tone, uncertainty, guidance tone, and sentiment surprise (tone versus the company's previous four calls). Also outputs the evidence tables the dashboard shows.",
+   "tags": [
+    "nlp",
+    "features"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "class:src/ecsa/nlp/features.py:Analysis",
+   "type": "class",
+   "name": "Analysis",
+   "filePath": "src/ecsa/nlp/features.py",
+   "lineRange": [
+    24,
+    30
+   ],
+   "summary": "Event features and auditable sentence/phrase/disclaimer evidence tables.",
+   "tags": [
+    "nlp",
+    "features"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/nlp/features.py:add_surprise",
+   "type": "function",
+   "name": "add_surprise",
+   "filePath": "src/ecsa/nlp/features.py",
+   "lineRange": [
+    33,
+    56
+   ],
+   "summary": "Sentiment surprise: how unusual this call's tone is versus the company's previous four calls (a z-score). Needs at least two prior calls.",
+   "tags": [
+    "nlp",
+    "features"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/nlp/features.py:analyze_documents",
+   "type": "function",
+   "name": "analyze_documents",
+   "filePath": "src/ecsa/nlp/features.py",
+   "lineRange": [
+    73,
+    190
+   ],
+   "summary": "The main NLP function: cleans, segments and scores every document, then aggregates one feature row per event.",
+   "tags": [
+    "nlp",
+    "features"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:src/ecsa/events/__init__.py",
+   "type": "file",
+   "name": "__init__.py",
+   "filePath": "src/ecsa/events/__init__.py",
+   "lineRange": [
+    1,
+    1
+   ],
+   "summary": "Package for Stage 3, the event study.",
+   "tags": [
+    "package"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:src/ecsa/events/calendar.py",
+   "type": "file",
+   "name": "calendar.py",
+   "filePath": "src/ecsa/events/calendar.py",
+   "lineRange": [
+    1,
+    56
+   ],
+   "summary": "The trading calendar, built from the benchmark's actual trading days (so holidays and half-days are handled). Its day0() rule: calls before the open or during the session use that day; after-close or unknown-time calls use the next trading day.",
+   "tags": [
+    "event-study",
+    "timing"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:src/ecsa/events/calendar.py:TradingCalendar",
+   "type": "class",
+   "name": "TradingCalendar",
+   "filePath": "src/ecsa/events/calendar.py",
+   "lineRange": [
+    15,
+    56
+   ],
+   "summary": "Lists real trading days and answers 'which day is day 0 for this call?'.",
+   "tags": [
+    "event-study",
+    "timing"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:src/ecsa/events/market_model.py",
+   "type": "file",
+   "name": "market_model.py",
+   "filePath": "src/ecsa/events/market_model.py",
+   "lineRange": [
+    1,
+    68
+   ],
+   "summary": "Estimates what a stock 'normally' does given the market: an OLS regression of the stock's daily return on the benchmark's, fitted on days −250 to −30 before the event. Falls back to stock-minus-market when there is too little history.",
+   "tags": [
+    "event-study",
+    "statistics"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:src/ecsa/events/market_model.py:MarketModel",
+   "type": "class",
+   "name": "MarketModel",
+   "filePath": "src/ecsa/events/market_model.py",
+   "lineRange": [
+    14,
+    35
+   ],
+   "summary": "Daily decimal alpha and residual variance; beta is dimensionless.",
+   "tags": [
+    "event-study",
+    "statistics"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/events/market_model.py:fit_market_model",
+   "type": "function",
+   "name": "fit_market_model",
+   "filePath": "src/ecsa/events/market_model.py",
+   "lineRange": [
+    38,
+    68
+   ],
+   "summary": "Fits expected return = alpha + beta × market return on the estimation window, using only data available before the event.",
+   "tags": [
+    "event-study",
+    "statistics"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:src/ecsa/events/study.py",
+   "type": "file",
+   "name": "study.py",
+   "filePath": "src/ecsa/events/study.py",
+   "lineRange": [
+    1,
+    123
+   ],
+   "summary": "The event study itself. For each event it computes abnormal returns (actual minus expected) for each day from −5 to +10, and cumulative abnormal returns (CAR) for the standard windows: pre-event [−5,−1], reaction [0] and [0,+1], post-event drift [+1,+10]. Only the drift window tests whether sentiment predicts returns you could trade.",
+   "tags": [
+    "event-study",
+    "statistics"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:src/ecsa/events/study.py:run_study",
+   "type": "function",
+   "name": "run_study",
+   "filePath": "src/ecsa/events/study.py",
+   "lineRange": [
+    29,
+    123
+   ],
+   "summary": "For every event: find day 0, fit the market model on past data, then compute daily abnormal returns from −5 to +10 and the CAR windows.",
+   "tags": [
+    "event-study",
+    "statistics"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:src/ecsa/events/stats.py",
+   "type": "file",
+   "name": "stats.py",
+   "filePath": "src/ecsa/events/stats.py",
+   "lineRange": [
+    1,
+    213
+   ],
+   "summary": "Statistics over all events: groups events into sentiment quintiles and averages their return paths with 95% bands, runs t-tests and the BMP test per window, measures the information coefficient (rank correlation of score with later returns), and a drift regression. These look back at outcomes, so they are for evaluation only and never feed trading decisions.",
+   "tags": [
+    "event-study",
+    "statistics",
+    "evaluation"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:src/ecsa/events/stats.py:quarter_buckets",
+   "type": "function",
+   "name": "quarter_buckets",
+   "filePath": "src/ecsa/events/stats.py",
+   "lineRange": [
+    24,
+    36
+   ],
+   "summary": "Retrospective quarter quintiles; ties share a bucket; tiny quarters are neutral.",
+   "tags": [
+    "event-study",
+    "statistics",
+    "evaluation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/events/stats.py:bucket_membership",
+   "type": "function",
+   "name": "bucket_membership",
+   "filePath": "src/ecsa/events/stats.py",
+   "lineRange": [
+    39,
+    69
+   ],
+   "summary": "Persist peer membership separately from causal trading decisions.",
+   "tags": [
+    "event-study",
+    "statistics",
+    "evaluation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:src/ecsa/events/stats.py:bucket_paths",
+   "type": "function",
+   "name": "bucket_paths",
+   "filePath": "src/ecsa/events/stats.py",
+   "lineRange": [
+    72,
+    115
+   ],
+   "summary": "Average AR/CAR paths with date-cluster robust 95% intervals for AR and CAR.",
+   "tags": [
+    "event-study",
+    "statistics",
+    "evaluation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:src/ecsa/events/stats.py:window_tests",
+   "type": "function",
+   "name": "window_tests",
+   "filePath": "src/ecsa/events/stats.py",
+   "lineRange": [
+    118,
+    142
+   ],
+   "summary": "Cross-sectional t and BMP standardized t per window; undefined tests remain NaN.",
+   "tags": [
+    "event-study",
+    "statistics",
+    "evaluation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:src/ecsa/events/stats.py:information_coefficient",
+   "type": "function",
+   "name": "information_coefficient",
+   "filePath": "src/ecsa/events/stats.py",
+   "lineRange": [
+    145,
+    165
+   ],
+   "summary": "Spearman score versus CAR[+1,+10], overall and by calendar quarter.",
+   "tags": [
+    "event-study",
+    "statistics",
+    "evaluation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:src/ecsa/events/stats.py:drift_regression",
+   "type": "function",
+   "name": "drift_regression",
+   "filePath": "src/ecsa/events/stats.py",
+   "lineRange": [
+    168,
+    213
+   ],
+   "summary": "Retrospective OLS drift ~ score + anticipation + reaction; SE clustered by day0.",
+   "tags": [
+    "event-study",
+    "statistics",
+    "evaluation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:src/ecsa/signals/__init__.py",
+   "type": "file",
+   "name": "__init__.py",
+   "filePath": "src/ecsa/signals/__init__.py",
+   "lineRange": [
+    1,
+    1
+   ],
+   "summary": "Package for Stage 4, trading signals.",
+   "tags": [
+    "package"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:src/ecsa/signals/scoring.py",
+   "type": "file",
+   "name": "scoring.py",
+   "filePath": "src/ecsa/signals/scoring.py",
+   "lineRange": [
+    1,
+    37
+   ],
+   "summary": "Combines five measures into one composite score: length-weighted sentiment, sentiment surprise, lexicon tone, guidance tone, and (negatively) uncertainty. Each is turned into a z-score using only earlier events, then averaged with the configured weights.",
+   "tags": [
+    "signals",
+    "scoring",
+    "no-look-ahead"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:src/ecsa/signals/scoring.py:composite_scores",
+   "type": "function",
+   "name": "composite_scores",
+   "filePath": "src/ecsa/signals/scoring.py",
+   "lineRange": [
+    11,
+    37
+   ],
+   "summary": "Computes each event's composite score from past-only z-scores of the five measures.",
+   "tags": [
+    "signals",
+    "scoring",
+    "no-look-ahead"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:src/ecsa/signals/model.py",
+   "type": "file",
+   "name": "model.py",
+   "filePath": "src/ecsa/signals/model.py",
+   "lineRange": [
+    1,
+    67
+   ],
+   "summary": "Optional learned weights. Walk-forward training only on events whose 10-day outcome had already finished, with a 10-trading-day gap (embargo) before each test date, so the model never sees the answers it is graded on.",
+   "tags": [
+    "signals",
+    "ml",
+    "no-look-ahead"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:src/ecsa/signals/model.py:walk_forward",
+   "type": "function",
+   "name": "walk_forward",
+   "filePath": "src/ecsa/signals/model.py",
+   "lineRange": [
+    16,
+    67
+   ],
+   "summary": "Fit before each test close; label end must precede a ten-session embargo.",
+   "tags": [
+    "signals",
+    "ml",
+    "no-look-ahead"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:src/ecsa/signals/portfolio.py",
+   "type": "file",
+   "name": "portfolio.py",
+   "filePath": "src/ecsa/signals/portfolio.py",
+   "lineRange": [
+    1,
+    153
+   ],
+   "summary": "Turns scores into trades. At each event's day-0 close, it ranks the event against events from the past 90 days: top 20% → LONG, bottom 20% → SHORT, otherwise NONE. Needs at least 20 events to rank, caps each name at 5%, can be sector-neutral, and records the reason for every decision. Events whose features were not ready by the close are rejected, never backdated.",
+   "tags": [
+    "signals",
+    "portfolio"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:src/ecsa/signals/portfolio.py:build_signals",
+   "type": "function",
+   "name": "build_signals",
+   "filePath": "src/ecsa/signals/portfolio.py",
+   "lineRange": [
+    18,
+    153
+   ],
+   "summary": "Ranks each new event against the trailing 90 days and returns LONG/SHORT/NONE with a reason, plus the list of rejected events.",
+   "tags": [
+    "signals",
+    "portfolio"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:src/ecsa/signals/backtest.py",
+   "type": "file",
+   "name": "backtest.py",
+   "filePath": "src/ecsa/signals/backtest.py",
+   "lineRange": [
+    1,
+    134
+   ],
+   "summary": "Simulates the strategy day by day: enter at the day-0 close, hold for 10 trading days, overlapping positions, 10 bps cost per side. The placebo function reruns it 100 times with shuffled scores; a real signal should clearly beat the placebo.",
+   "tags": [
+    "signals",
+    "backtest"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:src/ecsa/signals/backtest.py:backtest",
+   "type": "function",
+   "name": "backtest",
+   "filePath": "src/ecsa/signals/backtest.py",
+   "lineRange": [
+    13,
+    97
+   ],
+   "summary": "Daily portfolio returns after costs from all open positions.",
+   "tags": [
+    "signals",
+    "backtest"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:src/ecsa/signals/backtest.py:placebo",
+   "type": "function",
+   "name": "placebo",
+   "filePath": "src/ecsa/signals/backtest.py",
+   "lineRange": [
+    100,
+    134
+   ],
+   "summary": "Shuffles scores among events on the same day and reruns the backtest, 100 times, as a 'luck' baseline.",
+   "tags": [
+    "signals",
+    "backtest"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:src/ecsa/signals/metrics.py",
+   "type": "file",
+   "name": "metrics.py",
+   "filePath": "src/ecsa/signals/metrics.py",
+   "lineRange": [
+    1,
+    65
+   ],
+   "summary": "Strategy scorecard: annualized return and volatility, Sharpe ratio, maximum drawdown, hit rate, turnover, long versus short contribution, and how many strategy variants were tried (to flag data snooping).",
+   "tags": [
+    "signals",
+    "evaluation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:src/ecsa/signals/metrics.py:performance",
+   "type": "function",
+   "name": "performance",
+   "filePath": "src/ecsa/signals/metrics.py",
+   "lineRange": [
+    12,
+    65
+   ],
+   "summary": "Annualized returns/volatility use 252 sessions; Sharpe assumes zero cash rate.",
+   "tags": [
+    "signals",
+    "evaluation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "table:data/interim/documents.parquet",
+   "type": "table",
+   "name": "documents.parquet",
+   "filePath": "data/interim/documents.parquet",
+   "summary": "All collected documents with sections, speakers and timestamps.",
+   "tags": [
+    "data",
+    "parquet",
+    "interim"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/interim/prices.parquet",
+   "type": "table",
+   "name": "prices.parquet",
+   "filePath": "data/interim/prices.parquet",
+   "summary": "Daily prices and decimal returns for every ticker and the benchmark (SPY).",
+   "tags": [
+    "data",
+    "parquet",
+    "interim"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/features.parquet",
+   "type": "table",
+   "name": "features.parquet",
+   "filePath": "data/processed/features.parquet",
+   "summary": "One row of sentiment features per earnings event.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/sentences.parquet",
+   "type": "table",
+   "name": "sentences.parquet",
+   "filePath": "data/processed/sentences.parquet",
+   "summary": "Every scored sentence with speaker, section and sentiment; feeds the dashboard's tone-across-the-call chart.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/phrases.parquet",
+   "type": "table",
+   "name": "phrases.parquet",
+   "filePath": "data/processed/phrases.parquet",
+   "summary": "Matched positive/negative phrases with their sentences; feeds 'Words behind the score'.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/removed_text.parquet",
+   "type": "table",
+   "name": "removed_text.parquet",
+   "filePath": "data/processed/removed_text.parquet",
+   "summary": "Safe-harbor and boilerplate text removed before analysis, kept for audit.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/event_study.parquet",
+   "type": "table",
+   "name": "event_study.parquet",
+   "filePath": "data/processed/event_study.parquet",
+   "summary": "Per-event abnormal returns and CAR windows joined to the features.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/event_paths.parquet",
+   "type": "table",
+   "name": "event_paths.parquet",
+   "filePath": "data/processed/event_paths.parquet",
+   "summary": "Day-by-day AR/CAR path of each event (−5…+10) for the chart.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/bucket_paths.parquet",
+   "type": "table",
+   "name": "bucket_paths.parquet",
+   "filePath": "data/processed/bucket_paths.parquet",
+   "summary": "Average return paths of high/neutral/low sentiment peers with 95% bands.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/event_buckets.parquet",
+   "type": "table",
+   "name": "event_buckets.parquet",
+   "filePath": "data/processed/event_buckets.parquet",
+   "summary": "Which sentiment quintile each event falls in.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/window_tests.parquet",
+   "type": "table",
+   "name": "window_tests.parquet",
+   "filePath": "data/processed/window_tests.parquet",
+   "summary": "t-test and BMP results for each return window.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/information_coefficients.parquet",
+   "type": "table",
+   "name": "information_coefficients.parquet",
+   "filePath": "data/processed/information_coefficients.parquet",
+   "summary": "Rank correlation of each score with post-event drift, overall and by quarter.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/regression.parquet",
+   "type": "table",
+   "name": "regression.parquet",
+   "filePath": "data/processed/regression.parquet",
+   "summary": "Drift regression controlling for anticipation and reaction.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/scored_events.parquet",
+   "type": "table",
+   "name": "scored_events.parquet",
+   "filePath": "data/processed/scored_events.parquet",
+   "summary": "Events with their composite score.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/signals.parquet",
+   "type": "table",
+   "name": "signals.parquet",
+   "filePath": "data/processed/signals.parquet",
+   "summary": "Every trade decision (LONG/SHORT/NONE), weight, dates and reason.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/rejected_signals.parquet",
+   "type": "table",
+   "name": "rejected_signals.parquet",
+   "filePath": "data/processed/rejected_signals.parquet",
+   "summary": "Events that could not be traded, with the reason.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/backtest.parquet",
+   "type": "table",
+   "name": "backtest.parquet",
+   "filePath": "data/processed/backtest.parquet",
+   "summary": "Daily strategy returns after costs.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/placebo.parquet",
+   "type": "table",
+   "name": "placebo.parquet",
+   "filePath": "data/processed/placebo.parquet",
+   "summary": "Average equity path of the shuffled-score placebo.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/strategy_metrics.parquet",
+   "type": "table",
+   "name": "strategy_metrics.parquet",
+   "filePath": "data/processed/strategy_metrics.parquet",
+   "summary": "Strategy scorecard (Sharpe, drawdown, hit rate, IC…).",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/strategy_ic.parquet",
+   "type": "table",
+   "name": "strategy_ic.parquet",
+   "filePath": "data/processed/strategy_ic.parquet",
+   "summary": "Information coefficient of the composite score by quarter.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "table:data/processed/run_metadata.parquet",
+   "type": "table",
+   "name": "run_metadata.parquet",
+   "filePath": "data/processed/run_metadata.parquet",
+   "summary": "Run settings: demo flag, seed, model revision, costs, placebo count.",
+   "tags": [
+    "data",
+    "parquet",
+    "processed"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "concept:no-look-ahead",
+   "type": "concept",
+   "name": "No look-ahead (point-in-time data)",
+   "summary": "The rule that protects every result: a decision may only use information that existed at that moment. Every record has an `available_at` time; z-scores, themes and models use only earlier events; late features are rejected, not backdated. Tests change future data and check that past signals stay the same.",
+   "tags": [
+    "concept"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "concept:day-zero",
+   "type": "concept",
+   "name": "Day 0 and call timing",
+   "summary": "Day 0 is the first trading session that could react to the call. Before-open or in-session calls: that day. After-close or unknown-time calls: the next trading day. Positions enter at the day-0 close.",
+   "tags": [
+    "concept"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "concept:abnormal-return",
+   "type": "concept",
+   "name": "Abnormal return and CAR",
+   "summary": "Abnormal return = what the stock did minus what the market model expected. CAR adds them up over a window. [−5,−1] shows anticipation, [0] and [0,+1] the immediate reaction, and [+1,+10] the post-call drift — the only window a signal formed at the call could trade.",
+   "tags": [
+    "concept"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "concept:sentence-sentiment",
+   "type": "concept",
+   "name": "Sentence sentiment (−1 to +1)",
+   "summary": "Each sentence gets probabilities for positive, negative and neutral from FinBERT. Its score is positive minus negative. Event scores are averages, overall and by section and speaker.",
+   "tags": [
+    "concept"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "concept:sentiment-surprise",
+   "type": "concept",
+   "name": "Sentiment surprise",
+   "summary": "Companies have a house style, so tone is compared with the same company's previous four calls. A big positive surprise means unusually upbeat for that company.",
+   "tags": [
+    "concept"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "concept:composite-score",
+   "type": "concept",
+   "name": "Composite score",
+   "summary": "The number that drives trades: a weighted average of past-only z-scores of sentiment, surprise, lexicon tone, guidance tone and (negative) uncertainty. The dashboard's sidebar score is for display; trades always use this composite.",
+   "tags": [
+    "concept"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "concept:placebo-test",
+   "type": "concept",
+   "name": "Placebo test",
+   "summary": "The strategy is rerun 100 times with scores shuffled among same-day events. If the real strategy doesn't beat these, its results could be luck.",
+   "tags": [
+    "concept"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "concept:safe-harbor",
+   "type": "concept",
+   "name": "Safe-harbor removal",
+   "summary": "The legal 'forward-looking statements' disclaimer read at the start of most calls is removed before analysis; otherwise it would inflate every forward-looking measure.",
+   "tags": [
+    "concept"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:README.md",
+   "type": "document",
+   "name": "README.md",
+   "filePath": "README.md",
+   "summary": "Start here: what the project does, how to run the offline demo, how to use real data, and its limitations.",
+   "tags": [
+    "documentation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:guidelines.md",
+   "type": "document",
+   "name": "guidelines.md",
+   "filePath": "guidelines.md",
+   "summary": "The design document: the methodology for data collection, NLP, the event study and trading signals, plus the dashboard specification.",
+   "tags": [
+    "documentation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:change-report.md",
+   "type": "document",
+   "name": "change-report.md",
+   "filePath": "change-report.md",
+   "summary": "What was built and verified: test, lint, type, build and browser checks, and the bugs fixed.",
+   "tags": [
+    "documentation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:HANDOFF.md",
+   "type": "document",
+   "name": "HANDOFF.md",
+   "filePath": "HANDOFF.md",
+   "summary": "Checkpoint used to hand the task between AI assistants; currently marked complete.",
+   "tags": [
+    "documentation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:config/settings.yaml",
+   "type": "config",
+   "name": "config/settings.yaml",
+   "filePath": "config/settings.yaml",
+   "summary": "All tunable parameters in one place: model ids and revisions, keyword lists, event windows, ranking thresholds, costs, placebo count.",
+   "tags": [
+    "configuration"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:.env.example",
+   "type": "config",
+   "name": ".env.example",
+   "filePath": ".env.example",
+   "summary": "Template for secrets (SEC_USER_AGENT, optional API keys). Copy to .env, fill in, and export; never committed.",
+   "tags": [
+    "configuration"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:pyproject.toml",
+   "type": "config",
+   "name": "pyproject.toml",
+   "filePath": "pyproject.toml",
+   "summary": "Package definition, dependencies, and tool settings for pytest (network disabled), ruff and strict mypy.",
+   "tags": [
+    "configuration"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:Makefile",
+   "type": "config",
+   "name": "Makefile",
+   "filePath": "Makefile",
+   "summary": "Shortcuts: `make demo-data`, `make app`, `make test`, `make check`.",
+   "tags": [
+    "configuration"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:app/streamlit_app.py",
+   "target": "function:app/streamlit_app.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "function:src/ecsa/pipeline.py:build_parser",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "function:src/ecsa/pipeline.py:ingest",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "function:src/ecsa/pipeline.py:analyze",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "function:src/ecsa/pipeline.py:event_study",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "function:src/ecsa/pipeline.py:signals",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "function:src/ecsa/pipeline.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/settings.py",
+   "target": "class:src/ecsa/settings.py:Settings",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/schemas.py",
+   "target": "class:src/ecsa/schemas.py:Record",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/schemas.py",
+   "target": "class:src/ecsa/schemas.py:Utterance",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/schemas.py",
+   "target": "class:src/ecsa/schemas.py:Section",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/schemas.py",
+   "target": "function:src/ecsa/schemas.py:document_id",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/schemas.py",
+   "target": "class:src/ecsa/schemas.py:Document",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/schemas.py",
+   "target": "class:src/ecsa/schemas.py:PriceBar",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/schemas.py",
+   "target": "class:src/ecsa/schemas.py:EventFeatures",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/schemas.py",
+   "target": "class:src/ecsa/schemas.py:Signal",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/storage.py",
+   "target": "function:src/ecsa/storage.py:utc",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/storage.py",
+   "target": "function:src/ecsa/storage.py:write_parquet",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/storage.py",
+   "target": "function:src/ecsa/storage.py:save_documents",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/storage.py",
+   "target": "function:src/ecsa/storage.py:load_documents",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/demo.py",
+   "target": "function:src/ecsa/demo.py:generate_fixtures",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/dashboard.py",
+   "target": "function:src/ecsa/dashboard.py:signal_explanation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/dashboard.py",
+   "target": "function:src/ecsa/dashboard.py:load_table",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/dashboard.py",
+   "target": "function:src/ecsa/dashboard.py:table",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/dashboard.py",
+   "target": "function:src/ecsa/dashboard.py:highlighted",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/dashboard.py",
+   "target": "function:src/ecsa/dashboard.py:event_chart",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/dashboard.py",
+   "target": "function:src/ecsa/dashboard.py:render",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/cache.py",
+   "target": "class:src/ecsa/data/cache.py:DiskCache",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/cache.py",
+   "target": "class:src/ecsa/data/cache.py:HttpClient",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/ratelimit.py",
+   "target": "class:src/ecsa/data/ratelimit.py:TokenBucket",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/edgar.py",
+   "target": "function:src/ecsa/data/edgar.py:pad_cik",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/edgar.py",
+   "target": "class:src/ecsa/data/edgar.py:Filing",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/edgar.py",
+   "target": "function:src/ecsa/data/edgar.py:parse_submissions",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/edgar.py",
+   "target": "function:src/ecsa/data/edgar.py:extract_mdna",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/edgar.py",
+   "target": "class:src/ecsa/data/edgar.py:EdgarClient",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/transcripts.py",
+   "target": "class:src/ecsa/data/transcripts.py:TranscriptSource",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/transcripts.py",
+   "target": "function:src/ecsa/data/transcripts.py:session_timing",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/transcripts.py",
+   "target": "function:src/ecsa/data/transcripts.py:parse_transcript",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/transcripts.py",
+   "target": "class:src/ecsa/data/transcripts.py:LocalFileSource",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/transcripts.py",
+   "target": "class:src/ecsa/data/transcripts.py:VendorAPISource",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/prices.py",
+   "target": "class:src/ecsa/data/prices.py:PriceSource",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/prices.py",
+   "target": "function:src/ecsa/data/prices.py:daily_returns",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/prices.py",
+   "target": "function:src/ecsa/data/prices.py:validate_bars",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/prices.py",
+   "target": "class:src/ecsa/data/prices.py:LocalPriceSource",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/data/prices.py",
+   "target": "class:src/ecsa/data/prices.py:YFinancePriceSource",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/cleaning.py",
+   "target": "class:src/ecsa/nlp/cleaning.py:CleanedDocument",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/cleaning.py",
+   "target": "function:src/ecsa/nlp/cleaning.py:normalize",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/cleaning.py",
+   "target": "function:src/ecsa/nlp/cleaning.py:clean_document",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/segment.py",
+   "target": "class:src/ecsa/nlp/segment.py:Sentence",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/segment.py",
+   "target": "function:src/ecsa/nlp/segment.py:segment",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/finbert.py",
+   "target": "class:src/ecsa/nlp/finbert.py:SentimentResult",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/finbert.py",
+   "target": "class:src/ecsa/nlp/finbert.py:SentimentModel",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/finbert.py",
+   "target": "class:src/ecsa/nlp/finbert.py:ModelClient",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/finbert.py",
+   "target": "class:src/ecsa/nlp/finbert.py:FinBertScorer",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/finbert.py",
+   "target": "class:src/ecsa/nlp/finbert.py:DemoScorer",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/llm.py",
+   "target": "class:src/ecsa/nlp/llm.py:LlmResult",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/llm.py",
+   "target": "class:src/ecsa/nlp/llm.py:LlmScorer",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/lexicon.py",
+   "target": "function:src/ecsa/nlp/lexicon.py:lemma",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/lexicon.py",
+   "target": "function:src/ecsa/nlp/lexicon.py:words",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/lexicon.py",
+   "target": "class:src/ecsa/nlp/lexicon.py:PhraseMatch",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/lexicon.py",
+   "target": "class:src/ecsa/nlp/lexicon.py:Lexicon",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/fls.py",
+   "target": "function:src/ecsa/nlp/fls.py:is_forward_looking",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/fls.py",
+   "target": "class:src/ecsa/nlp/fls.py:FlsDetector",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/themes.py",
+   "target": "class:src/ecsa/nlp/themes.py:CorpusDocument",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/themes.py",
+   "target": "class:src/ecsa/nlp/themes.py:TemporalThemes",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/features.py",
+   "target": "class:src/ecsa/nlp/features.py:Analysis",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/features.py",
+   "target": "function:src/ecsa/nlp/features.py:add_surprise",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/nlp/features.py",
+   "target": "function:src/ecsa/nlp/features.py:analyze_documents",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/events/calendar.py",
+   "target": "class:src/ecsa/events/calendar.py:TradingCalendar",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/events/market_model.py",
+   "target": "class:src/ecsa/events/market_model.py:MarketModel",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/events/market_model.py",
+   "target": "function:src/ecsa/events/market_model.py:fit_market_model",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/events/study.py",
+   "target": "function:src/ecsa/events/study.py:run_study",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/events/stats.py",
+   "target": "function:src/ecsa/events/stats.py:quarter_buckets",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/events/stats.py",
+   "target": "function:src/ecsa/events/stats.py:bucket_membership",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/events/stats.py",
+   "target": "function:src/ecsa/events/stats.py:bucket_paths",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/events/stats.py",
+   "target": "function:src/ecsa/events/stats.py:window_tests",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/events/stats.py",
+   "target": "function:src/ecsa/events/stats.py:information_coefficient",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/events/stats.py",
+   "target": "function:src/ecsa/events/stats.py:drift_regression",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/signals/scoring.py",
+   "target": "function:src/ecsa/signals/scoring.py:composite_scores",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/signals/model.py",
+   "target": "function:src/ecsa/signals/model.py:walk_forward",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/signals/portfolio.py",
+   "target": "function:src/ecsa/signals/portfolio.py:build_signals",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/signals/backtest.py",
+   "target": "function:src/ecsa/signals/backtest.py:backtest",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/signals/backtest.py",
+   "target": "function:src/ecsa/signals/backtest.py:placebo",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:src/ecsa/signals/metrics.py",
+   "target": "function:src/ecsa/signals/metrics.py:performance",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:app/streamlit_app.py",
+   "target": "file:src/ecsa/dashboard.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:app/streamlit_app.py",
+   "target": "file:src/ecsa/settings.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "function:app/streamlit_app.py:main",
+   "target": "function:src/ecsa/dashboard.py:render",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "file:src/ecsa/settings.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "file:src/ecsa/data/edgar.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "file:src/ecsa/data/prices.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "file:src/ecsa/data/transcripts.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "file:src/ecsa/schemas.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "file:src/ecsa/storage.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "file:src/ecsa/nlp/features.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "file:src/ecsa/nlp/finbert.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "file:src/ecsa/nlp/llm.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "file:src/ecsa/events/stats.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "file:src/ecsa/events/study.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "file:src/ecsa/events/calendar.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "file:src/ecsa/signals/backtest.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "file:src/ecsa/signals/metrics.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "file:src/ecsa/signals/model.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "file:src/ecsa/signals/portfolio.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/pipeline.py",
+   "target": "file:src/ecsa/signals/scoring.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:ingest",
+   "target": "function:src/ecsa/data/prices.py:validate_bars",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:ingest",
+   "target": "class:src/ecsa/data/transcripts.py:LocalFileSource",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:ingest",
+   "target": "function:src/ecsa/data/prices.py:daily_returns",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:ingest",
+   "target": "class:src/ecsa/data/edgar.py:EdgarClient",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:ingest",
+   "target": "class:src/ecsa/data/prices.py:LocalPriceSource",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:ingest",
+   "target": "class:src/ecsa/data/prices.py:YFinancePriceSource",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:analyze",
+   "target": "function:src/ecsa/nlp/features.py:analyze_documents",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:analyze",
+   "target": "class:src/ecsa/nlp/finbert.py:DemoScorer",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:analyze",
+   "target": "class:src/ecsa/nlp/llm.py:LlmScorer",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:analyze",
+   "target": "class:src/ecsa/nlp/finbert.py:FinBertScorer",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:event_study",
+   "target": "function:src/ecsa/events/study.py:run_study",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:event_study",
+   "target": "function:src/ecsa/events/stats.py:window_tests",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:event_study",
+   "target": "function:src/ecsa/events/stats.py:drift_regression",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:event_study",
+   "target": "function:src/ecsa/events/stats.py:bucket_membership",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:event_study",
+   "target": "function:src/ecsa/events/stats.py:bucket_paths",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:event_study",
+   "target": "function:src/ecsa/events/stats.py:information_coefficient",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "function:src/ecsa/signals/scoring.py:composite_scores",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "class:src/ecsa/events/calendar.py:TradingCalendar",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "function:src/ecsa/signals/portfolio.py:build_signals",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "function:src/ecsa/signals/backtest.py:backtest",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "function:src/ecsa/signals/backtest.py:placebo",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "function:src/ecsa/signals/model.py:walk_forward",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "function:src/ecsa/signals/metrics.py:performance",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "function:src/ecsa/events/stats.py:information_coefficient",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:main",
+   "target": "function:src/ecsa/pipeline.py:build_parser",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:main",
+   "target": "function:src/ecsa/pipeline.py:ingest",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:main",
+   "target": "function:src/ecsa/pipeline.py:analyze",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:main",
+   "target": "function:src/ecsa/pipeline.py:event_study",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:main",
+   "target": "function:src/ecsa/pipeline.py:signals",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/settings.py",
+   "target": "file:src/ecsa/schemas.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "class:src/ecsa/schemas.py:Document",
+   "target": "function:src/ecsa/schemas.py:document_id",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/storage.py",
+   "target": "file:src/ecsa/schemas.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/demo.py",
+   "target": "file:src/ecsa/events/calendar.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/demo.py",
+   "target": "file:src/ecsa/schemas.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/demo.py",
+   "target": "file:src/ecsa/storage.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "function:src/ecsa/demo.py:generate_fixtures",
+   "target": "class:src/ecsa/events/calendar.py:TradingCalendar",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/demo.py:generate_fixtures",
+   "target": "class:src/ecsa/schemas.py:Section",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/demo.py:generate_fixtures",
+   "target": "class:src/ecsa/schemas.py:Document",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/demo.py:generate_fixtures",
+   "target": "class:src/ecsa/schemas.py:Utterance",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/dashboard.py:render",
+   "target": "function:src/ecsa/dashboard.py:signal_explanation",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/dashboard.py:render",
+   "target": "function:src/ecsa/dashboard.py:event_chart",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/dashboard.py:render",
+   "target": "function:src/ecsa/dashboard.py:highlighted",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/data/cache.py",
+   "target": "file:src/ecsa/data/ratelimit.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "class:src/ecsa/data/cache.py:HttpClient",
+   "target": "class:src/ecsa/data/ratelimit.py:TokenBucket",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/data/edgar.py",
+   "target": "file:src/ecsa/data/cache.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/data/edgar.py",
+   "target": "file:src/ecsa/data/transcripts.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/data/edgar.py",
+   "target": "file:src/ecsa/schemas.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/data/edgar.py",
+   "target": "file:src/ecsa/settings.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/data/edgar.py",
+   "target": "file:src/ecsa/storage.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "function:src/ecsa/data/edgar.py:parse_submissions",
+   "target": "class:src/ecsa/data/edgar.py:Filing",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/data/edgar.py:parse_submissions",
+   "target": "function:src/ecsa/data/edgar.py:pad_cik",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/data/edgar.py:EdgarClient",
+   "target": "function:src/ecsa/data/edgar.py:pad_cik",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/data/edgar.py:EdgarClient",
+   "target": "function:src/ecsa/data/edgar.py:parse_submissions",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/data/edgar.py:EdgarClient",
+   "target": "function:src/ecsa/data/edgar.py:extract_mdna",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/data/edgar.py:EdgarClient",
+   "target": "class:src/ecsa/schemas.py:Document",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/data/edgar.py:EdgarClient",
+   "target": "class:src/ecsa/data/cache.py:HttpClient",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/data/edgar.py:EdgarClient",
+   "target": "class:src/ecsa/data/cache.py:DiskCache",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/data/edgar.py:EdgarClient",
+   "target": "function:src/ecsa/data/transcripts.py:session_timing",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/data/edgar.py:EdgarClient",
+   "target": "class:src/ecsa/schemas.py:Section",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/data/edgar.py:EdgarClient",
+   "target": "function:src/ecsa/data/transcripts.py:parse_transcript",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/data/edgar.py:EdgarClient",
+   "target": "class:src/ecsa/schemas.py:Utterance",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/data/transcripts.py",
+   "target": "file:src/ecsa/schemas.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/data/transcripts.py",
+   "target": "file:src/ecsa/storage.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "function:src/ecsa/data/transcripts.py:parse_transcript",
+   "target": "class:src/ecsa/schemas.py:Section",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/data/transcripts.py:parse_transcript",
+   "target": "class:src/ecsa/schemas.py:Utterance",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/data/transcripts.py:LocalFileSource",
+   "target": "function:src/ecsa/data/transcripts.py:session_timing",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/data/transcripts.py:LocalFileSource",
+   "target": "function:src/ecsa/data/transcripts.py:parse_transcript",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/data/prices.py",
+   "target": "file:src/ecsa/data/cache.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/data/prices.py",
+   "target": "file:src/ecsa/data/ratelimit.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/data/prices.py",
+   "target": "file:src/ecsa/events/calendar.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/data/prices.py",
+   "target": "file:src/ecsa/settings.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/data/prices.py",
+   "target": "file:src/ecsa/storage.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "class:src/ecsa/data/prices.py:LocalPriceSource",
+   "target": "function:src/ecsa/data/prices.py:validate_bars",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/data/prices.py:YFinancePriceSource",
+   "target": "class:src/ecsa/data/ratelimit.py:TokenBucket",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/data/prices.py:YFinancePriceSource",
+   "target": "function:src/ecsa/data/prices.py:validate_bars",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/data/prices.py:YFinancePriceSource",
+   "target": "class:src/ecsa/events/calendar.py:TradingCalendar",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/nlp/cleaning.py",
+   "target": "file:src/ecsa/schemas.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "function:src/ecsa/nlp/cleaning.py:clean_document",
+   "target": "class:src/ecsa/nlp/cleaning.py:CleanedDocument",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/nlp/cleaning.py:clean_document",
+   "target": "class:src/ecsa/schemas.py:Section",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/nlp/cleaning.py:clean_document",
+   "target": "function:src/ecsa/nlp/cleaning.py:normalize",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/nlp/cleaning.py:clean_document",
+   "target": "class:src/ecsa/schemas.py:Utterance",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/nlp/segment.py",
+   "target": "file:src/ecsa/nlp/cleaning.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/nlp/segment.py",
+   "target": "file:src/ecsa/schemas.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "function:src/ecsa/nlp/segment.py:segment",
+   "target": "class:src/ecsa/nlp/segment.py:Sentence",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/nlp/finbert.py",
+   "target": "file:src/ecsa/data/cache.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/nlp/finbert.py",
+   "target": "file:src/ecsa/settings.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "class:src/ecsa/nlp/finbert.py:ModelClient",
+   "target": "class:src/ecsa/data/cache.py:HttpClient",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/nlp/finbert.py:ModelClient",
+   "target": "class:src/ecsa/data/cache.py:DiskCache",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/nlp/finbert.py:FinBertScorer",
+   "target": "class:src/ecsa/data/cache.py:DiskCache",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/nlp/finbert.py:FinBertScorer",
+   "target": "class:src/ecsa/nlp/finbert.py:SentimentResult",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/nlp/finbert.py:FinBertScorer",
+   "target": "class:src/ecsa/nlp/finbert.py:ModelClient",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/nlp/finbert.py:DemoScorer",
+   "target": "class:src/ecsa/nlp/finbert.py:SentimentResult",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/nlp/llm.py",
+   "target": "file:src/ecsa/data/cache.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/nlp/llm.py",
+   "target": "file:src/ecsa/nlp/finbert.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/nlp/llm.py",
+   "target": "file:src/ecsa/settings.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "class:src/ecsa/nlp/llm.py:LlmScorer",
+   "target": "class:src/ecsa/data/cache.py:HttpClient",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/nlp/llm.py:LlmScorer",
+   "target": "class:src/ecsa/data/cache.py:DiskCache",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/nlp/llm.py:LlmScorer",
+   "target": "class:src/ecsa/nlp/finbert.py:SentimentResult",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/nlp/lexicon.py",
+   "target": "file:src/ecsa/nlp/segment.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/nlp/lexicon.py",
+   "target": "file:src/ecsa/settings.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "class:src/ecsa/nlp/lexicon.py:Lexicon",
+   "target": "class:src/ecsa/nlp/lexicon.py:PhraseMatch",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/nlp/fls.py",
+   "target": "file:src/ecsa/nlp/finbert.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/nlp/fls.py",
+   "target": "file:src/ecsa/settings.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "class:src/ecsa/nlp/fls.py:FlsDetector",
+   "target": "function:src/ecsa/nlp/fls.py:is_forward_looking",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:src/ecsa/nlp/fls.py:FlsDetector",
+   "target": "class:src/ecsa/nlp/finbert.py:ModelClient",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/nlp/themes.py",
+   "target": "file:src/ecsa/nlp/segment.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/nlp/themes.py",
+   "target": "file:src/ecsa/settings.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/nlp/themes.py",
+   "target": "file:src/ecsa/storage.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/nlp/features.py",
+   "target": "file:src/ecsa/data/transcripts.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/nlp/features.py",
+   "target": "file:src/ecsa/nlp/cleaning.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/nlp/features.py",
+   "target": "file:src/ecsa/nlp/finbert.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/nlp/features.py",
+   "target": "file:src/ecsa/nlp/fls.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/nlp/features.py",
+   "target": "file:src/ecsa/nlp/lexicon.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/nlp/features.py",
+   "target": "file:src/ecsa/nlp/segment.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/nlp/features.py",
+   "target": "file:src/ecsa/nlp/themes.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/nlp/features.py",
+   "target": "file:src/ecsa/schemas.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/nlp/features.py",
+   "target": "file:src/ecsa/settings.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "function:src/ecsa/nlp/features.py:analyze_documents",
+   "target": "class:src/ecsa/nlp/features.py:Analysis",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/nlp/features.py:analyze_documents",
+   "target": "class:src/ecsa/nlp/lexicon.py:Lexicon",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/nlp/features.py:analyze_documents",
+   "target": "class:src/ecsa/nlp/fls.py:FlsDetector",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/nlp/features.py:analyze_documents",
+   "target": "class:src/ecsa/nlp/themes.py:TemporalThemes",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/nlp/features.py:analyze_documents",
+   "target": "function:src/ecsa/nlp/features.py:add_surprise",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/nlp/features.py:analyze_documents",
+   "target": "function:src/ecsa/nlp/cleaning.py:clean_document",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/nlp/features.py:analyze_documents",
+   "target": "class:src/ecsa/nlp/themes.py:CorpusDocument",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/nlp/features.py:analyze_documents",
+   "target": "function:src/ecsa/nlp/segment.py:segment",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/nlp/features.py:analyze_documents",
+   "target": "function:src/ecsa/data/transcripts.py:parse_transcript",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/events/calendar.py",
+   "target": "file:src/ecsa/schemas.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/events/calendar.py",
+   "target": "file:src/ecsa/storage.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "function:src/ecsa/events/market_model.py:fit_market_model",
+   "target": "class:src/ecsa/events/market_model.py:MarketModel",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/events/study.py",
+   "target": "file:src/ecsa/events/calendar.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/events/study.py",
+   "target": "file:src/ecsa/events/market_model.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/events/study.py",
+   "target": "file:src/ecsa/settings.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/events/study.py",
+   "target": "file:src/ecsa/storage.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "function:src/ecsa/events/study.py:run_study",
+   "target": "class:src/ecsa/events/calendar.py:TradingCalendar",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/events/study.py:run_study",
+   "target": "function:src/ecsa/events/market_model.py:fit_market_model",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/events/stats.py",
+   "target": "file:src/ecsa/events/study.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "function:src/ecsa/events/stats.py:bucket_membership",
+   "target": "function:src/ecsa/events/stats.py:quarter_buckets",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/events/stats.py:bucket_paths",
+   "target": "function:src/ecsa/events/stats.py:bucket_membership",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/signals/scoring.py",
+   "target": "file:src/ecsa/settings.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/signals/model.py",
+   "target": "file:src/ecsa/events/calendar.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/signals/model.py",
+   "target": "file:src/ecsa/settings.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/signals/portfolio.py",
+   "target": "file:src/ecsa/events/calendar.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/signals/portfolio.py",
+   "target": "file:src/ecsa/schemas.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/signals/portfolio.py",
+   "target": "file:src/ecsa/settings.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/signals/backtest.py",
+   "target": "file:src/ecsa/events/calendar.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/signals/backtest.py",
+   "target": "file:src/ecsa/settings.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/signals/backtest.py",
+   "target": "file:src/ecsa/signals/portfolio.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "function:src/ecsa/signals/backtest.py:backtest",
+   "target": "class:src/ecsa/events/calendar.py:TradingCalendar",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/signals/backtest.py:placebo",
+   "target": "function:src/ecsa/signals/portfolio.py:build_signals",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/signals/backtest.py:placebo",
+   "target": "function:src/ecsa/signals/backtest.py:backtest",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:src/ecsa/signals/metrics.py",
+   "target": "file:src/ecsa/events/stats.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:src/ecsa/signals/metrics.py",
+   "target": "file:src/ecsa/settings.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "function:src/ecsa/signals/metrics.py:performance",
+   "target": "function:src/ecsa/events/stats.py:information_coefficient",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:ingest",
+   "target": "table:data/interim/documents.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:analyze",
+   "target": "table:data/interim/documents.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:ingest",
+   "target": "table:data/interim/prices.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:event_study",
+   "target": "table:data/interim/prices.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "table:data/interim/prices.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:analyze",
+   "target": "table:data/processed/features.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:event_study",
+   "target": "table:data/processed/features.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:analyze",
+   "target": "table:data/processed/sentences.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/dashboard.py:render",
+   "target": "table:data/processed/sentences.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:analyze",
+   "target": "table:data/processed/phrases.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/dashboard.py:render",
+   "target": "table:data/processed/phrases.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:analyze",
+   "target": "table:data/processed/removed_text.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/dashboard.py:render",
+   "target": "table:data/processed/removed_text.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:event_study",
+   "target": "table:data/processed/event_study.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "table:data/processed/event_study.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:event_study",
+   "target": "table:data/processed/event_paths.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/dashboard.py:render",
+   "target": "table:data/processed/event_paths.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:event_study",
+   "target": "table:data/processed/bucket_paths.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/dashboard.py:render",
+   "target": "table:data/processed/bucket_paths.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:event_study",
+   "target": "table:data/processed/event_buckets.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/dashboard.py:render",
+   "target": "table:data/processed/event_buckets.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:event_study",
+   "target": "table:data/processed/window_tests.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:event_study",
+   "target": "table:data/processed/information_coefficients.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:event_study",
+   "target": "table:data/processed/regression.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "table:data/processed/scored_events.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/dashboard.py:render",
+   "target": "table:data/processed/scored_events.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "table:data/processed/signals.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/dashboard.py:render",
+   "target": "table:data/processed/signals.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "table:data/processed/rejected_signals.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "table:data/processed/backtest.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/dashboard.py:render",
+   "target": "table:data/processed/backtest.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "table:data/processed/placebo.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/dashboard.py:render",
+   "target": "table:data/processed/placebo.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "table:data/processed/strategy_metrics.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/dashboard.py:render",
+   "target": "table:data/processed/strategy_metrics.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "table:data/processed/strategy_ic.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/dashboard.py:render",
+   "target": "table:data/processed/strategy_ic.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/pipeline.py:signals",
+   "target": "table:data/processed/run_metadata.parquet",
+   "type": "writes_to",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "function:src/ecsa/dashboard.py:render",
+   "target": "table:data/processed/run_metadata.parquet",
+   "type": "reads_from",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "file:src/ecsa/schemas.py",
+   "target": "concept:no-look-ahead",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.7,
+   "description": "implements this idea"
+  },
+  {
+   "source": "file:src/ecsa/signals/scoring.py",
+   "target": "concept:no-look-ahead",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.7,
+   "description": "implements this idea"
+  },
+  {
+   "source": "file:src/ecsa/nlp/themes.py",
+   "target": "concept:no-look-ahead",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.7,
+   "description": "implements this idea"
+  },
+  {
+   "source": "file:src/ecsa/signals/model.py",
+   "target": "concept:no-look-ahead",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.7,
+   "description": "implements this idea"
+  },
+  {
+   "source": "file:src/ecsa/signals/portfolio.py",
+   "target": "concept:no-look-ahead",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.7,
+   "description": "implements this idea"
+  },
+  {
+   "source": "file:src/ecsa/data/transcripts.py",
+   "target": "concept:day-zero",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.7,
+   "description": "implements this idea"
+  },
+  {
+   "source": "file:src/ecsa/events/calendar.py",
+   "target": "concept:day-zero",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.7,
+   "description": "implements this idea"
+  },
+  {
+   "source": "file:src/ecsa/events/market_model.py",
+   "target": "concept:abnormal-return",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.7,
+   "description": "implements this idea"
+  },
+  {
+   "source": "file:src/ecsa/events/study.py",
+   "target": "concept:abnormal-return",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.7,
+   "description": "implements this idea"
+  },
+  {
+   "source": "file:src/ecsa/nlp/finbert.py",
+   "target": "concept:sentence-sentiment",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.7,
+   "description": "implements this idea"
+  },
+  {
+   "source": "file:src/ecsa/nlp/features.py",
+   "target": "concept:sentence-sentiment",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.7,
+   "description": "implements this idea"
+  },
+  {
+   "source": "file:src/ecsa/nlp/features.py",
+   "target": "concept:sentiment-surprise",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.7,
+   "description": "implements this idea"
+  },
+  {
+   "source": "file:src/ecsa/signals/scoring.py",
+   "target": "concept:composite-score",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.7,
+   "description": "implements this idea"
+  },
+  {
+   "source": "file:src/ecsa/signals/portfolio.py",
+   "target": "concept:composite-score",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.7,
+   "description": "implements this idea"
+  },
+  {
+   "source": "file:src/ecsa/signals/backtest.py",
+   "target": "concept:placebo-test",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.7,
+   "description": "implements this idea"
+  },
+  {
+   "source": "file:src/ecsa/nlp/cleaning.py",
+   "target": "concept:safe-harbor",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.7,
+   "description": "implements this idea"
+  },
+  {
+   "source": "file:src/ecsa/nlp/fls.py",
+   "target": "concept:safe-harbor",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.7,
+   "description": "implements this idea"
+  },
+  {
+   "source": "document:README.md",
+   "target": "document:guidelines.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5,
+   "description": "method details"
+  },
+  {
+   "source": "document:README.md",
+   "target": "file:src/ecsa/pipeline.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:guidelines.md",
+   "target": "file:src/ecsa/dashboard.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:change-report.md",
+   "target": "file:src/ecsa/pipeline.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.3
+  },
+  {
+   "source": "config:config/settings.yaml",
+   "target": "file:src/ecsa/settings.py",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "config:.env.example",
+   "target": "file:src/ecsa/settings.py",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "config:pyproject.toml",
+   "target": "file:src/ecsa/__init__.py",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "config:Makefile",
+   "target": "file:src/ecsa/pipeline.py",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.7
+  }
+ ],
+ "layers": [
+  {
+   "id": "layer:foundations",
+   "name": "1 · Foundations",
+   "description": "Shared contracts every stage relies on: data records, settings and Parquet storage.",
+   "nodeIds": [
+    "file:src/ecsa/__init__.py",
+    "file:src/ecsa/settings.py",
+    "file:src/ecsa/schemas.py",
+    "file:src/ecsa/storage.py"
+   ]
+  },
+  {
+   "id": "layer:collection",
+   "name": "2 · Data collection (ingest)",
+   "description": "Gets earnings text and prices: licensed transcripts, SEC EDGAR filings, price sources, with caching and rate limiting.",
+   "nodeIds": [
+    "file:src/ecsa/data/__init__.py",
+    "file:src/ecsa/data/cache.py",
+    "file:src/ecsa/data/ratelimit.py",
+    "file:src/ecsa/data/edgar.py",
+    "file:src/ecsa/data/transcripts.py",
+    "file:src/ecsa/data/prices.py"
+   ]
+  },
+  {
+   "id": "layer:nlp",
+   "name": "3 · NLP & sentiment (analyze)",
+   "description": "Turns text into numbers: cleaning, sentences, FinBERT/LLM sentiment, keyword tone, forward-looking statements, themes, event features.",
+   "nodeIds": [
+    "file:src/ecsa/nlp/__init__.py",
+    "file:src/ecsa/nlp/cleaning.py",
+    "file:src/ecsa/nlp/segment.py",
+    "file:src/ecsa/nlp/finbert.py",
+    "file:src/ecsa/nlp/llm.py",
+    "file:src/ecsa/nlp/lexicon.py",
+    "file:src/ecsa/nlp/fls.py",
+    "file:src/ecsa/nlp/themes.py",
+    "file:src/ecsa/nlp/features.py"
+   ]
+  },
+  {
+   "id": "layer:events",
+   "name": "4 · Event study (event-study)",
+   "description": "Measures how prices moved around each call (−5 to +10 days) and whether sentiment explains the move.",
+   "nodeIds": [
+    "file:src/ecsa/events/__init__.py",
+    "file:src/ecsa/events/calendar.py",
+    "file:src/ecsa/events/market_model.py",
+    "file:src/ecsa/events/study.py",
+    "file:src/ecsa/events/stats.py"
+   ]
+  },
+  {
+   "id": "layer:signals",
+   "name": "5 · Trading signals & backtest (signals)",
+   "description": "Turns sentiment into LONG/SHORT decisions and tests them honestly with costs and a placebo.",
+   "nodeIds": [
+    "file:src/ecsa/signals/__init__.py",
+    "file:src/ecsa/signals/scoring.py",
+    "file:src/ecsa/signals/model.py",
+    "file:src/ecsa/signals/portfolio.py",
+    "file:src/ecsa/signals/backtest.py",
+    "file:src/ecsa/signals/metrics.py"
+   ]
+  },
+  {
+   "id": "layer:app",
+   "name": "6 · Orchestration & dashboard",
+   "description": "The CLI that runs the stages, the synthetic demo, and the Streamlit dashboard.",
+   "nodeIds": [
+    "file:app/streamlit_app.py",
+    "file:src/ecsa/pipeline.py",
+    "file:src/ecsa/demo.py",
+    "file:src/ecsa/dashboard.py"
+   ]
+  },
+  {
+   "id": "layer:data",
+   "name": "7 · Data files",
+   "description": "The Parquet tables each stage writes and the next stage (or the dashboard) reads.",
+   "nodeIds": [
+    "table:data/interim/documents.parquet",
+    "table:data/interim/prices.parquet",
+    "table:data/processed/features.parquet",
+    "table:data/processed/sentences.parquet",
+    "table:data/processed/phrases.parquet",
+    "table:data/processed/removed_text.parquet",
+    "table:data/processed/event_study.parquet",
+    "table:data/processed/event_paths.parquet",
+    "table:data/processed/bucket_paths.parquet",
+    "table:data/processed/event_buckets.parquet",
+    "table:data/processed/window_tests.parquet",
+    "table:data/processed/information_coefficients.parquet",
+    "table:data/processed/regression.parquet",
+    "table:data/processed/scored_events.parquet",
+    "table:data/processed/signals.parquet",
+    "table:data/processed/rejected_signals.parquet",
+    "table:data/processed/backtest.parquet",
+    "table:data/processed/placebo.parquet",
+    "table:data/processed/strategy_metrics.parquet",
+    "table:data/processed/strategy_ic.parquet",
+    "table:data/processed/run_metadata.parquet"
+   ]
+  },
+  {
+   "id": "layer:concepts",
+   "name": "8 · Key ideas",
+   "description": "Short explanations of the ideas you need to read the code and the results.",
+   "nodeIds": [
+    "concept:no-look-ahead",
+    "concept:day-zero",
+    "concept:abnormal-return",
+    "concept:sentence-sentiment",
+    "concept:sentiment-surprise",
+    "concept:composite-score",
+    "concept:placebo-test",
+    "concept:safe-harbor"
+   ]
+  },
+  {
+   "id": "layer:docs",
+   "name": "9 · Docs & configuration",
+   "description": "Project documents and configuration files.",
+   "nodeIds": [
+    "document:README.md",
+    "document:guidelines.md",
+    "document:change-report.md",
+    "document:HANDOFF.md",
+    "config:config/settings.yaml",
+    "config:.env.example",
+    "config:pyproject.toml",
+    "config:Makefile"
+   ]
+  }
+ ],
+ "tour": [
+  {
+   "order": 1,
+   "title": "What this project does",
+   "description": "The system reads earnings-call text, scores its tone, checks whether tone explains the stock's move over the following days, and turns that into long/short trades. Start with the README for the big picture and the guidelines for the method.",
+   "nodeIds": [
+    "document:README.md",
+    "document:guidelines.md"
+   ]
+  },
+  {
+   "order": 2,
+   "title": "How a run flows",
+   "description": "pipeline.py runs four stages: ingest → analyze → event-study → signals. Each stage writes Parquet files the next stage reads (see the Data files layer). `--demo` runs it all offline on synthetic data.",
+   "nodeIds": [
+    "file:src/ecsa/pipeline.py",
+    "function:src/ecsa/pipeline.py:main",
+    "config:config/settings.yaml"
+   ]
+  },
+  {
+   "order": 3,
+   "title": "The rule behind everything: no look-ahead",
+   "description": "Every record says when it became available. Read the Document and Signal schemas, then the concept note. Most design choices later in the tour exist to enforce this rule.",
+   "nodeIds": [
+    "file:src/ecsa/schemas.py",
+    "concept:no-look-ahead"
+   ],
+   "languageLesson": "Pydantic models validate data when it is created: wrong types, naive timestamps or impossible availability times raise errors immediately instead of silently corrupting results."
+  },
+  {
+   "order": 4,
+   "title": "Stage 1 — collecting text and prices",
+   "description": "Transcripts come from licensed local files (Seeking Alpha is not scraped), filings from SEC EDGAR, prices from a local file or yfinance. All network access goes through one cached, rate-limited client.",
+   "nodeIds": [
+    "file:src/ecsa/data/transcripts.py",
+    "file:src/ecsa/data/edgar.py",
+    "file:src/ecsa/data/prices.py",
+    "file:src/ecsa/data/cache.py"
+   ]
+  },
+  {
+   "order": 5,
+   "title": "Day 0: when could the market react?",
+   "description": "A call after the 16:00 close can only move prices the next trading day. The calendar turns call times into day 0, which anchors the event study and the trade entry.",
+   "nodeIds": [
+    "concept:day-zero",
+    "class:src/ecsa/events/calendar.py:TradingCalendar"
+   ]
+  },
+  {
+   "order": 6,
+   "title": "Stage 2 — from words to sentiment",
+   "description": "Text is cleaned (safe-harbor disclaimer removed), split into sentences, scored by FinBERT, and matched against keyword lists. features.py combines everything into one row per event, including sentiment surprise.",
+   "nodeIds": [
+    "file:src/ecsa/nlp/cleaning.py",
+    "file:src/ecsa/nlp/finbert.py",
+    "file:src/ecsa/nlp/lexicon.py",
+    "file:src/ecsa/nlp/features.py",
+    "concept:sentence-sentiment",
+    "concept:sentiment-surprise"
+   ]
+  },
+  {
+   "order": 7,
+   "title": "Stage 3 — did the price react?",
+   "description": "The market model estimates a normal return; the difference is the abnormal return. Summing it over windows gives CAR. stats.py tests, across all events, whether high-sentiment calls drift up after the call.",
+   "nodeIds": [
+    "file:src/ecsa/events/market_model.py",
+    "file:src/ecsa/events/study.py",
+    "file:src/ecsa/events/stats.py",
+    "concept:abnormal-return"
+   ],
+   "languageLesson": "statsmodels OLS is used for the market model and for the drift regression; standard errors are clustered by date because many companies report on the same days."
+  },
+  {
+   "order": 8,
+   "title": "Stage 4 — turning tone into trades",
+   "description": "scoring.py builds the composite score from past-only z-scores; portfolio.py ranks each event against the last 90 days to decide LONG, SHORT or NONE and records why.",
+   "nodeIds": [
+    "file:src/ecsa/signals/scoring.py",
+    "file:src/ecsa/signals/portfolio.py",
+    "concept:composite-score"
+   ]
+  },
+  {
+   "order": 9,
+   "title": "Testing the strategy honestly",
+   "description": "The backtest charges costs and holds 10 days; the placebo reruns it with shuffled scores 100 times; metrics.py reports Sharpe, drawdown, hit rate, IC and the number of variants tried.",
+   "nodeIds": [
+    "file:src/ecsa/signals/backtest.py",
+    "file:src/ecsa/signals/metrics.py",
+    "concept:placebo-test"
+   ]
+  },
+  {
+   "order": 10,
+   "title": "Seeing the results",
+   "description": "The dashboard only reads the processed tables. Pick a ticker and event to see its scores, the reason for its trade decision, the −5 to +10 day chart against peers, and the phrases behind the score.",
+   "nodeIds": [
+    "file:app/streamlit_app.py",
+    "file:src/ecsa/dashboard.py",
+    "table:data/processed/signals.parquet"
+   ],
+   "languageLesson": "Streamlit reruns the script on every interaction; @st.cache_data keeps the Parquet reads from repeating."
+  }
+ ]
+}

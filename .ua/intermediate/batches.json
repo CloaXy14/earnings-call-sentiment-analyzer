@@ -1,0 +1,636 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 62,
+  "totalBatches": 5,
+  "exportsByPath": {
+    "app/streamlit_app.py": [
+      "main"
+    ],
+    "src/ecsa/__init__.py": [],
+    "src/ecsa/dashboard.py": [
+      "signal_explanation",
+      "load_table",
+      "table",
+      "highlighted",
+      "event_chart",
+      "render"
+    ],
+    "src/ecsa/data/__init__.py": [],
+    "src/ecsa/data/cache.py": [
+      "DiskCache",
+      "HttpClient"
+    ],
+    "src/ecsa/data/edgar.py": [
+      "pad_cik",
+      "Filing",
+      "parse_submissions",
+      "extract_mdna",
+      "EdgarClient"
+    ],
+    "src/ecsa/data/prices.py": [
+      "PriceSource",
+      "daily_returns",
+      "validate_bars",
+      "LocalPriceSource",
+      "YFinancePriceSource"
+    ],
+    "src/ecsa/data/ratelimit.py": [
+      "TokenBucket"
+    ],
+    "src/ecsa/data/transcripts.py": [
+      "TranscriptSource",
+      "session_timing",
+      "parse_transcript",
+      "LocalFileSource",
+      "VendorAPISource"
+    ],
+    "src/ecsa/demo.py": [
+      "generate_fixtures"
+    ],
+    "src/ecsa/events/__init__.py": [],
+    "src/ecsa/events/calendar.py": [
+      "TradingCalendar"
+    ],
+    "src/ecsa/events/market_model.py": [
+      "MarketModel",
+      "fit_market_model"
+    ],
+    "src/ecsa/events/stats.py": [
+      "quarter_buckets",
+      "bucket_membership",
+      "bucket_paths",
+      "window_tests",
+      "information_coefficient",
+      "drift_regression"
+    ],
+    "src/ecsa/events/study.py": [
+      "run_study"
+    ],
+    "src/ecsa/nlp/__init__.py": [],
+    "src/ecsa/nlp/cleaning.py": [
+      "CleanedDocument",
+      "normalize",
+      "clean_document"
+    ],
+    "src/ecsa/nlp/features.py": [
+      "Analysis",
+      "add_surprise",
+      "_sentiment",
+      "analyze_documents"
+    ],
+    "src/ecsa/nlp/finbert.py": [
+      "SentimentResult",
+      "SentimentModel",
+      "ModelClient",
+      "FinBertScorer",
+      "DemoScorer"
+    ],
+    "src/ecsa/nlp/fls.py": [
+      "is_forward_looking",
+      "FlsDetector"
+    ],
+    "src/ecsa/nlp/lexicon.py": [
+      "lemma",
+      "words",
+      "PhraseMatch",
+      "Lexicon"
+    ],
+    "src/ecsa/nlp/llm.py": [
+      "LlmResult",
+      "LlmScorer"
+    ],
+    "src/ecsa/nlp/segment.py": [
+      "Sentence",
+      "segment"
+    ],
+    "src/ecsa/nlp/themes.py": [
+      "CorpusDocument",
+      "TemporalThemes"
+    ],
+    "src/ecsa/pipeline.py": [
+      "build_parser",
+      "ingest",
+      "analyze",
+      "event_study",
+      "signals",
+      "main"
+    ],
+    "src/ecsa/py.typed": [],
+    "src/ecsa/sample_data/sample_prices.parquet": [],
+    "src/ecsa/schemas.py": [
+      "_to_utc",
+      "Record",
+      "Utterance",
+      "Section",
+      "document_id",
+      "Document",
+      "PriceBar",
+      "EventFeatures",
+      "Signal"
+    ],
+    "src/ecsa/settings.py": [
+      "_environment_secret",
+      "Settings"
+    ],
+    "src/ecsa/signals/__init__.py": [],
+    "src/ecsa/signals/backtest.py": [
+      "backtest",
+      "placebo"
+    ],
+    "src/ecsa/signals/metrics.py": [
+      "performance"
+    ],
+    "src/ecsa/signals/model.py": [
+      "walk_forward"
+    ],
+    "src/ecsa/signals/portfolio.py": [
+      "build_signals"
+    ],
+    "src/ecsa/signals/scoring.py": [
+      "composite_scores"
+    ],
+    "src/ecsa/storage.py": [
+      "utc",
+      "write_parquet",
+      "save_documents",
+      "load_documents"
+    ]
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": ".agent-team/evidence/final/browser.json",
+          "language": "json",
+          "sizeLines": 13,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".agent-team/evidence/final/mypy.txt",
+          "language": "txt",
+          "sizeLines": 1,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agent-team/evidence/final/pytest.txt",
+          "language": "txt",
+          "sizeLines": 3,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agent-team/evidence/final/ruff.txt",
+          "language": "txt",
+          "sizeLines": 2,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agent-team/evidence/final/source-sha256.json",
+          "language": "json",
+          "sizeLines": 63,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        ".agent-team/evidence/final/browser.json": [],
+        ".agent-team/evidence/final/mypy.txt": [],
+        ".agent-team/evidence/final/pytest.txt": [],
+        ".agent-team/evidence/final/ruff.txt": [],
+        ".agent-team/evidence/final/source-sha256.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": ".agent-team/evidence/step-0/build.txt",
+          "language": "txt",
+          "sizeLines": 139,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agent-team/evidence/step-0/change-report-step-0.md",
+          "language": "markdown",
+          "sizeLines": 100,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agent-team/evidence/step-0/cli-help.txt",
+          "language": "txt",
+          "sizeLines": 16,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agent-team/evidence/step-0/created-files.txt",
+          "language": "txt",
+          "sizeLines": 58,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agent-team/evidence/step-0/mypy.txt",
+          "language": "txt",
+          "sizeLines": 1,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agent-team/evidence/step-0/pytest.txt",
+          "language": "txt",
+          "sizeLines": 3,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agent-team/evidence/step-0/ruff.txt",
+          "language": "txt",
+          "sizeLines": 1,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agent-team/evidence/step-0/source-sha256.json",
+          "language": "json",
+          "sizeLines": 55,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".agent-team/evidence/step-0/versions.txt",
+          "language": "txt",
+          "sizeLines": 8,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        ".agent-team/evidence/step-0/build.txt": [],
+        ".agent-team/evidence/step-0/change-report-step-0.md": [],
+        ".agent-team/evidence/step-0/cli-help.txt": [],
+        ".agent-team/evidence/step-0/created-files.txt": [],
+        ".agent-team/evidence/step-0/mypy.txt": [],
+        ".agent-team/evidence/step-0/pytest.txt": [],
+        ".agent-team/evidence/step-0/ruff.txt": [],
+        ".agent-team/evidence/step-0/source-sha256.json": [],
+        ".agent-team/evidence/step-0/versions.txt": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": "HANDOFF.md",
+          "language": "markdown",
+          "sizeLines": 68,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "Makefile",
+          "language": "makefile",
+          "sizeLines": 18,
+          "fileCategory": "infra"
+        },
+        {
+          "path": "README.md",
+          "language": "markdown",
+          "sizeLines": 97,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "change-report.md",
+          "language": "markdown",
+          "sizeLines": 85,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "guidelines.md",
+          "language": "markdown",
+          "sizeLines": 252,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "pyproject.toml",
+          "language": "toml",
+          "sizeLines": 74,
+          "fileCategory": "config"
+        },
+        {
+          "path": "requirements.txt",
+          "language": "txt",
+          "sizeLines": 3,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "HANDOFF.md": [],
+        "Makefile": [],
+        "README.md": [],
+        "change-report.md": [],
+        "guidelines.md": [],
+        "pyproject.toml": [],
+        "requirements.txt": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 4,
+      "files": [
+        {
+          "path": ".agent-team/evidence/completed/browser.json",
+          "language": "json",
+          "sizeLines": 7,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".streamlit/config.toml",
+          "language": "toml",
+          "sizeLines": 10,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".ua/intermediate/scan-result.json",
+          "language": "json",
+          "sizeLines": 12411,
+          "fileCategory": "config"
+        },
+        {
+          "path": "app/streamlit_app.py",
+          "language": "python",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "config/settings.yaml",
+          "language": "yaml",
+          "sizeLines": 76,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/ecsa/__init__.py",
+          "language": "python",
+          "sizeLines": 3,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/dashboard.py",
+          "language": "python",
+          "sizeLines": 416,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/data/__init__.py",
+          "language": "python",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/data/cache.py",
+          "language": "python",
+          "sizeLines": 146,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/data/edgar.py",
+          "language": "python",
+          "sizeLines": 236,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/data/prices.py",
+          "language": "python",
+          "sizeLines": 154,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/data/ratelimit.py",
+          "language": "python",
+          "sizeLines": 42,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/data/transcripts.py",
+          "language": "python",
+          "sizeLines": 181,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/demo.py",
+          "language": "python",
+          "sizeLines": 124,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/events/__init__.py",
+          "language": "python",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/events/calendar.py",
+          "language": "python",
+          "sizeLines": 56,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/events/market_model.py",
+          "language": "python",
+          "sizeLines": 68,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/events/stats.py",
+          "language": "python",
+          "sizeLines": 213,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/events/study.py",
+          "language": "python",
+          "sizeLines": 123,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/nlp/__init__.py",
+          "language": "python",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/nlp/cleaning.py",
+          "language": "python",
+          "sizeLines": 72,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/nlp/features.py",
+          "language": "python",
+          "sizeLines": 190,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/nlp/finbert.py",
+          "language": "python",
+          "sizeLines": 173,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/nlp/fls.py",
+          "language": "python",
+          "sizeLines": 67,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/nlp/lexicon.py",
+          "language": "python",
+          "sizeLines": 113,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        ".agent-team/evidence/completed/browser.json": [],
+        ".streamlit/config.toml": [],
+        ".ua/intermediate/scan-result.json": [],
+        "app/streamlit_app.py": [],
+        "config/settings.yaml": [],
+        "src/ecsa/__init__.py": [],
+        "src/ecsa/dashboard.py": [],
+        "src/ecsa/data/__init__.py": [],
+        "src/ecsa/data/cache.py": [],
+        "src/ecsa/data/edgar.py": [],
+        "src/ecsa/data/prices.py": [],
+        "src/ecsa/data/ratelimit.py": [],
+        "src/ecsa/data/transcripts.py": [],
+        "src/ecsa/demo.py": [],
+        "src/ecsa/events/__init__.py": [],
+        "src/ecsa/events/calendar.py": [],
+        "src/ecsa/events/market_model.py": [],
+        "src/ecsa/events/stats.py": [],
+        "src/ecsa/events/study.py": [],
+        "src/ecsa/nlp/__init__.py": [],
+        "src/ecsa/nlp/cleaning.py": [],
+        "src/ecsa/nlp/features.py": [],
+        "src/ecsa/nlp/finbert.py": [],
+        "src/ecsa/nlp/fls.py": [],
+        "src/ecsa/nlp/lexicon.py": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 5,
+      "files": [
+        {
+          "path": "src/ecsa/nlp/llm.py",
+          "language": "python",
+          "sizeLines": 88,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/nlp/segment.py",
+          "language": "python",
+          "sizeLines": 50,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/nlp/themes.py",
+          "language": "python",
+          "sizeLines": 69,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/pipeline.py",
+          "language": "python",
+          "sizeLines": 329,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/py.typed",
+          "language": "typed",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/sample_data/sample_documents.json",
+          "language": "json",
+          "sizeLines": 4322,
+          "fileCategory": "config"
+        },
+        {
+          "path": "src/ecsa/sample_data/sample_prices.parquet",
+          "language": "parquet",
+          "sizeLines": 912,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/schemas.py",
+          "language": "python",
+          "sizeLines": 197,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/settings.py",
+          "language": "python",
+          "sizeLines": 210,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/signals/__init__.py",
+          "language": "python",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/signals/backtest.py",
+          "language": "python",
+          "sizeLines": 134,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/signals/metrics.py",
+          "language": "python",
+          "sizeLines": 65,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/signals/model.py",
+          "language": "python",
+          "sizeLines": 67,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/signals/portfolio.py",
+          "language": "python",
+          "sizeLines": 153,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/signals/scoring.py",
+          "language": "python",
+          "sizeLines": 37,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/ecsa/storage.py",
+          "language": "python",
+          "sizeLines": 56,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/ecsa/nlp/llm.py": [],
+        "src/ecsa/nlp/segment.py": [],
+        "src/ecsa/nlp/themes.py": [],
+        "src/ecsa/pipeline.py": [],
+        "src/ecsa/py.typed": [],
+        "src/ecsa/sample_data/sample_documents.json": [],
+        "src/ecsa/sample_data/sample_prices.parquet": [],
+        "src/ecsa/schemas.py": [],
+        "src/ecsa/settings.py": [],
+        "src/ecsa/signals/__init__.py": [],
+        "src/ecsa/signals/backtest.py": [],
+        "src/ecsa/signals/metrics.py": [],
+        "src/ecsa/signals/model.py": [],
+        "src/ecsa/signals/portfolio.py": [],
+        "src/ecsa/signals/scoring.py": [],
+        "src/ecsa/storage.py": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

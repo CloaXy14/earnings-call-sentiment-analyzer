@@ -1,0 +1,28 @@
+from pathlib import Path
+import subprocess, time, json, shutil, sys, hashlib, importlib.metadata as md
+R=Path('/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer'); E=R/'.agent-team/evidence/audit-20261002'; PY=str(R/'.venv/bin/python')
+def run(name,cmd,cwd=R,timeout=240):
+ t=time.monotonic()
+ try:
+  p=subprocess.run(cmd,cwd=cwd,capture_output=True,text=True,timeout=timeout); out=p.stdout+p.stderr; code=p.returncode
+ except subprocess.TimeoutExpired as x: out=str(x);code=124
+ (E/(name+'.txt')).write_text(out); result={'command':cmd,'cwd':str(cwd),'exit_code':code,'seconds':round(time.monotonic()-t,2)}; (E/(name+'-result.json')).write_text(json.dumps(result,indent=2));print(name,result, out[-700:],flush=True);return code
+if sys.argv[1]=='demo':
+ for i in [1,2]:
+  run('demo-'+str(i),[PY,'-m','ecsa.pipeline','all','--demo','--config',str(E/'demo-settings.yaml')])
+  hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in (E/'demo-data/processed').glob('*.parquet')};(E/f'demo-{i}-hashes.json').write_text(json.dumps(hashes,indent=2))
+ print('identical',(E/'demo-1-hashes.json').read_bytes()==(E/'demo-2-hashes.json').read_bytes(),flush=True)
+elif sys.argv[1]=='download':
+ work=E/'download-run';work.mkdir(exist_ok=True);run('download',[PY,str(R/'scripts/download_data.py')],cwd=work,timeout=80)
+elif sys.argv[1]=='build':
+ work=E/'build-source';work.mkdir(exist_ok=True)
+ for name in ['src','pyproject.toml','README.md']:
+  p=R/name
+  if p.is_dir():shutil.copytree(p,work/name,ignore=shutil.ignore_patterns('__pycache__','*.egg-info'),dirs_exist_ok=True)
+  else:shutil.copy2(p,work/name)
+ run('build',['/Users/leonhardaudie/.local/bin/uv','build','--wheel','--python',PY,'--cache-dir','/private/tmp/ecsa-uv-cache','--out-dir',str(E/'wheel'),str(work)])
+elif sys.argv[1]=='env':
+ run('dependencies',['/Users/leonhardaudie/.local/bin/uv','pip','check','--python',PY,'--cache-dir','/private/tmp/ecsa-uv-cache'])
+ run('make-check',['make','check'])
+ run('ruff-json',[str(R/'.venv/bin/ruff'),'check','.','--output-format','json'])
+ (E/'versions.json').write_text(json.dumps({d.metadata['Name']:d.version for d in md.distributions()},indent=2))

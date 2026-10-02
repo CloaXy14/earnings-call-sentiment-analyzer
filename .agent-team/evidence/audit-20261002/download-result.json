@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/.venv/bin/python",
+    "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/scripts/download_data.py"
+  ],
+  "cwd": "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/.agent-team/evidence/audit-20261002/download-run",
+  "exit_code": 0,
+  "seconds": 3.2
+}

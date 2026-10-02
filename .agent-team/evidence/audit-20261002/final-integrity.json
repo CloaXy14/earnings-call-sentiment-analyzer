@@ -1,0 +1,11 @@
+{
+  "audited_files": 60,
+  "changed": [],
+  "new_download_matches_original": true,
+  "policy_sha256": {
+    "AGENT-TEAM.md": "7d69f95b8dffdbe8a109c646347d4c28cabdc65b2e12742e5a00538acb54fd3d",
+    "RUNBOOK.md": "f9a6dad45213f0f201578bce6d988cddd028dc42f0c1a1c4001f994c11340137",
+    "TASKS.md": "ecd0d0b14ef8ecec74a21775e49aece07cd3ca5bbff9b37226d5a975c381ea15",
+    "HANDOFF.md": "ffd3010788dda860004e113aca8f80620d14bc7e569216ea9f416ffd152ac549"
+  }
+}

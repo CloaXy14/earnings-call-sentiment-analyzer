@@ -1,0 +1,233 @@
+{
+  "_id": "621ffdc036468d709f176f71",
+  "id": "ProsusAI/finbert",
+  "private": false,
+  "pipeline_tag": "text-classification",
+  "library_name": "transformers",
+  "tags": [
+    "transformers",
+    "pytorch",
+    "tf",
+    "jax",
+    "bert",
+    "text-classification",
+    "financial-sentiment-analysis",
+    "sentiment-analysis",
+    "en",
+    "arxiv:1908.10063",
+    "endpoints_compatible",
+    "deploy:azure",
+    "region:us"
+  ],
+  "downloads": 4636372,
+  "likes": 1256,
+  "modelId": "ProsusAI/finbert",
+  "author": "ProsusAI",
+  "sha": "4556d13015211d73dccd3fdd39d39232506f3e43",
+  "lastModified": "2023-05-23T12:43:35.000Z",
+  "gated": false,
+  "disabled": false,
+  "mask_token": "[MASK]",
+  "widgetData": [
+    {
+      "text": "Stocks rallied and the British pound gained."
+    }
+  ],
+  "model-index": null,
+  "config": {
+    "architectures": [
+      "BertForSequenceClassification"
+    ],
+    "model_type": "bert",
+    "tokenizer_config": {
+      "unk_token": "[UNK]",
+      "sep_token": "[SEP]",
+      "pad_token": "[PAD]",
+      "cls_token": "[CLS]",
+      "mask_token": "[MASK]"
+    }
+  },
+  "cardData": {
+    "language": "en",
+    "tags": [
+      "financial-sentiment-analysis",
+      "sentiment-analysis"
+    ],
+    "widget": [
+      {
+        "text": "Stocks rallied and the British pound gained."
+      }
+    ]
+  },
+  "transformersInfo": {
+    "auto_model": "AutoModelForSequenceClassification",
+    "pipeline_tag": "text-classification",
+    "processor": "AutoTokenizer"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "ae8c63daedbd4206d7d40126955d4e6ab1c80f8f",
+      "size": 391
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "d57a1f3bc9735cdc84c7734d787fee973ad3a420",
+      "size": 1476
+    },
+    {
+      "rfilename": "config.json",
+      "blobId": "e3d6323dc93e170f3eef66cebb32dbaf4589aee0",
+      "size": 758
+    },
+    {
+      "rfilename": "flax_model.msgpack",
+      "blobId": "063800e7a339bdafd2313bfb5fdcc74c88dee425",
+      "size": 437945404,
+      "lfs": {
+        "sha256": "04c231ff252c4b5ed3e277120b1cc961b97be14d81825c51c44ba66b4ee8033e",
+        "size": 437945404,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "pytorch_model.bin",
+      "blobId": "c0104036bc2c3730025744ec953879eca6557f38",
+      "size": 437992753,
+      "lfs": {
+        "sha256": "e15a7b5738df7f17553399b6d94c6e2ff69c89245d066e8e5d183f5803a554e3",
+        "size": 437992753,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "special_tokens_map.json",
+      "blobId": "e7b0375001f109a6b8873d756ad4f7bbb15fbaa5",
+      "size": 112
+    },
+    {
+      "rfilename": "tf_model.h5",
+      "blobId": "a2944adc89cf9143adc84b81d1448b7c0edd3505",
+      "size": 438196200,
+      "lfs": {
+        "sha256": "195e23248e2e9a4ffed51e671408e390d8b902f070d93dea3b06d8d5e3bfc1da",
+        "size": 438196200,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "tokenizer_config.json",
+      "blobId": "cd79adc84d3c96daa03456853766c63141aef734",
+      "size": 252
+    },
+    {
+      "rfilename": "vocab.txt",
+      "blobId": "fb140275c155a9c7c5a3b3e0e77a9e839594a938",
+      "size": 231508
+    }
+  ],
+  "spaces": [
+    "embedl/hfviewer",
+    "KSS-1227/TradeMind",
+    "IoannisTr/Tech_Stocks_Trading_Assistant",
+    "RobertCastagna/Fin_Research",
+    "eduagarcia/multilingual-tokenizer-leaderboard",
+    "JayLacoma/News_Market_Sentiment_Analysis",
+    "EnzoBustos/IC-2022-Classificacao-de-Dados-Financeiros",
+    "Shredder/CONBERT-3",
+    "kumar9/flaskapp",
+    "angxt/btc-price-movement-predictor",
+    "Chinar-Q-AI/AI-Assistant-for-Finance",
+    "Sai-ban111/ADVANCED-STOCK-MARKET-INTELLIGENCE-AND-PREDICTION-SYSTEM",
+    "Deepika-05/crypto-price-predictor",
+    "Really-amin/Datasourceforcryptocurrency-2",
+    "Bit-Trading-Company/bit-atlas",
+    "darthPanda/Social_media_sentiment_tracker",
+    "sohomghosh/FinLanSer_Financial_Language_Simplifier",
+    "Rickyheyhey/finbert_market_evaluation",
+    "Aditya020705/finance-qa-demo",
+    "karthikeyansett1/financial-sentiment-analyzer",
+    "Italianhype/Blum",
+    "OswaldJaures/European-Equity-Screener",
+    "Bit-Trading-Company/bit-forecast-arena",
+    "Shredder/CONBERT-2",
+    "sohomghosh/FLUEnT",
+    "amgross01/Stocks_Trading_Assistant",
+    "Dhahlan2000/trade-master",
+    "Anupam251272/AI-Financial-Analyst",
+    "Seyomi/multimodal-financial-forecast",
+    "karan021/Goldsense",
+    "rajistics/interpet_transformers",
+    "Shredder/CONBERT",
+    "sohomghosh/FinRead",
+    "ESG-TFM-UV/ESG_API_BATCH",
+    "Swindu/ProsusAI-finbert",
+    "awacke1/HEDIS.Dash.Component.Top.Clinical.Terminology.Vocabulary",
+    "Himanshusingh/sec_sentiment_analysis",
+    "kudoshinichi/hf-sentiment-models",
+    "davissong01/financial-sentiment-analysis",
+    "mixcard/text-finbert",
+    "TrungTech/finBert",
+    "jchen1234567/isom5240g15_pt_fin_sent",
+    "bn-skn/ProsusAI-finbert",
+    "sohan-ai/stock-sentiment",
+    "itsnotjord/CyberNews",
+    "parkerjj/BuckLakeAI",
+    "halme/Stock_Price_Forecaster_ID2223",
+    "S6six/stock_sentiment_analysisv1",
+    "atteyarasha/Sentiment_analysis",
+    "abhilash88/newsscope-ai",
+    "mgbam/CryptoSentinel_AI",
+    "Pavankuamr/Bert-Bot",
+    "Akhil8125/bot-of-bert",
+    "manikandan18ramalingam/Agentic-AI-Options-Trading-App",
+    "Sanchi10/financial-research-agent",
+    "darisdzakwanhoesien/esg_scoring_sme",
+    "saghircse/indian-stock-sentiment",
+    "Anant-25/Stockinator",
+    "Wonderless22/finbert-sentiment",
+    "sitayeb/sentiment-rag-chatbot",
+    "royzhou01/MarketLens",
+    "Zedge06/ProsusAI-finbert",
+    "minowau/marketmind-terminal",
+    "ESCP/RX12PortfolioMonitoring",
+    "maxtyron/veritas-ai-api",
+    "Rajveer-code/finsight",
+    "RaghavMT/stock-news-analyzer",
+    "Samarth1542005/stock-predictor-api",
+    "mary-kaw1005/financial-sentiment",
+    "cozmoo/financial-news-analyzer",
+    "PROSTLE/StockSense-AI",
+    "tahp0604/ai-stock-watchlist",
+    "somita/ipo-prediction-backend",
+    "DJ-Goanna-Coding/citadel-agentic-swarm",
+    "wasif6/nlp-insight-engine",
+    "vishalmehta97/goldsense-vishal",
+    "HAFIZAMARYAM/fed-policy-classifier",
+    "hareharannagula/nifty500-intelligence-system",
+    "AmartyaSen/omnistock-backend",
+    "sanjikiren/Signal_News_Based_Market_Predictor",
+    "Peaaa/StocksenseGG",
+    "LAMA20NR/trade1",
+    "anotheruserishere/Bertographer",
+    "F114126123/ai-quantback-test_V.1",
+    "NihalNimmagadda/blitz",
+    "Tanoo0233/stock-ai-tool-v3",
+    "rohityadav483/ai-crypto-advisor",
+    "wadii123/finsentiment",
+    "kingbros919/quantmacro-india",
+    "YourGrimReaper/Oil-Market-Dashboard",
+    "Anshuman0301/stock-sentiment-engine",
+    "Shredder/Prototype",
+    "Shredder/Sample",
+    "wiraindrak/financial-sentiment-classification-indonesia",
+    "kandy/Lab_stat",
+    "vives/bert_cvent_top_k_sim",
+    "husnu/ASR_to_QA",
+    "darthPanda/SentimentAnalysisTool",
+    "ateliershen/ProsusAI-finbert",
+    "kelvinleong/Kt-Demo-Text_classifier-2"
+  ],
+  "createdAt": "2022-03-02T23:29:04.000Z",
+  "usedStorage": 3504463245
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/.venv/bin/ruff",
+    "check",
+    ".",
+    "--output-format",
+    "json"
+  ],
+  "cwd": "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer",
+  "exit_code": 1,
+  "seconds": 0.05
+}

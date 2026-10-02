@@ -1,0 +1,16 @@
+usage: pipeline.py [-h] [--config CONFIG]
+                   {ingest,analyze,event-study,signals,all} ...
+
+Earnings Call Sentiment Analyzer (ecsa)
+
+positional arguments:
+  {ingest,analyze,event-study,signals,all}
+    ingest              Collect licensed documents and prices (Step 1)
+    analyze             Generate sentiment features (Step 2)
+    event-study         Estimate abnormal event returns (Step 3)
+    signals             Create signals and backtest (Step 4)
+    all                 Run ingest through signals (Step 6)
+
+options:
+  -h, --help            show this help message and exit
+  --config CONFIG       Path to settings YAML

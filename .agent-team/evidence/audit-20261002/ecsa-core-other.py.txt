@@ -1,0 +1,20 @@
+import runpy,json
+from pathlib import Path
+from datetime import timedelta
+import numpy as np
+import pandas as pd
+from ecsa.settings import Settings
+from ecsa.events.study import run_study
+from ecsa.signals.portfolio import build_signals
+from ecsa.signals.backtest import backtest
+from ecsa.signals.metrics import performance
+s=Settings.from_yaml('config/settings.yaml');p,cal=runpy.run_path('tests/test_events_signals.py')['synthetic_prices']();c=lambda i:cal.close(cal.dates[i]);out={}
+e=pd.DataFrame([dict(event_id='e',ticker='TEST',session_timing='BMO',event_datetime=c(270)-timedelta(hours=7),available_at=c(270))]);full,_=run_study(e,p,s);gap=p[~((p.ticker=='SPY')&(p.date==cal.dates[275]))];changed,path=run_study(e,gap,s);actual=path.loc[path.relative_day==10,'date'].iloc[0]
+assert actual!=cal.dates[280] and pd.notna(changed.iloc[0].label_available_at)
+out['missing_benchmark']={'expected_day10':str(cal.dates[280]),'actual_day10':str(actual),'full_car':float(full.iloc[0].CAR_drift),'gap_car':float(changed.iloc[0].CAR_drift),'label_available_at':str(changed.iloc[0].label_available_at)}
+e=pd.DataFrame([dict(event_id=str(i),ticker='TEST',day0=cal.dates[260+i],available_at=c(309),score=float(i),CAR_drift=i/100) for i in range(4)]);signals,rejected=build_signals(e,p,cal,s);daily=backtest(signals,p,s);m=performance(daily,signals,p,e,s).set_index('metric').value
+assert signals.empty and len(rejected)==4 and np.isclose(m['ic'],1)
+out['late_features_ic']={'accepted':len(signals),'rejected':len(rejected),'ic':float(m['ic'])}
+s0=s.model_copy(update={'transaction_cost_bps':0.,'borrow_cost_bps_annual':0.});dates=cal.dates[270:281];prices=pd.DataFrame([dict(ticker=t,date=d,adj_close=v,available_at=cal.close(d)) for t,values in [('SPY',[100.]*11),('TEST',[100.,200.]+[99.]*9)] for d,v in zip(dates,values)]);signals=pd.DataFrame([dict(ticker='TEST',side='SHORT',weight=.05,entry_date=c(270),exit_date=c(280))]);daily=backtest(signals,prices,s0);m=performance(daily,signals,prices,pd.DataFrame(),s0).set_index('metric').value
+assert daily.equity.iloc[-1]<1 and m['completed_trades']==1 and m['hit_rate']==1
+out['hit_rate_accounting']={'equity':float(daily.equity.iloc[-1]),'hit_rate':float(m['hit_rate']),'average_win':float(m['average_win'])};Path('.agent-team/evidence/audit-20261002/core-other.json').write_text(json.dumps(out,indent=2));print(json.dumps(out,indent=2))

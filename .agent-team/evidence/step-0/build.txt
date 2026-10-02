@@ -1,0 +1,139 @@
+Building wheel...
+running egg_info
+writing src/ecsa.egg-info/PKG-INFO
+writing dependency_links to src/ecsa.egg-info/dependency_links.txt
+writing entry points to src/ecsa.egg-info/entry_points.txt
+writing requirements to src/ecsa.egg-info/requires.txt
+writing top-level names to src/ecsa.egg-info/top_level.txt
+reading manifest file 'src/ecsa.egg-info/SOURCES.txt'
+writing manifest file 'src/ecsa.egg-info/SOURCES.txt'
+running bdist_wheel
+running build
+running build_py
+creating build/lib/ecsa
+copying src/ecsa/__init__.py -> build/lib/ecsa
+copying src/ecsa/schemas.py -> build/lib/ecsa
+copying src/ecsa/pipeline.py -> build/lib/ecsa
+copying src/ecsa/settings.py -> build/lib/ecsa
+creating build/lib/ecsa/signals
+copying src/ecsa/signals/metrics.py -> build/lib/ecsa/signals
+copying src/ecsa/signals/scoring.py -> build/lib/ecsa/signals
+copying src/ecsa/signals/__init__.py -> build/lib/ecsa/signals
+copying src/ecsa/signals/model.py -> build/lib/ecsa/signals
+copying src/ecsa/signals/backtest.py -> build/lib/ecsa/signals
+copying src/ecsa/signals/portfolio.py -> build/lib/ecsa/signals
+creating build/lib/ecsa/nlp
+copying src/ecsa/nlp/themes.py -> build/lib/ecsa/nlp
+copying src/ecsa/nlp/__init__.py -> build/lib/ecsa/nlp
+copying src/ecsa/nlp/llm.py -> build/lib/ecsa/nlp
+copying src/ecsa/nlp/features.py -> build/lib/ecsa/nlp
+copying src/ecsa/nlp/lexicon.py -> build/lib/ecsa/nlp
+copying src/ecsa/nlp/finbert.py -> build/lib/ecsa/nlp
+copying src/ecsa/nlp/segment.py -> build/lib/ecsa/nlp
+copying src/ecsa/nlp/fls.py -> build/lib/ecsa/nlp
+copying src/ecsa/nlp/cleaning.py -> build/lib/ecsa/nlp
+creating build/lib/ecsa/events
+copying src/ecsa/events/market_model.py -> build/lib/ecsa/events
+copying src/ecsa/events/__init__.py -> build/lib/ecsa/events
+copying src/ecsa/events/calendar.py -> build/lib/ecsa/events
+copying src/ecsa/events/stats.py -> build/lib/ecsa/events
+copying src/ecsa/events/study.py -> build/lib/ecsa/events
+creating build/lib/ecsa/data
+copying src/ecsa/data/transcripts.py -> build/lib/ecsa/data
+copying src/ecsa/data/edgar.py -> build/lib/ecsa/data
+copying src/ecsa/data/cache.py -> build/lib/ecsa/data
+copying src/ecsa/data/__init__.py -> build/lib/ecsa/data
+copying src/ecsa/data/ratelimit.py -> build/lib/ecsa/data
+copying src/ecsa/data/prices.py -> build/lib/ecsa/data
+running egg_info
+writing src/ecsa.egg-info/PKG-INFO
+writing dependency_links to src/ecsa.egg-info/dependency_links.txt
+writing entry points to src/ecsa.egg-info/entry_points.txt
+writing requirements to src/ecsa.egg-info/requires.txt
+writing top-level names to src/ecsa.egg-info/top_level.txt
+reading manifest file 'src/ecsa.egg-info/SOURCES.txt'
+writing manifest file 'src/ecsa.egg-info/SOURCES.txt'
+copying src/ecsa/py.typed -> build/lib/ecsa
+installing to build/bdist.macosx-10.15-x86_64/wheel
+running install
+running install_lib
+creating build/bdist.macosx-10.15-x86_64/wheel
+creating build/bdist.macosx-10.15-x86_64/wheel/ecsa
+creating build/bdist.macosx-10.15-x86_64/wheel/ecsa/signals
+copying build/lib/ecsa/signals/metrics.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/signals
+copying build/lib/ecsa/signals/scoring.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/signals
+copying build/lib/ecsa/signals/__init__.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/signals
+copying build/lib/ecsa/signals/model.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/signals
+copying build/lib/ecsa/signals/backtest.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/signals
+copying build/lib/ecsa/signals/portfolio.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/signals
+copying build/lib/ecsa/__init__.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa
+copying build/lib/ecsa/schemas.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa
+copying build/lib/ecsa/pipeline.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa
+creating build/bdist.macosx-10.15-x86_64/wheel/ecsa/nlp
+copying build/lib/ecsa/nlp/themes.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/nlp
+copying build/lib/ecsa/nlp/__init__.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/nlp
+copying build/lib/ecsa/nlp/llm.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/nlp
+copying build/lib/ecsa/nlp/features.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/nlp
+copying build/lib/ecsa/nlp/lexicon.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/nlp
+copying build/lib/ecsa/nlp/finbert.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/nlp
+copying build/lib/ecsa/nlp/segment.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/nlp
+copying build/lib/ecsa/nlp/fls.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/nlp
+copying build/lib/ecsa/nlp/cleaning.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/nlp
+copying build/lib/ecsa/settings.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa
+copying build/lib/ecsa/py.typed -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa
+creating build/bdist.macosx-10.15-x86_64/wheel/ecsa/events
+copying build/lib/ecsa/events/market_model.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/events
+copying build/lib/ecsa/events/__init__.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/events
+copying build/lib/ecsa/events/calendar.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/events
+copying build/lib/ecsa/events/stats.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/events
+copying build/lib/ecsa/events/study.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/events
+creating build/bdist.macosx-10.15-x86_64/wheel/ecsa/data
+copying build/lib/ecsa/data/transcripts.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/data
+copying build/lib/ecsa/data/edgar.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/data
+copying build/lib/ecsa/data/cache.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/data
+copying build/lib/ecsa/data/__init__.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/data
+copying build/lib/ecsa/data/ratelimit.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/data
+copying build/lib/ecsa/data/prices.py -> build/bdist.macosx-10.15-x86_64/wheel/./ecsa/data
+running install_egg_info
+Copying src/ecsa.egg-info to build/bdist.macosx-10.15-x86_64/wheel/./ecsa-0.1.0-py3.11.egg-info
+running install_scripts
+creating build/bdist.macosx-10.15-x86_64/wheel/ecsa-0.1.0.dist-info/WHEEL
+creating '/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/dist/.tmp-a_p0nsdm/ecsa-0.1.0-py3-none-any.whl' and adding 'build/bdist.macosx-10.15-x86_64/wheel' to it
+adding 'ecsa/__init__.py'
+adding 'ecsa/pipeline.py'
+adding 'ecsa/py.typed'
+adding 'ecsa/schemas.py'
+adding 'ecsa/settings.py'
+adding 'ecsa/data/__init__.py'
+adding 'ecsa/data/cache.py'
+adding 'ecsa/data/edgar.py'
+adding 'ecsa/data/prices.py'
+adding 'ecsa/data/ratelimit.py'
+adding 'ecsa/data/transcripts.py'
+adding 'ecsa/events/__init__.py'
+adding 'ecsa/events/calendar.py'
+adding 'ecsa/events/market_model.py'
+adding 'ecsa/events/stats.py'
+adding 'ecsa/events/study.py'
+adding 'ecsa/nlp/__init__.py'
+adding 'ecsa/nlp/cleaning.py'
+adding 'ecsa/nlp/features.py'
+adding 'ecsa/nlp/finbert.py'
+adding 'ecsa/nlp/fls.py'
+adding 'ecsa/nlp/lexicon.py'
+adding 'ecsa/nlp/llm.py'
+adding 'ecsa/nlp/segment.py'
+adding 'ecsa/nlp/themes.py'
+adding 'ecsa/signals/__init__.py'
+adding 'ecsa/signals/backtest.py'
+adding 'ecsa/signals/metrics.py'
+adding 'ecsa/signals/model.py'
+adding 'ecsa/signals/portfolio.py'
+adding 'ecsa/signals/scoring.py'
+adding 'ecsa-0.1.0.dist-info/METADATA'
+adding 'ecsa-0.1.0.dist-info/WHEEL'
+adding 'ecsa-0.1.0.dist-info/entry_points.txt'
+adding 'ecsa-0.1.0.dist-info/top_level.txt'
+adding 'ecsa-0.1.0.dist-info/RECORD'
+removing build/bdist.macosx-10.15-x86_64/wheel
+Successfully built dist/ecsa-0.1.0-py3-none-any.whl

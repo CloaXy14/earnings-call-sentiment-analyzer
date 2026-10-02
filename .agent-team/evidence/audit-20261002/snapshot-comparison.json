@@ -1,0 +1,12 @@
+{
+  "prior_format": "dict",
+  "changed": [],
+  "missing": [],
+  "added": [
+    "scripts/test_analyzer.py",
+    "scripts/download_data.py",
+    "scripts/download_hf_data.py",
+    "requirements-dev.lock",
+    "data/raw/real_sample_transcripts.json"
+  ]
+}

@@ -1,0 +1,402 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [
+    "requirements.txt"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 6,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 6
+    }
+  },
+  "results": [
+    {
+      "path": "HANDOFF.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 68,
+      "nonEmptyLines": 48,
+      "sections": [
+        {
+          "heading": "Project handoff",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Objective",
+          "level": 2,
+          "line": 12
+        },
+        {
+          "heading": "Acceptance criteria",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "Completed",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "Affected files and artifacts",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "Checks",
+          "level": 2,
+          "line": 43
+        },
+        {
+          "heading": "Constraints and decisions",
+          "level": 2,
+          "line": 52
+        },
+        {
+          "heading": "Remaining work",
+          "level": 2,
+          "line": 58
+        },
+        {
+          "heading": "Next steps",
+          "level": 2,
+          "line": 62
+        },
+        {
+          "heading": "Blockers",
+          "level": 2,
+          "line": 66
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "Makefile",
+      "language": "makefile",
+      "fileCategory": "infra",
+      "totalLines": 18,
+      "nonEmptyLines": 12,
+      "steps": [
+        {
+          "name": "test",
+          "startLine": 5,
+          "endLine": 7
+        },
+        {
+          "name": "check",
+          "startLine": 8,
+          "endLine": 11
+        },
+        {
+          "name": "demo-data",
+          "startLine": 12,
+          "endLine": 14
+        },
+        {
+          "name": "demo",
+          "startLine": 15,
+          "endLine": 16
+        },
+        {
+          "name": "app",
+          "startLine": 17,
+          "endLine": 19
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "stepCount": 5
+      }
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 97,
+      "nonEmptyLines": 76,
+      "sections": [
+        {
+          "heading": "Earnings Call Sentiment Analyzer",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Quick start (offline demo)",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Setup",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "Running on real data",
+          "level": 2,
+          "line": 44
+        },
+        {
+          "heading": "Layout",
+          "level": 2,
+          "line": 62
+        },
+        {
+          "heading": "Design rules that protect the results",
+          "level": 2,
+          "line": 77
+        },
+        {
+          "heading": "Limitations",
+          "level": 2,
+          "line": 88
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "change-report.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 85,
+      "nonEmptyLines": 65,
+      "sections": [
+        {
+          "heading": "Change report — ECSA Steps 1–6",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Summary",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Acceptance evidence",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "Capabilities unavailable",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "Changed in this session (Kiro)",
+          "level": 2,
+          "line": 32
+        },
+        {
+          "heading": "Added in this session",
+          "level": 2,
+          "line": 44
+        },
+        {
+          "heading": "Removed / Discarded",
+          "level": 2,
+          "line": 51
+        },
+        {
+          "heading": "Numbers",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "Checks",
+          "level": 2,
+          "line": 64
+        },
+        {
+          "heading": "Not done",
+          "level": 2,
+          "line": 75
+        },
+        {
+          "heading": "Bugs found",
+          "level": 2,
+          "line": 80
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "guidelines.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 252,
+      "nonEmptyLines": 202,
+      "sections": [
+        {
+          "heading": "Earnings Call Sentiment Analyzer — Guidelines",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Project overview",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "2. Environment setup",
+          "level": 2,
+          "line": 38
+        },
+        {
+          "heading": "Requirements",
+          "level": 3,
+          "line": 40
+        },
+        {
+          "heading": "Install",
+          "level": 3,
+          "line": 44
+        },
+        {
+          "heading": "Configuration",
+          "level": 3,
+          "line": 70
+        },
+        {
+          "heading": "Run",
+          "level": 3,
+          "line": 81
+        },
+        {
+          "heading": "3. Methodologies",
+          "level": 2,
+          "line": 90
+        },
+        {
+          "heading": "3.1 Data collection",
+          "level": 3,
+          "line": 92
+        },
+        {
+          "heading": "3.2 NLP & sentiment analysis",
+          "level": 3,
+          "line": 122
+        },
+        {
+          "heading": "3.3 Event study (−5D to +10D)",
+          "level": 3,
+          "line": 160
+        },
+        {
+          "heading": "3.4 Trading signals",
+          "level": 3,
+          "line": 183
+        },
+        {
+          "heading": "4. Visualization guidelines (Streamlit)",
+          "level": 2,
+          "line": 203
+        },
+        {
+          "heading": "5. Conventions",
+          "level": 2,
+          "line": 247
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    },
+    {
+      "path": "pyproject.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 74,
+      "nonEmptyLines": 65,
+      "sections": [
+        {
+          "heading": "build-system",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "project",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "project.optional-dependencies",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "project.scripts",
+          "level": 2,
+          "line": 48
+        },
+        {
+          "heading": "tool.setuptools.packages.find",
+          "level": 4,
+          "line": 51
+        },
+        {
+          "heading": "tool.setuptools.package-data",
+          "level": 3,
+          "line": 54
+        },
+        {
+          "heading": "tool.pytest.ini_options",
+          "level": 3,
+          "line": 57
+        },
+        {
+          "heading": "tool.ruff",
+          "level": 2,
+          "line": 61
+        },
+        {
+          "heading": "tool.ruff.lint",
+          "level": 3,
+          "line": 66
+        },
+        {
+          "heading": "tool.mypy",
+          "level": 2,
+          "line": 69
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    }
+  ]
+}

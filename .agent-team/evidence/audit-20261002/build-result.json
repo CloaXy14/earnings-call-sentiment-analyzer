@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/Users/leonhardaudie/.local/bin/uv",
+    "build",
+    "--wheel",
+    "--python",
+    "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/.venv/bin/python",
+    "--cache-dir",
+    "/private/tmp/ecsa-uv-cache",
+    "--out-dir",
+    "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/.agent-team/evidence/audit-20261002/wheel",
+    "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer/.agent-team/evidence/audit-20261002/build-source"
+  ],
+  "cwd": "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer",
+  "exit_code": 0,
+  "seconds": 3.85
+}

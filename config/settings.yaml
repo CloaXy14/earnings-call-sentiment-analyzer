@@ -1,0 +1,76 @@
+# The only application configuration entry point is Settings.from_yaml().
+# Secrets belong in environment variables, never in YAML.
+seed: 42
+storage_timezone: UTC
+market_timezone: America/New_York
+data_dir: data
+benchmark: SPY
+tickers: []
+start_date: null
+end_date: null
+
+# Immutable upstream commit, verified against:
+# https://huggingface.co/api/models/ProsusAI/finbert
+finbert_model_id: ProsusAI/finbert
+finbert_revision: 4556d13015211d73dccd3fdd39d39232506f3e43
+finbert_batch_size: 32
+finbert_max_tokens: 512
+llm_enabled: false
+
+# Network clients, caching, and these controls are implemented in Step 1.
+sec_requests_per_second: 8.0
+request_timeout_seconds: 30.0
+request_max_retries: 4
+retry_backoff_seconds: 1.0
+cache_ttl_seconds: 86400
+
+# Historical inference cannot precede the model artifact's availability.
+finbert_available_at: '2023-05-23T12:43:35Z'
+nlp_backend: finbert
+fls_backend: rules
+fls_model_id: yiyanghkust/finbert-fls
+fls_revision: null
+fls_available_at: null
+llm_model: gpt-4o-mini-2024-07-18
+llm_available_at: '2024-07-18T00:00:00Z'
+# User-supplied price assumptions for cost estimates; confirm before enabling.
+llm_input_cost_per_million: 0.15
+llm_output_cost_per_million: 0.60
+dictionary_path: null
+positive_phrases: [growth, expansion, record revenue, strong demand, margin expansion, raised guidance]
+negative_phrases: [costs, margin pressure, uncertainty, headwinds, slowdown, lowered guidance, impairment]
+uncertainty_phrases: [uncertainty]
+financial_stop_words: [company, quarter, year, thank, operator, million, billion]
+topic_count: 4
+estimation_start: -250
+estimation_end: -30
+estimation_min_days: 120
+event_start: -5
+event_end: 10
+score_weights:
+  finbert_net_weighted: 1
+  sentiment_surprise: 1
+  lexicon_net: 1
+  fls_net: 1
+  uncertainty_per_1k: -1
+ranking_days: 90
+minimum_ranking_events: 20
+long_quantile: 0.8
+short_quantile: 0.2
+holding_days: 10
+max_name_weight: 0.05
+gross_target: 1.0
+weighting: equal
+sector_neutral: false
+sectors: {}
+volatility_days: 60
+transaction_cost_bps: 10
+borrow_cost_bps_annual: 0
+placebo_seeds: 100
+variants_tried: 1
+learned_model: none
+embargo_days: 10
+minimum_training_events: 30
+include_edgar: false
+include_mdna: false
+price_backend: yfinance

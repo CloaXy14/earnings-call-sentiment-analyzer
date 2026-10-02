@@ -1,0 +1,6 @@
+from pathlib import Path
+import requests,json,hashlib
+R=Path('/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer');E=R/'.agent-team/evidence/audit-20261002'
+params={'dataset':'finosfoundation/EarningsCallTranscript','config':'default','split':'train','offset':100,'length':100}
+r=requests.get('https://datasets-server.huggingface.co/rows',params=params,timeout=30);r.raise_for_status();data=r.json();(E/'upstream-next-page.json').write_text(json.dumps(data,indent=2));summary={'total_rows':data['num_rows_total'],'next_page':[{'filename':x['row'].get('original_filename'),'segment_id':x['row'].get('segment_id')} for x in data['rows']]}
+sha='4556d13015211d73dccd3fdd39d39232506f3e43';r=requests.get(f'https://huggingface.co/api/models/ProsusAI/finbert/revision/{sha}',params={'blobs':'true'},timeout=30);r.raise_for_status();meta=r.json();(E/'upstream-model-metadata.json').write_text(json.dumps(meta,indent=2));weight=next(x for x in meta['siblings'] if x['rfilename']=='pytorch_model.bin');local=R/'data/cache/models/ProsusAI--finbert'/sha/'pytorch_model.bin';actual=hashlib.sha256(local.read_bytes()).hexdigest();summary['weights']={'upstream':weight,'local_sha256':actual,'matches':actual==weight['lfs']['sha256']};(E/'upstream-verification.json').write_text(json.dumps(summary,indent=2));print(json.dumps(summary,indent=2))

@@ -1,0 +1,21 @@
+{
+  "ticker": "TEST",
+  "cik": "0000000001",
+  "doc_type": "transcript",
+  "event_datetime": "2024-07-25T16:30:00-04:00",
+  "available_at": "2024-07-25T18:00:00-04:00",
+  "session_timing": "AMC",
+  "source": "synthetic_fixture",
+  "url": "local://synthetic/test-call",
+  "raw_text": "Alex Example: Revenue grew. Taylor Example: What is the outlook?",
+  "sections": [
+    {
+      "name": "prepared_remarks",
+      "utterances": [{"speaker": "Alex Example", "role": "executive", "text": "Revenue grew."}]
+    },
+    {
+      "name": "qa",
+      "utterances": [{"speaker": "Taylor Example", "role": "analyst", "text": "What is the outlook?"}]
+    }
+  ]
+}

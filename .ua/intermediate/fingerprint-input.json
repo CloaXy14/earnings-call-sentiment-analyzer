@@ -1,0 +1,8 @@
+{
+  "projectRoot": "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer",
+  "filePaths": [
+    "config/settings.yaml", "src/ecsa/pipeline.py", "src/ecsa/dashboard.py",
+    "src/ecsa/demo.py", "src/ecsa/data/edgar.py", "src/ecsa/data/transcripts.py"
+  ],
+  "gitCommitHash": "none"
+}

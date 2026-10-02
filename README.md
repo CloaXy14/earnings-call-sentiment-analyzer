@@ -1,0 +1,97 @@
+# Earnings Call Sentiment Analyzer
+
+`ecsa` is a Python 3.11 research system that turns earnings call transcripts, 8-K earnings
+releases and MD&A text into sentiment features, tests them with a −5D to +10D event study,
+and converts them into long/short signals with a cost-aware backtest and placebo checks.
+A Streamlit dashboard shows the results. The method is described in [guidelines.md](guidelines.md).
+
+All six steps are implemented. Everything runs offline on bundled synthetic data; real data
+needs your own licensed transcripts, an SEC User-Agent, and a price source.
+
+## Quick start (offline demo)
+
+```sh
+make demo-data      # ingest → analyze → event-study → signals on synthetic data
+make app            # http://localhost:8501
+make test           # 134 tests, sockets disabled
+make check          # ruff + strict mypy
+```
+
+The demo uses 8 synthetic companies, 96 events and a toy lexical scorer instead of FinBERT,
+so no model download is needed. Its numbers demonstrate the workflow and are **not** evidence
+of trading performance; the dashboard says so on every page.
+
+## Setup
+
+```sh
+python3.11 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt   # pinned research stack + editable package
+cp .env.example .env                        # fill locally, then export it yourself
+```
+
+`requirements.lock` pins the research stack; `requirements-dev.lock` pins test and lint tools.
+No `.env` file is loaded automatically: export it (`set -a; source .env; set +a`).
+
+| Variable | Needed for |
+|---|---|
+| `SEC_USER_AGENT` | EDGAR requests (`"Your Name you@example.com"`) |
+| `TRANSCRIPT_API_KEY` | A licensed transcript vendor (adapter is a stub) |
+| `OPENAI_API_KEY` | Optional LLM scorer (`llm_enabled: true`) |
+
+Secrets are read only from the environment and are rejected in YAML.
+
+## Running on real data
+
+1. Put licensed transcripts in `data/raw/transcripts/`: JSON (object or list), CSV, or TXT with
+   a `.meta.json` sidecar. Each row needs `ticker`, `raw_text`, `available_at`, and
+   `event_datetime` (or `event_date`, which is treated as an unknown call time).
+   A malformed file or row fails with its file name and row number.
+2. Optional EDGAR input: set `include_edgar: true` (8-K Item 2.02 EX-99 exhibits) and
+   `include_mdna: true` (10-Q/10-K MD&A) in `config/settings.yaml`.
+3. Optional Loughran-McDonald dictionary: download it under its license and set `dictionary_path`.
+4. Run:
+
+```sh
+python -m ecsa.pipeline all --config config/settings.yaml --tickers AAPL MSFT --start 2019-01-01 --end 2025-12-31
+```
+
+Stages can also run one at a time: `ingest`, `analyze`, `event-study`, `signals`.
+The first real `analyze` run downloads FinBERT (`ProsusAI/finbert`, pinned revision).
+
+## Layout
+
+```text
+config/settings.yaml      all parameters (model revisions, phrases, windows, thresholds, costs)
+src/ecsa/data/            EDGAR client, licensed transcript sources, prices, cache, rate limiter
+src/ecsa/nlp/             cleaning, sentences, FinBERT/LLM scorers, lexicon, FLS, themes, features
+src/ecsa/events/          trading calendar, market model, event study, statistics
+src/ecsa/signals/         composite score, walk-forward model, portfolio, backtest, metrics
+src/ecsa/dashboard.py     Streamlit views (reads data/processed only)
+src/ecsa/pipeline.py      CLI
+app/streamlit_app.py      Streamlit entry point
+tests/                    offline tests and fixtures
+data/{raw,interim,processed}/   local data (git-ignored)
+```
+
+## Design rules that protect the results
+
+- **No look-ahead.** Every record carries `available_at`. Features, z-scores, themes, model fits
+  and signals use only data available at the decision time. Tests perturb future data and check
+  that signals do not change.
+- **Tradeable timing.** Positions enter at the day-0 close only if the features were available
+  by then; otherwise the event is rejected and logged, never backdated. Only CAR[+1, +10]
+  tests prediction; [−5, −1] and day 0 are reported as anticipation and reaction.
+- **Honest evaluation.** Costs of 10 bps per side, 100 shuffled-score placebo runs, the number
+  of variants tried, and out-of-sample IC only for learned weights (purged walk-forward).
+
+## Limitations
+
+- The transcript vendor adapter is a stub; Seeking Alpha is not scraped (its terms forbid it).
+- `yfinance` is unofficial and for prototyping. Current adjusted prices and today's ticker list
+  introduce survivorship and revision bias; use point-in-time data before trusting results.
+- MD&A extraction returns nothing when headings are ambiguous rather than guessing.
+- The BMP test does not remove cross-firm correlation within an earnings season.
+
+This project follows the Agent Team manual `feature+quality` workflow. Check evidence is in
+[change-report.md](change-report.md); the current checkpoint is in `HANDOFF.md`.

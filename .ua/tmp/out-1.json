@@ -1,0 +1,375 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 2,
+  "filesSkipped": [
+    ".agent-team/evidence/final/mypy.txt",
+    ".agent-team/evidence/final/pytest.txt",
+    ".agent-team/evidence/final/ruff.txt"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 2,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 2
+    }
+  },
+  "results": [
+    {
+      "path": ".agent-team/evidence/final/browser.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 14,
+      "nonEmptyLines": 14,
+      "sections": [
+        {
+          "heading": "desktop",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "mobile",
+          "level": 1,
+          "line": 8
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": ".agent-team/evidence/final/source-sha256.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 64,
+      "nonEmptyLines": 64,
+      "sections": [
+        {
+          "heading": "Makefile",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "README.md",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "app/streamlit_app.py",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "config/settings.yaml",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "guidelines.md",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "pyproject.toml",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "requirements.lock",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "requirements.txt",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "src/ecsa/__init__.py",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "src/ecsa/dashboard.py",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "src/ecsa/data/__init__.py",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "src/ecsa/data/cache.py",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "src/ecsa/data/edgar.py",
+          "level": 1,
+          "line": 14
+        },
+        {
+          "heading": "src/ecsa/data/prices.py",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "src/ecsa/data/ratelimit.py",
+          "level": 1,
+          "line": 16
+        },
+        {
+          "heading": "src/ecsa/data/transcripts.py",
+          "level": 1,
+          "line": 17
+        },
+        {
+          "heading": "src/ecsa/demo.py",
+          "level": 1,
+          "line": 18
+        },
+        {
+          "heading": "src/ecsa/events/__init__.py",
+          "level": 1,
+          "line": 19
+        },
+        {
+          "heading": "src/ecsa/events/calendar.py",
+          "level": 1,
+          "line": 20
+        },
+        {
+          "heading": "src/ecsa/events/market_model.py",
+          "level": 1,
+          "line": 21
+        },
+        {
+          "heading": "src/ecsa/events/stats.py",
+          "level": 1,
+          "line": 22
+        },
+        {
+          "heading": "src/ecsa/events/study.py",
+          "level": 1,
+          "line": 23
+        },
+        {
+          "heading": "src/ecsa/nlp/__init__.py",
+          "level": 1,
+          "line": 24
+        },
+        {
+          "heading": "src/ecsa/nlp/cleaning.py",
+          "level": 1,
+          "line": 25
+        },
+        {
+          "heading": "src/ecsa/nlp/features.py",
+          "level": 1,
+          "line": 26
+        },
+        {
+          "heading": "src/ecsa/nlp/finbert.py",
+          "level": 1,
+          "line": 27
+        },
+        {
+          "heading": "src/ecsa/nlp/fls.py",
+          "level": 1,
+          "line": 28
+        },
+        {
+          "heading": "src/ecsa/nlp/lexicon.py",
+          "level": 1,
+          "line": 29
+        },
+        {
+          "heading": "src/ecsa/nlp/llm.py",
+          "level": 1,
+          "line": 30
+        },
+        {
+          "heading": "src/ecsa/nlp/segment.py",
+          "level": 1,
+          "line": 31
+        },
+        {
+          "heading": "src/ecsa/nlp/themes.py",
+          "level": 1,
+          "line": 32
+        },
+        {
+          "heading": "src/ecsa/pipeline.py",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "src/ecsa/py.typed",
+          "level": 1,
+          "line": 34
+        },
+        {
+          "heading": "src/ecsa/sample_data/sample_documents.json",
+          "level": 1,
+          "line": 35
+        },
+        {
+          "heading": "src/ecsa/sample_data/sample_prices.parquet",
+          "level": 1,
+          "line": 36
+        },
+        {
+          "heading": "src/ecsa/schemas.py",
+          "level": 1,
+          "line": 37
+        },
+        {
+          "heading": "src/ecsa/settings.py",
+          "level": 1,
+          "line": 38
+        },
+        {
+          "heading": "src/ecsa/signals/__init__.py",
+          "level": 1,
+          "line": 39
+        },
+        {
+          "heading": "src/ecsa/signals/backtest.py",
+          "level": 1,
+          "line": 40
+        },
+        {
+          "heading": "src/ecsa/signals/metrics.py",
+          "level": 1,
+          "line": 41
+        },
+        {
+          "heading": "src/ecsa/signals/model.py",
+          "level": 1,
+          "line": 42
+        },
+        {
+          "heading": "src/ecsa/signals/portfolio.py",
+          "level": 1,
+          "line": 43
+        },
+        {
+          "heading": "src/ecsa/signals/scoring.py",
+          "level": 1,
+          "line": 44
+        },
+        {
+          "heading": "src/ecsa/storage.py",
+          "level": 1,
+          "line": 45
+        },
+        {
+          "heading": "src/ecsa.egg-info/PKG-INFO",
+          "level": 1,
+          "line": 46
+        },
+        {
+          "heading": "src/ecsa.egg-info/SOURCES.txt",
+          "level": 1,
+          "line": 47
+        },
+        {
+          "heading": "src/ecsa.egg-info/dependency_links.txt",
+          "level": 1,
+          "line": 48
+        },
+        {
+          "heading": "src/ecsa.egg-info/entry_points.txt",
+          "level": 1,
+          "line": 49
+        },
+        {
+          "heading": "src/ecsa.egg-info/requires.txt",
+          "level": 1,
+          "line": 50
+        },
+        {
+          "heading": "src/ecsa.egg-info/top_level.txt",
+          "level": 1,
+          "line": 51
+        },
+        {
+          "heading": "tests/conftest.py",
+          "level": 1,
+          "line": 52
+        },
+        {
+          "heading": "tests/fixtures/document.json",
+          "level": 1,
+          "line": 53
+        },
+        {
+          "heading": "tests/fixtures/sample_documents.json",
+          "level": 1,
+          "line": 54
+        },
+        {
+          "heading": "tests/fixtures/sample_prices.parquet",
+          "level": 1,
+          "line": 55
+        },
+        {
+          "heading": "tests/fixtures/submissions.json",
+          "level": 1,
+          "line": 56
+        },
+        {
+          "heading": "tests/test_data.py",
+          "level": 1,
+          "line": 57
+        },
+        {
+          "heading": "tests/test_events_signals.py",
+          "level": 1,
+          "line": 58
+        },
+        {
+          "heading": "tests/test_integration.py",
+          "level": 1,
+          "line": 59
+        },
+        {
+          "heading": "tests/test_nlp.py",
+          "level": 1,
+          "line": 60
+        },
+        {
+          "heading": "tests/test_pipeline.py",
+          "level": 1,
+          "line": 61
+        },
+        {
+          "heading": "tests/test_schemas.py",
+          "level": 1,
+          "line": 62
+        },
+        {
+          "heading": "tests/test_settings.py",
+          "level": 1,
+          "line": 63
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 62
+      }
+    }
+  ]
+}

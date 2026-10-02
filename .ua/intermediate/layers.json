@@ -1,0 +1,38 @@
+[
+  {
+    "id": "layer:infrastructure",
+    "name": "Infrastructure",
+    "description": "Configuration files",
+    "nodeIds": ["config:config/settings.yaml", "config:.env.example"]
+  },
+  {
+    "id": "layer:data",
+    "name": "Data Layer",
+    "description": "Data ingestion and storage",
+    "nodeIds": ["file:src/ecsa/data/edgar.py", "file:src/ecsa/data/transcripts.py", "file:src/ecsa/data/prices.py", "file:src/ecsa/data/cache.py"]
+  },
+  {
+    "id": "layer:nlp",
+    "name": "NLP Analysis",
+    "description": "Text processing and sentiment",
+    "nodeIds": ["file:src/ecsa/nlp/finbert.py", "file:src/ecsa/nlp/features.py", "file:src/ecsa/nlp/cleaning.py", "file:src/ecsa/nlp/lexicon.py"]
+  },
+  {
+    "id": "layer:events",
+    "name": "Event Study",
+    "description": "Statistical analysis",
+    "nodeIds": ["file:src/ecsa/events/study.py", "file:src/ecsa/events/stats.py"]
+  },
+  {
+    "id": "layer:signals",
+    "name": "Signals and Backtest",
+    "description": "Portfolio and backtesting",
+    "nodeIds": ["file:src/ecsa/signals/backtest.py", "file:src/ecsa/signals/portfolio.py"]
+  },
+  {
+    "id": "layer:app",
+    "name": "Application",
+    "description": "CLI and Dashboard",
+    "nodeIds": ["file:src/ecsa/pipeline.py", "file:src/ecsa/dashboard.py", "file:src/ecsa/demo.py"]
+  }
+]

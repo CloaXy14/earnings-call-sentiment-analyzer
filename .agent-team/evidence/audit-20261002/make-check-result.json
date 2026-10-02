@@ -1,0 +1,9 @@
+{
+  "command": [
+    "make",
+    "check"
+  ],
+  "cwd": "/Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer",
+  "exit_code": 2,
+  "seconds": 0.27
+}

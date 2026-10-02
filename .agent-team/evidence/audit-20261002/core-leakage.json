@@ -1,0 +1,14 @@
+{
+  "case": "unavailable_denominator",
+  "prediction_time": "2023-02-14 21:00:00+00:00",
+  "price_available_at": "2023-03-28 20:00:00+00:00",
+  "before": {
+    "score": -3.5188779796847726e-16,
+    "label_available_at": "2023-03-28 20:00:00+00:00"
+  },
+  "after": {
+    "score": -3.5188779796847726e-16,
+    "label_available_at": "2023-03-28 20:00:00+00:00"
+  },
+  "requirement_passed": true
+}

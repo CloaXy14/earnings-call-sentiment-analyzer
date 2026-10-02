@@ -1,0 +1,18 @@
+.venv/bin/python -m pytest
+============================= test session starts ==============================
+platform darwin -- Python 3.11.16, pytest-9.1.1, pluggy-1.6.0
+rootdir: /Users/leonhardaudie/Documents/antigravity/Projects/earnings-call-sentiment-analyzer
+configfile: pyproject.toml
+testpaths: tests
+plugins: platformdirs-4.12.2, socket-0.8.1, anyio-4.15.1
+collected 134 items
+
+tests/test_data.py ..............................                        [ 22%]
+tests/test_events_signals.py .............                               [ 32%]
+tests/test_integration.py .....                                          [ 35%]
+tests/test_nlp.py ........                                               [ 41%]
+tests/test_pipeline.py ...............                                   [ 52%]
+tests/test_schemas.py ..........................................         [ 84%]
+tests/test_settings.py .....................                             [100%]
+
+============================= 134 passed in 36.07s =============================
